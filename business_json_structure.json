@@ -1,0 +1,38 @@
+{
+  "john-coffee": {
+    "name": "John's Coffee Shop",
+    "image": "https://raw.githubusercontent.com/yourusername/yourrepo/main/images/john-coffee.jpg",
+    "address": "123 Main Street, Downtown, City 12345",
+    "phone": "+1234567890",
+    "socials": {
+      "instagram": "https://instagram.com/johncoffeeshop",
+      "facebook": "https://facebook.com/johncoffeeshop",
+      "twitter": "https://twitter.com/johncoffee",
+      "linkedin": "https://linkedin.com/company/johncoffeeshop",
+      "tiktok": "https://tiktok.com/@johncoffeeshop"
+    }
+  },
+  "mary-salon": {
+    "name": "Mary's Beauty Salon",
+    "image": "https://raw.githubusercontent.com/yourusername/yourrepo/main/images/mary-salon.jpg",
+    "address": "456 Beauty Ave, Uptown, City 67890",
+    "phone": "+0987654321",
+    "socials": {
+      "instagram": "https://instagram.com/marysalon",
+      "facebook": "https://facebook.com/marysalon",
+      "whatsapp": "https://wa.me/0987654321"
+    }
+  },
+  "tech-repair": {
+    "name": "Quick Tech Repair",
+    "image": "https://raw.githubusercontent.com/yourusername/yourrepo/main/images/tech-repair.jpg",
+    "address": "789 Tech Street, Digital District, City 13579",
+    "phone": "+1122334455",
+    "socials": {
+      "instagram": "https://instagram.com/quicktechrepair",
+      "facebook": "https://facebook.com/quicktechrepair",
+      "twitter": "https://twitter.com/quicktech",
+      "linkedin": "https://linkedin.com/company/quicktechrepair"
+    }
+  }
+}
