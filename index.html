@@ -273,8 +273,8 @@
 
     <script>
         // Get business ID from URL path
-        const path = window.location.pathname.replace(/^\/+|\/+$/g, ''); // Remove leading/trailing slashes
-        const businessId = path || 'john-coffee'; // Default fallback
+        const path = window.location.pathname.replace(/^\/+|\/+$/g, '').split('/')[0];
+        const businessId = path || 'john-coffee';
         
         // Social media icons mapping
         const socialIcons = {
@@ -298,7 +298,7 @@
                 
                 if (!businessData) {
                     throw new Error('Business not found');
-                }
+                } 
                 
                 renderBusinessCard(businessData);
             } catch (error) {
