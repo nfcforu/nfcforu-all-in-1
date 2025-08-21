@@ -290,7 +290,7 @@
         // Load business data
         async function loadBusinessData() {
             try {
-                const response = await fetch('businesses.json');
+                const response = await fetch('/nfcforu-all-in-1/businesses.json');
                 if (!response.ok) throw new Error('Failed to load businesses data');
                 
                 const allBusinesses = await response.json();
