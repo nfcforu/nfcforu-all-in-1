@@ -1,5 +1,5 @@
 {
-  "john-coffee": {
+  "0001": {
     "name": "John's Coffee Shop",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/viber_image_2025-08-03_17-53-12-050.jpg",
     "address": "123 Main Street, Downtown, City 12345",
@@ -12,7 +12,7 @@
       "tiktok": "https://tiktok.com/@johncoffeeshop"
     }
   },
-  "mary-salon": {
+  "0002": {
     "name": "Mary's Beauty Salon",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/viber_image_2025-08-03_17-53-12-050.jpg",
     "address": "456 Beauty Ave, Uptown, City 67890",
@@ -23,7 +23,7 @@
       "whatsapp": "https://wa.me/0987654321"
     }
   },
-  "tech-repair": {
+  "0003": {
     "name": "Quick Tech Repair",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/viber_image_2025-08-03_17-53-12-050.jpg",
     "address": "789 Tech Street, Digital District, City 13579",
