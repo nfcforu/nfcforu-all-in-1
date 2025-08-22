@@ -349,12 +349,12 @@
                         </div>
                         <div class="contact-text">${phone}</div>
                     </a>
-                    <div class="contact-item" style="cursor: default;">
+                    <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}" target="_blank" class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="contact-text address-text">${address}</div>
-                    </div>
+                    </a>
                     ${socialLinks}
                 </div>
             `;
