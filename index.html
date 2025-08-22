@@ -14,7 +14,7 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */ /* Remove this line */
             min-height: 100vh;
             padding: 20px;
             display: flex;
@@ -310,49 +310,52 @@
         function renderBusinessCard(data) {
             const { name, image, address, phone, socials, gradient } = data;
 
-    // Set page title
-    document.getElementById('page-title').textContent = `${name} - Digital Business Card`;
+            // Set page title
+            document.getElementById('page-title').textContent = `${name} - Digital Business Card`;
 
-    let socialLinks = '';
-    if (socials && Object.keys(socials).length > 0) {
-        socialLinks = Object.entries(socials).map(([platform, url]) => {
-            const socialInfo = socialIcons[platform] || { icon: 'fas fa-link', class: '' };
-            return `
-                <a href="${url}" target="_blank" class="contact-item ${socialInfo.class}" style="margin-bottom: 0;">
-                    <div class="contact-icon">
-                        <i class="${socialInfo.icon}"></i>
+            // Set body background to business gradient or default
+            document.body.style.background = gradient || 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+
+            let socialLinks = '';
+            if (socials && Object.keys(socials).length > 0) {
+                socialLinks = Object.entries(socials).map(([platform, url]) => {
+                    const socialInfo = socialIcons[platform] || { icon: 'fas fa-link', class: '' };
+                    return `
+                        <a href="${url}" target="_blank" class="contact-item ${socialInfo.class}" style="margin-bottom: 0;">
+                            <div class="contact-icon">
+                                <i class="${socialInfo.icon}"></i>
+                            </div>
+                            <div class="contact-text" style="font-size:0.95em;text-transform:capitalize;">${platform}</div>
+                        </a>
+                    `;
+                }).join('');
+            }
+
+            const content = `
+                <div class="profile-section" style="background: ${gradient || 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}">
+                    <img src="${image}" alt="${name}" class="profile-image" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik02MCA4MEM3MS4wNDU3IDgwIDgwIDcxLjA0NTcgODAgNjBDODAgNDguOTU0MyA3MS4wNDU3IDQwIDYwIDQwQzQ4Ljk1NDMgNDAgNDAgNDguOTU0MyA0MCA2MEM0MCA3MS4wNDU3IDQ4Ljk1NDMgODAgNjAgODBaIiBmaWxsPSIjOUNBM0FGIi8+PC9zdmc+'">
+                    <h1 class="business-name">${name}</h1>
+                </div>
+                <div class="contact-section">
+                    <a href="tel:${phone}" class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">${phone}</div>
+                    </a>
+                    <div class="contact-item" style="cursor: default;">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text address-text">${address}</div>
                     </div>
-                    <div class="contact-text" style="font-size:0.95em;text-transform:capitalize;">${platform}</div>
-                </a>
+                    ${socialLinks}
+                </div>
             `;
-        }).join('');
-    }
 
-    const content = `
-        <div class="profile-section" style="background: ${gradient || 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}">
-            <img src="${image}" alt="${name}" class="profile-image" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik02MCA4MEM3MS4wNDU3IDgwIDgwIDcxLjA0NTcgODAgNjBDODAgNDguOTU0MyA3MS4wNDU3IDQwIDYwIDQwQzQ4Ljk1NDMgNDAgNDAgNDguOTU0MyA0MCA2MEM0MCA3MS4wNDU3IDQ4Ljk1NDMgODAgNjAgODBaIiBmaWxsPSIjOUNBM0FGIi8+PC9zdmc+'">
-            <h1 class="business-name">${name}</h1>
-        </div>
-        <div class="contact-section">
-            <a href="tel:${phone}" class="contact-item">
-                <div class="contact-icon">
-                    <i class="fas fa-phone"></i>
-                </div>
-                <div class="contact-text">${phone}</div>
-            </a>
-            <div class="contact-item" style="cursor: default;">
-                <div class="contact-icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="contact-text address-text">${address}</div>
-            </div>
-            ${socialLinks}
-        </div>
-    `;
-
-    document.getElementById('content').innerHTML = content;
-    document.getElementById('content').style.display = 'block';
-    document.getElementById('loading').style.display = 'none';
+            document.getElementById('content').innerHTML = content;
+            document.getElementById('content').style.display = 'block';
+            document.getElementById('loading').style.display = 'none';
         }
         
         function showError() {
