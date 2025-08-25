@@ -431,7 +431,8 @@
                 const closeBtn = document.getElementById('closeMenuModal');
                 const pdfFrame = document.getElementById('menuPdfFrame');
                 openBtn.onclick = function() {
-                    pdfFrame.src = menu;
+                    // Use Google Docs Viewer for PDF preview
+                    pdfFrame.src = `https://docs.google.com/gview?url=${encodeURIComponent(menu)}&embedded=true`;
                     modal.classList.add('active');
                 };
                 closeBtn.onclick = function() {
