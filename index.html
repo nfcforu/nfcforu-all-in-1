@@ -375,13 +375,13 @@
                 socialLinks = Object.entries(socials).map(([platform, url]) => {
                     const socialInfo = socialIcons[platform] || { icon: 'fas fa-link', class: '' };
                     return `
-                        <a href="${url}" target="_blank" class="contact-item ${socialInfo.class}" style="margin-bottom: 0;">
-                            <div class="contact-icon">
-                                <i class="${socialInfo.icon}"></i>
-                            </div>
-                            <div class="contact-text" style="font-size:0.95em;text-transform:capitalize;">${platform}</div>
-                        </a>
-                    `;
+    <a href="${url}" target="_blank" class="contact-item ${socialInfo.class}">
+        <div class="contact-icon">
+            <i class="${socialInfo.icon}"></i>
+        </div>
+        <div class="contact-text" style="font-size:0.95em;text-transform:capitalize;">${platform}</div>
+    </a>
+`;
                 }).join('');
             }
 
