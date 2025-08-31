@@ -154,49 +154,21 @@
         }
         
         .social-link {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            background: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            position: relative;
-            overflow: hidden;
+            width: auto !important;
+            height: auto !important;
+            border-radius: 15px !important;
+            background: #f8f9fa !important;
+            box-shadow: none !important;
+            justify-content: flex-start !important;
+            margin: 0 !important;
+            padding: 0 !important;
         }
-        
         .social-link:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            display: none !important;
         }
-        
-        .social-link:hover:before {
-            opacity: 1;
-        }
-        
-        .social-link:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.3);
-        }
-        
         .social-link i {
-            font-size: 1.4em;
-            z-index: 1;
-            transition: color 0.3s ease;
-        }
-        
-        .social-link:hover i {
-            color: white;
+            font-size: 1.3em;
+            color: inherit;
         }
         
         /* Social platform specific colors */
