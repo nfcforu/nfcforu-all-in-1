@@ -310,6 +310,18 @@
                 height: 70vh;
             }
         }
+        
+        .social-links-vertical {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .contact-section .contact-item {
+      margin-bottom: 16px;
+    }
+    .social-section {
+      margin-top: 16px;
+    }
     </style>
 </head>
 <body>
@@ -336,6 +348,9 @@
         const phone = business.phone || '';
         const menu = business.menu || '';
         const socials = business.socials || {};
+
+        // Set body background
+        document.body.style.background = gradient;
 
         // Address rendering logic
         let addressHtml = '';
@@ -378,23 +393,33 @@
         let menuHtml = '';
         if (menu) {
           menuHtml = `
-            <a href="${menu}" target="_blank" class="menu-btn">View Menu</a>
+            <a href="${menu}" target="_blank" class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <div class="contact-text">View Menu</div>
+            </a>
           `;
         }
 
-        // Social links
+        // Social links (vertical)
         let socialsHtml = '';
         if (Object.keys(socials).length > 0) {
-          socialsHtml = `<div class="social-section">
-            <div class="social-title">Socials</div>
-            <div class="social-links">
-              ${Object.entries(socials).map(([platform, url]) => `
-                <a href="${url}" target="_blank" class="social-link social-${platform}">
-                  <i class="fab fa-${platform}"></i>
-                </a>
-              `).join('')}
+          socialsHtml = `
+            <div class="social-section">
+              <div class="social-title">Socials</div>
+              <div class="social-links-vertical">
+                ${Object.entries(socials).map(([platform, url]) => `
+                  <a href="${url}" target="_blank" class="contact-item social-link social-${platform}">
+                    <div class="contact-icon">
+                      <i class="fab fa-${platform}"></i>
+                    </div>
+                    <div class="contact-text">${platform.charAt(0).toUpperCase() + platform.slice(1)}</div>
+                  </a>
+                `).join('')}
+              </div>
             </div>
-          </div>`;
+          `;
         }
 
         // Render card
@@ -403,12 +428,12 @@
             <img src="${image}" alt="${name}" class="profile-image">
             <div class="business-name">${name}</div>
           </div>
-          ${menuHtml}
           <div class="contact-section">
             ${addressHtml}
             ${phoneHtml}
+            ${menuHtml}
+            ${socialsHtml}
           </div>
-          ${socialsHtml}
         `;
       } catch (e) {
         document.getElementById('content').innerHTML = '<div class="error"><h2>Error loading business data</h2></div>';
