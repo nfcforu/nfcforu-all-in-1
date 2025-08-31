@@ -398,23 +398,23 @@
             }
 
             let addressHtml = '';
-if (address) {
-  if (typeof address === 'object' && address.url && address.text) {
+if (business.address) {
+  if (typeof business.address === 'object' && business.address.url && business.address.text) {
     addressHtml = `
-      <a href="${address.url}" target="_blank" class="contact-item">
+      <a href="${business.address.url}" target="_blank" class="contact-item">
         <div class="contact-icon">
           <i class="fas fa-map-marker-alt"></i>
         </div>
-        <div class="contact-text address-text">${address.text}</div>
+        <div class="contact-text address-text">${business.address.text}</div>
       </a>
     `;
-  } else if (typeof address === 'string') {
+  } else if (typeof business.address === 'string') {
     addressHtml = `
-      <a href="https://maps.google.com/?q=${encodeURIComponent(address)}" target="_blank" class="contact-item">
+      <a href="https://maps.google.com/?q=${encodeURIComponent(business.address)}" target="_blank" class="contact-item">
         <div class="contact-icon">
           <i class="fas fa-map-marker-alt"></i>
         </div>
-        <div class="contact-text address-text">${address}</div>
+        <div class="contact-text address-text">${business.address}</div>
       </a>
     `;
   }
