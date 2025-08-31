@@ -397,6 +397,29 @@
                 `;
             }
 
+            let addressHtml = '';
+if (address) {
+  if (typeof address === 'object' && address.url && address.text) {
+    addressHtml = `
+      <a href="${address.url}" target="_blank" class="contact-item">
+        <div class="contact-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div class="contact-text address-text">${address.text}</div>
+      </a>
+    `;
+  } else if (typeof address === 'string') {
+    addressHtml = `
+      <a href="https://maps.google.com/?q=${encodeURIComponent(address)}" target="_blank" class="contact-item">
+        <div class="contact-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div class="contact-text address-text">${address}</div>
+      </a>
+    `;
+  }
+}
+
             const content = `
                 <div class="profile-section" style="background: ${gradient || 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}">
                     <img src="${image}" alt="${name}" class="profile-image" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik02MCA4MEM3MS4wNDU3IDgwIDgwIDcxLjA0NTcgODAgNjBDODAgNDguOTU0MyA3MS4wNDU3IDQwIDYwIDQwQzQ4Ljk1NDMgNDAgNDAgNDguOTU0MyA0MCA2MEM0MCA3MS4wNDU3IDQ4Ljk1NDMgODAgNjAgODBaIiBmaWxsPSIjOUNBM0FGIi8+PC9zdmc+'">
@@ -409,12 +432,7 @@
                         </div>
                         <div class="contact-text">${phone}</div>
                     </a>
-                    <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}" target="_blank" class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text address-text">${address}</div>
-                    </a>
+                    ${addressHtml}
                     ${menuBtn}
                     ${socialLinks}
                 </div>
