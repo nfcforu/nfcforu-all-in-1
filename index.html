@@ -275,6 +275,16 @@
 <body>
   <div class="container" id="content"></div>
   <script>
+    // Helper to extract the first color from a gradient or return the color itself
+    function getMainColor(gradient) {
+      if (!gradient) return "#ff9966";
+      if (gradient.startsWith("linear-gradient")) {
+        const match = gradient.match(/#([0-9a-fA-F]{3,8})/);
+        return match ? match[0] : "#ff9966";
+      }
+      return gradient;
+    }
+
     async function loadBusiness() {
       const path = window.location.pathname.replace(/^\/+|\/+$/g, '');
       const businessId = path || '0001';
@@ -293,6 +303,7 @@
         const name = business.name || 'Business Name';
         const image = business.image || 'https://via.placeholder.com/150x150?text=No+Image';
         const gradient = business.gradient || '#f5f5f5';
+        const mainColor = getMainColor(gradient);
         const phone = business.phone || '';
         const menu = business.menu || '';
         const socials = business.socials || {};
@@ -306,7 +317,7 @@
           if (typeof business.address === 'object' && business.address.url && business.address.text) {
             addressHtml = `
               <a href="${business.address.url}" target="_blank" class="contact-item">
-                <div class="contact-icon">
+                <div class="contact-icon" style="color:${mainColor}">
                   <i class="fas fa-map-marker-alt"></i>
                 </div>
                 <div class="contact-text address-text">${business.address.text}</div>
@@ -315,7 +326,7 @@
           } else if (typeof business.address === 'string') {
             addressHtml = `
               <a href="https://maps.google.com/?q=${encodeURIComponent(business.address)}" target="_blank" class="contact-item">
-                <div class="contact-icon">
+                <div class="contact-icon" style="color:${mainColor}">
                   <i class="fas fa-map-marker-alt"></i>
                 </div>
                 <div class="contact-text address-text">${business.address}</div>
@@ -329,7 +340,7 @@
         if (phone) {
           phoneHtml = `
             <a href="tel:${phone}" class="contact-item">
-              <div class="contact-icon">
+              <div class="contact-icon" style="color:${mainColor}">
                 <i class="fas fa-phone"></i>
               </div>
               <div class="contact-text">${phone}</div>
@@ -342,7 +353,7 @@
         if (menu) {
           menuHtml = `
             <a href="${menu}" target="_blank" class="contact-item">
-              <div class="contact-icon">
+              <div class="contact-icon" style="color:${mainColor}">
                 <i class="fas fa-utensils"></i>
               </div>
               <div class="contact-text">View Menu</div>
@@ -350,12 +361,12 @@
           `;
         }
 
-        // Social links (rendered as contact-item)
+        // Social links (vertical, same style)
         let socialsHtml = '';
         if (Object.keys(socials).length > 0) {
           socialsHtml = Object.entries(socials).map(([platform, url]) => `
             <a href="${url}" target="_blank" class="contact-item">
-              <div class="contact-icon">
+              <div class="contact-icon" style="color:${mainColor}">
                 <i class="fab fa-${platform}"></i>
               </div>
               <div class="contact-text">${platform.charAt(0).toUpperCase() + platform.slice(1)}</div>
