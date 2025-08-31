@@ -314,14 +314,10 @@
 </head>
 <body>
   <div class="container" id="content"></div>
-  <div id="loading" style="display:none;">Loading...</div>
-  <div class="menu-modal" id="menuModal"></div>
   <script>
     async function loadBusiness() {
-      document.getElementById('loading').style.display = 'block';
-      // Get business ID from URL path
       const path = window.location.pathname.replace(/^\/+|\/+$/g, '');
-      const businessId = path || '0001'; // fallback to first business if root
+      const businessId = path || '0001';
 
       try {
         const res = await fetch('/businesses.json');
@@ -332,6 +328,14 @@
           document.getElementById('content').innerHTML = '<div class="error"><h2>Business not found</h2></div>';
           return;
         }
+
+        // Use defaults if fields are missing
+        const name = business.name || 'Business Name';
+        const image = business.image || 'https://via.placeholder.com/150x150?text=No+Image';
+        const gradient = business.gradient || '#f5f5f5';
+        const phone = business.phone || '';
+        const menu = business.menu || '';
+        const socials = business.socials || {};
 
         // Address rendering logic
         let addressHtml = '';
@@ -357,13 +361,34 @@
           }
         }
 
+        // Phone
+        let phoneHtml = '';
+        if (phone) {
+          phoneHtml = `
+            <a href="tel:${phone}" class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-text">${phone}</div>
+            </a>
+          `;
+        }
+
+        // Menu
+        let menuHtml = '';
+        if (menu) {
+          menuHtml = `
+            <a href="${menu}" target="_blank" class="menu-btn">View Menu</a>
+          `;
+        }
+
         // Social links
         let socialsHtml = '';
-        if (business.socials) {
+        if (Object.keys(socials).length > 0) {
           socialsHtml = `<div class="social-section">
             <div class="social-title">Socials</div>
             <div class="social-links">
-              ${Object.entries(business.socials).map(([platform, url]) => `
+              ${Object.entries(socials).map(([platform, url]) => `
                 <a href="${url}" target="_blank" class="social-link social-${platform}">
                   <i class="fab fa-${platform}"></i>
                 </a>
@@ -372,32 +397,11 @@
           </div>`;
         }
 
-        // Phone
-        let phoneHtml = '';
-        if (business.phone) {
-          phoneHtml = `
-            <a href="tel:${business.phone}" class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-phone"></i>
-              </div>
-              <div class="contact-text">${business.phone}</div>
-            </a>
-          `;
-        }
-
-        // Menu
-        let menuHtml = '';
-        if (business.menu) {
-          menuHtml = `
-            <a href="${business.menu}" target="_blank" class="menu-btn">View Menu</a>
-          `;
-        }
-
         // Render card
         document.getElementById('content').innerHTML = `
-          <div class="profile-section" style="background:${business.gradient || '#fff'}">
-            <img src="${business.image || ''}" alt="${business.name}" class="profile-image">
-            <div class="business-name">${business.name || ''}</div>
+          <div class="profile-section" style="background:${gradient}">
+            <img src="${image}" alt="${name}" class="profile-image">
+            <div class="business-name">${name}</div>
             ${menuHtml}
           </div>
           <div class="contact-section">
@@ -408,8 +412,6 @@
         `;
       } catch (e) {
         document.getElementById('content').innerHTML = '<div class="error"><h2>Error loading business data</h2></div>';
-      } finally {
-        document.getElementById('loading').style.display = 'none';
       }
     }
     loadBusiness();
