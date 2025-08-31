@@ -313,182 +313,106 @@
     </style>
 </head>
 <body>
-  <div class="container" id="content">
-    <!-- Card content will be injected here -->
-  </div>
+  <div class="container" id="content"></div>
   <div id="loading" style="display:none;">Loading...</div>
-  <div class="menu-modal" id="menuModal">
-    <div class="menu-modal-content">
-      <div class="menu-modal-header">
-        <button class="menu-modal-close" id="closeMenuModal" title="Close">&times;</button>
-      </div>
-      <iframe id="menuPdfFrame" class="menu-modal-iframe"></iframe>
-    </div>
-  </div>
+  <div class="menu-modal" id="menuModal"></div>
   <script>
-        // Get business ID from URL path
-        const path = window.location.pathname.replace(/^\/+|\/+$/g, '').split('/')[0];
-        const businessId = path || 'john-coffee';
-        
-        // Social media icons mapping
-        const socialIcons = {
-            instagram: { icon: 'fab fa-instagram', class: 'social-instagram' },
-            facebook: { icon: 'fab fa-facebook-f', class: 'social-facebook' },
-            twitter: { icon: 'fab fa-twitter', class: 'social-twitter' },
-            linkedin: { icon: 'fab fa-linkedin-in', class: 'social-linkedin' },
-            tiktok: { icon: 'fab fa-tiktok', class: 'social-tiktok' },
-            whatsapp: { icon: 'fab fa-whatsapp', class: 'social-whatsapp' },
-            youtube: { icon: 'fab fa-youtube', class: 'social-youtube' }
-        };
-        
-        // Load business data
-        async function loadBusinessData() {
-            try {
-                const response = await fetch('/businesses.json');
-                if (!response.ok) throw new Error('Failed to load businesses data');
-                
-                const allBusinesses = await response.json();
-                const businessData = allBusinesses[businessId];
-                
-                if (!businessData) {
-                    throw new Error('Business not found');
-                } 
-                
-                renderBusinessCard(businessData);
-            } catch (error) {
-                console.error('Error loading business data:', error);
-                showError();
-            }
+    async function loadBusiness() {
+      document.getElementById('loading').style.display = 'block';
+      // Get business ID from URL path
+      const path = window.location.pathname.replace(/^\/+|\/+$/g, '');
+      const businessId = path || '0001'; // fallback to first business if root
+
+      try {
+        const res = await fetch('/businesses.json');
+        if (!res.ok) throw new Error('Failed to load businesses.json');
+        const businesses = await res.json();
+        const business = businesses[businessId];
+        if (!business) {
+          document.getElementById('content').innerHTML = '<div class="error"><h2>Business not found</h2></div>';
+          return;
         }
-        
-        function renderBusinessCard(data) {
-            const { name, image, address, phone, socials, gradient, menu } = data;
 
-            // Set page title
-            document.getElementById('page-title').textContent = `${name} - Digital Business Card`;
-
-            // Set body background to business gradient or default
-            document.body.style.background = gradient || 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-
-            let socialLinks = '';
-            if (socials && Object.keys(socials).length > 0) {
-                socialLinks = Object.entries(socials).map(([platform, url]) => {
-                    const socialInfo = socialIcons[platform] || { icon: 'fas fa-link', class: '' };
-                    return `
-    <a href="${url}" target="_blank" class="contact-item ${socialInfo.class}">
-        <div class="contact-icon">
-            <i class="${socialInfo.icon}"></i>
-        </div>
-        <div class="contact-text" style="font-size:0.95em;text-transform:capitalize;">${platform}</div>
-    </a>
-`;
-                }).join('');
-            }
-
-            let menuBtn = '';
-            if (menu) {
-                menuBtn = `
-                    <a href="javascript:void(0)" class="contact-item" id="openMenuBtn">
-                        <div class="contact-icon">
-                            <i class="fas fa-utensils"></i>
-                        </div>
-                        <div class="contact-text">Menu</div>
-                    </a>
-                `;
-            }
-
-            let addressHtml = '';
-if (business.address) {
-  if (typeof business.address === 'object' && business.address.url && business.address.text) {
-    addressHtml = `
-      <a href="${business.address.url}" target="_blank" class="contact-item">
-        <div class="contact-icon">
-          <i class="fas fa-map-marker-alt"></i>
-        </div>
-        <div class="contact-text address-text">${business.address.text}</div>
-      </a>
-    `;
-  } else if (typeof business.address === 'string') {
-    addressHtml = `
-      <a href="https://maps.google.com/?q=${encodeURIComponent(business.address)}" target="_blank" class="contact-item">
-        <div class="contact-icon">
-          <i class="fas fa-map-marker-alt"></i>
-        </div>
-        <div class="contact-text address-text">${business.address}</div>
-      </a>
-    `;
-  }
-}
-
-            const content = `
-                <div class="profile-section" style="background: ${gradient || 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}">
-                    <img src="${image}" alt="${name}" class="profile-image" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik02MCA4MEM3MS4wNDU3IDgwIDgwIDcxLjA0NTcgODAgNjBDODAgNDguOTU0MyA3MS4wNDU3IDQwIDYwIDQwQzQ4Ljk1NDMgNDAgNDAgNDguOTU0MyA0MCA2MEM0MCA3MS4wNDU3IDQ4Ljk1NDMgODAgNjAgODBaIiBmaWxsPSIjOUNBM0FGIi8+PC9zdmc+'">
-                    <h1 class="business-name">${name}</h1>
+        // Address rendering logic
+        let addressHtml = '';
+        if (business.address) {
+          if (typeof business.address === 'object' && business.address.url && business.address.text) {
+            addressHtml = `
+              <a href="${business.address.url}" target="_blank" class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
                 </div>
-                <div class="contact-section">
-                    <a href="tel:${phone}" class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-text">${phone}</div>
-                    </a>
-                    ${addressHtml}
-                    ${menuBtn}
-                    ${socialLinks}
-                </div>
+                <div class="contact-text address-text">${business.address.text}</div>
+              </a>
             `;
-
-            document.getElementById('content').innerHTML = content;
-            document.getElementById('content').style.display = 'block';
-            document.getElementById('loading').style.display = 'none';
-
-            // Menu modal logic
-            if (menu) {
-                const openBtn = document.getElementById('openMenuBtn');
-                const modal = document.getElementById('menuModal');
-                const closeBtn = document.getElementById('closeMenuModal');
-                const pdfFrame = document.getElementById('menuPdfFrame');
-                openBtn.onclick = function() {
-                    pdfFrame.src = menu;
-                    modal.classList.add('active');
-                };
-                closeBtn.onclick = function() {
-                    modal.classList.remove('active');
-                    pdfFrame.src = '';
-                };
-                // Close modal on outside click
-                modal.onclick = function(e) {
-                    if (e.target === modal) {
-                        modal.classList.remove('active');
-                        pdfFrame.src = '';
-                    }
-                };
-            }
-        }
-
-        function showError() {
-            document.getElementById('content').innerHTML = `
-                <div class="error">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <h2>Business Not Found</h2>
-                    <p>Sorry, we couldn't find this business card.</p>
+          } else if (typeof business.address === 'string') {
+            addressHtml = `
+              <a href="https://maps.google.com/?q=${encodeURIComponent(business.address)}" target="_blank" class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
                 </div>
+                <div class="contact-text address-text">${business.address}</div>
+              </a>
             `;
-            document.getElementById('content').style.display = 'block';
-            document.getElementById('loading').style.display = 'none';
+          }
         }
 
-        // Show loading spinner while fetching
-        document.getElementById('loading').innerHTML = `
-            <div class="loading">
-                <i class="fas fa-spinner fa-spin"></i>
-                <div>Loading...</div>
+        // Social links
+        let socialsHtml = '';
+        if (business.socials) {
+          socialsHtml = `<div class="social-section">
+            <div class="social-title">Socials</div>
+            <div class="social-links">
+              ${Object.entries(business.socials).map(([platform, url]) => `
+                <a href="${url}" target="_blank" class="social-link social-${platform}">
+                  <i class="fab fa-${platform}"></i>
+                </a>
+              `).join('')}
             </div>
-        `;
-        document.getElementById('loading').style.display = 'block';
+          </div>`;
+        }
 
-        // Start loading data
-        loadBusinessData();
-    </script>
+        // Phone
+        let phoneHtml = '';
+        if (business.phone) {
+          phoneHtml = `
+            <a href="tel:${business.phone}" class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-text">${business.phone}</div>
+            </a>
+          `;
+        }
+
+        // Menu
+        let menuHtml = '';
+        if (business.menu) {
+          menuHtml = `
+            <a href="${business.menu}" target="_blank" class="menu-btn">View Menu</a>
+          `;
+        }
+
+        // Render card
+        document.getElementById('content').innerHTML = `
+          <div class="profile-section" style="background:${business.gradient || '#fff'}">
+            <img src="${business.image || ''}" alt="${business.name}" class="profile-image">
+            <div class="business-name">${business.name || ''}</div>
+            ${menuHtml}
+          </div>
+          <div class="contact-section">
+            ${addressHtml}
+            ${phoneHtml}
+          </div>
+          ${socialsHtml}
+        `;
+      } catch (e) {
+        document.getElementById('content').innerHTML = '<div class="error"><h2>Error loading business data</h2></div>';
+      } finally {
+        document.getElementById('loading').style.display = 'none';
+      }
+    }
+    loadBusiness();
+  </script>
 </body>
 </html>
