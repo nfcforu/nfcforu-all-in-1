@@ -274,6 +274,12 @@
 </head>
 <body>
   <div class="container" id="content"></div>
+  <div class="menu-modal" id="menuModal">
+  <div class="menu-modal-content">
+    <button class="menu-modal-close" id="closeMenuBtn" title="Close">&times;</button>
+    <iframe id="menuIframe" class="menu-modal-iframe" src="" frameborder="0"></iframe>
+  </div>
+</div>
   <script>
     // Helper to extract the first color from a gradient or return the color itself
     function getMainColor(gradient) {
@@ -352,12 +358,12 @@
         let menuHtml = '';
         if (menu) {
           menuHtml = `
-            <a href="${menu}" target="_blank" class="contact-item">
+            <button class="contact-item" id="openMenuBtn" type="button">
               <div class="contact-icon" style="color:${mainColor}">
                 <i class="fas fa-utensils"></i>
               </div>
               <div class="contact-text">View Menu</div>
-            </a>
+            </button>
           `;
         }
 
@@ -387,6 +393,29 @@
             ${socialsHtml}
           </div>
         `;
+
+        // After rendering the card
+        if (menu) {
+          const openMenuBtn = document.getElementById('openMenuBtn');
+          const menuModal = document.getElementById('menuModal');
+          const menuIframe = document.getElementById('menuIframe');
+          const closeMenuBtn = document.getElementById('closeMenuBtn');
+          openMenuBtn.onclick = () => {
+            menuIframe.src = menu;
+            menuModal.classList.add('active');
+          };
+          closeMenuBtn.onclick = () => {
+            menuModal.classList.remove('active');
+            menuIframe.src = '';
+          };
+          // Optional: close modal when clicking outside content
+          menuModal.onclick = (e) => {
+            if (e.target === menuModal) {
+              menuModal.classList.remove('active');
+              menuIframe.src = '';
+            }
+          };
+        }
       } catch (e) {
         document.getElementById('content').innerHTML = '<div class="error"><h2>Error loading business data</h2></div>';
       }
