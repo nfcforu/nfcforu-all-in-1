@@ -358,12 +358,12 @@
         let menuHtml = '';
         if (menu) {
           menuHtml = `
-            <button class="contact-item" id="openMenuBtn" type="button">
+            <a href="#" class="contact-item" id="openMenuBtn">
               <div class="contact-icon" style="color:${mainColor}">
                 <i class="fas fa-utensils"></i>
               </div>
               <div class="contact-text">View Menu</div>
-            </button>
+            </a>
           `;
         }
 
@@ -400,7 +400,8 @@
           const menuModal = document.getElementById('menuModal');
           const menuIframe = document.getElementById('menuIframe');
           const closeMenuBtn = document.getElementById('closeMenuBtn');
-          openMenuBtn.onclick = () => {
+          openMenuBtn.onclick = (e) => {
+            e.preventDefault();
             menuIframe.src = menu;
             menuModal.classList.add('active');
           };
@@ -408,7 +409,6 @@
             menuModal.classList.remove('active');
             menuIframe.src = '';
           };
-          // Optional: close modal when clicking outside content
           menuModal.onclick = (e) => {
             if (e.target === menuModal) {
               menuModal.classList.remove('active');
