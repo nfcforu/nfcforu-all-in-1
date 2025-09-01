@@ -6,283 +6,141 @@
     <title id="page-title">Business Card</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */ /* Remove this line */
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
             min-height: 100vh;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            transition: background 0.3s;
         }
-        
-        @keyframes fadeSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
         .container {
-            max-width: 400px;
-            width: 100%;
-            background: white;
-            border-radius: 25px;
-            overflow: hidden;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-            animation: fadeSlideUp 0.8s cubic-bezier(.4,1.4,.6,1) both;
+            max-width: 420px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.95);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+            padding: 0 0 32px 0;
+            animation: fadeSlideUp 0.6s;
         }
-        
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        @keyframes fadeSlideUp {
+            from { opacity: 0; transform: translateY(40px);}
+            to { opacity: 1; transform: translateY(0);}
         }
-        
         .profile-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 50px 30px 40px 30px; /* more top/bottom padding */
+            border-radius: 18px 18px 0 0;
+            padding: 32px 0 18px 0;
             text-align: center;
-            color: white;
         }
-        
         .profile-image {
-            width: 180px;
-            height: 180px;
+            width: 110px;
+            height: 110px;
             object-fit: cover;
             border-radius: 50%;
-            border: 6px solid #fff;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-            margin-bottom: 28px; /* more space below image */
-            background: #fff;
-            transition: transform 0.2s;
+            border: 4px solid #fff;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+            margin-bottom: 12px;
+            background: #eee;
         }
-        .profile-image:hover {
-            transform: scale(1.05);
-        }
-        
         .business-name {
-            font-size: 2.2em; /* larger font */
-            font-weight: 700;
-            margin-bottom: 18px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            letter-spacing: 1px;
-        }
-        
-        .contact-section {
-            padding: 30px;
-        }
-        
-        /* Make all contact items (including socials) look the same */
-.contact-item {
-  display: flex;
-  align-items: center;
-  background: #f8f9fa;
-  border-radius: 15px;
-  padding: 12px 18px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  transition: background 0.2s;
-  text-decoration: none;
-  color: inherit;
-  min-width: 220px;
-  max-width: 100%;
-  font-size: 1.1em;
-}
-.contact-item:last-child {
-  margin-bottom: 0;
-}
-.contact-item:hover {
-  background: #ececec;
-}
-.contact-icon {
-  margin-right: 16px;
-  font-size: 1.3em;
-  width: 28px;
-  text-align: center;
-}
-.contact-text {
-  flex: 1;
-  word-break: break-word;
-}
-
-/* Remove any previous social-link or social-section styling */
-.social-link, .social-section, .social-links, .social-links-vertical {
-  all: unset;
-}
-        
-        .social-title {
-            text-align: center;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #333;
-            font-size: 1.1em;
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        
-        .social-link {
-            width: auto !important;
-            height: auto !important;
-            border-radius: 15px !important;
-            background: #f8f9fa !important;
-            box-shadow: none !important;
-            justify-content: flex-start !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-        .social-link:before {
-            display: none !important;
-        }
-        .social-link i {
-            font-size: 1.3em;
-            color: inherit;
-        }
-        
-        /* Social platform specific colors */
-        .social-instagram i { color: #E4405F; }
-        .social-facebook i { color: #1877F2; }
-        .social-twitter i { color: #1DA1F2; }
-        .social-linkedin i { color: #0077B5; }
-        .social-tiktok i { color: #000000; }
-        .social-whatsapp i { color: #25D366; }
-        .social-youtube i { color: #FF0000; }
-        
-        .loading {
-            text-align: center;
-            padding: 80px 30px;
-            color: #666;
-        }
-        
-        .loading i {
             font-size: 2em;
-            margin-bottom: 15px;
-            animation: spin 2s linear infinite;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #222;
         }
-        
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        .contact-section {
+            padding: 24px 28px 0 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
         }
-        
-        .error {
-            text-align: center;
-            padding: 80px 30px;
-            color: #e74c3c;
-        }
-        
-        .error i {
-            font-size: 3em;
-            margin-bottom: 15px;
-        }
-        
-        .error h2 {
-            margin-bottom: 10px;
-            font-size: 1.5em;
-        }
-        
-        .menu-btn {
+        .contact-item {
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 14px 20px;
-            margin-bottom: 12px;
-            background: #fffbe6;
+            background: #f8f9fa;
             border-radius: 15px;
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            font-size: 1em;
-            border: 2px solid #F7DA1E;
-            cursor: pointer;
-            transition: all 0.3s;
+            padding: 12px 18px;
+            margin-bottom: 16px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: background 0.2s;
+            text-decoration: none;
+            color: inherit;
+            min-width: 220px;
+            max-width: 100%;
+            font-size: 1.1em;
+            cursor: pointer;
         }
-        .menu-btn:hover {
-            background: #fff3b0;
-            border-color: #f1c40f;
+        .contact-item:last-child {
+            margin-bottom: 0;
         }
+        .contact-item:hover {
+            background: #ececec;
+        }
+        .contact-icon {
+            margin-right: 16px;
+            font-size: 1.3em;
+            width: 28px;
+            text-align: center;
+        }
+        .contact-text {
+            flex: 1;
+            word-break: break-word;
+        }
+        /* Modal styles */
         .menu-modal {
             display: none;
             position: fixed;
-            z-index: 9999;
-            left: 0; top: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.45);
+            z-index: 1000;
+            left: 0; top: 0; width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.5);
             align-items: center;
             justify-content: center;
         }
-        .menu-modal.active {
-            display: flex;
-        }
+        .menu-modal.active { display: flex; }
         .menu-modal-content {
-            background: #fff;
-            border-radius: 16px;
-            max-width: 95vw;
-            max-height: 90vh;
-            padding: 0;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
             position: relative;
+            max-width: 90vw;
+            width: 600px;
+            height: 80vh;
+            margin: auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 32px rgba(0,0,0,0.2);
             display: flex;
             flex-direction: column;
-            align-items: stretch;
-        }
-        .menu-modal-header {
-            display: flex;
-            justify-content: flex-end;
-            padding: 8px 16px 0 0;
         }
         .menu-modal-close {
+            position: absolute;
+            top: 10px;
+            right: 16px;
+            font-size: 2em;
             background: none;
             border: none;
-            font-size: 2em;
-            color: #333;
             cursor: pointer;
+            color: #333;
         }
         .menu-modal-iframe {
-            width: 80vw;
-            height: 80vh;
+            width: 100%;
+            height: 100%;
             border: none;
-            border-radius: 0 0 16px 16px;
+            border-radius: 12px;
+            flex: 1;
         }
-        @media (max-width: 600px) {
-            .menu-modal-iframe {
-                width: 98vw;
-                height: 70vh;
-            }
+        @media (max-width: 700px) {
+            .container { max-width: 98vw; }
+            .menu-modal-content { width: 98vw; }
         }
     </style>
 </head>
 <body>
   <div class="container" id="content"></div>
   <!-- Modal for PDF menu -->
-  <div class="menu-modal" id="menuModal" style="display:none;">
-    <div class="menu-modal-content" style="position:relative;max-width:90vw;width:600px;height:80vh;margin:auto;background:#fff;border-radius:12px;box-shadow:0 4px 32px rgba(0,0,0,0.2);">
-      <button class="menu-modal-close" id="closeMenuBtn" title="Close" style="position:absolute;top:10px;right:16px;font-size:2em;background:none;border:none;cursor:pointer;">&times;</button>
-      <iframe id="menuIframe" class="menu-modal-iframe" src="" frameborder="0" style="width:100%;height:100%;border:none;border-radius:12px;"></iframe>
+  <div class="menu-modal" id="menuModal">
+    <div class="menu-modal-content">
+      <button class="menu-modal-close" id="closeMenuBtn" title="Close">&times;</button>
+      <iframe id="menuIframe" class="menu-modal-iframe" src="" frameborder="0"></iframe>
     </div>
   </div>
   <script>
-    // Helper to extract color from gradient or use as is
+    // Helper to extract the first color from a gradient or return the color itself
     function getMainColor(gradient) {
       if (!gradient) return "#ff9966";
       if (gradient.startsWith("linear-gradient")) {
@@ -404,15 +262,15 @@
           openMenuBtn.onclick = (e) => {
             e.preventDefault();
             menuIframe.src = menu;
-            menuModal.style.display = 'flex';
+            menuModal.classList.add('active');
           };
           closeMenuBtn.onclick = () => {
-            menuModal.style.display = 'none';
+            menuModal.classList.remove('active');
             menuIframe.src = '';
           };
           menuModal.onclick = (e) => {
             if (e.target === menuModal) {
-              menuModal.style.display = 'none';
+              menuModal.classList.remove('active');
               menuIframe.src = '';
             }
           };
@@ -423,21 +281,5 @@
     }
     loadBusiness();
   </script>
-  <style>
-    /* ...your existing styles... */
-    .menu-modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0; top: 0; width: 100vw; height: 100vh;
-      background: rgba(0,0,0,0.5);
-      align-items: center;
-      justify-content: center;
-    }
-    .menu-modal.active { display: flex; }
-    .menu-modal-content { animation: fadeSlideUp 0.3s; }
-    .menu-modal-close { position: absolute; top: 10px; right: 16px; font-size: 2em; background: none; border: none; cursor: pointer; }
-    .menu-modal-iframe { width: 100%; height: 100%; border: none; border-radius: 12px; }
-  </style>
 </body>
 </html>
