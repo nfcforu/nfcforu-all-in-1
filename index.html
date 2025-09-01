@@ -274,14 +274,15 @@
 </head>
 <body>
   <div class="container" id="content"></div>
-  <div class="menu-modal" id="menuModal">
-  <div class="menu-modal-content">
-    <button class="menu-modal-close" id="closeMenuBtn" title="Close">&times;</button>
-    <iframe id="menuIframe" class="menu-modal-iframe" src="" frameborder="0"></iframe>
+  <!-- Modal for PDF menu -->
+  <div class="menu-modal" id="menuModal" style="display:none;">
+    <div class="menu-modal-content" style="position:relative;max-width:90vw;width:600px;height:80vh;margin:auto;background:#fff;border-radius:12px;box-shadow:0 4px 32px rgba(0,0,0,0.2);">
+      <button class="menu-modal-close" id="closeMenuBtn" title="Close" style="position:absolute;top:10px;right:16px;font-size:2em;background:none;border:none;cursor:pointer;">&times;</button>
+      <iframe id="menuIframe" class="menu-modal-iframe" src="" frameborder="0" style="width:100%;height:100%;border:none;border-radius:12px;"></iframe>
+    </div>
   </div>
-</div>
   <script>
-    // Helper to extract the first color from a gradient or return the color itself
+    // Helper to extract color from gradient or use as is
     function getMainColor(gradient) {
       if (!gradient) return "#ff9966";
       if (gradient.startsWith("linear-gradient")) {
@@ -354,7 +355,7 @@
           `;
         }
 
-        // Menu
+        // Menu (open in modal)
         let menuHtml = '';
         if (menu) {
           menuHtml = `
@@ -394,7 +395,7 @@
           </div>
         `;
 
-        // After rendering the card
+        // Modal logic for menu
         if (menu) {
           const openMenuBtn = document.getElementById('openMenuBtn');
           const menuModal = document.getElementById('menuModal');
@@ -403,15 +404,15 @@
           openMenuBtn.onclick = (e) => {
             e.preventDefault();
             menuIframe.src = menu;
-            menuModal.classList.add('active');
+            menuModal.style.display = 'flex';
           };
           closeMenuBtn.onclick = () => {
-            menuModal.classList.remove('active');
+            menuModal.style.display = 'none';
             menuIframe.src = '';
           };
           menuModal.onclick = (e) => {
             if (e.target === menuModal) {
-              menuModal.classList.remove('active');
+              menuModal.style.display = 'none';
               menuIframe.src = '';
             }
           };
@@ -422,5 +423,21 @@
     }
     loadBusiness();
   </script>
+  <style>
+    /* ...your existing styles... */
+    .menu-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0; width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.5);
+      align-items: center;
+      justify-content: center;
+    }
+    .menu-modal.active { display: flex; }
+    .menu-modal-content { animation: fadeSlideUp 0.3s; }
+    .menu-modal-close { position: absolute; top: 10px; right: 16px; font-size: 2em; background: none; border: none; cursor: pointer; }
+    .menu-modal-iframe { width: 100%; height: 100%; border: none; border-radius: 12px; }
+  </style>
 </body>
 </html>
