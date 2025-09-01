@@ -1,16 +1,17 @@
 {
-  "0001": {
-    "name": "John's Coffee Shop",
-    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/viber_image_2025-08-03_17-53-12-050.jpg",
-    "address": "123 Main Street, Downtown, City 12345",
-    "phone": "+1234567890",
-    "gradient": "linear-gradient(135deg, #ff9966 0%, #ff5e62 100%)",
+  "Los-Tacos ": {
+    "name": "LOS TACOS",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/LOS-TACOS.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/FP8HbyrL1eQ5ndRTA",
+      "text": "Rue Harrag Mohamed Senoussi, Sétif"
+    },
+    "phone": "0662698843",
+    "gradient": "linear-gradient(135deg, #145960 0%, #004E52 100%)",
+    "menu": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/menu.pdf",
     "socials": {
-      "instagram": "https://instagram.com/johncoffeeshop",
-      "facebook": "https://facebook.com/johncoffeeshop",
-      "twitter": "https://twitter.com/johncoffee",
-      "linkedin": "https://linkedin.com/company/johncoffeeshop",
-      "tiktok": "https://tiktok.com/@johncoffeeshop"
+      "instagram": "https://www.instagram.com/pzlostacos/",
+      "facebook": "https://web.facebook.com/pzlostacos"
     }
   },
   "0002": {
