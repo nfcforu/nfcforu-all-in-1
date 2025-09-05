@@ -427,6 +427,52 @@
             return subtitles[type] || subtitles[platform] || 'Visiter le lien';
         }
         
+        // Helper to improve color contrast for better readability
+        function improveColorContrast(gradient) {
+            if (!gradient) return 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+            
+            // If it's already a gradient, return as is
+            if (gradient.includes('gradient')) {
+                return gradient;
+            }
+            
+            // If it's a solid color, check if it's too bright
+            const color = gradient.startsWith('#') ? gradient : '#667eea';
+            
+            // Convert hex to RGB to check brightness
+            const hex = color.replace('#', '');
+            const r = parseInt(hex.substr(0, 2), 16);
+            const g = parseInt(hex.substr(2, 2), 16);
+            const b = parseInt(hex.substr(4, 2), 16);
+            
+            // Calculate brightness (0-255)
+            const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+            
+            // If too bright (over 180), create a gradient to a darker version
+            if (brightness > 180) {
+                // Create a darker version by reducing RGB values
+                const darkerR = Math.max(0, Math.round(r * 0.3));
+                const darkerG = Math.max(0, Math.round(g * 0.3));
+                const darkerB = Math.max(0, Math.round(b * 0.3));
+                const darkerHex = `#${darkerR.toString(16).padStart(2, '0')}${darkerG.toString(16).padStart(2, '0')}${darkerB.toString(16).padStart(2, '0')}`;
+                
+                return `linear-gradient(135deg, ${color} 0%, ${darkerHex} 100%)`;
+            }
+            
+            // If color is fine, return as is
+            return gradient;
+        }
+        
+        // Helper to extract the first color from a gradient or return the color itself
+        function getMainColor(gradient) {
+            if (!gradient) return "#ff9966";
+            if (gradient.startsWith("linear-gradient")) {
+                const match = gradient.match(/#([0-9a-fA-F]{3,8})/);
+                return match ? match[0] : "#ff9966";
+            }
+            return gradient;
+        }
+        
         async function loadBusiness() {
             showLoading();
             
@@ -454,8 +500,9 @@
                 const menu = business.menu || '';
                 const socials = business.socials || {};
                 
-                // Set background
-                document.body.style.background = gradient;
+                // Set background with improved contrast
+                const improvedGradient = improveColorContrast(gradient);
+                document.body.style.background = improvedGradient;
                 document.title = name;
                 
                 // Build links array
@@ -585,7 +632,7 @@
             modalClose.addEventListener('click', closeModal);
             modalOverlay.addEventListener('click', (e) => {
                 if (e.target === modalOverlay) closeModal();
-            });     
+            });
             
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
