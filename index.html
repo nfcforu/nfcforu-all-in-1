@@ -518,7 +518,7 @@
                 
                 // Render the page
                 const linksHtml = links.map((link, index) => `
-                    <a href="${link.external ? link.url : '#'}" 
+                    <a href="${link.url}" 
                        class="link-item ${link.type}" 
                        ${link.external ? 'target="_blank" rel="noopener"' : ''}
                        ${link.modal ? 'data-modal="true" data-url="' + link.url + '"' : ''}
