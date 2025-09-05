@@ -43,13 +43,13 @@
         }
         
         .profile-avatar {
-            width: 96px;
-            height: 96px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #fff;
-            margin-bottom: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            border: 4px solid #fff;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 30px rgba(0,0,0,0.4);
             transition: transform 0.3s ease;
             cursor: pointer;
         }
@@ -383,7 +383,7 @@
             document.getElementById('mainContainer').innerHTML = `
                 <div class="loading-state">
                     <div class="loading-spinner"></div>
-                    <h2>Loading your business card...</h2>
+                    <h2>Chargement de votre carte de visite...</h2>
                 </div>
             `;
         }
@@ -391,7 +391,7 @@
         function showError(message) {
             document.getElementById('mainContainer').innerHTML = `
                 <div class="error-state">
-                    <h2>Oops! Something went wrong</h2>
+                    <h2>Oups ! Quelque chose s'est mal passé</h2>
                     <p>${message}</p>
                 </div>
             `;
@@ -415,16 +415,16 @@
         
         function getSubtitleForType(type, platform) {
             const subtitles = {
-                phone: 'Call us',
-                address: 'Get directions',
-                menu: 'View our menu',
-                instagram: 'Follow us',
-                facebook: 'Like our page',
-                whatsapp: 'Chat with us',
-                twitter: 'Follow us',
-                linkedin: 'Connect with us'
+                phone: 'Appelez-nous',
+                address: 'Obtenir les directions',
+                menu: 'Voir notre menu',
+                instagram: 'Suivez-nous',
+                facebook: 'Aimez notre page',
+                whatsapp: 'Discutez avec nous',
+                twitter: 'Suivez-nous',
+                linkedin: 'Connectez-vous avec nous'
             };
-            return subtitles[type] || subtitles[platform] || 'Visit link';
+            return subtitles[type] || subtitles[platform] || 'Visiter le lien';
         }
         
         async function loadBusiness() {
@@ -442,13 +442,13 @@
                 const business = businesses[businessId];
                 
                 if (!business) {
-                    showError(`Business "${businessId}" not found.`);
+                    showError(`Entreprise "${businessId}" introuvable.`);
                     return;
                 }
                 
                 // Extract business data
-                const name = business.name || 'Business Name';
-                const image = business.image || 'https://via.placeholder.com/96x96?text=' + encodeURIComponent(name.charAt(0));
+                const name = business.name || 'Nom de l\'entreprise';
+                const image = business.image || 'https://via.placeholder.com/140x140?text=' + encodeURIComponent(name.charAt(0));
                 const gradient = business.gradient || 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
                 const phone = business.phone || '';
                 const menu = business.menu || '';
@@ -467,7 +467,7 @@
                         links.push({
                             type: 'address',
                             title: business.address.text,
-                            subtitle: 'Get directions',
+                            subtitle: 'Obtenir les directions',
                             url: business.address.url,
                             external: true
                         });
@@ -475,21 +475,21 @@
                         links.push({
                             type: 'address',
                             title: business.address,
-                            subtitle: 'Get directions',
+                            subtitle: 'Obtenir les directions',
                             url: `https://maps.google.com/?q=${encodeURIComponent(business.address)}`,
                             external: true
                         });
                     }
                 }
                 
-                // Add phone link
+                // Add phone link - FIXED: external: true
                 if (phone) {
                     links.push({
                         type: 'phone',
                         title: phone,
-                        subtitle: 'Call us',
+                        subtitle: 'Appelez-nous',
                         url: `tel:${phone}`,
-                        external: false
+                        external: true
                     });
                 }
                 
@@ -497,8 +497,8 @@
                 if (menu) {
                     links.push({
                         type: 'menu',
-                        title: 'View Menu',
-                        subtitle: 'See what we offer',
+                        title: 'Voir le Menu',
+                        subtitle: 'Découvrez nos offres',
                         url: menu,
                         external: false,
                         modal: true
@@ -516,7 +516,7 @@
                     });
                 });
                 
-                // Render the page
+                // Render the page - FIXED: Always use link.url in href
                 const linksHtml = links.map((link, index) => `
                     <a href="${link.url}" 
                        class="link-item ${link.type}" 
@@ -541,9 +541,9 @@
                         <img src="${image}" 
                              alt="${name}" 
                              class="profile-avatar"
-                             onerror="this.src='https://via.placeholder.com/96x96?text=${encodeURIComponent(name.charAt(0))}&bg=667eea&color=fff'">
+                             onerror="this.src='https://via.placeholder.com/140x140?text=${encodeURIComponent(name.charAt(0))}&bg=667eea&color=fff'">
                         <h1 class="profile-name">${name}</h1>
-                        <p class="profile-bio">Connect with us through these links</p>
+                        <p class="profile-bio">Connectez-vous avec nous via ces liens</p>
                     </div>
                     <div class="links-container">
                         ${linksHtml}
@@ -555,7 +555,7 @@
                 
             } catch (error) {
                 console.error('Error loading business:', error);
-                showError('Unable to load business information. Please try again.');
+                showError('Impossible de charger les informations de l\'entreprise. Veuillez réessayer.');
             }
         }
         
