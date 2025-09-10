@@ -542,11 +542,14 @@
                 
                 // Add menu link
                 if (menu) {
+                    // Use Google Docs viewer for PDF display (works with GitHub raw URLs)
+                    const googleViewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(menu)}&embedded=true`;
+                    
                     links.push({
                         type: 'menu',
                         title: 'Voir le Menu',
                         subtitle: 'Découvrez nos offres',
-                        url: menu,
+                        url: googleViewerUrl,
                         external: false,
                         modal: true
                     });
