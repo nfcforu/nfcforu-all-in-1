@@ -17,12 +17,16 @@
   "sac-de-lux": {
     "name": "Sac De Luxe",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/viber_image_2025-08-03_17-53-12-050.jpg",
-    "address": "456 Beauty Ave, Uptown, City 67890",
-    "phone": "+0987654321",
+     "address": {
+      "url": "https://www.google.com/maps/place/Boutique+Sac+de+luxe/@36.2059736,5.4329927,17z/data=!4m6!3m5!1s0x12f31529b79ae597:0x8855050ad922e288!8m2!3d36.2059736!4d5.4355676!16s%2Fg%2F11s4bjzf4k?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
+      "text": " Boulvard n°03, Sétif"
+    },
+    "phone": "0772935076",
     "gradient": "linear-gradient(135deg, #ff9966 0%, #ff5e62 100%)",
     "socials": {
-      "facebook": "https://facebook.com/marysalon",
-      "whatsapp": "https://wa.me/0987654321"
+      "facebook": "https://web.facebook.com/sac2lux",
+      "whatsapp": "https://api.whatsapp.com/send?phone=%2B213782746952&fbclid=IwVERTSANA9qlleHRuA2FlbQIxMAABHiTFOvpE0tSm4h4NuBJWOgfe7GQddnsGreBOXORdLKSmWUMKUcRSe5mlkh9R_aem_v1coVSt8xLts_HUUOFyFsw&sfnsn=wa",
+      "tiktok":"https://www.tiktok.com/@sac_2_luxe"
     }
   },
   "FIVE-PIZZA": {
