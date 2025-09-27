@@ -95,6 +95,21 @@
       "text": "Rue Harrag Mohamed Senoussi, Sétif 19000"
     },
     "phone": "0697540682",
+    "gradient": " linear-gradient(90deg,rgba(244, 7, 187, 1) 0%, rgba(223, 236, 244, 1) 100%)",
+    "socials": {
+      "instagram": "https://www.instagram.com/kasr_elanaka19?igsh=ZHBrN2xlZ2FvNmF5 ",
+      "facebook": "https://www.facebook.com/share/1CjsyncM5C/",
+      "tiktok":"https://www.tiktok.com/@kasr_elanaka19?_t=ZS-904u6ivuPzO&_r=1"
+    }
+  },
+  "mad": {
+    "name": "kasr Elanaka",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-09-27 at 14.46.13_bb97c4e3.jpg",
+    "address": {
+      "url": "https://www.google.com/maps/place/Gami+glamour/@36.2015839,5.414143,17z/data=!3m1!4b1!4m6!3m5!1s0x12f315c185ce9839:0xe568101ffc85a880!8m2!3d36.2015839!4d5.4167179!16s%2Fg%2F11lp1yt5rm?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D",
+      "text": "Rue Harrag Mohamed Senoussi, Sétif 19000"
+    },
+    "phone": "0697540682",
     "gradient": "#F407BB",
     "socials": {
       "instagram": "https://www.instagram.com/kasr_elanaka19?igsh=ZHBrN2xlZ2FvNmF5 ",
