@@ -117,5 +117,20 @@
       "tiktok":"https://www.tiktok.com/@luxo_cadeaux_accessoires?_t=ZS-904yfECoI8W&_r=1",
       "snapchat":"https://www.snapchat.com/@boutique_luxo?share_id=WG8CgKcvfhQ&locale=en-US"
     }
+  },
+  "boutique_lmerta7": {
+    "name": "Boutique Lmerta7",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/521531045_17912834196159068_8631979837346519242_n.jpg",
+    "address": {
+      "url": "https://www.google.com/maps/place/Boutique+lmerta7/@36.1889916,5.4071164,17z/data=!3m1!4b1!4m6!3m5!1s0x12f315001daf931b:0x6f5817351f4f1821!8m2!3d36.1889916!4d5.4096913!16s%2Fg%2F11yh053m0b?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D",
+      "text": "Rue Bouatoura Meryem, Sétif 19000"
+    },
+    "phone": "0560632997",
+    "gradient": "#939A80",
+    "socials": {
+      "instagram": "https://www.instagram.com/boutique_lmerta7",
+      "tiktok":"https://www.tiktok.com/@boutiquelmerta7?",
+      "snapchat":"https://www.snapchat.com/@tkabachi2020?"
+    }
   }
 }
