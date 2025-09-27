@@ -132,5 +132,20 @@
       "tiktok":"https://www.tiktok.com/@boutiquelmerta7?",
       "snapchat":"https://www.snapchat.com/@tkabachi2020?"
     }
+  },
+    "Lattafa-Parfum-Setif": {
+    "name": "Lattafa Parfum Setif",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/bbac697a-e7f4-4a9c-bc03-93390853a849.png",
+    "address": {
+      "url": "https://www.google.com/maps/place/Lattafa+Perfumes+setif/@36.1900389,5.411176,17z/data=!3m1!4b1!4m6!3m5!1s0x12f3150007900a4f:0x11fc01f1503adcb4!8m2!3d36.1900389!4d5.4137509!16s%2Fg%2F11w_tmcrgk?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D",
+      "text": "Arret tramway Aboutaleb, Sétif 19000"
+    },
+    "phone": "0542303496",
+    "gradient": "#D4B660",
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1F5Pwzbhvh/",
+      "tiktok":"https://www.tiktok.com/@lattafa_setif1"
+      
+    }
   }
 }
