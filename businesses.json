@@ -147,5 +147,20 @@
       "tiktok":"https://www.tiktok.com/@lattafa_setif1"
       
     }
+  },
+   "hamza-abou-zaid": {
+    "name": "حمزة أبو زيد للعطور",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-09-27 at 20.38.15_248c05d4.jpg",
+    "address": {
+      "url": "https://www.google.com/maps/place/%D8%AD%D9%85%D8%B2%D8%A9+%D8%A3%D8%A8%D9%88+%D8%B2%D9%8A%D8%AF+%D9%84%D9%84%D8%B9%D8%B7%D9%88%D8%B1%E2%80%AD/@36.1897029,5.4123421,17z/data=!3m1!4b1!4m6!3m5!1s0x12f31500029b666b:0x9d57fc4de943866c!8m2!3d36.1897029!4d5.414917!16s%2Fg%2F11vqd321v5?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D",
+      "text": "25 Av. du 1er Novembere, Sétif"
+    },
+    "phone": "0773569848",
+    "gradient": "linear-gradient(90deg,rgba(8, 55, 61, 1) 0%, rgba(103, 125, 89, 1) 100%)",
+    "socials": {
+      "facebook": "https://www.facebook.com/hmzt.abw.zyd.ll.twr",
+      "tiktok":"https://www.tiktok.com/@lattafa_setif1",
+      "instagram": "https://www.instagram.com/hamza_abou_zaid"
+    }
   }
 }
