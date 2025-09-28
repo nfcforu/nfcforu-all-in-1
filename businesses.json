@@ -178,6 +178,21 @@
       "instagram": "https://www.instagram.com/el_bezzi_home_decor",
       "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213553366385"
     }
+    },
+"The Computer ": {
+    "name": "The Computer ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-09-28 at 20.05.38_42a98f68.jpg",
+    "address": {
+      "url": "https://www.google.com/maps/place/The+Computer/@36.2009847,5.4112449,18.96z/data=!4m6!3m5!1s0x12f315e9962f9a41:0x222e33c38453c88b!8m2!3d36.2006874!4d5.4117092!16s%2Fg%2F11kqq6q0t5?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D",
+      "text": "Rue Harrag Mohamed Senoussi, Sétif"
+    },
+    "phone": "0770121546",
+    "gradient": "radial-gradient(circle,rgba(254, 113, 14, 1) 0%, rgba(145, 99, 64, 1) 100%)",
+      "socials": {
+      "facebook": "https://www.facebook.com/people/The-Computer/100090559567802/",
+      "tiktok":"https://www.tiktok.com/@the_computer_seti",
+      "instagram": "https://www.instagram.com/the_computer_setif_/"
+    }
     }
   }
 
