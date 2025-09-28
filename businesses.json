@@ -209,6 +209,21 @@
       "instagram": "https://www.instagram.com/golden_body_setif/",
       "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213661480656"
     }
+    },
+    "chouchou_vegas": {
+    "name": "Chouchou Vegas",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/527833946_1322725569862023_2385635275326947222_n.jpg",
+    "address": {
+      "url": "https://www.google.com/maps/@36.1999011,5.4079754,20z?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D",
+      "text": "Rue Harrag Mohamed Senoussi, Sétif"
+    },
+    "phone": "0555095668",
+    "gradient": "#D7000F",
+      "socials": {
+      "facebook": "https://www.facebook.com/boutiquevegas19?locale=fr_FR",
+      "tiktok":"https://www.tiktok.com/@chouchouvegas",
+      "instagram": "https://www.instagram.com/chouchou_vegas_/"
+    }
     }
   }
 
