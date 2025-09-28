@@ -162,5 +162,22 @@
       "tiktok":"https://www.tiktok.com/@user941703651255?",
       "instagram": "https://www.instagram.com/hamza_abou_zaid"
     }
+  },
+     "EL-Bezzi-home-decor": {
+    "name": "EL-Bezzi Home Decor",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-09-28 at 16.57.53_bcc1f39b.jpg",
+    "address": {
+      "url": "https://www.google.com/maps/place/El-Bezzi+home+d%C3%A9cor/@36.2016881,5.4291612,17z/data=!3m1!4b1!4m6!3m5!1s0x12f30ba0bb7cc02b:0xcaeff4e9045baa2d!8m2!3d36.2016881!4d5.4317361!16s%2Fg%2F11sbfkfkbf?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D",
+      "text": "Sétif"
+    },
+    "phone": "0553366385",
+    "gradient": "#C46C1A",
+      "socials": {
+      "facebook": "https://www.facebook.com/wpcelbezzi",
+      "tiktok":"https://www.tiktok.com/@elbezzi_home_decor",
+      "instagram": "https://www.instagram.com/el_bezzi_home_decor",
+      "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213553366385"
+    }
+    }
   }
-}
+
