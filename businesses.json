@@ -171,7 +171,7 @@
       "text": "Sétif"
     },
     "phone": "0553366385",
-    "gradient": "#C46410",
+    "gradient": "linear-gradient(185deg,rgba(19, 16, 17, 1) 0%, rgba(236, 199, 124, 1) 100%)",
       "socials": {
       "facebook": "https://www.facebook.com/wpcelbezzi",
       "tiktok":"https://www.tiktok.com/@elbezzi_home_decor",
