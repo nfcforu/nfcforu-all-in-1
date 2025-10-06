@@ -286,6 +286,21 @@
       "instagram": "https://www.instagram.com/boutique.jagua.r19/",
       "facebook":"https://www.facebook.com/profile.php?id=61559514929996"
     }
+    },
+        "patisserie-sofrane": {
+    "name": "Pâtisserie Sofrane",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/451314455_454812660794371_7361564426721197365_n.jpg",
+    "address": {
+      "url": "https://www.google.com/maps/place/P%C3%A2tisserie+Sofrane/@36.1898722,5.4097393,17z/data=!3m1!4b1!4m6!3m5!1s0x12f3159b5492480f:0x357841264f9ed970!8m2!3d36.1898722!4d5.4123142!16s%2Fg%2F11lmdwcq21?entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D",
+      "text": "Rue du 1er Novembre, Sétif"
+    },
+    "phone": "036825729",
+    "gradient": "#BFAE96",
+      "socials": {
+      "tiktok":"https://www.tiktok.com/@patisserie.sofrane?_t=ZS-90KYB7rDmZG&_r=1",
+      "instagram": "https://www.instagram.com/pati_sserie_sofrane?",
+      "facebook":"https://www.facebook.com/share/1BJ17daUSq/"
+    }
     }
   }
 
