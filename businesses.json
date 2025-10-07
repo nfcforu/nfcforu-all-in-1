@@ -287,7 +287,7 @@
       "facebook":"https://www.facebook.com/profile.php?id=61559514929996"
     }
     },
-        "patisserie-sofrane": {
+    "patisserie-sofrane": {
     "name": "Pâtisserie Sofrane",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/451314455_454812660794371_7361564426721197365_n.jpg",
     "address": {
@@ -300,6 +300,23 @@
       "tiktok":"https://www.tiktok.com/@patisserie.sofrane?_t=ZS-90KYB7rDmZG&_r=1",
       "instagram": "https://www.instagram.com/pati_sserie_sofrane?",
       "facebook":"https://www.facebook.com/share/1BJ17daUSq/"
+    }
+    },
+    "succes-space": {
+    "name": "فضاء النجاح التعليمي",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-10-07 at 11.53.08_c9171e32.jpg",
+    "address": {
+      "url": "https://www.google.com/maps/place/36%C2%B011'05.1%22N+5%C2%B018'49.4%22E/@36.18475,5.3130785,19z/data=!3m1!4b1!4m12!1m7!3m6!1s0x12f33fb3c2a398ab:0x813c230eb6b7c84d!2z2KfYtdmE2KfYrSDYp9mE2YXZiNin2LLZitmGINiv2YjZgdmG2YjZhg!8m2!3d36.1845036!4d5.313263!16s%2Fg%2F11g10lf2ht!3m3!8m2!3d36.18475!4d5.3137222?entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D",
+      "text": "Ain Arnat, Sétif"
+    },
+    "phone": "0555843307",
+    "email":"academysuccesspace@gmail.com",
+    "gradient": "linear-gradient(6deg,rgba(231, 197, 99, 1) 0%, rgba(62, 166, 117, 1) 100%)",
+      "socials": {
+      "tiktok":"https://www.tiktok.com/@succes.space.acad?_t=ZS-90Lhz5r1DYl&_r=1",
+      "instagram": "https://www.instagram.com/succes_space",
+      "facebook":"https://www.facebook.com/share/16YzikRu7f/",
+      "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213555843307"
     }
     }
   }
