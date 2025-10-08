@@ -1,19 +1,4 @@
 {
-  "los-tacos": {
-    "name": "LOS TACOS",
-    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/LOS-TACOS.jpg",
-    "address": {
-      "url": "https://maps.app.goo.gl/FP8HbyrL1eQ5ndRTA",
-      "text": "Rue Harrag Mohamed Senoussi, Sétif"
-    },
-    "phone": "0662698843",
-    "gradient": "linear-gradient(135deg, #145960 0%, #004E52 100%)",
-    "menu": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/menu.pdf",
-    "socials": {
-      "instagram": "https://www.instagram.com/pzlostacos/",
-      "facebook": "https://web.facebook.com/pzlostacos"
-    }
-  },
   "sac-de-lux": {
     "name": "Sac De Luxe",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-09-24 at 16.33.50_cf05da8e.jpg",
