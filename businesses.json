@@ -1,4 +1,19 @@
 {
+    "los-tacos": {
+    "name": "Sac De Luxe",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-09-24 at 16.33.50_cf05da8e.jpg",
+     "address": {
+      "url": "https://www.google.com/maps/place/Boutique+Sac+de+luxe/@36.2059736,5.4329927,17z/data=!4m6!3m5!1s0x12f31529b79ae597:0x8855050ad922e288!8m2!3d36.2059736!4d5.4355676!16s%2Fg%2F11s4bjzf4k?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
+      "text": "Boulvard n°03, Sétif"
+    },
+    "phone": "0772935076",
+    "gradient": "#FBCF53",
+    "socials": {
+      "facebook": "https://web.facebook.com/sac2lux",
+      "whatsapp": "https://api.whatsapp.com/send?phone=%2B213782746952&fbclid=IwVERTSANA9qlleHRuA2FlbQIxMAABHiTFOvpE0tSm4h4NuBJWOgfe7GQddnsGreBOXORdLKSmWUMKUcRSe5mlkh9R_aem_v1coVSt8xLts_HUUOFyFsw&sfnsn=wa",
+      "tiktok":"https://www.tiktok.com/@sac_2_luxe"
+    }
+  },
   "sac-de-lux": {
     "name": "Sac De Luxe",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-09-24 at 16.33.50_cf05da8e.jpg",
@@ -56,8 +71,8 @@
     "phone": "0556310559",
     "gradient": "#EADABE",
     "socials": {
-      "instagram": "https://www.instagram.com/big_mode.19/",
-      "facebook": "https://www.facebook.com/people/BIG-MODE/100077852154033/",
+      "instagram": "https://www.instagram.com/kikou_bnn?igsh=a25kOTN0c2RxeWc2 ",
+      "facebook": "https://www.facebook.com/share/1EV7NR9vuD/?mibextid=wwXIfr",
       "tiktok":"https://www.tiktok.com/@big_mode.setif"
     }
   },
