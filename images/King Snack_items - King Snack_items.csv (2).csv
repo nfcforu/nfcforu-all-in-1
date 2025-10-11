@@ -1,0 +1,192 @@
+category,category_desc,category_image,item_name,description,veg/non-veg,price,old_price,total_stock,offer_text,item_image,item_image_compressed,sub_category,customization_type,customization_item_limit,customization_item_lower_limit,customization_subtype,customization_price,customize_option_limit,checkbox_flag,external_item_id
+Promo 🎉,,,Pizza Poulet L + Boisson ,,,300,470,100,Remise 35% + Livraison Gratuite ‼️,,,,,,,,,,,
+Pizza Céme Fraiche,,,Boisée Poulet L,,,500,500,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée Poulet XL,,,1000,1000,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée Poulet XXL,,,1350,1350,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée Fumé L,,,600,600,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée Fumé XL,,,1200,1200,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée Fumé XXL,,,1700,1700,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée 4 Fromage L,,,600,600,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée 4 Fromage XL,,,1150,1150,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée 4 Fromage XXL,,,1500,1500,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée 5 Fromage L,,,700,700,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée 5 Fromage XL,,,1300,1300,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée 5 Fromage XXL,,,1700,1700,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée Viande Hachée L,,,550,550,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée Viande Hachée XL,,,1100,1100,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée Viande Hachée XXL,,,1400,1400,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée Merguez L,,,550,550,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée Merguez XL,,,1100,1100,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée Merguez XXL,,,1400,1400,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée Crevette L,,,800,800,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée Crevette XL,,,1450,1450,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée Crevette XXL,,,2100,2100,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée 3 Viande L,,,600,600,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée 3 Viande XL,,,1200,1200,100,,,,,,null,null,,,null,,null
+Pizza Céme Fraiche,,,Boisée 3 Viande XXL,,,1600,1600,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Margharita L,,,300,300,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Margharita XL,,,600,600,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Margharita XXL,,,900,900,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Poulet L,,,400,400,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Poulet XL,,,800,800,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Poulet XXL,,,1200,1200,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Fumée L,,,550,550,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Fumée XL,,,1100,1100,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Fumée XXL,,,1600,1600,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Végétarienne L,,,400,400,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Végétarienne XL,,,800,800,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Végétarienne XXL,,,1200,1200,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza 3 Fromage L,,,500,500,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza 3 Fromage XL,,,1000,1000,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza 3 Fromage XXL,,,1350,1350,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Viande Hachée L,,,500,500,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Viande Hachée XL,,,1000,1000,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Viande Hachée XXL,,,1300,1300,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Merguez L,,,500,500,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Merguez XL,,,1000,1000,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Merguez XXL,,,1300,1300,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Crevette L,,,800,800,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Crevette XL,,,1400,1400,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Crevette XXL,,,2000,2000,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza 3 Viandes L,,,550,550,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza 3 Viandes XL,,,1100,1100,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza 3 Viandes XXL,,,1500,1500,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Thon L,,,550,550,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Thon XL,,,1100,1100,100,,,,,,null,null,,,null,,null
+Base Sauce Tomate,,,Pizza Thon XXL,,,1500,1500,100,,,,,,null,null,,,null,,null
+Pizza Special,,,Pizza Special 4 Saisons XL,,,1000,1000,100,,,,,,null,null,,,null,,null
+Pizza Special,,,Pizza Special 4 Saisons XXL,,,1350,1350,100,,,,,,null,null,,,null,,null
+Pizza Special,,,Pizza Special 3 Saisons XL,,,1000,1000,100,,,,,,null,null,,,null,,null
+Pizza Special,,,Pizza Special 3 Saisons XXL,,,1350,1350,100,,,,,,null,null,,,null,,null
+Pizza Special,,,Pizza Special Panachée L,,,550,550,100,,,,,,null,null,,,null,,null
+Pizza Special,,,Pizza Special Panachée XL,,,1000,1000,100,,,,,,null,null,,,null,,null
+Pizza Special,,,Pizza Special Panachée XXL,,,1350,1350,100,,,,,,null,null,,,null,,null
+Pizza Special,,,Pizza Special Pepperoni L,,,600,600,100,,,,,,null,null,,,null,,null
+Pizza Special,,,Pizza Special Pepperoni XL,,,1200,1200,100,,,,,,null,null,,,null,,null
+Pizza Special,,,Pizza Special Pepperoni XXL,,,1500,1500,100,,,,,,null,null,,,null,,null
+Pizza Special,,,Pizza Special King L,,,850,850,100,,,,,,null,null,,,null,,null
+Pizza Special,,,Pizza Special King XL,,,1550,1550,100,,,,,,null,null,,,null,,null
+Pizza Special,,,Pizza Special King XXL,,,2200,2200,100,,,,,,null,null,,,null,,null
+Pizza Special,,,Pizza Special Royal L,,,800,800,100,,,,,,null,null,,,null,,null
+Pizza Special,,,Pizza Special Royal XL,,,1400,1400,100,,,,,,null,null,,,null,,null
+Pizza Special,,,Pizza Special Royal XXL,,,2000,2000,100,,,,,,null,null,,,null,,null
+Tacos,,,Tacos Poulet L,,,400,400,100,,,,,,null,null,,,null,,null
+Tacos,,,Tacos Poulet XL,,,600,600,100,,,,,,null,null,,,null,,null
+Tacos,,,Tacos Viand L,,,450,450,100,,,,,,null,null,,,null,,null
+Tacos,,,Tacos Viand XL,,,650,650,100,,,,,,null,null,,,null,,null
+Tacos,,,Tacos Mixt L,,,500,500,100,,,,,,null,null,,,null,,null
+Tacos,,,Tacos Mixt XL,,,750,750,100,,,,,,null,null,,,null,,null
+Tacos,,,Tacos 4 Fromage L,,,550,550,100,,,,,,null,null,,,null,,null
+Tacos,,,Tacos 4 Fromage XL,,,800,800,100,,,,,,null,null,,,null,,null
+Tacos,,,Tacos tandori L,,,500,500,100,,,,,,null,null,,,null,,null
+Tacos,,,Tacos tandori XL,,,750,750,100,,,,,,null,null,,,null,,null
+Tacos,,,Tacos Fumé L,,,550,550,100,,,,,,null,null,,,null,,null
+Tacos,,,Tacos Fumé XL,,,800,800,100,,,,,,null,null,,,null,,null
+Tacos,,,Tacos Crispy L,,,550,550,100,,,,,,null,null,,,null,,null
+Tacos,,,Tacos Crispy XL,,,800,800,100,,,,,,null,null,,,null,,null
+Tacos,,,Tacos Poulet Mariné L,,,450,450,100,,,,,,null,null,,,null,,null
+Tacos,,,Tacos Poulet Mariné XL,,,650,650,100,,,,,,null,null,,,null,,null
+Burger,,,Burger Chicken,,,350,350,100,,,,,,null,null,,,null,,null
+Burger,,,Burger Classic,,,400,400,100,,,,,,null,null,,,null,,null
+Burger,,,Burger Cheese,,,400,400,100,,,,,,null,null,,,null,,null
+Burger,,,Burger Crispy,,,450,450,100,,,,,,null,null,,,null,,null
+Burger,,,Burger Double Cheese,,,650,650,100,,,,,,null,null,,,null,,null
+Calzon,,,Calzon Poulet,,,500,500,100,,,,,,null,null,,,null,,null
+Calzon,,,Calzon Viande,,,600,600,100,,,,,,null,null,,,null,,null
+Calzon,,,Calzon Merguez,,,600,600,100,,,,,,null,null,,,null,,null
+Calzon,,,Calzon Mixt,,,650,650,100,,,,,,null,null,,,null,,null
+Calzon,,,Calzon Thon,,,550,550,100,,,,,,null,null,,,null,,null
+Calzon,,,Calzon 4 Fromage,,,650,650,100,,,,,,null,null,,,null,,null
+Sandwich Américain,,,Sandwich Américain Poulet,,,400,400,100,,,,,,null,null,,,null,,null
+Sandwich Américain,,,Sandwich Américain Viande,,,450,450,100,,,,,,null,null,,,null,,null
+Sandwich Américain,,,Sandwich Américain Poulet Mariné,,,450,450,100,,,,,,null,null,,,null,,null
+Sandwich Américain,,,Sandwich Américain Mixte,,,500,500,100,,,,,,null,null,,,null,,null
+Sandwich Américain,,,Sandwich Américain Tandori,,,500,500,100,,,,,,null,null,,,null,,null
+Sandwich Libanais,,,Sandwich Libanais Poulet,,,400,400,100,,,,,,null,null,,,null,,null
+Sandwich Libanais,,,Sandwich Libanais Viande,,,450,450,100,,,,,,null,null,,,null,,null
+Sandwich Libanais,,,Sandwich Libanais Poulet Mariné,,,450,450,100,,,,,,null,null,,,null,,null
+Sandwich Libanais,,,Sandwich Libanais Mixte,,,500,500,100,,,,,,null,null,,,null,,null
+Sandwich Libanais,,,Sandwich Libanais Tandori,,,500,500,100,,,,,,null,null,,,null,,null
+Sandwich Kinge,,,Sandwich King Poulet,,,450,450,100,,,,,,null,null,,,null,,null
+Sandwich Kinge,,,Sandwich King Viande,,,500,500,100,,,,,,null,null,,,null,,null
+Sandwich Kinge,,,Sandwich King Poulet Mariné,,,500,500,100,,,,,,null,null,,,null,,null
+Sandwich Kinge,,,Sandwich King Mixte,,,550,550,100,,,,,,null,null,,,null,,null
+Sandwich Kinge,,,Sandwich King Crispy,,,500,500,100,,,,,,null,null,,,null,,null
+Wings,,,03 pcs wings  + Barket De Frite,,,350,350,100,,,,,,null,null,,,null,,null
+Wings,,,06pcs wings+ Barket De Frite,,,650,650,100,,,,,,null,null,,,null,,null
+Wings,,,09pcs wings+ 2 Barket De Frite,,,1000,1000,100,,,,,,null,null,,,null,,null
+Legs,,,03 pcs legs + Barket De Frite,,,500,500,100,,,,,,null,null,,,null,,null
+Legs,,,06pcs legs  + Barket De Frite,,,900,900,100,,,,,,null,null,,,null,,null
+Legs,,,09pcs legs+ 2 Barket De Frite,,,1300,1300,100,,,,,,null,null,,,null,,null
+Tenders,,,03 pcs tendrs + Barket De Frite,,,500,500,100,,,,,,null,null,,,null,,null
+Tenders,,,06pcs tendrs + Barket De Frite,,,950,950,100,,,,,,null,null,,,null,,null
+Tenders,,,09pcs tendrs+ 2 Barket De Frite,,,1350,1350,100,,,,,,null,null,,,null,,null
+Brosted Packs All In One,,,Pack 03pce,1Wing + 1Leg + 1Tender + Frite + Soda 33cl,,650,650,100,,,,,,null,null,,,null,,null
+Brosted Packs All In One,,,Pack 06pce,2Wing + 2Leg + 2Tender + 2Frite + Soda 33cl,,1300,1300,100,,,,,,null,null,,,null,,null
+Brosted Packs All In One,,,Familly Pack 12pce,4Wing + 4Leg + 4Tender + 2Frite + Soda 33cl,,2300,2300,100,,,,,,null,null,,,null,,null
+Chicken Balls,,,06 chicken Balls + Frite,,,500,500,100,,,,,,null,null,,,null,,null
+Chicken Balls,,,09  chicken Balls + Frite,,,750,750,100,,,,,,null,null,,,null,,null
+Chicken Balls,,,12 chicken Balls + 2frites,,,1050,1050,100,,,,,,null,null,,,null,,null
+Gratin,,,Gratin Poulet,,,450,450,100,,,,,,null,null,,,null,,null
+Gratin,,,Gratin Viande,,,500,500,100,,,,,,null,null,,,null,,null
+Gratin,,,Gratin Mixte,,,550,550,100,,,,,,null,null,,,null,,null
+Gratin,,,Gratin Crispy,,,500,500,100,,,,,,null,null,,,null,,null
+Boissons,,,Fanta Orange 1 L,,,150,150,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_KX9TzQrshLxW.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_KX9TzQrshLxW_200x200.jpg,Fanta,,null,null,,,null,,null
+Boissons,,,Fanta Citron 1 L,,,150,150,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_fPC1tqibjWKC.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_fPC1tqibjWKC_200x200.jpg,Fanta,,null,null,,,null,,null
+Boissons,,,Fanta Fraise 1 L,,,150,150,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_gODQjEwsU8g4.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_gODQjEwsU8g4_200x200.jpg,Fanta,,null,null,,,null,,null
+Boissons,,,Canette Fanta Orange,,,100,100,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_ySvRKUGIKVlV.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_ySvRKUGIKVlV_200x200.jpg,Fanta,,null,null,,,null,,null
+Boissons,,,Canette Fanta Citron,,,100,100,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_eZNrcY1t0dNH.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_eZNrcY1t0dNH_200x200.jpg,Fanta,,null,null,,,null,,null
+Boissons,,,Canette Fanta Fraise,,,100,100,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_ixGwqAA5hu3r.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_ixGwqAA5hu3r_200x200.jpg,Fanta,,null,null,,,null,,null
+Boissons,,,Fanta Orange 33 Cl,,,100,100,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_Nil1tL5Ccssg.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_Nil1tL5Ccssg_200x200.jpg,Fanta,,null,null,,,null,,null
+Boissons,,,Fanta Fraise 33 Cl,,,100,100,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_edAApDQeuGnG.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_edAApDQeuGnG_200x200.jpg,Fanta,,null,null,,,null,,null
+Boissons,,,Schweppes Citron Menthe 1L,,,180,180,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_4HKAhJejqF4g.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_4HKAhJejqF4g_200x200.jpg,Schweppes,,null,null,,,null,,null
+Boissons,,,Schweppes Grenadine 1L,,,180,180,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_Ojo6DGI5OJ3a.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_Ojo6DGI5OJ3a_200x200.jpg,Schweppes,,null,null,,,null,,null
+Boissons,,,Schweppes Mandarin 1L,,,180,180,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_wkFgELLEAwYw.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_wkFgELLEAwYw_200x200.jpg,Schweppes,,null,null,,,null,,null
+Boissons,,,Canette Schweppes Citron Menthe,,,100,100,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_c43VcQT0eEng.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_c43VcQT0eEng_200x200.jpg,Schweppes,,null,null,,,null,,null
+Boissons,,,Canette Schweppes Grenadine,,,100,100,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_hCM5tTZqq5fv.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_hCM5tTZqq5fv_200x200.jpg,Schweppes,,null,null,,,null,,null
+Boissons,,,Canette Schweppes Mandarin,,,100,100,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_jK4x4VnsYdPw.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_jK4x4VnsYdPw_200x200.jpg,Schweppes,,null,null,,,null,,null
+Boissons,,,Jus enfant,,,50,50,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_4wuUEcIQWJkh.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_4wuUEcIQWJkh_200x200.jpg,Jus,,null,null,,,null,,null
+Boissons,,,Jus Cocktaile Ifruit 1L,,,150,150,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_0qs5mzaDp1ub.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_0qs5mzaDp1ub_200x200.jpg,Jus,,null,null,,,null,,null
+Boissons,,,Jus Cocktaile Ifruit  33 cl,,,100,100,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_S0pcgNtrzVDo.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_S0pcgNtrzVDo_200x200.jpg,Jus,,null,null,,,null,,null
+Boissons,,,Jus Orange Ifruit 1L,,,150,150,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_9bJp2HLrS1Tx.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_9bJp2HLrS1Tx_200x200.jpg,Jus,,null,null,,,null,,null
+Boissons,,,Jus Orange Ifruit 33 cl,,,70,70,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_hWBWR9hhVzZC.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_hWBWR9hhVzZC_200x200.jpg,Jus,,null,null,,,null,,null
+Boissons,,,Jus Citron Ifruit 1L,,,150,150,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_wYMip0kajhrx.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_wYMip0kajhrx_200x200.jpg,Jus,,null,null,,,null,,null
+Boissons,,,Jus Citron Ifruit 33 cl,,,70,70,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_WlWapHhAWXTa.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_WlWapHhAWXTa_200x200.jpg,Jus,,null,null,,,null,,null
+Boissons,,,"Eau Minerale 1,5 L",,,50,50,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_T3wGIulSaKow.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_T3wGIulSaKow_200x200.jpg,Eau Minérale,,null,null,,,null,,null
+Boissons,,,"Eau Minérale 0,5 L",,,30,30,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_MnmD71YGOSXH.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_MnmD71YGOSXH_200x200.jpg,Eau Minérale,,null,null,,,null,,null
+Boissons,,,Hamoud 1L,,,150,150,100,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_MwxbpFqvAElf.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_MwxbpFqvAElf_200x200.jpg,Hamoud Boualem,,null,null,,,null,,null
+Boissons,,,Slim Citron 1L,,,150,150,50,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_IgrTXHOYJM32.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_IgrTXHOYJM32_200x200.jpg,Hamoud Boualem,,null,null,,,null,,null
+Boissons,,,Slim Orange 1L,,,150,150,50,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_YNnWHKDSrYyb.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_YNnWHKDSrYyb_200x200.jpg,Hamoud Boualem,,null,null,,,null,,null
+Boissons,,,Canette N'gaous,,,100,100,50,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_Mv0tDrQAZzGc.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_Mv0tDrQAZzGc_200x200.jpg,N'gaous,,null,null,,,null,,null
+Boissons,,,N'gaous 1L,,,150,150,50,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_3O7yyx5fySae.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_3O7yyx5fySae_200x200.jpg,N'gaous,,null,null,,,null,,null
+Boissons,,,Bona Citron 1L,,,100,100,50,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_GJoUo2qpJA7M.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_GJoUo2qpJA7M_200x200.jpg,Bona,,null,null,,,null,,null
+Boissons,,,Bona Cola 1L,,,100,100,50,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_ArVUImFVV9MP.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_ArVUImFVV9MP_200x200.jpg,Bona,,null,null,,,null,,null
+Boissons,,,Bona Orange 1L,,,100,100,50,,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_7G2Za7Ve8qiJ.jpg,https://jugnoo-menus.s3-ap-south-1.amazonaws.com/images/item_image_7G2Za7Ve8qiJ_200x200.jpg,Bona,,null,null,,,null,,null
+Boissons,,, schweppes canette ,,,100,100,50,,,,Schweppes,,null,null,,,null,,null
+Boissons,,,Schweppes gold peche canette,,,100,100,50,,,,Schweppes,,null,null,,,null,,null
+Boissons,,,Ramy canette jus,,,100,100,50,,,,Jus,,null,null,,,null,,null
+Boissons,,,Cocacola canette ,,,100,100,50,,,,cocacola,,null,null,,,null,,null
+Boissons,,,Cocacola 1 littre,,,150,150,50,,,,cocacola,,null,null,,,null,,null
+Boissons,,,Cocacolla 0.33,,,100,100,50,,,,cocacola,,null,null,,,null,,null
+Boissons,,,Sprite 0.33,,,100,100,50,,,,Fanta,,null,null,,,null,,null
+Boissons,,,Pepsi 0.33,,,100,100,50,,,,pepsi,,null,null,,,null,,null
+Boissons,,,Pepsi 1L,,,150,150,50,,,,pepsi,,null,null,,,null,,null
+Boissons,,,Schweppes 0.33 mogito,,,100,100,50,,,,Schweppes,,null,null,,,null,,null
+Boissons,,,7up 1littre,,,150,150,50,,,,Fanta,,null,null,,,null,,null
+Boissons,,,7up 0.33l ,,,100,100,50,,,,7up,,null,null,,,null,,null
+Boissons,,,Miranda 0.33,,,100,100,50,,,,miranda,,null,null,,,null,,null
+Boissons,,,Miranda ananas 0.33 l,,,100,100,50,,,,miranda,,null,null,,,null,,null
+Boissons,,,Miranda framboise 0.33l,,,100,100,50,,,,miranda,,null,null,,,null,,null
+Boissons,,,Selecto  hamoud 1 littre ,,,150,150,50,,,,Hamoud Boualem,,null,null,,,null,,null
+Boissons,,,Ifruit cerise 1 littre ,,,150,150,50,,,,Jus,,null,null,,,null,,null
+Boissons,,,Hamoude letchi 1littre ,,,150,150,50,,,,Hamoud Boualem,,null,null,,,null,,null
+Boissons,,,Fanta pomme 1 littre ,,,150,150,50,,,,Fanta,,null,null,,,null,,null
+Boissons,,,Fanta pomme 0.33 l,,,100,100,50,,,,Fanta,,null,null,,,null,,null
+Boissons,,,Fanta ananas 0.33,,,100,100,50,,,,Fanta,,null,null,,,null,,null
+Boissons,,,Schweppes ananas coco 1 littre ,,,180,180,50,,,,Schweppes,,null,null,,,null,,null
+Boissons,,,Schweppes gold ananas 1 littre ,,,180,180,50,,,,Schweppes,,null,null,,,null,,null
+Boissons,,,Canette hamoude selecto ,,,100,100,50,,,,Hamoud Boualem,,null,null,,,null,,null
+Boissons,,,Canette gamoud slim ananad ,,,100,100,50,,,,Hamoud Boualem,,null,null,,,null,,null
+Boissons,,,Canette slim citron ,,,100,100,50,,,,Hamoud Boualem,,null,null,,,null,,null
+Boissons,,,Canette hamoud orange ,,,100,100,50,,,,Hamoud Boualem,,null,null,,,null,,null
+Boissons,,,Ngaouse 1 littre ,,,150,150,50,,,,N'gaous,,null,null,,,null,,null
