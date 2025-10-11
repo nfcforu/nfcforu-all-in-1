@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background: #f8f8f8;
+            margin: 0;
+            color: #222;
+        }
+        .menu-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px 24px;
+        }
+        .category {
+            margin-bottom: 32px;
+        }
+        .category-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #764ba2;
+        }
+        .menu-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+        .menu-item {
+            background: #f4f4f4;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 18px 16px;
+            flex: 1 1 260px;
+            min-width: 220px;
+            max-width: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+        }
+        .menu-item-image {
+            width: 100%;
+            max-width: 220px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            background: #eee;
+        }
+        .menu-item-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .menu-item-desc {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .menu-item-price {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #11998e;
+            margin-bottom: 4px;
+        }
+        .menu-item-oldprice {
+            font-size: 0.95rem;
+            color: #b71c1c;
+            text-decoration: line-through;
+            margin-left: 8px;
+        }
+        .menu-item-offer {
+            font-size: 0.95rem;
+            color: #e67e22;
+            background: #fffbe6;
+            border-radius: 6px;
+            padding: 2px 8px;
+            margin-bottom: 6px;
+        }
+        @media (max-width: 600px) {
+            .menu-container {
+                padding: 12px 4px;
+            }
+            .menu-list {
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container" id="menuContainer">
+        <h1 style="text-align:center;color:#764ba2;">Restaurant Menu</h1>
+        <div id="menuContent"></div>
+    </div>
+    <script>
+    // Simple CSV parser
+    function parseCSV(text) {
+        const lines = text.split(/\r?\n/).filter(l => l.trim());
+        const headers = lines[0].split(',');
+        return lines.slice(1).map(line => {
+            const values = line.split(',');
+            const obj = {};
+            headers.forEach((h, i) => obj[h.trim()] = values[i] ? values[i].trim() : '');
+            return obj;
+        });
+    }
+
+    // Fetch and render menu
+    fetch('images/King Snack_items - King Snack_items.csv (2).csv')
+        .then(res => res.text())
+        .then(csv => {
+            const items = parseCSV(csv);
+            // Group by category
+            const categories = {};
+            items.forEach(item => {
+                const cat = item.category || 'Other';
+                if (!categories[cat]) categories[cat] = [];
+                categories[cat].push(item);
+            });
+            const menuContent = document.getElementById('menuContent');
+            menuContent.innerHTML = Object.entries(categories).map(([cat, items]) => `
+                <div class="category">
+                    <div class="category-title">${cat}</div>
+                    <div class="menu-list">
+                        ${items.map(item => `
+                            <div class="menu-item">
+                                ${item.item_image ? `<img class="menu-item-image" src="${item.item_image}" alt="${item.item_name}">` : ''}
+                                <div class="menu-item-title">${item.item_name}</div>
+                                ${item.description ? `<div class="menu-item-desc">${item.description}</div>` : ''}
+                                <div>
+                                    <span class="menu-item-price">${item.price ? item.price + ' DA' : ''}</span>
+                                    ${item.old_price && item.old_price !== item.price ? `<span class="menu-item-oldprice">${item.old_price} DA</span>` : ''}
+                                </div>
+                                ${item.offer_text ? `<div class="menu-item-offer">${item.offer_text}</div>` : ''}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+        });
+    </script>
+</body>
+</html>
