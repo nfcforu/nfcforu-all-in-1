@@ -377,6 +377,21 @@
             <iframe class="modal-iframe" id="modalIframe" src="" title="Menu"></iframe>
         </div>
     </div>
+
+    <!-- Modal for Gallery Carousel -->
+    <div class="modal-overlay" id="galleryModal" style="display:none;">
+        <div class="modal-content" style="max-width:600px;">
+            <div class="modal-header">
+                <h3 class="modal-title" id="galleryTitle">Gallery</h3>
+                <button class="modal-close" id="galleryClose">&times;</button>
+            </div>
+            <div id="carouselContainer" style="flex:1;display:flex;align-items:center;justify-content:center;position:relative;background:#222;">
+                <button id="prevImage" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;z-index:2;">&#10094;</button>
+                <img id="carouselImage" src="" alt="Gallery Image" style="max-width:80%;max-height:70vh;border-radius:12px;box-shadow:0 2px 16px #000;">
+                <button id="nextImage" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;z-index:2;">&#10095;</button>
+            </div>
+        </div>
+    </div>
     
     <script>
         function showLoading() {
@@ -408,11 +423,7 @@
                 twitter: 'fab fa-twitter',
                 linkedin: 'fab fa-linkedin',
                 tiktok: 'fab fa-tiktok',
-                youtube: 'fab fa-youtube',
-                snapchat: 'fab fa-snapchat',
-                viber:' fab fa-viber',
-                telegram:' fab fa-telegram',
-                email: 'fas fa-envelope'
+                youtube: 'fab fa-youtube'
             };
             return icons[type] || icons[platform] || 'fas fa-link';
         }
@@ -511,6 +522,18 @@
                 
                 // Build links array
                 const links = [];
+                // Ajout du bouton Gallery si présent dans le JSON
+                if (business.gallery && Array.isArray(business.gallery.images) && business.gallery.images.length > 0) {
+                    links.push({
+                        type: 'gallery',
+                        title: business.gallery.name || 'Gallery',
+                        subtitle: '',
+                        url: '#',
+                        external: false,
+                        galleryImages: business.gallery.images,
+                        modal: 'gallery'
+                    });
+                }
                 
                 // Add address link
                 if (business.address) {
@@ -571,8 +594,23 @@
                 });
                 
                 // Render the page - FIXED: Always use link.url in href
-                const linksHtml = links.map((link, index) => `
-                    <a href="${link.url}" 
+                const linksHtml = links.map((link, index) => {
+                    if (link.type === 'gallery') {
+                        return `<a href="#" 
+                           class="link-item gallery" 
+                           data-gallery="true" 
+                           data-images="${encodeURIComponent(JSON.stringify(link.galleryImages))}" 
+                           data-title="${link.title}" 
+                           style="animation-delay: ${0.1 + index * 0.1}s">
+                                <div class="link-icon"><i class="fas fa-images"></i></div>
+                                <div class="link-content">
+                                    <div class="link-title">${link.title}</div>
+                                    <div class="link-subtitle">${link.subtitle}</div>
+                                </div>
+                                <div class="link-arrow"><i class="fas fa-chevron-right"></i></div>
+                        </a>`;
+                    }
+                    return `<a href="${link.url}" 
                        class="link-item ${link.type}" 
                        ${link.external ? 'target="_blank" rel="noopener"' : ''}
                        ${link.modal ? 'data-modal="true" data-url="' + link.url + '"' : ''}
@@ -587,8 +625,8 @@
                         <div class="link-arrow">
                             <i class="fas fa-chevron-right"></i>
                         </div>
-                    </a>
-                `).join('');
+                    </a>`;
+                }).join('');
                 
                 document.getElementById('mainContainer').innerHTML = `
                     <div class="profile-header">
@@ -617,8 +655,17 @@
             const modalOverlay = document.getElementById('modalOverlay');
             const modalIframe = document.getElementById('modalIframe');
             const modalClose = document.getElementById('modalClose');
-            
-            // Handle modal links
+            // Gallery modal elements
+            const galleryModal = document.getElementById('galleryModal');
+            const galleryClose = document.getElementById('galleryClose');
+            const carouselImage = document.getElementById('carouselImage');
+            const prevImage = document.getElementById('prevImage');
+            const nextImage = document.getElementById('nextImage');
+            const galleryTitle = document.getElementById('galleryTitle');
+            let galleryImages = [];
+            let currentImageIndex = 0;
+
+            // Handle menu modal links
             document.querySelectorAll('[data-modal="true"]').forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -628,19 +675,62 @@
                     document.body.style.overflow = 'hidden';
                 });
             });
-            
-            // Close modal handlers
+
+            // Handle gallery modal links
+            document.querySelectorAll('[data-gallery="true"]').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    galleryImages = JSON.parse(decodeURIComponent(link.dataset.images));
+                    currentImageIndex = 0;
+                    galleryTitle.textContent = link.dataset.title || 'Gallery';
+                    showGalleryImage();
+                    galleryModal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            function showGalleryImage() {
+                if (galleryImages.length === 0) return;
+                carouselImage.src = galleryImages[currentImageIndex];
+                prevImage.style.display = galleryImages.length > 1 ? 'block' : 'none';
+                nextImage.style.display = galleryImages.length > 1 ? 'block' : 'none';
+            }
+
+            prevImage.addEventListener('click', () => {
+                currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+                showGalleryImage();
+            });
+            nextImage.addEventListener('click', () => {
+                currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+                showGalleryImage();
+            });
+
+            // Close gallery modal
+            function closeGallery() {
+                galleryModal.style.display = 'none';
+                carouselImage.src = '';
+                document.body.style.overflow = '';
+            }
+            galleryClose.addEventListener('click', closeGallery);
+            galleryModal.addEventListener('click', (e) => {
+                if (e.target === galleryModal) closeGallery();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && galleryModal.style.display === 'flex') {
+                    closeGallery();
+                }
+            });
+
+            // Close menu modal handlers
             function closeModal() {
                 modalOverlay.classList.remove('active');
                 modalIframe.src = '';
                 document.body.style.overflow = '';
             }
-            
             modalClose.addEventListener('click', closeModal);
             modalOverlay.addEventListener('click', (e) => {
                 if (e.target === modalOverlay) closeModal();
             });
-            
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
                     closeModal();
