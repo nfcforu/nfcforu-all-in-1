@@ -1,3 +1,4 @@
+    <div id="menuStatus" style="text-align:center;color:#764ba2;font-size:1.2rem;margin:24px 0;"></div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -199,6 +200,8 @@
         }
     </style>
     <script>
+    // Show loading message
+    document.getElementById('menuStatus').textContent = 'Loading menu...';
     // Simple CSV parser
     function parseCSV(text) {
         const lines = text.split(/\r?\n/).filter(l => l.trim());
@@ -266,6 +269,7 @@
     fetch('images/King%20Snack_items%20-%20King%20Snack_items.csv%20(2).csv')
         .then(res => res.text())
         .then(csv => {
+            document.getElementById('menuStatus').textContent = '';
             allItems = parseCSV(csv);
             categories = {};
             allItems.forEach(item => {
@@ -287,6 +291,9 @@
                     renderMenu(document.getElementById('searchBar').value);
                 });
             });
+        });
+        .catch(err => {
+            document.getElementById('menuStatus').textContent = 'Menu could not be loaded. Please check the CSV file path or try again later.';
         });
     // Search bar handler
     document.getElementById('searchBar').addEventListener('input', e => {
