@@ -387,8 +387,19 @@
             </div>
             <div id="carouselContainer" style="flex:1;display:flex;align-items:center;justify-content:center;position:relative;background:#222;">
                 <button id="prevImage" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;z-index:2;">&#10094;</button>
-                <img id="carouselImage" src="" alt="Gallery Image" style="max-width:80%;max-height:70vh;border-radius:12px;box-shadow:0 2px 16px #000;">
+                <img id="carouselImage" src="" alt="Gallery Image" style="width:90vw;max-width:500px;max-height:70vh;border-radius:12px;box-shadow:0 2px 16px #000;object-fit:contain;">
                 <button id="nextImage" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;z-index:2;">&#10095;</button>
+        @media (max-width: 600px) {
+            #carouselContainer {
+                padding: 0;
+            }
+            #carouselImage {
+                width: 98vw !important;
+                max-width: 98vw !important;
+                max-height: 60vh !important;
+                border-radius: 10px !important;
+            }
+        }
             </div>
         </div>
     </div>
