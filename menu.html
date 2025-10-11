@@ -1,4 +1,19 @@
     <div id="menuStatus" style="text-align:center;color:#764ba2;font-size:1.2rem;margin:24px 0;"></div>
+    <div class="menu-container">
+        <div class="menu-header">
+            <div class="menu-title">Menu du restaurant</div>
+            <input id="searchBar" class="search-bar" type="text" placeholder="Rechercher un plat...">
+        </div>
+        <div id="categoryTabs" class="category-tabs"></div>
+        <div id="menuContent"></div>
+    </div>
+    <!-- Modal pour zoomer sur l'image -->
+    <div id="imageModal" class="image-modal">
+        <div class="image-modal-content">
+            <button id="imageModalClose" class="image-modal-close" title="Fermer">&times;</button>
+            <img id="modalImage" src="" alt="Zoom menu">
+        </div>
+    </div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
