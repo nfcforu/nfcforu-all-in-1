@@ -1,0 +1,460 @@
+<!DOCTYPE html><!DOCTYPE html>
+
+<html lang="en"><html lang="fr">
+
+<head><head>
+
+    <meta charset="UTF-8">    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Business Dashboard NFC</title>    <title>Dashboard Business NFC</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>    <style>
+
+        body {        body {
+
+            background: #181c24;            background: #181c24;
+
+            color: #fff;            color: #fff;
+
+            font-family: 'Inter', Arial, sans-serif;            font-family: 'Inter', Arial, sans-serif;
+
+            margin: 0;            margin: 0;
+
+            min-height: 100vh;            min-height: 100vh;
+
+        }        }
+
+        .container {        .container {
+
+            max-width: 900px;            max-width: 900px;
+
+            margin: 0 auto;            margin: 0 auto;
+
+            padding: 32px 16px;            padding: 32px 16px;
+
+        }        }
+
+        h1 {        h1 {
+
+            text-align: center;            text-align: center;
+
+            margin-bottom: 32px;            margin-bottom: 32px;
+
+        }        }
+
+        .business-list {        .business-list {
+
+            display: grid;            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+            gap: 24px;            gap: 24px;
+
+            margin-bottom: 40px;            margin-bottom: 40px;
+
+        }        }
+
+        .business-card {        .business-card {
+
+            background: #23283a;            background: #23283a;
+
+            border-radius: 16px;            border-radius: 16px;
+
+            padding: 20px;            padding: 20px;
+
+            box-shadow: 0 2px 16px #0002;            box-shadow: 0 2px 16px #0002;
+
+            display: flex;            display: flex;
+
+            flex-direction: column;            flex-direction: column;
+
+            align-items: center;            align-items: center;
+
+            transition: box-shadow 0.2s;            transition: box-shadow 0.2s;
+
+        }        }
+
+        .business-card:hover {        .business-card:hover {
+
+            box-shadow: 0 6px 32px #0005;            box-shadow: 0 6px 32px #0005;
+
+        }        }
+
+        .business-avatar {        .business-avatar {
+
+            width: 80px;            width: 80px;
+
+            height: 80px;            height: 80px;
+
+            border-radius: 50%;            border-radius: 50%;
+
+            object-fit: cover;            object-fit: cover;
+
+            margin-bottom: 12px;            margin-bottom: 12px;
+
+            border: 3px solid #fff2;            border: 3px solid #fff2;
+
+        }        }
+
+        .business-name {        .business-name {
+
+            font-size: 1.2rem;            font-size: 1.2rem;
+
+            font-weight: 600;            font-weight: 600;
+
+            margin-bottom: 6px;            margin-bottom: 6px;
+
+            text-align: center;            text-align: center;
+
+        }        }
+
+        .business-phone, .business-address {        .business-phone, .business-address {
+
+            font-size: 0.95rem;            font-size: 0.95rem;
+
+            color: #bfc8e2;            color: #bfc8e2;
+
+            margin-bottom: 4px;            margin-bottom: 4px;
+
+            text-align: center;            text-align: center;
+
+        }        }
+
+        .add-form {        .add-form {
+
+            background: #23283a;            background: #23283a;
+
+            border-radius: 16px;            border-radius: 16px;
+
+            padding: 24px;            padding: 24px;
+
+            box-shadow: 0 2px 16px #0002;            box-shadow: 0 2px 16px #0002;
+
+            max-width: 500px;            max-width: 500px;
+
+            margin: 0 auto 32px;            margin: 0 auto 32px;
+
+        }        }
+
+        .add-form h2 {        .add-form h2 {
+
+            margin-top: 0;            margin-top: 0;
+
+            margin-bottom: 18px;            margin-bottom: 18px;
+
+            text-align: center;            text-align: center;
+
+        }        }
+
+        .form-group {        .form-group {
+
+            margin-bottom: 16px;            margin-bottom: 16px;
+
+        }        }
+
+        .form-group label {        .form-group label {
+
+            display: block;            display: block;
+
+            margin-bottom: 6px;            margin-bottom: 6px;
+
+            font-weight: 500;            font-weight: 500;
+
+        }        }
+
+        .form-group input, .form-group textarea {        .form-group input, .form-group textarea {
+
+            width: 100%;            width: 100%;
+
+            padding: 8px 10px;            padding: 8px 10px;
+
+            border-radius: 8px;            border-radius: 8px;
+
+            border: none;            border: none;
+
+            background: #181c24;            background: #181c24;
+
+            color: #fff;            color: #fff;
+
+            font-size: 1rem;            font-size: 1rem;
+
+        }        }
+
+        .form-group textarea {        .form-group textarea {
+
+            resize: vertical;            resize: vertical;
+
+        }        }
+
+        .form-actions {        .form-actions {
+
+            text-align: center;            text-align: center;
+
+        }        }
+
+        .form-actions button {        .form-actions button {
+
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+            color: #fff;            color: #fff;
+
+            border: none;            border: none;
+
+            border-radius: 10px;            border-radius: 10px;
+
+            padding: 10px 28px;            padding: 10px 28px;
+
+            font-size: 1.1rem;            font-size: 1.1rem;
+
+            cursor: pointer;            cursor: pointer;
+
+            transition: background 0.2s;            transition: background 0.2s;
+
+        }        }
+
+        .form-actions button:hover {        .form-actions button:hover {
+
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+
+        }        }
+
+        .export-btn {        .export-btn {
+
+            display: block;            display: block;
+
+            margin: 0 auto 24px;            margin: 0 auto 24px;
+
+            background: #11998e;            background: #11998e;
+
+            color: #fff;            color: #fff;
+
+            border: none;            border: none;
+
+            border-radius: 10px;            border-radius: 10px;
+
+            padding: 10px 24px;            padding: 10px 24px;
+
+            font-size: 1rem;            font-size: 1rem;
+
+            cursor: pointer;            cursor: pointer;
+
+        }        }
+
+        @media (max-width: 600px) {        @media (max-width: 600px) {
+
+            .container {            .container {
+
+                padding: 16px 4px;                padding: 16px 4px;
+
+            }            }
+
+            .business-list {            .business-list {
+
+                grid-template-columns: 1fr;                grid-template-columns: 1fr;
+
+            }            }
+
+        }        }
+
+    </style>    </style>
+
+</head></head>
+
+<body><body>
+
+    <div class="container">    <div class="container">
+
+        <h1>Business Dashboard NFC</h1>        <h1>Tableau de bord des Business NFC</h1>
+
+        <button class="export-btn" id="exportBtn"><i class="fas fa-download"></i> Export JSON</button>        <button class="export-btn" id="exportBtn"><i class="fas fa-download"></i> Exporter le JSON</button>
+
+        <form class="add-form" id="addForm">        <form class="add-form" id="addForm">
+
+            <h2>Add a new business</h2>            <h2>Ajouter un nouveau business</h2>
+
+            <div class="form-group">            <div class="form-group">
+
+                <label for="businessId">ID (unique, e.g. los-tacos)</label>                <label for="businessId">Identifiant (unique, ex: los-tacos)</label>
+
+                <input type="text" id="businessId" required>                <input type="text" id="businessId" required>
+
+            </div>            </div>
+
+            <div class="form-group">            <div class="form-group">
+
+                <label for="businessName">Name</label>                <label for="businessName">Nom</label>
+
+                <input type="text" id="businessName" required>                <input type="text" id="businessName" required>
+
+            </div>            </div>
+
+            <div class="form-group">            <div class="form-group">
+
+                <label for="businessImage">Image (URL)</label>                <label for="businessImage">Image (URL)</label>
+
+                <input type="text" id="businessImage">                <input type="text" id="businessImage">
+
+            </div>            </div>
+
+            <div class="form-group">            <div class="form-group">
+
+                <label for="businessPhone">Phone</label>                <label for="businessPhone">Téléphone</label>
+
+                <input type="text" id="businessPhone">                <input type="text" id="businessPhone">
+
+            </div>            </div>
+
+            <div class="form-group">            <div class="form-group">
+
+                <label for="businessAddress">Address</label>                <label for="businessAddress">Adresse</label>
+
+                <input type="text" id="businessAddress">                <input type="text" id="businessAddress">
+
+            </div>            </div>
+
+            <div class="form-group">            <div class="form-group">
+
+                <label for="businessGallery">Gallery (URLs separated by commas)</label>                <label for="businessGallery">Galerie (URLs séparées par des virgules)</label>
+
+                <textarea id="businessGallery" rows="2"></textarea>                <textarea id="businessGallery" rows="2"></textarea>
+
+            </div>            </div>
+
+            <div class="form-actions">            <div class="form-actions">
+
+                <button type="submit">Add</button>                <button type="submit">Ajouter</button>
+
+            </div>            </div>
+
+        </form>        </form>
+
+        <div class="business-list" id="businessList"></div>        <div class="business-list" id="businessList"></div>
+
+    </div>    </div>
+
+    <script>    <script>
+
+        let businesses = {};        let businesses = {};
+
+        async function loadBusinesses() {        async function loadBusinesses() {
+
+            try {            try {
+
+                const res = await fetch('businesses.json');                const res = await fetch('businesses.json');
+
+                businesses = await res.json();                businesses = await res.json();
+
+                renderBusinessList();                renderBusinessList();
+
+            } catch (e) {            } catch (e) {
+
+                document.getElementById('businessList').innerHTML = '<p>Error loading businesses.json</p>';                document.getElementById('businessList').innerHTML = '<p>Erreur de chargement du fichier businesses.json</p>';
+
+            }            }
+
+        }        }
+
+        function renderBusinessList() {        function renderBusinessList() {
+
+            const list = document.getElementById('businessList');            const list = document.getElementById('businessList');
+
+            list.innerHTML = '';            list.innerHTML = '';
+
+            Object.entries(businesses).forEach(([id, b]) => {            Object.entries(businesses).forEach(([id, b]) => {
+
+                const card = document.createElement('div');                const card = document.createElement('div');
+
+                card.className = 'business-card';                card.className = 'business-card';
+
+                card.innerHTML = `                card.innerHTML = `
+
+                    <img src="${b.image || 'https://via.placeholder.com/80x80?text=' + encodeURIComponent(b.name?.charAt(0) || '?')}" class="business-avatar" alt="${b.name}">                    <img src="${b.image || 'https://via.placeholder.com/80x80?text=' + encodeURIComponent(b.name?.charAt(0) || '?')}" class="business-avatar" alt="${b.name}">
+
+                    <div class="business-name">${b.name || id}</div>                    <div class="business-name">${b.name || id}</div>
+
+                    <div class="business-phone"><i class="fas fa-phone"></i> ${b.phone || ''}</div>                    <div class="business-phone"><i class="fas fa-phone"></i> ${b.phone || ''}</div>
+
+                    <div class="business-address"><i class="fas fa-map-marker-alt"></i> ${b.address?.text || b.address || ''}</div>                    <div class="business-address"><i class="fas fa-map-marker-alt"></i> ${b.address?.text || b.address || ''}</div>
+
+                    <div style="font-size:0.9rem;color:#f093fb;margin-top:6px;">${b.gallery?.images?.length ? b.gallery.images.length + ' image(s)' : ''}</div>                    <div style="font-size:0.9rem;color:#f093fb;margin-top:6px;">${b.gallery?.images?.length ? b.gallery.images.length + ' image(s)' : ''}</div>
+
+                `;                `;
+
+                list.appendChild(card);                list.appendChild(card);
+
+            });            });
+
+        }        }
+
+        document.getElementById('addForm').addEventListener('submit', function(e) {        document.getElementById('addForm').addEventListener('submit', function(e) {
+
+            e.preventDefault();            e.preventDefault();
+
+            const id = document.getElementById('businessId').value.trim();            const id = document.getElementById('businessId').value.trim();
+
+            if (!id || businesses[id]) {            if (!id || businesses[id]) {
+
+                alert('ID missing or already used.');                alert('Identifiant manquant ou déjà utilisé.');
+
+                return;                return;
+
+            }            }
+
+            const name = document.getElementById('businessName').value.trim();            const name = document.getElementById('businessName').value.trim();
+
+            const image = document.getElementById('businessImage').value.trim();            const image = document.getElementById('businessImage').value.trim();
+
+            const phone = document.getElementById('businessPhone').value.trim();            const phone = document.getElementById('businessPhone').value.trim();
+
+            const address = document.getElementById('businessAddress').value.trim();            const address = document.getElementById('businessAddress').value.trim();
+
+            const galleryRaw = document.getElementById('businessGallery').value.trim();            const galleryRaw = document.getElementById('businessGallery').value.trim();
+
+            const galleryImages = galleryRaw ? galleryRaw.split(',').map(u => u.trim()).filter(u => u) : [];            const galleryImages = galleryRaw ? galleryRaw.split(',').map(u => u.trim()).filter(u => u) : [];
+
+            businesses[id] = {            businesses[id] = {
+
+                name,                name,
+
+                image,                image,
+
+                phone,                phone,
+
+                address,                address,
+
+                gallery: galleryImages.length ? { name: 'Gallery', images: galleryImages } : undefined                gallery: galleryImages.length ? { name: 'Gallery', images: galleryImages } : undefined
+
+            };            };
+
+            renderBusinessList();            renderBusinessList();
+
+            this.reset();            this.reset();
+
+        });        });
+
+        document.getElementById('exportBtn').addEventListener('click', function() {        document.getElementById('exportBtn').addEventListener('click', function() {
+
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(businesses, null, 2));            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(businesses, null, 2));
+
+            const dl = document.createElement('a');            const dl = document.createElement('a');
+
+            dl.setAttribute('href', dataStr);            dl.setAttribute('href', dataStr);
+
+            dl.setAttribute('download', 'businesses.json');            dl.setAttribute('download', 'businesses.json');
+
+            dl.click();            dl.click();
+
+        });        });
+
+        loadBusinesses();        loadBusinesses();
+
+    </script>    </script>
+
+</body></body>
+
+</html></html>
+
