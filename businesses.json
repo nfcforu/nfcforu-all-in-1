@@ -342,6 +342,21 @@
         
       ]
     }
+    },
+        "Peak-setif": {
+    "name": "Peak Setif",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/images (1).png",
+    "address": {
+      "url": "https://www.google.com/maps/search/36.198559,+5.427521?entry=tts&g_ep=EgoyMDI1MTAxOS4wIPu8ASoASAFQAw%3D%3D&skid=df109df2-6360-4b34-8ca8-57d30a18a5bd",
+      "text": "Rue Liamine Ali, Sétif"
+    },
+    "phone": "+213556673853",
+    "gradient": "#FB0000",
+      "socials": {
+      "instagram": "https://www.instagram.com/peaksetif",
+      "facebook":"https://www.facebook.com/share/16aPnvTbAw/",
+      "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213556673853"
+    }
     }
   }
 
