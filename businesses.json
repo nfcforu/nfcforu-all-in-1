@@ -357,6 +357,22 @@
       "facebook":"https://www.facebook.com/profile.php?id=61582548573896&mibextid=wwXIfr&rdid=DEmeaVh9RHd23IPQ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JSmp3H4w9%2F%3Fmibextid%3DwwXIfr#",
       "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213556673853"
     }
+    },
+        "Krispy-Kult": {
+    "name": "Krispy-Kult",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-10-21 at 21.00.51_2b3f3273.jpg",
+    "address": {
+      "url": "google.com/maps?sca_esv=d39a8183768c3c68&output=search&q=krispy+kult&source=lnms&fbs=AIIjpHx4nJjfGojPVHhEACUHPiMQ_pbg5bWizQs3A_kIenjtcpTTqBUdyVgzq0c3_k8z34GAwf0jHaPgz38H1UrFi4JZ_wsbaZy5bcislJwEjK9aKHWL5YDNbqGaJ_AT-L_UXwccD4oKT_NF4Lks8qLz53qpySDJ2wncmNPxKIFN4g4PFsE8_L5nUZ-aYD-kBzWnhKh81qEs_5vBx81VcZKfvOf4k1Scrw&entry=mc&ved=1t:200715&ictx=111",
+      "text": "Rue El Mokrani Hadji Med, Sétif"
+    },
+    "phone": "0779941898",
+    "gradient": "linear-gradient(1deg,rgba(4, 8, 9, 1) 0%, rgba(194, 120, 47, 1) 100%)",
+      "socials": {
+      "instagram": "https://www.instagram.com/krispykult",
+      "facebook":"https://www.facebook.com/Krispykult",
+      "tiktok":"https://www.tiktok.com/@krispykult",
+      "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213549167753"
+    }
     }
   }
 
