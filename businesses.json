@@ -399,6 +399,22 @@
       "tiktok":"https://www.tiktok.com/@elegance.boutique.19?",
       "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213549167753"
     }
+    },
+        "Mr-pasta": {
+    "name": "Mr pasta",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/354832433_135898359510656_3533099122302324103_n.jpg",
+    "address": {
+      "url": "google.com/maps/place/mr+pasta+setif/data=!4m2!3m1!1s0x12f3150b09bd2be9:0x8023f0e0d0f4d1f8?sa=X&ved=1t:242&ictx=111",
+      "text": "Av. du 1er Novembere, Sétif"
+    },
+    "phone": "0556521689",
+    "gradient": "linear-gradient(353deg,rgba(253, 218, 128, 1) 0%, rgba(0, 0, 0, 1) 97%)",
+      "socials": {
+      "instagram": "https://www.instagram.com/mrpasta19/",
+      "facebook":"https://www.facebook.com/mrpasta19",
+      "tiktok":"https://www.tiktok.com/@mrpasta.setif",
+      "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213549167753"
+    }
     }
   }
 
