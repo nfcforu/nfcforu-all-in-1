@@ -469,6 +469,17 @@
       "facebook":"https://www.facebook.com/profile.php?id=100080039298725",
       "whatsapp":"https://api.whatsapp.com/send/?phone=%2B2130671727473"
     }
+    },
+          "Pro-cars": {
+    "name": "Pro cars",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/ChatGPT Image Oct 23, 2025, 07_34_00 PM.png",
+    "phone": "036451260",
+    "gradient": "linear-gradient(163deg,rgba(154, 6, 12, 1) 11%, rgba(5, 5, 5, 1) 100%)",
+      "socials": {
+      "facebook":"https://www.facebook.com/profile.php?id=61577954632267",
+      "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213551532545"
     }
+    }
+    
   }
 
