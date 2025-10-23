@@ -479,6 +479,22 @@
       "facebook":"https://www.facebook.com/profile.php?id=61577954632267",
       "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213551532545"
     }
+    },
+          "Sultana_Luxury": {
+    "name": "Sultana Luxury",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/504451431_17843227617517260_869182863055058834_n.jpg",
+    "address": {
+      "url": "https://www.google.com/maps/place/SULTANA+Luxury/@36.1942957,5.4147423,17z/data=!3m1!4b1!4m6!3m5!1s0x12f315003efaed7b:0x73420807e48acec2!8m2!3d36.1942957!4d5.4173172!16s%2Fg%2F11zk880np6?entry=ttu&g_ep=EgoyMDI1MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+      "text": "Cité yahiaoui, Sétif"
+    },
+    "phone": "0770210656",
+    "gradient": "radial-gradient(circle,rgba(126, 47, 94, 1) 11%, rgba(0, 0, 0, 1) 100%)'p",
+      "socials": {
+      "facebook":"https://www.facebook.com/profile.php?id=100063653499540",
+      "instagram": "https://www.instagram.com/sultana_luxury19/",
+      "tiktok":"https://www.tiktok.com/@sultanaluxury19",
+      "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213555759026"
+    }
     }
     
   }
