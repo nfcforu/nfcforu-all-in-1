@@ -415,6 +415,21 @@
       "tiktok":"https://www.tiktok.com/@mrpasta.setif",
       "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213556521689"
     }
+    },
+      "Silver-Queen": {
+    "name": "Silver Queen",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/504451431_17843227617517260_869182863055058834_n.jpg",
+    "address": {
+      "url": "https://www.google.com/maps/place/36%C2%B011'41.4%22N+5%C2%B025'07.9%22E/@36.1948333,5.4188611,17z/data=!3m1!4b1!4m4!3m3!8m2!3d36.1948333!4d5.4188611?entry=ttu&g_ep=EgoyMDI1MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+      "text": "Cité yahiaoui, Sétif"
+    },
+    "phone": "0555759026",
+    "gradient": "linear-gradient(5deg,rgba(246, 239, 231, 1) 0%, rgba(174, 190, 179, 1) 97%)",
+      "socials": {
+      "instagram": "https://www.instagram.com/silver.queen2025?i",
+      "tiktok":"https://www.tiktok.com/@silver.queen182?_t=ZS-90n3ToFD1KZ&_r=1",
+      "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213555759026"
+    }
     }
   }
 
