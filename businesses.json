@@ -441,6 +441,18 @@
       "tiktok":"https://www.tiktok.com/@royal.kids.officiel",
       "facebook":"https://www.facebook.com/profile.php?id=61557499148521"
     }
+    },
+      "Boutique-Bruxelles-Jozef-19": {
+    "name": "Boutique Bruxelles Jozef 19",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/561637016_17924663625152532_6095836205376130114_n.jpg",
+    "phone": "+213778050099",
+    "gradient": "#017FB1",
+      "socials": {
+      "instagram": "https://www.instagram.com/bruxelees/",
+      "tiktok":"https://www.tiktok.com/@boutique.bruxelles19",
+      "facebook":"https://www.facebook.com/youcef.khabcheche.2025",
+      "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213778050099"
+    }
     }
   }
 
