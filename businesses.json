@@ -17,7 +17,7 @@
   "sac-de-lux": {
     "name": "Sac De Luxe",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-09-24 at 16.33.50_cf05da8e.jpg",
-     "address": {
+    "address": {
       "url": "https://www.google.com/maps/place/Boutique+Sac+de+luxe/@36.2059736,5.4329927,17z/data=!4m6!3m5!1s0x12f31529b79ae597:0x8855050ad922e288!8m2!3d36.2059736!4d5.4355676!16s%2Fg%2F11s4bjzf4k?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
       "text": "Boulvard n°03, Sétif"
     },
@@ -26,7 +26,7 @@
     "socials": {
       "facebook": "https://web.facebook.com/sac2lux",
       "whatsapp": "https://api.whatsapp.com/send?phone=%2B213782746952&fbclid=IwVERTSANA9qlleHRuA2FlbQIxMAABHiTFOvpE0tSm4h4NuBJWOgfe7GQddnsGreBOXORdLKSmWUMKUcRSe5mlkh9R_aem_v1coVSt8xLts_HUUOFyFsw&sfnsn=wa",
-      "tiktok":"https://www.tiktok.com/@sac_2_luxe"
+      "tiktok": "https://www.tiktok.com/@sac_2_luxe"
     }
   },
   "FIVE-PIZZA": {
@@ -58,10 +58,10 @@
     "socials": {
       "instagram": "https://www.instagram.com/big_mode.19/",
       "facebook": "https://www.facebook.com/people/BIG-MODE/100077852154033/",
-      "tiktok":"https://www.tiktok.com/@big_mode.setif"
+      "tiktok": "https://www.tiktok.com/@big_mode.setif"
     }
   },
-    "moka-mode-19": {
+  "moka-mode-19": {
     "name": "moka mode",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-09-27 at 14.22.37_5d7a4a43.jpg",
     "phone": "0778944543",
@@ -69,7 +69,7 @@
     "socials": {
       "instagram": "https://www.instagram.com/mokamode19/?igsh=MTlvOHE4M3IxY2phcg%3D%3D#",
       "facebook": "https://www.facebook.com/people/Moka-boutique/61573554225897/?rdid=mPg5u4IIw1FP1DZX&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1FeBGF54qQ%2F",
-      "tiktok":"https://www.tiktok.com/@moka_mode19"
+      "tiktok": "https://www.tiktok.com/@moka_mode19"
     }
   },
   "Gami-glamour": {
@@ -84,7 +84,7 @@
     "socials": {
       "instagram": "https://www.instagram.com/gamiglamour/",
       "facebook": "https://www.facebook.com/people/Gami-Glamour/61558820503224/?rdid=TwiOt391YAOZza3p&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1GfFHzP8iu%2F",
-      "tiktok":"https://www.tiktok.com/@gamiglamourr?_t=ZS-904nhlrGqXA&_r=1"
+      "tiktok": "https://www.tiktok.com/@gamiglamourr?_t=ZS-904nhlrGqXA&_r=1"
     }
   },
   "kasr-elanaka": {
@@ -99,7 +99,7 @@
     "socials": {
       "instagram": "https://www.instagram.com/kasr_elanaka19?igsh=ZHBrN2xlZ2FvNmF5 ",
       "facebook": "https://www.facebook.com/share/1CjsyncM5C/",
-      "tiktok":"https://www.tiktok.com/@kasr_elanaka19?_t=ZS-904u6ivuPzO&_r=1"
+      "tiktok": "https://www.tiktok.com/@kasr_elanaka19?_t=ZS-904u6ivuPzO&_r=1"
     }
   },
   "Boutique-luxo": {
@@ -114,8 +114,8 @@
     "socials": {
       "instagram": "https://www.instagram.com/luxo_cadeaux_accessoirs_?igsh=dXg2YmZhdXlramdm",
       "facebook": "https://www.facebook.com/people/luxo-cadeaux-accessoires/61566809344163/?rdid=4fMRozs4CfDFi0EQ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1FMt9ptUie%2F",
-      "tiktok":"https://www.tiktok.com/@luxo_cadeaux_accessoires?_t=ZS-904yfECoI8W&_r=1",
-      "snapchat":"https://www.snapchat.com/@boutique_luxo?share_id=WG8CgKcvfhQ&locale=en-US"
+      "tiktok": "https://www.tiktok.com/@luxo_cadeaux_accessoires?_t=ZS-904yfECoI8W&_r=1",
+      "snapchat": "https://www.snapchat.com/@boutique_luxo?share_id=WG8CgKcvfhQ&locale=en-US"
     }
   },
   "boutique_lmerta7": {
@@ -129,11 +129,11 @@
     "gradient": "#939A80",
     "socials": {
       "instagram": "https://www.instagram.com/boutique_lmerta7",
-      "tiktok":"https://www.tiktok.com/@boutiquelmerta7?",
-      "snapchat":"https://www.snapchat.com/@tkabachi2020?"
+      "tiktok": "https://www.tiktok.com/@boutiquelmerta7?",
+      "snapchat": "https://www.snapchat.com/@tkabachi2020?"
     }
   },
-    "Lattafa-Parfum-Setif": {
+  "Lattafa-Parfum-Setif": {
     "name": "Lattafa Parfum Setif",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/bbac697a-e7f4-4a9c-bc03-93390853a849.png",
     "address": {
@@ -144,11 +144,10 @@
     "gradient": "#FEB21A",
     "socials": {
       "facebook": "https://www.facebook.com/share/1F5Pwzbhvh/",
-      "tiktok":"https://www.tiktok.com/@lattafa_setif1"
-      
+      "tiktok": "https://www.tiktok.com/@lattafa_setif1"
     }
   },
-   "hamza-abou-zaid": {
+  "hamza-abou-zaid": {
     "name": "حمزة أبو زيد للعطور",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-09-27 at 20.38.15_248c05d4.jpg",
     "address": {
@@ -159,11 +158,11 @@
     "gradient": "linear-gradient(90deg,rgba(8, 55, 61, 1) 0%, rgba(103, 125, 89, 1) 100%)",
     "socials": {
       "facebook": "https://www.facebook.com/hmzt.abw.zyd.ll.twr",
-      "tiktok":"https://www.tiktok.com/@user941703651255?",
+      "tiktok": "https://www.tiktok.com/@user941703651255?",
       "instagram": "https://www.instagram.com/hamza_abou_zaid"
     }
   },
-     "EL-Bezzi-home-decor": {
+  "EL-Bezzi-home-decor": {
     "name": "EL-Bezzi Home Decor",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-09-28 at 16.57.53_bcc1f39b.jpg",
     "address": {
@@ -172,16 +171,16 @@
     },
     "phone": "0553366385",
     "gradient": "linear-gradient(185deg,rgba(19, 16, 17, 1) 0%, rgba(236, 199, 124, 1) 100%)",
-      "socials": {
+    "socials": {
       "facebook": "https://www.facebook.com/wpcelbezzi",
-      "tiktok":"https://www.tiktok.com/@elbezzi_home_decor",
+      "tiktok": "https://www.tiktok.com/@elbezzi_home_decor",
       "instagram": "https://www.instagram.com/el_bezzi_home_decor",
-      "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213553366385",
-      "viber":"viber://chat?number=%2B+213770515710",
-      "telegram":"https://t.me/Bezzihome"
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213553366385",
+      "viber": "viber://chat?number=%2B+213770515710",
+      "telegram": "https://t.me/Bezzihome"
     }
-    },
-"The-Computer": {
+  },
+  "The-Computer": {
     "name": "The Computer ",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-09-28 at 20.05.38_42a98f68.jpg",
     "address": {
@@ -190,13 +189,13 @@
     },
     "phone": "0770121546",
     "gradient": "radial-gradient(circle,rgba(254, 113, 14, 1) 0%, rgba(145, 99, 64, 1) 100%)",
-      "socials": {
+    "socials": {
       "facebook": "https://www.facebook.com/people/The-Computer/100090559567802/",
-      "tiktok":"https://www.tiktok.com/@the_computer_seti",
+      "tiktok": "https://www.tiktok.com/@the_computer_seti",
       "instagram": "https://www.instagram.com/the_computer_setif_/"
     }
-    },
-    "golden_body_setif": {
+  },
+  "golden_body_setif": {
     "name": "Golden Body Setif",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/367486275_274393928680166_3600344301595036989_n.jpg",
     "address": {
@@ -205,14 +204,14 @@
     },
     "phone": "0542408129",
     "gradient": "linear-gradient(185deg,rgba(19, 16, 17, 1) 0%, rgba(236, 199, 124, 1) 100%)",
-      "socials": {
+    "socials": {
       "facebook": "https://www.facebook.com/profile.php?id=100083286819883&locale=fr_FR",
-      "tiktok":"https://www.tiktok.com/@sifou_golden_body",
+      "tiktok": "https://www.tiktok.com/@sifou_golden_body",
       "instagram": "https://www.instagram.com/golden_body_setif/",
-      "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213542408129"
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213542408129"
     }
-    },
-    "chouchou_vegas": {
+  },
+  "chouchou_vegas": {
     "name": "Chouchou Vegas",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/527833946_1322725569862023_2385635275326947222_n.jpg",
     "address": {
@@ -221,13 +220,13 @@
     },
     "phone": "0555095668",
     "gradient": "#D7000F",
-      "socials": {
+    "socials": {
       "facebook": "https://www.facebook.com/boutiquevegas19?locale=fr_FR",
-      "tiktok":"https://www.tiktok.com/@chouchouvegas",
+      "tiktok": "https://www.tiktok.com/@chouchouvegas",
       "instagram": "https://www.instagram.com/chouchou_vegas_/"
     }
-    },
-    "black_mode_setif": {
+  },
+  "black_mode_setif": {
     "name": "Black Mode Setif",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/ChatGPT Image 28 sept. 2025, 21_11_52.png",
     "address": {
@@ -236,13 +235,13 @@
     },
     "phone": "0550660981",
     "gradient": "#B38746",
-      "socials": {
-      "tiktok":"https://www.tiktok.com/@black_mode_setif",
+    "socials": {
+      "tiktok": "https://www.tiktok.com/@black_mode_setif",
       "instagram": "https://www.instagram.com/black_mode_setif19/",
-      "snapchat":"https://www.snapchat.com/@salah_ayat25?share_id=6F-gPTR2RqQ&locale=en-US"
+      "snapchat": "https://www.snapchat.com/@salah_ayat25?share_id=6F-gPTR2RqQ&locale=en-US"
     }
-    },
-    "amer-phone": {
+  },
+  "amer-phone": {
     "name": "Amer Phone",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/ChatGPT Image 29 sept. 2025, 17_22_59.png",
     "address": {
@@ -251,13 +250,13 @@
     },
     "phone": "0552348370",
     "gradient": "#7F7C7C",
-      "socials": {
-      "tiktok":"https://www.tiktok.com/@amerphone93",
+    "socials": {
+      "tiktok": "https://www.tiktok.com/@amerphone93",
       "instagram": "https://www.instagram.com/amerphone93/",
-      "facebook":"https://www.facebook.com/people/Amer-Phone-setif/61553275597430/?ref=_xav_ig_profile_page_web"
+      "facebook": "https://www.facebook.com/people/Amer-Phone-setif/61553275597430/?ref=_xav_ig_profile_page_web"
     }
-    },
-    "vitalia": {
+  },
+  "vitalia": {
     "name": "Vitalia",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/486542490_122093593856834079_3434836811588493143_n.jpg",
     "address": {
@@ -266,13 +265,13 @@
     },
     "phone": "0552754526",
     "gradient": "linear-gradient(168deg,rgba(104, 30, 1, 1) 0%, rgba(19, 9, 8, 1) 100%)",
-      "socials": {
-      "tiktok":"https://www.tiktok.com/@vitalia_setif",
+    "socials": {
+      "tiktok": "https://www.tiktok.com/@vitalia_setif",
       "instagram": "https://www.instagram.com/vitalia_setif/",
-      "facebook":"https://www.facebook.com/profile.php?id=61575022371756"
+      "facebook": "https://www.facebook.com/profile.php?id=61575022371756"
     }
-    },
-    "Boutique-jaguar": {
+  },
+  "Boutique-jaguar": {
     "name": "Boutique Jaguar",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-09-28 at 21.51.57_e96309ae.jpg",
     "address": {
@@ -281,13 +280,13 @@
     },
     "phone": "0554392087",
     "gradient": "#1A8051",
-      "socials": {
-      "tiktok":"https://www.tiktok.com/@boutique.jaguar.19",
+    "socials": {
+      "tiktok": "https://www.tiktok.com/@boutique.jaguar.19",
       "instagram": "https://www.instagram.com/boutique.jagua.r19/",
-      "facebook":"https://www.facebook.com/profile.php?id=61559514929996"
+      "facebook": "https://www.facebook.com/profile.php?id=61559514929996"
     }
-    },
-    "patisserie-sofrane": {
+  },
+  "patisserie-sofrane": {
     "name": "Pâtisserie Sofrane",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/451314455_454812660794371_7361564426721197365_n.jpg",
     "address": {
@@ -296,13 +295,13 @@
     },
     "phone": "036825729",
     "gradient": "#BFAE96",
-      "socials": {
-      "tiktok":"https://www.tiktok.com/@patisserie.sofrane?_t=ZS-90KYB7rDmZG&_r=1",
+    "socials": {
+      "tiktok": "https://www.tiktok.com/@patisserie.sofrane?_t=ZS-90KYB7rDmZG&_r=1",
       "instagram": "https://www.instagram.com/pati_sserie_sofrane?",
-      "facebook":"https://www.facebook.com/share/1BJ17daUSq/"
+      "facebook": "https://www.facebook.com/share/1BJ17daUSq/"
     }
-    },
-    "succes-space": {
+  },
+  "succes-space": {
     "name": "فضاء النجاح التعليمي",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-10-07 at 11.53.08_c9171e32.jpg",
     "address": {
@@ -310,16 +309,16 @@
       "text": "Ain Arnat, Sétif"
     },
     "phone": "0555843307",
-    "email":"academysuccesspace@gmail.com",
+    "email": "academysuccesspace@gmail.com",
     "gradient": "linear-gradient(136deg,rgba(129, 72, 187, 1) 0%, rgba(219, 62, 113, 1) 47%, rgba(251, 194, 104, 1) 100%)",
-      "socials": {
-      "tiktok":"https://www.tiktok.com/@succes.space.acad?_t=ZS-90Lhz5r1DYl&_r=1",
+    "socials": {
+      "tiktok": "https://www.tiktok.com/@succes.space.acad?_t=ZS-90Lhz5r1DYl&_r=1",
       "instagram": "https://www.instagram.com/succes_space",
-      "facebook":"https://www.facebook.com/share/16YzikRu7f/",
-      "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213555843307"
+      "facebook": "https://www.facebook.com/share/16YzikRu7f/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213555843307"
     }
-    },
-        "omyga-gym": {
+  },
+  "omyga-gym": {
     "name": "OMEGA GYM",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-10-11 at 14.25.24_f37186e8.jpg",
     "address": {
@@ -328,22 +327,21 @@
     },
     "phone": "0550424598",
     "gradient": "linear-gradient(185deg,rgba(19, 16, 17, 1) 0%, rgba(236, 199, 124, 1) 100%)",
-      "socials": {
+    "socials": {
       "instagram": "https://www.instagram.com/dz_omega_gym",
-      "facebook":"https://www.facebook.com/share/1Fgz2qNeFu/ "
+      "facebook": "https://www.facebook.com/share/1Fgz2qNeFu/ "
     },
-         "gallery": {
-      "name": "Programme D'entrainement", 
+    "gallery": {
+      "name": "Programme D'entrainement",
       "images": [
         "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-10-11 at 14.24.55_72c9ed48.jpg",
         "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-10-11 at 16.20.30_24a88ebd.jpg",
         "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-10-11 at 13.40.22_fb19fe97.jpg",
         "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-10-11 at 13.40.22_7668b0fe.jpg"
-        
       ]
     }
-    },
-    "Peak-setif": {
+  },
+  "Peak-setif": {
     "name": "Peak Setif",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/images (1).png",
     "address": {
@@ -352,14 +350,14 @@
     },
     "phone": "+213556673853",
     "gradient": "#FB0000",
-      "socials": {
+    "socials": {
       "instagram": "https://www.instagram.com/peaksetif",
-      "facebook":"https://www.facebook.com/profile.php?id=61582548573896&mibextid=wwXIfr&rdid=DEmeaVh9RHd23IPQ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JSmp3H4w9%2F%3Fmibextid%3DwwXIfr#",
-      "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213556673853",
-      "tiktok":"https://www.tiktok.com/@peak.setif.offici?_t=ZS-90lJZTn5LXj&_r=1"
+      "facebook": "https://www.facebook.com/profile.php?id=61582548573896&mibextid=wwXIfr&rdid=DEmeaVh9RHd23IPQ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JSmp3H4w9%2F%3Fmibextid%3DwwXIfr#",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213556673853",
+      "tiktok": "https://www.tiktok.com/@peak.setif.offici?_t=ZS-90lJZTn5LXj&_r=1"
     }
-    },
-        "Krispy-Kult": {
+  },
+  "Krispy-Kult": {
     "name": "Krispy-Kult",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-10-21 at 21.00.51_2b3f3273.jpg",
     "address": {
@@ -368,23 +366,23 @@
     },
     "phone": "0779941898",
     "gradient": "linear-gradient(1deg,rgba(4, 8, 9, 1) 0%, rgba(194, 120, 47, 1) 100%)",
-      "socials": {
+    "socials": {
       "instagram": "https://www.instagram.com/krispykult",
-      "facebook":"https://www.facebook.com/Krispykult",
-      "tiktok":"https://www.tiktok.com/@krispykult",
-      "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213549167753"
+      "facebook": "https://www.facebook.com/Krispykult",
+      "tiktok": "https://www.tiktok.com/@krispykult",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213549167753"
     }
-    },
-   "Skydune": {
+  },
+  "Skydune": {
     "name": "Skydune",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-10-22 at 19.37.34_f47c80d7.jpg",
     "phone": "+213550417575",
     "gradient": "linear-gradient(167deg,rgba(36, 63, 86, 1) 0%, rgba(84, 92, 105, 1) 100%)",
-      "socials": {
-    "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213550418585"
+    "socials": {
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213550418585"
     }
-    },
-    "ELEGANCE-BOUTIQUE": {
+  },
+  "ELEGANCE-BOUTIQUE": {
     "name": "ELEGANCE-BOUTIQUE",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/358601731_729844082478537_5005913840619664282_n.jpg",
     "address": {
@@ -393,14 +391,14 @@
     },
     "phone": "+213671652249",
     "gradient": "linear-gradient(167deg,rgba(36, 63, 86, 1) 0%, rgba(84, 92, 105, 1) 100%)",
-      "socials": {
+    "socials": {
       "instagram": "https://www.instagram.com/elegance_boutique_les_tours/",
-      "facebook":"https://www.facebook.com/adilkad500",
-      "tiktok":"https://www.tiktok.com/@elegance.boutique.19?",
-      "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213549167753"
+      "facebook": "https://www.facebook.com/adilkad500",
+      "tiktok": "https://www.tiktok.com/@elegance.boutique.19?",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213549167753"
     }
-    },
-        "Mr-pasta": {
+  },
+  "Mr-pasta": {
     "name": "Mr pasta",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/354832433_135898359510656_3533099122302324103_n.jpg",
     "address": {
@@ -409,14 +407,14 @@
     },
     "phone": "0556521689",
     "gradient": "linear-gradient(353deg,rgba(253, 218, 128, 1) 0%, rgba(0, 0, 0, 1) 97%)",
-      "socials": {
+    "socials": {
       "instagram": "https://www.instagram.com/mrpasta19/",
-      "facebook":"https://www.facebook.com/mrpasta19",
-      "tiktok":"https://www.tiktok.com/@mrpasta.setif",
-      "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213556521689"
+      "facebook": "https://www.facebook.com/mrpasta19",
+      "tiktok": "https://www.tiktok.com/@mrpasta.setif",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213556521689"
     }
-    },
-      "Silver-Queen": {
+  },
+  "Silver-Queen": {
     "name": "Silver Queen",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/504451431_17843227617517260_869182863055058834_n.jpg",
     "address": {
@@ -425,76 +423,74 @@
     },
     "phone": "0555759026",
     "gradient": "#d9b99b",
-      "socials": {
+    "socials": {
       "instagram": "https://www.instagram.com/silver.queen2025?i",
-      "tiktok":"https://www.tiktok.com/@silver.queen182?_t=ZS-90n3ToFD1KZ&_r=1",
-      "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213555759026"
+      "tiktok": "https://www.tiktok.com/@silver.queen182?_t=ZS-90n3ToFD1KZ&_r=1",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213555759026"
     }
-    },
-          "Boutique-R-Kids": {
+  },
+  "Boutique-R-Kids": {
     "name": "Boutique R Kids",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/ChatGPT Image 23 oct. 2025, 16_55_42.png",
     "phone": "+213563455974",
     "gradient": "linear-gradient(175deg,rgba(223, 191, 18, 1) 0%, rgba(22, 13, 1, 1) 97%)",
-      "socials": {
+    "socials": {
       "instagram": "https://www.instagram.com/boutique.r.kids/",
-      "tiktok":"https://www.tiktok.com/@royal.kids.officiel",
-      "facebook":"https://www.facebook.com/profile.php?id=61557499148521"
+      "tiktok": "https://www.tiktok.com/@royal.kids.officiel",
+      "facebook": "https://www.facebook.com/profile.php?id=61557499148521"
     }
-    },
-      "Boutique-Bruxelles-Jozef-19": {
+  },
+  "Boutique-Bruxelles-Jozef-19": {
     "name": "Boutique Bruxelles Jozef 19",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/561637016_17924663625152532_6095836205376130114_n.jpg",
     "phone": "+213778050099",
     "gradient": "#017FB1",
-      "socials": {
+    "socials": {
       "instagram": "https://www.instagram.com/bruxelees/",
-      "tiktok":"https://www.tiktok.com/@boutique.bruxelles19",
-      "facebook":"https://www.facebook.com/youcef.khabcheche.2025",
-      "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213778050099"
+      "tiktok": "https://www.tiktok.com/@boutique.bruxelles19",
+      "facebook": "https://www.facebook.com/youcef.khabcheche.2025",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213778050099"
     }
-    },
-      "BoutiQue-Crystal": {
+  },
+  "BoutiQue-Crystal": {
     "name": "BoutiQue Crystal",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/ChatGPT Image Oct 23, 2025, 06_58_30 PM.png",
     "phone": "0671727473",
     "gradient": "#C3B2E3",
-        "address": {
+    "address": {
       "url": "https://www.google.com/maps/place/Boutiqur+crystal+saiid/@36.1951285,5.4142649,17z/data=!4m6!3m5!1s0x12f3151cf82ad041:0x745109335f5bb9e5!8m2!3d36.195063!4d5.4181786!16s%2Fg%2F11j153s3mh?entry=ttu&g_ep=EgoyMDI1MTAyMC4wIKXMDSoASAFQAw%3D%3D",
       "text": "Rue Boutaza el Hamid, Sétif"
     },
-      "socials": {
+    "socials": {
       "instagram": "https://www.instagram.com/boutique_crystal19/",
-      "tiktok":"https://www.tiktok.com/@boutiquecrystal19",
-      "facebook":"https://www.facebook.com/profile.php?id=100080039298725",
-      "whatsapp":"https://api.whatsapp.com/send/?phone=%2B2130671727473"
+      "tiktok": "https://www.tiktok.com/@boutiquecrystal19",
+      "facebook": "https://www.facebook.com/profile.php?id=100080039298725",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130671727473"
     }
-    },
-          "Pro-cars": {
+  },
+  "Pro-cars": {
     "name": "Pro cars",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/ChatGPT Image Oct 23, 2025, 07_34_00 PM.png",
     "phone": "036451260",
     "gradient": "linear-gradient(163deg,rgba(154, 6, 12, 1) 11%, rgba(5, 5, 5, 1) 100%)",
-      "socials": {
-      "facebook":"https://www.facebook.com/profile.php?id=61577954632267",
-      "whatsapp":"https://api.whatsapp.com/send/?phone=%2B213551532545"
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61577954632267",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213551532545"
     }
-    },
-          "Sultana_Luxury": {
+  },
+  "Sultana_Luxury": {
     "name": "Sultana Luxury",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/560359893_18528506227054906_3713971634424114696_n.jpg",
-    "address": { 
+    "address": {
       "url": "https://www.google.com/maps/place/SULTANA+Luxury/@36.1942957,5.4147423,17z/data=!3m1!4b1!4m6!3m5!1s0x12f315003efaed7b:0x73420807e48acec2!8m2!3d36.1942957!4d5.4173172!16s%2Fg%2F11zk880np6?entry=ttu&g_ep=EgoyMDI1MTAyMC4wIKXMDSoASAFQAw%3D%3D",
       "text": "Cité yahiaoui, Sétif"
     },
-    "phone": "0770210656", 
+    "phone": "0552011992",
     "gradient": "#7E2F5E",
-      "socials": {
-      "facebook":"https://www.facebook.com/profile.php?id=100063653499540",
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=100063653499540",
       "instagram": "https://www.instagram.com/sultana_luxury19/",
-      "tiktok":"https://www.tiktok.com/@sultanaluxury19"
+      "tiktok": "https://www.tiktok.com/@sultanaluxury19"
     }
-    }
-    
   }
-
+}
