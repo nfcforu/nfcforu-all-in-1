@@ -493,5 +493,20 @@
       "tiktok": "https://www.tiktok.com/@sultanaluxury19",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770210656"
     }
+  },
+  "La-Provence-Shopping": {
+    "name": "La Provence Shopping",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/imagesChatGPT Image Oct 25, 2025, 07_15_14 PM.png",
+    "address": {
+      "url": "https://www.google.com/maps/search/36.211226,+5.441669?entry=tts&g_ep=EgoyMDI1MTAyMi4wIPu8ASoASAFQAw%3D%3D&skid=eae89704-c695-43b8-9ee3-3b72e861cd10",
+      "text": "Cité El Hidhab, Sétif"
+    },
+    "phone": "0673419209",
+    "gradient": "linear-gradient(174deg,rgba(197, 16, 76, 1) 0%, rgba(201, 201, 201, 1) 100%)",
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=100064207444951&rdid=kL7Lao0a8y1meDSD&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1F5pigEgnq%2F#",
+      "instagram": "https://www.instagram.com/la_provence_shopping",
+      "tiktok": "https://www.tiktok.com/@la.provence.shopping"
+    }
   }
 }
