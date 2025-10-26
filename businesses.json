@@ -571,21 +571,19 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130555418571"
     }
   },
-  "Travel": {
-    "name": "Teraveza-Travel",
-    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/38bf9712d07f815d254cfb6cf4d98a09~tplv-tiktokx-cropcenter_1080_1080.jpeg",
+  " Dental-Technologie-Solution": {
+    "name": " Dental Technologie Solution",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/464096611_901443205294845_8542395562295759418_n.jpg",
     "address": {
       "url": "https://maps.app.goo.gl/cRYJxQhc1R4Ridp98",
-      "text": "Cité El Hidhab, Sétif"
+      "text": "Ain mousse, Sétif"
     },
-    "phone": "0550390440",
-    "gradient": "#69AEAB",
+    "phone": "0770019445",
+    "gradient": "#415E7E",
     "socials": {
-      "tiktok": "https://www.facebook.com/profile.php?id=61575697558971",
-      "facebook": "https://www.facebook.com/share/17d9ARCHDr/",
-      "instagram": "https://www.instagram.com/teraveza/",
-      "viber": "viber://chat?number=%2B+2130784397977",
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130555418571"
+      "facebook": "https://www.facebook.com/moha.mairecheremmache",
+      "instagram": "https://www.instagram.com/eighteethdts/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130770069446"
     }
   }
 }
