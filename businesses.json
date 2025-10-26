@@ -553,5 +553,39 @@
       "tiktok": "https://www.tiktok.com/@imad_moda_241?_t=ZS-90sLiRjOXkl&_r=1",
       "facebook": "https://www.facebook.com/share/17d9ARCHDr/"
     }
+  },
+  "Teraveza-Travel": {
+    "name": "Teraveza-Travel",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/38bf9712d07f815d254cfb6cf4d98a09~tplv-tiktokx-cropcenter_1080_1080.jpeg",
+    "address": {
+      "url": "https://maps.app.goo.gl/cRYJxQhc1R4Ridp98",
+      "text": "Cité El Hidhab, Sétif"
+    },
+    "phone": "0550390440",
+    "gradient": "#69AEAB",
+    "socials": {
+      "tiktok": "https://www.facebook.com/profile.php?id=61575697558971",
+      "facebook": "https://www.facebook.com/share/17d9ARCHDr/",
+      "instagram": "https://www.instagram.com/teraveza/",
+      "viber": "viber://chat?number=%2B+2130784397977",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130555418571"
+    }
+  },
+  "Travel": {
+    "name": "Teraveza-Travel",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/38bf9712d07f815d254cfb6cf4d98a09~tplv-tiktokx-cropcenter_1080_1080.jpeg",
+    "address": {
+      "url": "https://maps.app.goo.gl/cRYJxQhc1R4Ridp98",
+      "text": "Cité El Hidhab, Sétif"
+    },
+    "phone": "0550390440",
+    "gradient": "#69AEAB",
+    "socials": {
+      "tiktok": "https://www.facebook.com/profile.php?id=61575697558971",
+      "facebook": "https://www.facebook.com/share/17d9ARCHDr/",
+      "instagram": "https://www.instagram.com/teraveza/",
+      "viber": "viber://chat?number=%2B+2130784397977",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130555418571"
+    }
   }
 }
