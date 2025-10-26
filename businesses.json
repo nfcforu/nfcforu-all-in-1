@@ -542,16 +542,16 @@
   },
   "IMAD-MODA": {
     "name": "Dano Nuts",
-    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/ChatGPT Image 26 oct. 2025, 15_51_05.png",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/imagesChatGPT Image 26 oct. 2025, 16_12_10.png",
     "address": {
-      "url": "https://www.google.com/maps/place/6C5Q%2B85C,+Setif/@36.2082381,5.437959,20.59z/data=!4m6!3m5!1s0x12f31434fa993e0b:0xca26eb9bfd119610!8m2!3d36.2082352!4d5.43792!16s%2Fg%2F11j8h0gn5n?entry=ttu&g_ep=EgoyMDI1MTAyMi4wIKXMDSoASAFQAw%3D%3D",
+      "url": "https://maps.app.goo.gl/cRYJxQhc1R4Ridp98",
       "text": "Cité El Hidhab, Sétif"
     },
-    "phone": "0663801532",
-    "gradient": "radial-gradient(circle,rgba(233, 136, 45, 1) 0%, rgba(255, 217, 0, 1) 100%)",
+    "phone": "0550390440",
+    "gradient": "#102C46",
     "socials": {
-      "tiktok": "https://www.tiktok.com/@dano_nuts_19?",
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213663801532"
+      "tiktok": "https://www.tiktok.com/@imad_moda_241?_t=ZS-90sLiRjOXkl&_r=1",
+      "facebook": "https://www.facebook.com/share/17d9ARCHDr/"
     }
   }
 }
