@@ -602,5 +602,18 @@
       "instagram": "https://www.instagram.com/brands_family_setif/",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213549216647"
     }
+  },
+  "tendance-setif": {
+    "name": "Tendance Setif",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/563448723_17977802477931377_7841429402093622080_n (1).jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/XCG5vawDjih4vny1A",
+      "text": "Cité du 1er Nov .1954 SETIF, Sétif"
+    },
+    "phone": "0550509590",
+    "gradient": "#766B5F",
+    "socials": {
+      "instagram": "https://www.instagram.com/tendance_setif"
+    }
   }
 }
