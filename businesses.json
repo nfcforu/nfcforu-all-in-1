@@ -587,5 +587,20 @@
       "instagram": "https://www.instagram.com/eighteethdts/",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130770069446"
     }
+  },
+  "Brands-Family": {
+    "name": "Brands Family",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/387117150_3370499086428118_1763129091702261328_n.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/6M7ccmJs1knyB2Lw8",
+      "text": "Cité du 1er Nov .1954 SETIF, Sétif"
+    },
+    "phone": "0549216647",
+    "gradient": "linear-gradient(173deg,rgba(219, 0, 6, 1) 0%, rgba(194, 194, 194, 1)",
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61551853451479",
+      "instagram": "https://www.instagram.com/brands_family_setif/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213549216647"
+    }
   }
 }
