@@ -549,7 +549,7 @@
       "text": "Cité El Hidhab, Sétif"
     },
     "phone": "0550390440",
-    "gradient": "#102C46",
+    "gradient": "radial-gradient(circle,rgba(222, 49, 99, 1) 0%, rgba(255, 145, 200, 1) 100%)",
     "socials": {
       "tiktok": "https://www.tiktok.com/@imad_moda_241?_t=ZS-90sLiRjOXkl&_r=1",
       "facebook": "https://www.facebook.com/share/17d9ARCHDr/"
