@@ -647,5 +647,21 @@
       "tiktok": "https://www.tiktok.com/@aura.home.dcor",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213778788616"
     }
+  },
+  "Aura-Home-Decor": {
+    "name": "Aura Home Décor",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/558976086_17855464869539964_7457598328655222595_n.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/7PiXVJkzT8kNptXb8",
+      "text": "Ouled Brahem, Sétif"
+    },
+    "phone": "0795457112",
+    "gradient": "linear-gradient(358deg,rgba(218, 168, 21, 1) 0%, rgba(107, 75, 24, 1) 100%)",
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61579053315587&ref=pl_edit_ig_profile_ac",
+      "instagram": "https://www.instagram.com/aura_homedecor00/",
+      "tiktok": "https://www.tiktok.com/@aura.home.dcor",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213778788616"
+    }
   }
 }
