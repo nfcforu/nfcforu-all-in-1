@@ -608,7 +608,7 @@
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/563448723_17977802477931377_7841429402093622080_n (1).jpg",
     "address": {
       "url": "https://maps.app.goo.gl/XCG5vawDjih4vny1A",
-      "text": "Cité du 1er Nov .1954 SETIF, Sétif"
+      "text": "Ouled Brahem, Sétif, Sétif"
     },
     "phone": "0550509590",
     "gradient": "#766B5F",
@@ -648,36 +648,36 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213778788616"
     }
   },
-  "Aura-Home-Deco": {
-    "name": "Aura Home Décor",
-    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/558976086_17855464869539964_7457598328655222595_n.jpg",
+  "Turquoise-Home-Textile": {
+    "name": "Turquoise Home Textile",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/325251015_869568007426242_6980174431221096788_n.jpg",
     "address": {
-      "url": "https://maps.app.goo.gl/7PiXVJkzT8kNptXb8",
-      "text": "Ouled Brahem, Sétif"
+      "url": "https://maps.app.goo.gl/LSDmd34CYDhswX7S6",
+      "text": "Promotion Keskas, Rue El Hidab, Sétif"
     },
-    "phone": "0795457112",
-    "gradient": "linear-gradient(358deg,rgba(218, 168, 21, 1) 0%, rgba(107, 75, 24, 1) 100%)",
+    "phone": "0556929134",
+    "gradient": "linear-gradient(358deg,rgba(64, 224, 208, 1) 0%, rgba(212, 212, 212, 1) 100%)",
     "socials": {
-      "facebook": "https://www.facebook.com/profile.php?id=61579053315587&ref=pl_edit_ig_profile_ac",
-      "instagram": "https://www.instagram.com/aura_homedecor00/",
-      "tiktok": "https://www.tiktok.com/@aura.home.dcor",
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213778788616"
+      "facebook": "https://www.facebook.com/profile.php?id=100089164818341&rdid=B6XdZxUa8o1oRYtt&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CswF6ccYo%2F#",
+      "instagram": "https://www.instagram.com/turquoise_home_textile",
+      "tiktok": "https://www.tiktok.com/@turquoise.home.textille",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213556929134"
     }
   },
-  "Aura-Home-Decor": {
-    "name": "Aura Home Décor",
-    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/558976086_17855464869539964_7457598328655222595_n.jpg",
+  "Turquoise-Home-Textile-ouled": {
+    "name": "Turquoise Home Textile",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/325251015_869568007426242_6980174431221096788_n.jpg",
     "address": {
-      "url": "https://maps.app.goo.gl/7PiXVJkzT8kNptXb8",
+      "url": "https://maps.app.goo.gl/yHFTt3S8v9XWAmDS7",
       "text": "Ouled Brahem, Sétif"
     },
-    "phone": "0795457112",
-    "gradient": "linear-gradient(358deg,rgba(218, 168, 21, 1) 0%, rgba(107, 75, 24, 1) 100%)",
+    "phone": "0556929134",
+    "gradient": "linear-gradient(358deg,rgba(64, 224, 208, 1) 0%, rgba(212, 212, 212, 1) 100%)",
     "socials": {
-      "facebook": "https://www.facebook.com/profile.php?id=61579053315587&ref=pl_edit_ig_profile_ac",
-      "instagram": "https://www.instagram.com/aura_homedecor00/",
-      "tiktok": "https://www.tiktok.com/@aura.home.dcor",
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213778788616"
+      "facebook": "https://www.facebook.com/profile.php?id=100089164818341&rdid=B6XdZxUa8o1oRYtt&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CswF6ccYo%2F#",
+      "instagram": "https://www.instagram.com/turquoise_home_textile",
+      "tiktok": "https://www.tiktok.com/@turquoise.home.textille",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213556929134"
     }
   }
 }
