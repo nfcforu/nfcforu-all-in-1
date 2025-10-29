@@ -615,5 +615,21 @@
     "socials": {
       "instagram": "https://www.instagram.com/tendance_setif"
     }
+  },
+  "Lina-Luxury": {
+    "name": "Lina Luxury",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/e41f692f561f2c3fd707f8304cea8950~tplv-tiktokx-cropcenter_1080_1080.jpeg",
+    "address": {
+      "url": "https://maps.app.goo.gl/vY8f6EgjaCgxpEGz6",
+      "text": "Ouled Brahem, Sétif"
+    },
+    "phone": "0673331135",
+    "gradient": "linear-gradient(176deg,rgba(196, 129, 50, 1) 0%, rgba(235, 206, 128, 1) 100%)",
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1Ni6coUjS2/",
+      "instagram": "https://www.instagram.com/lina_luxury19",
+      "tiktok": "https://www.tiktok.com/@lina_luxury_19?_t=ZS-90wya59Ul1E&_r=1",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213549270625"
+    }
   }
 }
