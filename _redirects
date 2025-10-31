@@ -1,1 +1,7 @@
-/*    /index.html   200
+/login.html               /login.html                200
+/customer-dashboard.html  /customer-dashboard.html   200
+/admin-dashboard.html     /admin-dashboard.html      200
+/supabase-config.js       /supabase-config.js        200
+
+# All other routes go to index.html (for business cards)
+/*                        /index.html                200
