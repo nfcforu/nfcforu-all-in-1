@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Business Card - Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        background: #f5f7fa;
+        color: #2d3748;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 30px 0;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+      header p {
+        opacity: 0.9;
+        font-size: 1.1rem;
+      }
+
+      .header-actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .btn-light {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .btn-light:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      .btn-success {
+        background: #48bb78;
+        color: white;
+      }
+
+      .btn-success:hover {
+        background: #38a169;
+      }
+
+      .alert {
+        padding: 16px 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 500;
+        animation: slideDown 0.3s ease-out;
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .alert-success {
+        background: #f0fff4;
+        color: #22543d;
+        border-left: 4px solid #38a169;
+      }
+
+      .dashboard-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      @media (min-width: 968px) {
+        .dashboard-grid {
+          grid-template-columns: 1fr 400px;
+        }
+      }
+
+      .card {
+        background: white;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+
+      .card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: #2d3748;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #4a5568;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #e2e8f0;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: all 0.3s;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      }
+
+      .form-group small {
+        display: block;
+        margin-top: 4px;
+        color: #718096;
+        font-size: 0.85rem;
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+
+      @media (max-width: 640px) {
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .social-inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .social-input-row {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .social-input-row select {
+        padding: 10px;
+        border: 2px solid #e2e8f0;
+        border-radius: 8px;
+        font-size: 1rem;
+        background: white;
+        cursor: pointer;
+      }
+
+      .social-input-row input {
+        flex: 1;
+      }
+
+      .social-input-row button {
+        padding: 10px 14px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        background: #fff5f5;
+        color: #e53e3e;
+        transition: all 0.2s;
+      }
+
+      .social-input-row button:hover {
+        background: #fed7d7;
+      }
+
+      .add-btn {
+        padding: 10px;
+        border: 2px dashed #cbd5e0;
+        background: none;
+        border-radius: 8px;
+        color: #667eea;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+        width: 100%;
+      }
+
+      .add-btn:hover {
+        border-color: #667eea;
+        background: #f7fafc;
+      }
+
+      .gallery-inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .gallery-input-row {
+        display: flex;
+        gap: 10px;
+      }
+      .gallery-input-row input {
+        flex: 1;
+      }
+
+      .preview-card {
+        position: sticky;
+        top: 20px;
+      }
+
+      .preview-header {
+        height: 100px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 12px 12px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .preview-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 4px solid white;
+        object-fit: cover;
+        position: absolute;
+        bottom: -40px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .preview-body {
+        padding: 50px 20px 20px;
+        text-align: center;
+      }
+
+      .preview-name {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #2d3748;
+      }
+
+      .preview-links {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+      }
+
+      .preview-link {
+        padding: 8px 12px;
+        background: #ebf8ff;
+        color: #3182ce;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .upload-box {
+        border: 2px dashed #cbd5e0;
+        border-radius: 8px;
+        padding: 30px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s;
+        background: #f7fafc;
+      }
+
+      .upload-box:hover {
+        border-color: #667eea;
+        background: #ebf8ff;
+      }
+
+      .upload-box i {
+        font-size: 2.5rem;
+        color: #667eea;
+        margin-bottom: 10px;
+      }
+
+      .upload-box p {
+        color: #4a5568;
+        margin-bottom: 5px;
+      }
+      .upload-box small {
+        color: #718096;
+      }
+
+      .loading-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 9999;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .loading-overlay.active {
+        display: flex;
+      }
+
+      .loading-content {
+        background: white;
+        padding: 30px 40px;
+        border-radius: 12px;
+        text-align: center;
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid #e2e8f0;
+        border-top: 4px solid #667eea;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+        margin: 0 auto 15px;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1><i class="fas fa-nfc-symbol"></i> My Business Card</h1>
+        <p id="welcomeText">Loading...</p>
+        <div class="header-actions">
+          <button class="btn btn-light" onclick="viewPublicCard()">
+            <i class="fas fa-eye"></i> View Public Card
+          </button>
+          <button class="btn btn-light" onclick="logout()">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div id="successAlert" class="alert alert-success" style="display: none">
+        <i class="fas fa-check-circle"></i>
+        <span>Changes saved successfully! Your card is updated.</span>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="card">
+          <h2><i class="fas fa-edit"></i> Edit Your Business Card</h2>
+
+          <form id="businessForm">
+            <div class="form-group">
+              <label>Business Name *</label>
+              <input
+                type="text"
+                id="businessName"
+                placeholder="e.g., LOS TACOS"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label>Business Logo/Image *</label>
+              <div
+                id="imageUploadBox"
+                class="upload-box"
+                onclick="document.getElementById('imageInput').click()"
+              >
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p><strong>Click to upload image</strong></p>
+                <small>JPG, PNG under 5MB</small>
+              </div>
+              <input
+                type="file"
+                id="imageInput"
+                accept="image/*"
+                style="display: none"
+              />
+              <input
+                type="url"
+                id="businessImage"
+                placeholder="Or paste image URL"
+                style="margin-top: 10px"
+                required
+              />
+              <small>Upload from computer or paste URL</small>
+            </div>
+
+            <div class="form-group">
+              <label>Background Color/Gradient</label>
+              <input
+                type="text"
+                id="businessGradient"
+                placeholder="e.g., #667eea or linear-gradient(...)"
+              />
+              <small>Hex color or CSS gradient</small>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" id="businessPhone" placeholder="0662698843" />
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input
+                  type="email"
+                  id="businessEmail"
+                  placeholder="email@business.com"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Address Text</label>
+              <input
+                type="text"
+                id="addressText"
+                placeholder="Rue Harrag Mohamed Senoussi, Sétif"
+              />
+            </div>
+
+            <div class="form-group">
+              <label>Address URL (Google Maps)</label>
+              <input
+                type="url"
+                id="addressUrl"
+                placeholder="https://maps.app.goo.gl/..."
+              />
+            </div>
+
+            <div class="form-group">
+              <label>Menu URL (PDF)</label>
+              <input
+                type="url"
+                id="menuUrl"
+                placeholder="https://...menu.pdf"
+              />
+            </div>
+
+            <div class="form-group">
+              <label>Gallery Name</label>
+              <input
+                type="text"
+                id="galleryName"
+                placeholder="e.g., Programme D'entrainement"
+              />
+            </div>
+
+            <div class="form-group">
+              <label>Gallery Images</label>
+              <div class="gallery-inputs" id="galleryInputs"></div>
+              <button type="button" class="add-btn" onclick="addGalleryInput()">
+                <i class="fas fa-plus"></i> Add Gallery Image
+              </button>
+            </div>
+
+            <div class="form-group">
+              <label>Social Media Links</label>
+              <div class="social-inputs" id="socialInputs"></div>
+              <button type="button" class="add-btn" onclick="addSocialInput()">
+                <i class="fas fa-plus"></i> Add Social Link
+              </button>
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-success"
+              style="width: 100%; padding: 15px; font-size: 1.1rem"
+            >
+              <i class="fas fa-save"></i> Save Changes
+            </button>
+          </form>
+        </div>
+
+        <div class="card preview-card">
+          <h2><i class="fas fa-eye"></i> Live Preview</h2>
+          <div
+            id="preview"
+            style="
+              background: white;
+              border-radius: 12px;
+              overflow: hidden;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <div class="preview-header" id="previewHeader">
+              <img
+                src="https://via.placeholder.com/80"
+                alt="Logo"
+                class="preview-avatar"
+                id="previewAvatar"
+              />
+            </div>
+            <div class="preview-body">
+              <div class="preview-name" id="previewName">
+                Your Business Name
+              </div>
+              <div class="preview-links" id="previewLinks">
+                <span class="preview-link"
+                  ><i class="fas fa-link"></i> Add links</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="loading-overlay" id="loadingOverlay">
+      <div class="loading-content">
+        <div class="spinner"></div>
+        <p id="loadingText">Saving your changes...</p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+
+    <script>
+      let currentUser = null;
+      let businessId = null;
+      let uploadedImageUrl = null;
+
+      supabase.auth.onAuthStateChange(async (event, session) => {
+        if (event === "SIGNED_OUT" || !session) {
+          window.location.href = "/login.html";
+          return;
+        }
+
+        if (event === "SIGNED_IN" || event === "INITIAL_SESSION") {
+          currentUser = session.user;
+          const userData = await db.getUser(currentUser.id);
+
+          if (userData.business_id) {
+            businessId = userData.business_id;
+            document.getElementById("welcomeText").textContent =
+              "Welcome back! Manage your business card";
+            loadBusinessData();
+          } else {
+            document.getElementById("welcomeText").textContent =
+              "No business assigned to your account";
+          }
+        }
+      });
+
+      async function loadBusinessData() {
+        try {
+          const business = await db.getBusiness(businessId);
+
+          document.getElementById("businessName").value = business.name || "";
+          document.getElementById("businessImage").value = business.image || "";
+          document.getElementById("businessGradient").value =
+            business.gradient || "";
+          document.getElementById("businessPhone").value = business.phone || "";
+          document.getElementById("businessEmail").value = business.email || "";
+          document.getElementById("addressText").value =
+            business.address?.text || "";
+          document.getElementById("addressUrl").value =
+            business.address?.url || "";
+          document.getElementById("menuUrl").value = business.menu || "";
+          document.getElementById("galleryName").value =
+            business.gallery?.name || "";
+
+          document.getElementById("socialInputs").innerHTML = "";
+          if (business.socials) {
+            Object.entries(business.socials).forEach(([platform, url]) => {
+              addSocialInput(platform, url);
+            });
+          }
+
+          document.getElementById("galleryInputs").innerHTML = "";
+          if (business.gallery?.images) {
+            business.gallery.images.forEach((url) => {
+              addGalleryInput(url);
+            });
+          }
+
+          updatePreview();
+        } catch (error) {
+          console.error("Error loading business:", error);
+        }
+      }
+
+      function addSocialInput(platform = "", url = "") {
+        const container = document.getElementById("socialInputs");
+        const row = document.createElement("div");
+        row.className = "social-input-row";
+
+        const platforms = [
+          "instagram",
+          "facebook",
+          "whatsapp",
+          "tiktok",
+          "twitter",
+          "linkedin",
+          "snapchat",
+          "youtube",
+          "viber",
+          "telegram",
+        ];
+
+        row.innerHTML = `
+                <select class="social-platform" onchange="updatePreview()">
+                    <option value="">Select</option>
+                    ${platforms
+                      .map(
+                        (p) =>
+                          `<option value="${p}" ${
+                            p === platform ? "selected" : ""
+                          }>${p.charAt(0).toUpperCase() + p.slice(1)}</option>`
+                      )
+                      .join("")}
+                </select>
+                <input type="url" placeholder="https://..." value="${url}" class="social-url" oninput="updatePreview()">
+                <button type="button" onclick="this.parentElement.remove(); updatePreview();">
+                    <i class="fas fa-times"></i>
+                </button>
+            `;
+        container.appendChild(row);
+      }
+
+      function addGalleryInput(url = "") {
+        const container = document.getElementById("galleryInputs");
+        const row = document.createElement("div");
+        row.className = "gallery-input-row";
+        row.innerHTML = `
+                <input type="url" placeholder="https://image-url.jpg" value="${url}" class="gallery-url">
+                <button type="button" onclick="this.parentElement.remove()" style="padding: 10px 14px; border: none; border-radius: 6px; cursor: pointer; background: #fff5f5; color: #e53e3e;">
+                    <i class="fas fa-times"></i>
+                </button>
+            `;
+        container.appendChild(row);
+      }
+
+      document
+        .getElementById("imageInput")
+        .addEventListener("change", async (e) => {
+          const file = e.target.files[0];
+          if (!file) return;
+
+          if (file.size > 5 * 1024 * 1024) {
+            alert("Image too large! Please choose an image under 5MB.");
+            return;
+          }
+
+          document.getElementById("loadingOverlay").classList.add("active");
+          document.getElementById("loadingText").textContent =
+            "Uploading image...";
+
+          try {
+            uploadedImageUrl = await storage.uploadImage(file, businessId);
+
+            document.getElementById("businessImage").value = uploadedImageUrl;
+            document.getElementById("imageUploadBox").innerHTML = `
+                    <i class="fas fa-check-circle" style="color: #48bb78;"></i>
+                    <p><strong>Image uploaded!</strong></p>
+                    <small>Click to change</small>
+                `;
+            updatePreview();
+          } catch (error) {
+            console.error("Upload error:", error);
+            alert("Upload failed: " + error.message);
+          } finally {
+            document
+              .getElementById("loadingOverlay")
+              .classList.remove("active");
+          }
+        });
+
+      function updatePreview() {
+        const name =
+          document.getElementById("businessName").value || "Your Business Name";
+        const image =
+          document.getElementById("businessImage").value ||
+          "https://via.placeholder.com/80";
+        const gradient =
+          document.getElementById("businessGradient").value ||
+          "linear-gradient(135deg, #667eea 0%, #764ba2 100%)";
+
+        document.getElementById("previewName").textContent = name;
+        document.getElementById("previewAvatar").src = image;
+        document.getElementById("previewHeader").style.background = gradient;
+
+        const socials = [];
+        document.querySelectorAll(".social-input-row").forEach((row) => {
+          const platform = row.querySelector(".social-platform").value;
+          if (platform) socials.push(platform);
+        });
+
+        const linksHtml =
+          socials.length > 0
+            ? socials
+                .map(
+                  (p) =>
+                    `<span class="preview-link"><i class="fab fa-${p}"></i> ${p}</span>`
+                )
+                .join("")
+            : '<span class="preview-link"><i class="fas fa-link"></i> Add social links</span>';
+
+        document.getElementById("previewLinks").innerHTML = linksHtml;
+      }
+
+      document
+        .querySelectorAll("#businessName, #businessImage, #businessGradient")
+        .forEach((input) => {
+          input.addEventListener("input", updatePreview);
+        });
+
+      document
+        .getElementById("businessForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const name = document.getElementById("businessName").value.trim();
+          const image = document.getElementById("businessImage").value.trim();
+
+          if (!name || !image) {
+            alert("Business name and image are required!");
+            return;
+          }
+
+          document.getElementById("loadingOverlay").classList.add("active");
+          document.getElementById("loadingText").textContent =
+            "Saving changes...";
+
+          try {
+            const socials = {};
+            document.querySelectorAll(".social-input-row").forEach((row) => {
+              const platform = row
+                .querySelector(".social-platform")
+                .value.trim();
+              const url = row.querySelector(".social-url").value.trim();
+              if (platform && url) socials[platform] = url;
+            });
+
+            const galleryImages = [];
+            document.querySelectorAll(".gallery-url").forEach((input) => {
+              const url = input.value.trim();
+              if (url) galleryImages.push(url);
+            });
+
+            const galleryName = document
+              .getElementById("galleryName")
+              .value.trim();
+            const gallery =
+              galleryName && galleryImages.length > 0
+                ? {
+                    name: galleryName,
+                    images: galleryImages,
+                  }
+                : null;
+
+            const addressText = document
+              .getElementById("addressText")
+              .value.trim();
+            const addressUrl = document
+              .getElementById("addressUrl")
+              .value.trim();
+            const address =
+              addressText || addressUrl
+                ? { url: addressUrl, text: addressText }
+                : null;
+
+            const businessData = {
+              name,
+              image,
+              gradient:
+                document.getElementById("businessGradient").value.trim() ||
+                null,
+              phone:
+                document.getElementById("businessPhone").value.trim() || null,
+              email:
+                document.getElementById("businessEmail").value.trim() || null,
+              address,
+              menu: document.getElementById("menuUrl").value.trim() || null,
+              socials: Object.keys(socials).length > 0 ? socials : null,
+              gallery,
+              owner_id: currentUser.id,
+            };
+
+            await db.saveBusiness(businessId, businessData);
+
+            document
+              .getElementById("loadingOverlay")
+              .classList.remove("active");
+
+            const alert = document.getElementById("successAlert");
+            alert.style.display = "flex";
+            window.scrollTo({ top: 0, behavior: "smooth" });
+
+            setTimeout(() => {
+              alert.style.display = "none";
+            }, 5000);
+          } catch (error) {
+            console.error("Save error:", error);
+            alert("Failed to save: " + error.message);
+            document
+              .getElementById("loadingOverlay")
+              .classList.remove("active");
+          }
+        });
+
+      function viewPublicCard() {
+        window.open(`/${businessId}`, "_blank");
+      }
+
+      async function logout() {
+        if (confirm("Are you sure you want to logout?")) {
+          await auth.signOut();
+          window.location.href = "/login.html";
+        }
+      }
+    </script>
+  </body>
+</html>
