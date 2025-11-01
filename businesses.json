@@ -694,5 +694,33 @@
       "facebook": "https://www.facebook.com/share/1H9vNVUN7Q/",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213555293445"
     }
+  },
+  "hakim-khimar-1014": {
+    "name": "Hakim Khimar",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-10-31 at 21.47.56_f323a81f.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/Q1ookdM21HbpNzHT7",
+      "text": "les 1014 Logement , Setif "
+    },
+    "gradient": "radial-gradient(circle,rgba(231, 216, 131, 1) 0%, rgba(191, 127, 39, 1) 100%)",
+    "socials": {
+      "tiktok": "https://vm.tiktok.com/ZSHc2CqB8LNBM-ktuKe/",
+      "instagram": "https://www.instagram.com/hakimkhimar",
+      "facebook": "https://www.facebook.com/share/17X7K7GRGW/"
+    }
+  },
+  "hakim-khimar-1014-1ere": {
+    "name": "Hakim Khimar",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-10-31 at 21.47.56_f323a81f.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/y1hGZb7EgQ1Cat3G7",
+      "text": "1er etage, Cite 1014 marche, Setif"
+    },
+    "gradient": "radial-gradient(circle,rgba(231, 216, 131, 1) 0%, rgba(191, 127, 39, 1) 100%)",
+    "socials": {
+      "tiktok": "https://vm.tiktok.com/ZSHc2CqB8LNBM-ktuKe/",
+      "instagram": "https://www.instagram.com/hakimkhimar",
+      "facebook": "https://www.facebook.com/share/17X7K7GRGW/"
+    }
   }
 }
