@@ -679,5 +679,20 @@
       "tiktok": "https://www.tiktok.com/@turquoise.home.textille",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213556929134"
     }
+  },
+  "Rich-Man": {
+    "name": "Rich Men",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-10-31 at 21.33.20_06ed4863.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/g7S2RMHikkRinqkY7",
+      "text": "Dallas 1st, Sétif"
+    },
+    "gradient": "radial-gradient(circle,rgba(255, 179, 12, 1) 0%, rgba(237, 44, 29, 1) 100%)",
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1H9vNVUN7Q/",
+      "instagram": "https://www.instagram.com/rich_19setif.men",
+      "tiktok": "https://vm.tiktok.com/ZSHc2xPcQYsBY-4E3Eh/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213555293445"
+    }
   }
 }
