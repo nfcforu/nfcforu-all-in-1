@@ -689,9 +689,9 @@
     },
     "gradient": "radial-gradient(circle,rgba(255, 179, 12, 1) 0%, rgba(237, 44, 29, 1) 100%)",
     "socials": {
-      "facebook": "https://www.facebook.com/share/1H9vNVUN7Q/",
-      "instagram": "https://www.instagram.com/rich_19setif.men",
       "tiktok": "https://vm.tiktok.com/ZSHc2xPcQYsBY-4E3Eh/",
+      "instagram": "https://www.instagram.com/rich_19setif.men",
+      "facebook": "https://www.facebook.com/share/1H9vNVUN7Q/",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213555293445"
     }
   }
