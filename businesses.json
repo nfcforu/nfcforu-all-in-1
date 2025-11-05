@@ -726,5 +726,19 @@
       "facebook": "https://www.facebook.com/share/17X7K7GRGW/",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213555856153"
     }
+  },
+  "CH Loreal": {
+    "name": "CH Loreal",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/566510443_18072131675271533_891466490890033965_n.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/Kh7mMPmqHArT9rk78",
+      "text": "Rue du 1er Novembre, Setif"
+    },
+    "phone": "0550551700",
+    "gradient": "linear-gradient(345deg,rgba(175, 23, 25, 1) 0%, rgba(1, 1, 1, 1) 100%)",
+    "socials": {
+      "tiktok": "https://www.tiktok.com/@lorealsetif19?",
+      "instagram": "https://www.instagram.com/ch_loreal_"
+    }
   }
 }
