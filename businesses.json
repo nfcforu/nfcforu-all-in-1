@@ -740,5 +740,21 @@
       "tiktok": "https://www.tiktok.com/@lorealsetif19?",
       "instagram": "https://www.instagram.com/ch_loreal_"
     }
+  },
+  "K-Mode": {
+    "name": "K-Mode",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/326401375_932070504839625_3124222274899951598_n.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/1eu2f5m7Q5woNRgo8",
+      "text": "Av. du 1er Novembere, Sétif"
+    },
+    "phone": "0549110251",
+    "gradient": "linear-gradient(345deg,rgba(149, 171, 132, 1) 0%, rgba(96, 149, 153, 1) 100%)",
+    "socials": {
+      "tiktok": "https://www.tiktok.com/@kmode_dallas?",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213549110251",
+      "instagram": "https://www.instagram.com/kmode_closet_dz",
+      "facebook": "https://www.facebook.com/k.mode.setif?"
+    }
   }
 }
