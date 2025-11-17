@@ -756,5 +756,21 @@
       "instagram": "https://www.instagram.com/kmode_closet_dz",
       "facebook": "https://www.facebook.com/k.mode.setif?"
     }
+  },
+  "Anes-Food": {
+    "name": "Anes Food",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/dc9ce6ed2511d84482055597bf23d58a~tplv-tiktokx-cropcenter_1080_1080.jpeg",
+    "address": {
+      "url": "https://maps.app.goo.gl/NNzYm2oLLy43VPdg6",
+      "text": "Rue Valentin Hauy, Oran"
+    },
+    "phone": "+213797822238",
+    "gradient": "linear-gradient(154deg,rgba(239, 82, 37, 1) 0%, rgba(252, 178, 71, 1) 67%)",
+    "socials": {
+      "tiktok": "https://www.tiktok.com/@anes.food.maraval?",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770322670",
+      "instagram": "https://www.instagram.com/anesfoodmaraval",
+      "facebook": "https://www.facebook.com/profile.php?id=61582707156919&rdid=KYi7tx4EWevZDKbD&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1A4AZYBTvz%2F#"
+    }
   }
 }
