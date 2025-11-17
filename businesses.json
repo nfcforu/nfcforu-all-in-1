@@ -772,5 +772,19 @@
       "instagram": "https://www.instagram.com/anesfoodmaraval",
       "facebook": "https://www.facebook.com/profile.php?id=61582707156919&rdid=KYi7tx4EWevZDKbD&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1A4AZYBTvz%2F#"
     }
+  },
+  "library": {
+    "name": "مكتبة ورقة و قلم",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/Screenshot 2025-11-17 120327.png",
+    "address": {
+      "url": "https://maps.app.goo.gl/ZxRFp4heptyuLvUL6",
+      "text": "Rue du 26 Novembre 1974, Annaba"
+    },
+    "phone": "0779649243",
+    "gradient": "linear-gradient(154deg,rgba(239, 82, 37, 1) 0%, rgba(252, 178, 71, 1) 67%)",
+    "socials": {
+      "instagram": "https://www.tiktok.com/@zineddine23ali?",
+      "facebook": "https://www.facebook.com/profile.php?id=100063462313236&rdid=QnjWukZpgZerZnTD&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F165KXHiG27%2F#"
+    }
   }
 }
