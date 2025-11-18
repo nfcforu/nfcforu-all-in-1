@@ -783,7 +783,7 @@
     "phone": "0779649243",
     "gradient": "linear-gradient(357deg,rgba(255, 229, 184, 1) 0%, rgba(136, 81, 14, 1) 100%)",
     "socials": {
-      "instagram": "https://www.tiktok.com/@zineddine23ali?",
+      "tiktok": "https://www.tiktok.com/@zineddine23ali?",
       "facebook": "https://www.facebook.com/profile.php?id=100063462313236&rdid=QnjWukZpgZerZnTD&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F165KXHiG27%2F#"
     }
   },
@@ -803,7 +803,7 @@
   },
   "ETB-TCE-MEKHELEF": {
     "name": "ETB TCE MEKHELEF",
-    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-18 at 08.00.23_188bf81c.jpg",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/ChatGPT Image 18 nov. 2025, 18_28_44.png",
     "address": {
       "url": "https://maps.app.goo.gl/pcXVHem47QVuA6Yd8",
       "text": "Baraki"
@@ -812,7 +812,8 @@
     "gradient": "linear-gradient(187deg,rgba(237, 61, 71, 1) 0%, rgba(254, 254, 254, 1) 100%)",
     "socials": {
       "instagram": "https://www.instagram.com/etb_tce_mekhelef",
-      "tiktok": "https://www.facebook.com/etsmekhelef"
+      "facebook": "https://www.facebook.com/etsmekhelef",
+      "tiktok": "https://www.tiktok.com/@etb_tce_mekhelef?"
     }
   },
   "BOUTIQUE-RICCHEZZA": {
@@ -845,19 +846,19 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213557290839"
     }
   },
-  "Pharmaci": {
-    "name": "Pharmacie Bouzana.صيدلية بوزانة ",
-    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-18 at 14.33.04_5510dc47.jpg",
+  "BBS-Boutique": {
+    "name": "BBS Boutique",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/336342779_3452508381692187_5851183508332312474_n.jpg",
     "address": {
-      "url": "https://maps.app.goo.gl/zdTVtGo4MkWeWY7f8",
-      "text": "شارع عبدالحميد ابن باديس, Zemmoura"
+      "url": "https://maps.app.goo.gl/AwvFig8UmSMAWEYBA",
+      "text": "Baraki"
     },
-    "phone": "0775869154",
-    "gradient": "linear-gradient(8deg,rgba(100, 162, 51, 1) 0%, rgba(26, 126, 149, 1) 100%)",
+    "phone": "0557434911",
+    "gradient": "linear-gradient(8deg,rgba(208, 145, 4, 1) 0%, rgba(208, 145, 4, 1) 100%)",
     "socials": {
-      "instagram": "https://www.instagram.com/pharmacie_bouzana?",
-      "facebook": "https://www.facebook.com/pharmacie.bouzana?rdid=ychqFHtkB8bFYFVP&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19iFr4BQEU%2F#",
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213557290839"
+      "instagram": "https://www.instagram.com/bbs_boutique16",
+      "facebook": "https://www.facebook.com/people/BBS-boutique/100078789339462/",
+      "tiktok": "https://www.tiktok.com/@bbs.boutique1?"
     }
   }
 }
