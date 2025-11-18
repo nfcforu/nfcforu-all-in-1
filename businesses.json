@@ -829,5 +829,20 @@
       "tiktok": "https://www.tiktok.com/@boutique.ricchezz?",
       "facebook": "https://www.facebook.com/people/Boutique-Ricchezza/61581885119661/?rdid=pifNNXFcnB9CFvAY&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16cBo3gY8W%2F"
     }
+  },
+  "Pharmacie-Bouzana": {
+    "name": "Pharmacie-Bouzana",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-18 at 14.33.04_5510dc47.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/zdTVtGo4MkWeWY7f8",
+      "text": "شارع عبدالحميد ابن باديس, Zemmoura"
+    },
+    "phone": "0775869154",
+    "gradient": "background: linear-gradient(8deg,rgba(100, 162, 51, 1) 0%, rgba(26, 126, 149, 1) 100%)",
+    "socials": {
+      "instagram": "https://www.instagram.com/pharmacie_bouzana?",
+      "facebook": "https://www.facebook.com/pharmacie.bouzana?rdid=ychqFHtkB8bFYFVP&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19iFr4BQEU%2F#",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213557290839"
+    }
   }
 }
