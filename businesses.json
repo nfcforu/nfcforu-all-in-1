@@ -761,7 +761,7 @@
     "name": "Anes Food",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/dc9ce6ed2511d84482055597bf23d58a~tplv-tiktokx-cropcenter_1080_1080.jpeg",
     "address": {
-      "url": "https://maps.app.goo.gl/NNzYm2oLLy43VPdg6",
+      "url": "https://maps.app.goo.gl/SYswrtijqezMW7DU9",
       "text": "Rue Valentin Hauy, Oran"
     },
     "phone": "+213797822238",
@@ -831,6 +831,21 @@
     }
   },
   "Pharmacie-Bouzana": {
+    "name": "Pharmacie Bouzana.صيدلية بوزانة ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-18 at 14.33.04_5510dc47.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/zdTVtGo4MkWeWY7f8",
+      "text": "شارع عبدالحميد ابن باديس, Zemmoura"
+    },
+    "phone": "0775869154",
+    "gradient": "linear-gradient(8deg,rgba(100, 162, 51, 1) 0%, rgba(26, 126, 149, 1) 100%)",
+    "socials": {
+      "instagram": "https://www.instagram.com/pharmacie_bouzana?",
+      "facebook": "https://www.facebook.com/pharmacie.bouzana?rdid=ychqFHtkB8bFYFVP&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19iFr4BQEU%2F#",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213557290839"
+    }
+  },
+  "Pharmaci": {
     "name": "Pharmacie Bouzana.صيدلية بوزانة ",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-18 at 14.33.04_5510dc47.jpg",
     "address": {
