@@ -860,5 +860,50 @@
       "facebook": "https://www.facebook.com/people/BBS-boutique/100078789339462/",
       "tiktok": "https://www.tiktok.com/@bbs.boutique1?"
     }
+  },
+  "thawb-mosakim": {
+    "name": "ثوب المستقيم",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/ChatGPT Image Nov 20, 2025, 10_40_13 AM.png",
+    "address": {
+      "url": "https://maps.app.goo.gl/neoBj4Nf92MXgr977",
+      "text": "Les Eucalyptus"
+    },
+    "phone": "0780121250",
+    "gradient": "linear-gradient(346deg,rgba(241, 218, 187, 1) 0%, rgba(255, 175, 99, 1) 100%)",
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61583505134545",
+      "tiktok": "https://www.tiktok.com/@user33026515903810"
+    }
+  },
+  "OSM": {
+    "name": "OSM",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-20 at 00.47.28_6160a652.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/aqMqZqLv9y6pqL177",
+      "text": "El Oued"
+    },
+    "phone": "0663782923",
+    "gradient": "linear-gradient(346deg,rgba(241, 218, 187, 1) 0%, rgba(255, 175, 99, 1) 100%)",
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1Nw4ZsYu4r/",
+      "tiktok": "http://tiktok.com/@aalamazajik",
+      "telegram": "https://t.me/Ossamalakhal",
+      "whatsapp": "https://wa.me/213663782923"
+    }
+  },
+  "El-Rissala-Academie": {
+    "name": "El Rissala Académie",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-20 at 01.53.06_5414862f.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/aqMqZqLv9y6pqL177",
+      "text": "حي عدل . اولاديعيش .البليدة"
+    },
+    "phone": "0554626949",
+    "gradient": "linear-gradient(346deg,rgba(204, 156, 58, 1) 16%, rgba(0, 0, 0, 1) 100%)",
+    "socials": {
+      "facebook": "https://www.facebook.com/el.rissala.academie?rdid=rsEwDBYREXPIQci3&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1D6RRZ84hY%2F#",
+      "instagram": "https://www.instagram.com/al_resala.academi?",
+      "whatsapp": "https://wa.me/213797458291"
+    }
   }
 }
