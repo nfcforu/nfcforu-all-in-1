@@ -905,5 +905,36 @@
       "instagram": "https://www.instagram.com/al_resala.academi?",
       "whatsapp": "https://wa.me/213797458291"
     }
+  },
+  "Eurl-Nassim-Sante-Life": {
+    "name": "Eurl Nassim Santé Life",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-20 at 10.11.21_266d145d.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/8tM5e7Do8tQj7wgNA",
+      "text": "El Khroub,Constantine"
+    },
+    "phone": "0552857734",
+    "gradient": "linear-gradient(184deg,rgba(12, 168, 30, 1) 0%, rgba(178, 178, 178, 1) 74%)",
+    "socials": {
+      "facebook": "https://www.facebook.com/share/17eYL5wggQ/",
+      "tiktok": "https://vm.tiktok.com/ZSH36aXLuxdLc-bxbWe/",
+      "instagram": "https://www.instagram.com/nassimsante?igsh=d3Y4NW9kc2g1b3E1",
+      "whatsapp": "https://wa.me/213661499133"
+    }
+  },
+  "sarl-Lmem": {
+    "name": "SARL LMEM",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-20 at 10.14.56_5a5d39ee.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/ChDvCXRz9vZkMEJW9",
+      "text": "Batna Univ Hospital Rd, Batna"
+    },
+    "phone": "0657678077",
+    "gradient": "linear-gradient(184deg,rgba(134, 210, 50, 1) 0%, rgba(41, 201, 237, 1) 100%)",
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1BBWtGuRxY/",
+      "whatsapp": "https://wa.me/213770318891",
+      "viber": "viber://chat?number=%2B+213661499133"
+    }
   }
 }
