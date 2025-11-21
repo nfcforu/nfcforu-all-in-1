@@ -940,18 +940,17 @@
   "My-Rym-Travel": {
     "name": "My Rym Travel",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/052ee7cb9784423088feaf0cc3b54507~tplv-tiktokx-cropcenter_1080_1080.jpeg",
-    "address": {
-      "url": "https://maps.app.goo.gl/Y3QBLGqcxic1sfrv9",
-      "text": "17 نهج العربي بن مهيدي ( بجانب مسجد الامان)"
-    },
-    "phone": "0657432130",
-    "gradient": "linear-gradient(316deg,rgba(229, 146, 18, 1) 0%, rgba(88, 154, 238, 1) 100%)",
     "socials": {
       "facebook": "https://web.facebook.com/MyRymTravel",
       "instagram": "https://www.instagram.com/my_rym_travel",
       "tiktok": "https://www.tiktok.com/@my.rym?",
-      "whatsapp": "https://wa.me/213669133008"
-    }
+      "whatsapp": "https://wa.me/2130657432130"
+    },
+    "address": {
+      "url": "https://maps.app.goo.gl/Y3QBLGqcxic1sfrv9",
+      "text": "17 نهج العربي بن مهيدي ( بجانب مسجد الامان)"
+    },
+    "gradient": "linear-gradient(316deg,rgba(229, 146, 18, 1) 0%, rgba(88, 154, 238, 1) 100%)"
   },
   "Lina-Cuisine": {
     "name": "Lina Cuisine Pro",
@@ -967,6 +966,21 @@
       "instagram": "https://www.instagram.com/linacuisinepro/",
       "tiktok": "https://www.tiktok.com/@lina.cuisine19",
       "whatsapp": "https://wa.me/213770927950"
+    }
+  },
+  "opera-peinture": {
+    "name": "opera peinture",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/Gemini_Generated_Image_ixi8v8ixi8v8ixi8-min (1) (1).png",
+    "address": {
+      "url": "https://maps.app.goo.gl/FngJqBXfL3KrBmNt9",
+      "text": "4 Chemins de la Gare Ighzer Amokrane"
+    },
+    "phone": "0770834100",
+    "gradient": "linear-gradient(321deg,rgba(120, 105, 59, 1) 0%, rgba(183, 137, 57, 1) 100%)",
+    "socials": {
+      "facebook": "https://web.facebook.com/people/Ciel-Deco/100070250019364/",
+      "instagram": "https://www.instagram.com/adour.h/?hl=en",
+      "whatsapp": "https://wa.me/213550583299"
     }
   },
   "opera-peinture": {
