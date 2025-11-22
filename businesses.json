@@ -893,17 +893,16 @@
   },
   "El-Rissala-Academie": {
     "name": "El Rissala Académie",
-    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-20 at 01.53.06_5414862f.jpg",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-21 at 17.11.24_a4dd0217.jpg",
     "address": {
-      "url": "https://maps.app.goo.gl/aqMqZqLv9y6pqL177",
-      "text": "حي عدل . اولاديعيش .البليدة"
+      "url": "https://maps.app.goo.gl/mr7VZU1ezqFtGqJ79",
+      "text": "Bouarfa, Blida"
     },
     "phone": "0554626949",
     "gradient": "linear-gradient(346deg,rgba(204, 156, 58, 1) 16%, rgba(0, 0, 0, 1) 100%)",
     "socials": {
       "facebook": "https://www.facebook.com/el.rissala.academie?rdid=rsEwDBYREXPIQci3&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1D6RRZ84hY%2F#",
-      "instagram": "https://www.instagram.com/al_resala.academi?",
-      "whatsapp": "https://wa.me/213797458291"
+      "instagram": "https://www.instagram.com/al_resala.academi?"
     }
   },
   "Eurl-Nassim-Sante-Life": {
@@ -995,6 +994,21 @@
       "facebook": "https://web.facebook.com/profile.php?id=100064113880662&rdid=Mvf8HjLirhnqnXeS&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1GzQqpoRQh%2F%3F_rdc%3D1%26_rdr#",
       "instagram": "https://www.instagram.com/accessoires_auto_pro_dz",
       "tiktok": "https://www.tiktok.com/@accessoireauto_plus?",
+      "whatsapp": "https://wa.me/213550220327"
+    }
+  },
+  "Bassem-Phone-Rouached": {
+    "name": "Bassem Phone Rouached",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/733f54f36a431360565b5fb7085b998a~tplv-tiktokx-cropcenter_1080_1080.jpeg",
+    "address": {
+      "url": "https://maps.app.goo.gl/E6e2BbPCKyxiiNwQ8",
+      "text": "Rouached, Mila"
+    },
+    "gradient": "linear-gradient(320deg,rgba(40, 133, 203, 1) 0%, rgba(82, 82, 82, 1) 100%)",
+    "socials": {
+      "facebook": "https://web.facebook.com/BASSEMPHONE?rdid=89XFKgXeZfmuUMWs&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1a7edXz8Ko%2F%3F_rdc%3D1%26_rdr#",
+      "instagram": "https://www.instagram.com/bassem_telecom?",
+      "tiktok": "https://www.tiktok.com/@bassem_telecom_rouached?",
       "whatsapp": "https://wa.me/213550220327"
     }
   }
