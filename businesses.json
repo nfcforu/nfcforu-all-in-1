@@ -999,16 +999,18 @@
   },
   "Bassem-Phone-Rouached": {
     "name": "Bassem Phone Rouached",
-    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/733f54f36a431360565b5fb7085b998a~tplv-tiktokx-cropcenter_1080_1080.jpeg",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-21 at 21.05.26_1f5e9852.jpg",
     "address": {
-      "url": "https://maps.app.goo.gl/E6e2BbPCKyxiiNwQ8",
+      "url": "https://maps.app.goo.gl/soFArKqGjNbAtDtQ8",
       "text": "Rouached, Mila"
     },
-    "gradient": "linear-gradient(320deg,rgba(40, 133, 203, 1) 0%, rgba(82, 82, 82, 1) 100%)",
+    "gradient": "linear-gradient(326deg,rgba(235, 173, 38, 1) 0%, rgba(135, 101, 27, 1) 100%)",
+    "phone": "0551286088",
     "socials": {
-      "facebook": "https://web.facebook.com/BASSEMPHONE?rdid=89XFKgXeZfmuUMWs&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1a7edXz8Ko%2F%3F_rdc%3D1%26_rdr#",
+      "facebook": "https://www.facebook.com/share/1a7edXz8Ko/",
       "instagram": "https://www.instagram.com/bassem_telecom?",
       "tiktok": "https://www.tiktok.com/@bassem_telecom_rouached?",
+      "viber": "viber://chat?number=%2B+213551286088",
       "whatsapp": "https://wa.me/213550220327"
     }
   }
