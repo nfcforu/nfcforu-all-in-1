@@ -1016,18 +1016,34 @@
   },
   "jawhara-south": {
     "name": "كوسمتيك جوهرة الجنوب ",
-    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-22 at 12.07.01_40c56c40.jpg",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-22 at 11.05.08_53b07437.jpg",
     "address": {
       "url": "https://maps.app.goo.gl/soFArKqGjNbAtDtQ8",
       "text": "Rue Benhamouda Larbi, Ouargla"
     },
-    "gradient": "linear-gradient(326deg,rgba(235, 173, 38, 1) 0%, rgba(135, 101, 27, 1) 100%)",
+    "gradient": "linear-gradient(193deg,rgba(126, 49, 187, 1) 0%, rgba(187, 187, 189, 1) 100%)",
     "phone": "0697572215",
     "socials": {
       "facebook": "https://www.facebook.com/share/19uLhtzxZS/",
       "instagram": "https://www.instagram.com/cosmetique_jawahrat_aljanub",
       "tiktok": "https://www.tiktok.com/@radwanradwan961?",
       "whatsapp": "https://wa.me/2130697572215"
+    }
+  },
+  "Boutique-Peboni-Setif": {
+    "name": "Boutique Peboni",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-22 at 12.44.35_0798ff84.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/soFArKqGjNbAtDtQ8",
+      "text": "Rue Benhamouda Larbi, Ouargla"
+    },
+    "gradient": "linear-gradient(193deg,rgba(173, 174, 169, 1) 0%, rgba(27, 26, 21, 1) 100%)",
+    "phone": "0697572215",
+    "socials": {
+      "facebook": "https://www.facebook.com/share/15xVmJiNch/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/boutique_eden_park",
+      "tiktok": "https://www.tiktok.com/@walidwalid1453",
+      "whatsapp": "https://wa.me/213540651925"
     }
   }
 }
