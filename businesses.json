@@ -1013,5 +1013,21 @@
       "viber": "viber://chat?number=%2B+213551286088",
       "whatsapp": "https://wa.me/213550220327"
     }
+  },
+  "jawhara-south": {
+    "name": "كوسمتيك جوهرة الجنوب ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-22 at 12.07.01_40c56c40.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/soFArKqGjNbAtDtQ8",
+      "text": "Rue Benhamouda Larbi, Ouargla"
+    },
+    "gradient": "linear-gradient(326deg,rgba(235, 173, 38, 1) 0%, rgba(135, 101, 27, 1) 100%)",
+    "phone": "0697572215",
+    "socials": {
+      "facebook": "https://www.facebook.com/share/19uLhtzxZS/",
+      "instagram": "https://www.instagram.com/cosmetique_jawahrat_aljanub",
+      "tiktok": "https://www.tiktok.com/@radwanradwan961?",
+      "whatsapp": "https://wa.me/2130697572215"
+    }
   }
 }
