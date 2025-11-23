@@ -1093,5 +1093,21 @@
       "instagram": "https://www.instagram.com/professor.sham?",
       "whatsapp": "https://wa.me/213541286661"
     }
+  },
+  "Boutique-fantaisie-la-Breche": {
+    "name": "Boutique Fantaisie la Brèche  ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-22 at 13.01.31_e0f17fc5.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/1JtjKPwU72cpVZB8A",
+      "text": "Akbou"
+    },
+    "gradient": "linear-gradient(352deg,rgba(90, 107, 133, 1) 0%, rgba(41, 44, 53, 1) 100%)",
+    "phone": "+213541286661",
+    "socials": {
+      "facebook": "https://www.facebook.com/people/Boutique-fantaisie-la-Br%C3%A8che/100092376355284/?",
+      "snapchat": "https://www.snapchat.com/@faresfantaisie",
+      "instagram": "https://www.instagram.com/fa7594res",
+      "whatsapp": "https://wa.me/213660948343"
+    }
   }
 }
