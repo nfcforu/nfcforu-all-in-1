@@ -1060,5 +1060,22 @@
       "facebook": "https://www.facebook.com/share/1BLSF7mVCH/",
       "whatsapp": "https://wa.me/213559735983"
     }
+  },
+  "HAYA-Beauty": {
+    "name": "HAYA Beauty",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/432743470_372886578945937_3332733434243297069_n.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/h5V5fCC819c89r256",
+      "text": "473 Chemin Benamara Abdelkader, El Achour"
+    },
+    "gradient": "linear-gradient(170deg,rgba(246, 158, 174, 1) 0%, rgba(232, 217, 222, 1) 100%)",
+    "phone": "+213555555776",
+    "socials": {
+      "tiktok": "https://www.tiktok.com/@haya.beauty.alg?",
+      "facebook": "https://www.facebook.com/people/HAYA-Beauty/61556201883820/?",
+      "snapchat": "https://www.snapchat.com/@hayabeautycentr",
+      "instagram": "https://www.instagram.com/haya.beauty.alg?",
+      "whatsapp": "https://wa.me/213555555776"
+    }
   }
 }
