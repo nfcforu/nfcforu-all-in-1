@@ -1046,5 +1046,19 @@
       "tiktok": "https://www.tiktok.com/@walidwalid1453",
       "whatsapp": "https://wa.me/213540651925"
     }
+  },
+  "el-ishrak": {
+    "name": "محل الاشراق",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-22 at 14.53.59_c8818fd9.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/BnXKRSB4BWWGKhdZ7",
+      "text": "In Amguel, Tamanrasset"
+    },
+    "gradient": "linear-gradient(156deg,rgba(86, 25, 30, 1) 0%, rgba(238, 190, 114, 1) 100%)",
+    "phone": "0559735983",
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1BLSF7mVCH/",
+      "whatsapp": "https://wa.me/213559735983"
+    }
   }
 }
