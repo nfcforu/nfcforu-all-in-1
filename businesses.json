@@ -1133,14 +1133,15 @@
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-23 at 07.17.40_16b59992.jpg",
     "address": {
       "url": "https://maps.app.goo.gl/wizkfYLboto3pGyx6",
-      "text": "Milla"
+      "text": "Mila"
     },
     "phone": "0772862218",
     "gradient": "linear-gradient(185deg,rgba(134, 5, 147, 1) 0%, rgba(241, 116, 70, 1) 100%)",
     "socials": {
       "facebook": "https://www.facebook.com/SoFAN.Meubles?",
       "tiktok": "https://www.tiktok.com/@wb_meubles?",
-      "instagram": "https://www.instagram.com/wb_meubles?"
+      "instagram": "https://www.instagram.com/wb_meubles?",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213772862218"
     }
   },
   "DR-chetouani": {
