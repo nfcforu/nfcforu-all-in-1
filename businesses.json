@@ -1110,5 +1110,35 @@
       "instagram": "https://www.instagram.com/fa7594res",
       "whatsapp": "https://wa.me/213660948343"
     }
+  },
+  "H-Bmeubles": {
+    "name": "H Bmeubles",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/393705081_1288387998543524_8580624544698327410_n (1).jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/EtXJbbkaCdo1UiKs9",
+      "text": "El Khroub, Constantine"
+    },
+    "gradient": "linear-gradient(24deg,rgba(199, 1, 2, 1) 0%, rgba(87, 49, 49, 1) 100%)",
+    "phone": "0560102222",
+    "socials": {
+      "facebook": "https://www.facebook.com/HBmeublesConstantine?",
+      "tiktok": "https://www.tiktok.com/@hbmeubles?",
+      "instagram": "https://www.instagram.com/hbmeubles",
+      "whatsapp": "https://wa.me/213560102222"
+    }
+  },
+  "W-B-Meubles ": {
+    "name": "W-B-Meubles",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-23 at 07.17.40_16b59992.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/wizkfYLboto3pGyx6",
+      "text": "Milla"
+    },
+    "gradient": "linear-gradient(185deg,rgba(134, 5, 147, 1) 0%, rgba(241, 116, 70, 1) 100%)",
+    "socials": {
+      "facebook": "https://www.facebook.com/SoFAN.Meubles?",
+      "tiktok": "https://www.tiktok.com/@wb_meubles?",
+      "instagram": "https://www.instagram.com/wb_meubles?"
+    }
   }
 }
