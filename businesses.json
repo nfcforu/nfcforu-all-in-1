@@ -1159,5 +1159,19 @@
       "instagram": "https://www.instagram.com/dr_chetouane_hicham_/",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130798557018"
     }
+  },
+  "DR-chermatte": {
+    "name": "دكتور شرماط رفيق المكي",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/427795383_122101806428215457_5133712902386295123_n.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/hLcanBwY5v1L4JN58",
+      "text": "Rue Dekhli Mokhtar, Taher"
+    },
+    "phone": "0669868167",
+    "gradient": "linear-gradient(183deg,rgba(142, 84, 45, 1) 0%, rgba(241, 187, 101, 1) 100%)",
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1AYgdpUgEm/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213669846101"
+    }
   }
 }
