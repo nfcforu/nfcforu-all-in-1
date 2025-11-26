@@ -1173,5 +1173,19 @@
       "facebook": "https://www.facebook.com/share/1AYgdpUgEm/",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213669846101"
     }
+  },
+  "Pets-Vet_DZ": {
+    "name": "Pets Vet DZ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/Gemini_Generated_Image_m7bl71m7bl71m7bl.png",
+    "address": {
+      "url": "https://share.google/caq8aTp1LVDYtNgW3",
+      "text": "Rue polyclinique, Bou Ismaïl"
+    },
+    "phone": "0559815966",
+    "gradient": "linear-gradient(162deg,rgba(32, 184, 195, 1) 0%, rgba(168, 168, 168, 1) 100%)",
+    "socials": {
+      "instagram": "https://www.instagram.com/petsvetdzclinic",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213779966485"
+    }
   }
 }
