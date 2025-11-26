@@ -1202,5 +1202,22 @@
       "facebook": "https://www.facebook.com/kamelhendi22",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213674138648"
     }
+  },
+  "Huyam-Lingerie": {
+    "name": "Huyam Lingerie",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-26 at 04.46.52_f32dbcd2.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/MEiUbjG1UUyUV19k7",
+      "text": "Bazar Hamza, Bachdjarah"
+    },
+    "phone": "0557605793",
+    "gradient": "linear-gradient(310deg,rgba(213, 37, 50, 1) 0%, rgba(135, 26, 33, 1) 100%)",
+    "socials": {
+      "instagram": "https://www.instagram.com/lingeriestore154",
+      "facebook": "https://www.facebook.com/people/Huyam-lingerie/61564442723073/",
+      "tiktok": "https://www.tiktok.com/@huyamlingerie?",
+      "snapchat": "https://www.snapchat.com/@monenclecharlie",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213674138648"
+    }
   }
 }
