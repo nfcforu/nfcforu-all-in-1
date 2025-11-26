@@ -1249,5 +1249,20 @@
       "facebook": "https://www.facebook.com/people/Yacime-voyage/100063924586857/",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213660186805"
     }
+  },
+  "Moto-Mix-Setif": {
+    "name": "Moto Mix Setif",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-26 at 05.10.30_8716f7c2.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/LSeWGqyXqq28W2BJ8",
+      "text": "Cité, Rue Hachemi Talbi، Sétif"
+    },
+    "phone": "+213550799966",
+    "gradient": "linear-gradient(163deg,rgba(249, 7, 6, 1) 0%, rgba(164, 164, 164, 1) 100%)",
+    "socials": {
+      "facebook": "https://www.facebook.com/bilal.lamamra.2025",
+      "instagram": "https://www.instagram.com/bilallamamra/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213550799966"
+    }
   }
 }
