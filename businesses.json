@@ -1187,5 +1187,20 @@
       "instagram": "https://www.instagram.com/petsvetdzclinic",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213779966485"
     }
+  },
+  "lala_l3roussa_hk28": {
+    "name": "لالة لعروسة_hk",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/562122678_17847675780577411_5947728271180504805_n.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/4xfnhr9dGzjMjzEz6",
+      "text": "M'Sila"
+    },
+    "phone": "0674138648",
+    "gradient": "linear-gradient(343deg,rgba(167, 137, 77, 1) 0%, rgba(82, 68, 36, 1) 100%)",
+    "socials": {
+      "instagram": "https://www.instagram.com/lala_l3roussa_hk28",
+      "facebook": "https://www.facebook.com/kamelhendi22",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213674138648"
+    }
   }
 }
