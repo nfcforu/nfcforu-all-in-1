@@ -1160,7 +1160,7 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130798557018"
     }
   },
-  "DR-chermatte": {
+  "DR-chermat": {
     "name": "دكتور شرماط رفيق المكي",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/427795383_122101806428215457_5133712902386295123_n.jpg",
     "address": {
@@ -1263,6 +1263,24 @@
       "facebook": "https://www.facebook.com/bilal.lamamra.2025",
       "instagram": "https://www.instagram.com/bilallamamra/",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213550799966"
+    }
+  },
+  "King-Style": {
+    "name": "King Style",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/Gemini_Generated_Image_3z2hl83z2hl83z2h.png",
+    "address": {
+      "url": "https://maps.app.goo.gl/gM6DPdXBRBwjTBiX8",
+      "text": "Meftah، Blida"
+    },
+    "phone": "0779658514",
+    "gradient": "linear-gradient(308deg,rgba(154, 125, 84, 1) 0%, rgba(74, 61, 38, 1) 100%)",
+    "socials": {
+      "facebook": "https://www.facebook.com/people/KingStyle/61576334545522/",
+      "instagram": "https://www.instagram.com/king.style16?",
+      "tiktok": "https://www.tiktok.com/@king.style16?",
+      "snapchat": "https://www.snapchat.com/@king.style16",
+      "whatsapp": "https://wa.me/message/6I6ZFUNZ3AWSM1?src=qr",
+      "telegram": "https://wa.me/message/6I6ZFUNZ3AWSM1?src=qr"
     }
   }
 }
