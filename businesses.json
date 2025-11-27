@@ -1280,7 +1280,22 @@
       "tiktok": "https://www.tiktok.com/@king.style16?",
       "snapchat": "https://www.snapchat.com/@king.style16",
       "whatsapp": "https://wa.me/message/6I6ZFUNZ3AWSM1?src=qr",
-      "telegram": "https://wa.me/message/6I6ZFUNZ3AWSM1?src=qr"
+      "telegram": "https://t.me/+213779658514"
+    }
+  },
+  "Studio-Badi": {
+    "name": "Studio Badi",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-27 at 07.21.19_49993d89.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/FRkZRDhvMUGV69pW6",
+      "text": "Cité El Hidhab, Sétif"
+    },
+    "phone": "0770327239",
+    "gradient": "linear-gradient(335deg,rgba(206, 161, 128, 1) 0%, rgba(55, 46, 37, 1) 100%)",
+    "socials": {
+      "facebook": "https://www.facebook.com/wafia.kouah",
+      "instagram": "https://www.instagram.com/wafiakouah/",
+      "tiktok": "https://www.tiktok.com/@wafiakouah"
     }
   }
 }
