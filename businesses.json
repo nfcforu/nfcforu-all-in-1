@@ -1329,5 +1329,19 @@
       "whatsapp": "https://wa.me/213658958833",
       "facebook": "https://www.facebook.com/amirlabphone"
     }
+  },
+  "Luxe-Ceram": {
+    "name": "Luxe Ceram",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/432951244_952769640187492_3475190830079435018_n.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/zFfzR7RdkZjLBRBUA",
+      "text": "lot n°2, Bouira"
+    },
+    "phone": "0560104229",
+    "gradient": "linear-gradient(164deg,rgba(223, 32, 50, 1) 0%, rgba(8, 177, 234, 1) 100%)",
+    "socials": {
+      "instagram": "https://www.instagram.com/luxeceram/",
+      "tiktok": "https://www.tiktok.com/@luxceram5"
+    }
   }
 }
