@@ -1315,5 +1315,19 @@
       "instagram": "https://www.instagram.com/wafiakouah/",
       "tiktok": "https://www.tiktok.com/@hichembijouxeleul?"
     }
+  },
+  "amir-lab-phone": {
+    "name": "Amir-Lab-Phone",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/557739051_122143496120876509_4419763600941445578_n.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/GptGjFxStcUckrKi7",
+      "text": "Grarem Gouga, Mila"
+    },
+    "phone": "0658958833",
+    "gradient": "linear-gradient(164deg,rgba(223, 32, 50, 1) 0%, rgba(8, 177, 234, 1) 100%)",
+    "socials": {
+      "whatsapp": "https://wa.me/213658958833",
+      "facebook": "https://www.facebook.com/amirlabphone"
+    }
   }
 }
