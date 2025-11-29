@@ -1361,5 +1361,22 @@
       "whatsapp": "https://wa.me/message/56UH6NZE3SIJB1",
       "telegram": "https://t.me/MonalisaMercerieAccessories"
     }
+  },
+  "king-boy": {
+    "name": "KïNg Bøÿ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/583800886_18199262683318940_8053740259289533345_n.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/83PvuPHhGa7SrLVt6",
+      "text": "Rue Larbi Ben M'Hidi, Constantine"
+    },
+    "phone": "0550348777",
+    "gradient": "linear-gradient(310deg,rgba(147, 171, 11, 1) 0%, rgba(30, 36, 36, 1) 100%)",
+    "socials": {
+      "instagram": "https://www.instagram.com/raouf__zahdi/",
+      "tiktok": "https://www.tiktok.com/@gimbbbi",
+      "facebook": "https://www.facebook.com/people/K%C3%AFNg-B%C3%B8%C3%BF/100063901753520/",
+      "snapchat": "https://www.snapchat.com/@user632266535",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213550348777"
+    }
   }
 }
