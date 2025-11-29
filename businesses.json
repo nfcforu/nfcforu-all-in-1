@@ -1344,5 +1344,22 @@
       "instagram": "https://www.instagram.com/luxeceram/",
       "tiktok": "https://www.tiktok.com/@luxceram5"
     }
+  },
+  "MONALISA-MERCERIE": {
+    "name": "MONALISA MERCERIE & ACCESSOIRES",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/359495561_788300376279732_7106093426427811325_n.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/83PvuPHhGa7SrLVt6",
+      "text": "Rue Larbi Ben M'Hidi, Constantine"
+    },
+    "phone": "0698649820",
+    "gradient": " linear-gradient(171deg,rgba(230, 203, 108, 1) 0%, rgba(5, 5, 5, 1) 100%)",
+    "socials": {
+      "instagram": "https://www.instagram.com/monalisa_mercerie_accessoires?",
+      "tiktok": "https://www.tiktok.com/@monalisa.accessoires?",
+      "facebook": "https://www.facebook.com/monalisa.cristal25?",
+      "whatsapp": "https://wa.me/message/56UH6NZE3SIJB1",
+      "telegram": "https://t.me/MonalisaMercerieAccessories"
+    }
   }
 }
