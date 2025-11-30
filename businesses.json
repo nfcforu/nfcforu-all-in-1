@@ -1269,19 +1269,18 @@
   "King-Style": {
     "name": "King Style",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/Gemini_Generated_Image_3z2hl83z2hl83z2h.png",
-    "address": {
-      "url": "https://maps.app.goo.gl/gM6DPdXBRBwjTBiX8",
-      "text": "Meftah، Blida"
-    },
     "phone": "0779658514",
     "gradient": "linear-gradient(308deg,rgba(154, 125, 84, 1) 0%, rgba(74, 61, 38, 1) 100%)",
+    "address": {
+      "text": "Meftah، Blida",
+      "url": "https://maps.app.goo.gl/gM6DPdXBRBwjTBiX8"
+    },
     "socials": {
       "facebook": "https://www.facebook.com/people/KingStyle/61576334545522/",
       "instagram": "https://www.instagram.com/king.style16?",
       "tiktok": "https://www.tiktok.com/@king.style16?",
-      "snapchat": "https://www.snapchat.com/@king.style16",
       "whatsapp": "https://wa.me/message/6I6ZFUNZ3AWSM1?src=qr",
-      "telegram": "https://t.me/+213779658514"
+      "website": "https://boutique16ks.shop/"
     }
   },
   "Studio-Badi": {
