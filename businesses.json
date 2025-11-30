@@ -1394,7 +1394,6 @@
       "facebook": "https://www.facebook.com/people/Maison-carla/61576584716445/"
     }
   },
-<<<<<<< HEAD
   "Pharmacie-Firane": {
     "name": "Pharmacie Firane",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/576907135_1281426684002062_4713318717267655324_n.jpg",
@@ -1406,7 +1405,8 @@
     "gradient": "linear-gradient(312deg,rgba(50, 184, 147, 1) 0%, rgba(221, 114, 106, 1) 100%)",
     "socials": {
       "facebook": "https://www.facebook.com/people/Maison-carla/61576584716445/"
-    },
+    }
+  },
   "walid-la-resto": {
     "name": "walid restau",
     "image": "",
@@ -1421,7 +1421,6 @@
       "instagram": "https://www.instagram.com/la_.sicilia_19",
       "tiktok": "https://www.tiktok.com/@la_.sicilia19?_t=ZS-90qtdk9YYlU&_r=1",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213659686007"
->>>>>>> 9e6a426a1ddac395b6bb50a183bd9ec81c183e3b
     }
   }
 }
