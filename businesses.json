@@ -1393,5 +1393,18 @@
       "tiktok": "https://www.tiktok.com/@maison.carla?",
       "facebook": "https://www.facebook.com/people/Maison-carla/61576584716445/"
     }
+  },
+  "Pharmacie-Firane": {
+    "name": "Pharmacie Firane",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/576907135_1281426684002062_4713318717267655324_n.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/wE1s48g2JRz7ug79A",
+      "text": "Serdj El Ghoul, Setif"
+    },
+    "phone": "036591733",
+    "gradient": "linear-gradient(312deg,rgba(50, 184, 147, 1) 0%, rgba(221, 114, 106, 1) 100%)",
+    "socials": {
+      "facebook": "https://www.facebook.com/people/Maison-carla/61576584716445/"
+    }
   }
 }
