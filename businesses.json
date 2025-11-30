@@ -1378,5 +1378,21 @@
       "snapchat": "https://www.snapchat.com/@user632266535",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213550348777"
     }
+  },
+  "Maison-Carla": {
+    "name": "Maison Carla",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/691249d0710d26a0f2b985b4f6df31d2~tplv-tiktokx-cropcenter_1080_1080.jpeg",
+    "address": {
+      "url": "https://maps.app.goo.gl/m3KwZZKnUwWukkWi8",
+      "text": "Hydra, Alger"
+    },
+    "phone": "0554020519",
+    "gradient": "linear-gradient(184deg,rgba(187, 61, 23, 1) 0%, rgba(163, 160, 153, 1) 100%)",
+    "socials": {
+      "instagram": "https://www.instagram.com/maison_carla1?",
+      "tiktok": "https://www.tiktok.com/@maison.carla?",
+      "facebook": "https://www.facebook.com/people/Maison-carla/61576584716445/",
+      "snapchat": "https://www.threads.com/@maison_carla1"
+    }
   }
 }
