@@ -1438,5 +1438,21 @@
       "tiktok": "https://www.tiktok.com/@la_.sicilia19?_t=ZS-90qtdk9YYlU&_r=1",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213659686007"
     }
+  },
+  "ijhsijs": {
+    "name": "King Style",
+    "image": "",
+    "phone": "06779658514",
+    "gradient": "linear-gradient(308deg,rgba(154, 125, 84, 1) 0%, rgba(74, 61, 38, 1) 100%)",
+    "address": {
+      "text": "Meftah، Blida",
+      "url": "https://maps.app.goo.gl/zFfzR7RdkZjLBRBUA"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/people/KingStyle/61576334545522/",
+      "instagram": "https://www.instagram.com/king.style16?",
+      "tiktok": "https://www.tiktok.com/@king.style16?",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213662497139"
+    }
   }
 }
