@@ -1409,7 +1409,7 @@
   },
   "LAFAR-EULMA": {
     "name": "بلاكيور لافار العلمة",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-01%20at%2016.21.13_0618ce50.jpg",
     "phone": "0558382609",
     "gradient": "linear-gradient(359deg,rgba(0, 0, 0, 1) 0%, rgba(150, 120, 54, 1) 80%, rgba(209, 166, 36, 1) 100%)",
     "address": {
@@ -1418,8 +1418,7 @@
     },
     "socials": {
       "facebook": "https://www.facebook.com/blakywr.bajmlt.al.lmt?mibextid=wwXIfr&rdid=S8R4cqA0UP39CRcW&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17sKi1C5dz%2F%3Fmibextid%3DwwXIfr#",
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213558382609",
-      "telegram": "https://t.me/plaquieleulma"
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213558382609"
     }
   },
   "LAFARR-EULMA": {
