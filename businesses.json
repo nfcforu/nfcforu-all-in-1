@@ -1436,5 +1436,20 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130671948096",
       "telegram": "https://t.me/palquoreleulma"
     }
+  },
+  "Dr-M-MERAZI": {
+    "name": "Dr-M-MERAZI",
+    "image": "",
+    "phone": "0661820296",
+    "gradient": "linear-gradient(90deg,rgba(1, 1, 8, 1) 0%, rgba(33, 33, 219, 1) 50%, rgba(5, 205, 250, 1) 91%)",
+    "address": {
+      "text": "Cité des annassers 1",
+      "url": "https://www.google.com/maps/place/Cité+des+annassers+1/@36.7212252,3.0481625,12.26z/data=!4m6!3m5!1s0x128fad5da47133bb:0x7e004a4f0a71ca2f!8m2!3d36.7350838!4d3.0726786!16s%2Fg%2F11l5jrxp6n?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1DC7jp4rUw/",
+      "instagram": "https://www.instagram.com/medi_m_dental?igsh=MW92OXZvdWdkc3Y1cg%3D%3D&fbclid=IwY2xjawOaqN1leHRuA2FlbQIxMABicmlkETEwQXZyamZEY0IzUUxmYTJpc3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEeL9eXZELLWFa8GvVG9x-0Ff1NDcZyy6z1G5eOQvT2ziLYfobyqhJd_GtGA5k_aem_BqKQZClIJNvvyItatnUOww",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213661820296"
+    }
   }
 }
