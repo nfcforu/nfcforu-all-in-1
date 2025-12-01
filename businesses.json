@@ -1408,18 +1408,17 @@
     }
   },
   "LAFAR-EULMA": {
-    "name": " لافار بلاكيور جملة العلمة",
+    "name": "بلاكيور لافار العلمة",
     "image": "",
-    "phone": "0671948096",
-    "gradient": "linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 57%, rgba(255, 213, 0, 1) 100%)",
+    "phone": "0558382609",
+    "gradient": "",
     "address": {
       "text": "بلاكيور لافار العلمة",
-      "url": "https://www.google.com/maps?q=5M5F+2XR+بلاكيور+لافار+العلمة,+El+Eulma+19600&ftid=0x12f30b0029582537:0xc24a815647a3aa53&entry=gps&lucs=,94275411,94284481,94224825,94227247,94227248,94231188,94280568,47071704,47069508,94218641,94282134,94298694,94203019,47084304&g_ep=CAISEjI1LjQyLjEuODE4NTg2NzMyMBgAIIgnKn4sOTQyNzU0MTEsOTQyODQ0ODEsOTQyMjQ4MjUsOTQyMjcyNDcsOTQyMjcyNDgsOTQyMzExODgsOTQyODA1NjgsNDcwNzE3MDQsNDcwNjk1MDgsOTQyMTg2NDEsOTQyODIxMzQsOTQyOTg2OTQsOTQyMDMwMTksNDcwODQzMDRCAkRa&skid=4176ea2d-1e1b-452d-a445-a6f0b25f13a6&g_st=ipc"
+      "url": "https://www.google.com/maps/place/بلاكيور+لافار+العلمة%E2%80%AD/@36.1576451,5.6747097,17z/data=!3m1!4b1!4m6!3m5!1s0x12f30b0029582537:0xc24a815647a3aa53!8m2!3d36.1576451!4d5.6747097!16s%2Fg%2F11xn7x43c_?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
     },
     "socials": {
-      "facebook": "www.facebook.com/blakywr.baljmlt.al.lmt.lafar?mibextid=wwXIfr&mibextid=wwXIfr",
-      "tiktok": "https://www.tiktok.com/@achrafkamikaz4?_r=1&_t=ZS-91kpgUeHJZK",
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130671948096"
+      "facebook": "https://www.facebook.com/blakywr.bajmlt.al.lmt?mibextid=wwXIfr&rdid=S8R4cqA0UP39CRcW&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17sKi1C5dz%2F%3Fmibextid%3DwwXIfr#",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213558382609"
     }
   }
 }
