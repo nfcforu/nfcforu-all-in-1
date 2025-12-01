@@ -1438,5 +1438,16 @@
       "tiktok": "https://www.tiktok.com/@la_.sicilia19?_t=ZS-90qtdk9YYlU&_r=1",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213659686007"
     }
+  },
+  "LAFAR-EULMA": {
+    "name": "DFA",
+    "image": "",
+    "phone": "",
+    "gradient": "",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {}
   }
 }
