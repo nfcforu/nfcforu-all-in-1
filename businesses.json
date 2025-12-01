@@ -1423,22 +1423,6 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213659686007"
     }
   },
-  "ro9a": {
-    "name": "ro9a",
-    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-10-25 at 20.30.58_d18d3e31.jpg",
-    "phone": "0554109015",
-    "gradient": "#948F8F",
-    "address": {
-      "text": "rue 24 fevrier 1956 , setif",
-      "url": "https://www.google.com/maps/place/Restaurant+la+sicilia/@36.1850205,5.4403124,20.99z/data=!4m14!1m7!3m6!1s0x12f3143539b4052b:0x7dc5deb9304197be!2sPizzeria+appolino!8m2!3d36.2066248!4d5.4366248!16s%2Fg%2F11dylwzql0!3m5!1s0x12f3150036585cb9:0xc0e7a64557187d0c!8m2!3d36.1849849!4d5.4404936!16s%2Fg%2F11x2w9r5w0?entry=ttu&g_ep=EgoyMDI1MTAyMi4wIKXMDSoASAFQAw%3D%3D"
-    },
-    "socials": {
-      "facebook": "https://www.facebook.com/share/1F4GWwSFoY/",
-      "instagram": "https://www.instagram.com/la_.sicilia_19",
-      "tiktok": "https://www.tiktok.com/@la_.sicilia19?_t=ZS-90qtdk9YYlU&_r=1",
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213659686007"
-    }
-  },
   "LAFAR-EULMA": {
     "name": "DFA",
     "image": "",
