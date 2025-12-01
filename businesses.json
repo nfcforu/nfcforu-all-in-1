@@ -1408,14 +1408,18 @@
     }
   },
   "LAFAR-EULMA": {
-    "name": "DFA",
+    "name": " لافار بلاكيور جملة العلمة",
     "image": "",
-    "phone": "",
-    "gradient": "",
+    "phone": "0671948096",
+    "gradient": "linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 57%, rgba(255, 213, 0, 1) 100%)",
     "address": {
-      "text": "",
-      "url": ""
+      "text": "بلاكيور لافار العلمة",
+      "url": "https://www.google.com/maps?q=5M5F+2XR+بلاكيور+لافار+العلمة,+El+Eulma+19600&ftid=0x12f30b0029582537:0xc24a815647a3aa53&entry=gps&lucs=,94275411,94284481,94224825,94227247,94227248,94231188,94280568,47071704,47069508,94218641,94282134,94298694,94203019,47084304&g_ep=CAISEjI1LjQyLjEuODE4NTg2NzMyMBgAIIgnKn4sOTQyNzU0MTEsOTQyODQ0ODEsOTQyMjQ4MjUsOTQyMjcyNDcsOTQyMjcyNDgsOTQyMzExODgsOTQyODA1NjgsNDcwNzE3MDQsNDcwNjk1MDgsOTQyMTg2NDEsOTQyODIxMzQsOTQyOTg2OTQsOTQyMDMwMTksNDcwODQzMDRCAkRa&skid=4176ea2d-1e1b-452d-a445-a6f0b25f13a6&g_st=ipc"
     },
-    "socials": {}
+    "socials": {
+      "facebook": "www.facebook.com/blakywr.baljmlt.al.lmt.lafar?mibextid=wwXIfr&mibextid=wwXIfr",
+      "tiktok": "https://www.tiktok.com/@achrafkamikaz4?_r=1&_t=ZS-91kpgUeHJZK",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130671948096"
+    }
   }
 }
