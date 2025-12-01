@@ -1269,19 +1269,18 @@
   "King-Style": {
     "name": "King Style",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/Gemini_Generated_Image_3z2hl83z2hl83z2h.png",
-    "address": {
-      "url": "https://maps.app.goo.gl/gM6DPdXBRBwjTBiX8",
-      "text": "Meftah، Blida"
-    },
     "phone": "0779658514",
     "gradient": "linear-gradient(308deg,rgba(154, 125, 84, 1) 0%, rgba(74, 61, 38, 1) 100%)",
+    "address": {
+      "text": "Meftah، Blida",
+      "url": "https://maps.app.goo.gl/gM6DPdXBRBwjTBiX8"
+    },
     "socials": {
       "facebook": "https://www.facebook.com/people/KingStyle/61576334545522/",
       "instagram": "https://www.instagram.com/king.style16?",
       "tiktok": "https://www.tiktok.com/@king.style16?",
-      "snapchat": "https://www.snapchat.com/@king.style16",
       "whatsapp": "https://wa.me/message/6I6ZFUNZ3AWSM1?src=qr",
-      "telegram": "https://t.me/+213779658514"
+      "website": "https://boutique16ks.shop/"
     }
   },
   "Studio-Badi": {
@@ -1334,13 +1333,14 @@
   "Luxe-Ceram": {
     "name": "Luxe Ceram",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/432951244_952769640187492_3475190830079435018_n.jpg",
-    "address": {
-      "url": "https://maps.app.goo.gl/zFfzR7RdkZjLBRBUA",
-      "text": "lot n°2, Bouira"
-    },
     "phone": "0560104229",
     "gradient": "linear-gradient(164deg,rgba(223, 32, 50, 1) 0%, rgba(8, 177, 234, 1) 100%)",
+    "address": {
+      "text": "lot n°2, Bouira",
+      "url": "https://maps.app.goo.gl/zFfzR7RdkZjLBRBUA"
+    },
     "socials": {
+      "facebook": "https://www.facebook.com/share/1JzjbQA2KX/",
       "instagram": "https://www.instagram.com/luxeceram/",
       "tiktok": "https://www.tiktok.com/@luxceram5"
     }
@@ -1407,20 +1407,33 @@
       "facebook": "https://www.facebook.com/people/Maison-carla/61576584716445/"
     }
   },
-  "walid-la-resto": {
-    "name": "walid restau",
+  "LAFAR-EULMA": {
+    "name": "بلاكيور لافار العلمة",
     "image": "",
-    "phone": "0662497139",
-    "gradient": "#948F8F",
+    "phone": "0558382609",
+    "gradient": "linear-gradient(359deg,rgba(0, 0, 0, 1) 0%, rgba(150, 120, 54, 1) 80%, rgba(209, 166, 36, 1) 100%)",
     "address": {
-      "text": "rue 24 fevrier 1956 , setif",
-      "url": "https://www.google.com/maps/place/Restaurant+la+sicilia/@36.1850205,5.4403124,20.99z/data=!4m14!1m7!3m6!1s0x12f3143539b4052b:0x7dc5deb9304197be!2sPizzeria+appolino!8m2!3d36.2066248!4d5.4366248!16s%2Fg%2F11dylwzql0!3m5!1s0x12f3150036585cb9:0xc0e7a64557187d0c!8m2!3d36.1849849!4d5.4404936!16s%2Fg%2F11x2w9r5w0?entry=ttu&g_ep=EgoyMDI1MTAyMi4wIKXMDSoASAFQAw%3D%3D"
+      "text": "بلاكيور لافار العلمة",
+      "url": "https://www.google.com/maps/place/بلاكيور+لافار+العلمة%E2%80%AD/@36.1576451,5.6747097,17z/data=!3m1!4b1!4m6!3m5!1s0x12f30b0029582537:0xc24a815647a3aa53!8m2!3d36.1576451!4d5.6747097!16s%2Fg%2F11xn7x43c_?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
     },
     "socials": {
-      "facebook": "https://www.facebook.com/share/1F4GWwSFoY/",
-      "instagram": "https://www.instagram.com/la_.sicilia_19",
-      "tiktok": "https://www.tiktok.com/@la_.sicilia19?_t=ZS-90qtdk9YYlU&_r=1",
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213659686007"
+      "facebook": "https://www.facebook.com/blakywr.bajmlt.al.lmt?mibextid=wwXIfr&rdid=S8R4cqA0UP39CRcW&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17sKi1C5dz%2F%3Fmibextid%3DwwXIfr#",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213558382609"
+    }
+  },
+  "LAFARR-EULMA": {
+    "name": "بلاكيور لافار العلمة",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-01%20at%2016.21.13_0618ce50.jpg",
+    "phone": "0671948096",
+    "gradient": "linear-gradient(359deg,rgba(0, 0, 0, 1) 0%, rgba(150, 120, 54, 1) 80%, rgba(209, 166, 36, 1) 100%)",
+    "address": {
+      "text": "بلاكيور لافار العلمة",
+      "url": "https://www.google.com/maps/place/بلاكيور+لافار+العلمة%E2%80%AD/@36.1576451,5.6747097,17z/data=!3m1!4b1!4m6!3m5!1s0x12f30b0029582537:0xc24a815647a3aa53!8m2!3d36.1576451!4d5.6747097!16s%2Fg%2F11xn7x43c_?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/blakywr.baljmlt.al.lmt.lafar?mibextid=wwXIfr",
+      "tiktok": "https://www.tiktok.com/@achrafkamikaz4?_r=1&_t=ZS-91kpgUeHJZK",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130671948096"
     }
   }
 }
