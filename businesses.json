@@ -1342,7 +1342,8 @@
     "socials": {
       "facebook": "https://www.facebook.com/share/1JzjbQA2KX/",
       "instagram": "https://www.instagram.com/luxeceram/",
-      "tiktok": "https://www.tiktok.com/@luxceram5"
+      "tiktok": "https://www.tiktok.com/@luxceram5",
+      "website": "luxceram10@gmail.com"
     }
   },
   "MONALISA-MERCERIE": {
@@ -1438,7 +1439,7 @@
     }
   },
   "Dr-M-MERAZI": {
-    "name": "Dr MERAZI M Medi M Dental",
+    "name": "Dr MERAZI ( Medi M Dental )",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-01%20at%2017.25.21_6c9707e4.jpg",
     "phone": "0661820296",
     "gradient": "linear-gradient(2deg,rgba(61, 61, 173, 1) 0%, rgba(168, 59, 59, 1) 49%, rgba(93, 114, 217, 1) 80%)",
@@ -1449,6 +1450,7 @@
     "socials": {
       "facebook": "https://www.facebook.com/share/1DC7jp4rUw/",
       "instagram": "https://www.instagram.com/medi_m_dental?igsh=MW92OXZvdWdkc3Y1cg%3D%3D&fbclid=IwY2xjawOaqN1leHRuA2FlbQIxMABicmlkETEwQXZyamZEY0IzUUxmYTJpc3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEeL9eXZELLWFa8GvVG9x-0Ff1NDcZyy6z1G5eOQvT2ziLYfobyqhJd_GtGA5k_aem_BqKQZClIJNvvyItatnUOww",
+      "tiktok": "https://www.tiktok.com/@cabinet.dr.merazi",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213661820296"
     }
   },
@@ -1469,8 +1471,8 @@
   },
   "Aura-Clinique-Dentaire": {
     "name": "Aura Clinique Dentaire",
-    "image": "",
-    "phone": "0782163091",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-06%20at%2011.51.43_281d543a.jpg",
+    "phone": "0799471646",
     "gradient": "linear-gradient(354deg,rgba(81, 33, 158, 1) 0%, rgba(211, 218, 235, 1) 100%)",
     "address": {
       "text": "Oran",
@@ -1481,6 +1483,22 @@
       "instagram": "https://www.instagram.com/aura.clinique_dentaire?igsh=MXNxZjB4dXZwbW5vNw%3D%3D",
       "tiktok": "https://www.tiktok.com/@auraclinque?_r=1&_t=ZS-91yrbBaePYI",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130782163091"
+    }
+  },
+  "Hachem-Serrab": {
+    "name": "Hachem Serrab",
+    "image": "",
+    "phone": "0771380462",
+    "gradient": "linear-gradient(172deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%)",
+    "address": {
+      "text": "Constantine",
+      "url": "https://maps.app.goo.gl/bawQQSLecFSqTULa9"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/hachem.serrab?rdid=F1qDO97Uzg75N94O&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1KozZWHBUs%2F#",
+      "instagram": "https://www.instagram.com/hachemserrab?igsh=bHNnczk4bjdxZzRo",
+      "tiktok": "https://www.tiktok.com/@hachemserrab?_r=1&_t=ZM-91zlhymxflT",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130771380462"
     }
   }
 }
