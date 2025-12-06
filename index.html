@@ -34,6 +34,7 @@
         align-items: center;
       }
 
+      /* Profile Section - Linktree Style */
       .profile-header {
         text-align: center;
         margin-bottom: 40px;
@@ -81,6 +82,7 @@
         max-width: 300px;
       }
 
+      /* Links Container */
       .links-container {
         width: 100%;
         max-width: 480px;
@@ -89,6 +91,7 @@
         gap: 16px;
       }
 
+      /* Link Items - Modern Linktree Style */
       .link-item {
         background: rgba(255, 255, 255, 0.1);
         border: 1px solid rgba(255, 255, 255, 0.2);
@@ -180,6 +183,7 @@
         color: rgba(255, 255, 255, 0.9);
       }
 
+      /* Special styling for different link types */
       .link-item.phone .link-icon {
         background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
       }
@@ -206,6 +210,7 @@
         background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
       }
 
+      /* Modal Styles */
       .modal-overlay {
         position: fixed;
         top: 0;
@@ -264,7 +269,7 @@
         padding: 20px 24px;
         border-bottom: 1px solid #eee;
         display: flex;
-        justify-content: space-between;
+        justify-content: between;
         align-items: center;
         background: #f8f9fa;
       }
@@ -335,36 +340,45 @@
         }
       }
 
+      /* Responsive Design */
       @media (max-width: 640px) {
         .main-container {
           padding: 30px 16px 50px;
         }
+
         .profile-avatar {
           width: 120px;
           height: 120px;
         }
+
         .profile-name {
           font-size: 1.6rem;
         }
+
         .links-container {
           gap: 14px;
         }
+
         .link-item {
           padding: 18px;
           border-radius: 16px;
         }
+
         .link-icon {
           width: 40px;
           height: 40px;
           margin-right: 14px;
         }
+
         .link-title {
           font-size: 1rem;
         }
+
         .modal-content {
           height: 95vh;
           border-radius: 12px;
         }
+
         .modal-header {
           padding: 16px 20px;
         }
@@ -374,16 +388,32 @@
         .main-container {
           padding: 20px 12px 40px;
         }
+
         .profile-header {
           margin-bottom: 32px;
         }
+
         .link-item {
           padding: 16px;
         }
+
         .modal-content {
           margin: 10px;
           height: calc(100vh - 20px);
         }
+      }
+
+      /* Dark theme variations */
+      .theme-gradient {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+
+      .theme-dark {
+        background: #0d1117;
+      }
+
+      .theme-warm {
+        background: linear-gradient(135deg, #ff9a8b 0%, #a8edea 100%);
       }
     </style>
   </head>
@@ -392,6 +422,7 @@
       <!-- Content will be loaded here -->
     </div>
 
+    <!-- Modal for Menu -->
     <div class="modal-overlay" id="modalOverlay">
       <div class="modal-content">
         <div class="modal-header">
@@ -407,6 +438,7 @@
       </div>
     </div>
 
+    <!-- Modal for Gallery Carousel -->
     <div class="modal-overlay" id="galleryModal" style="display: none">
       <div class="modal-content" style="max-width: 600px">
         <div class="modal-header">
@@ -473,15 +505,12 @@
       </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="supabase-config.js"></script>
-
     <script>
       function showLoading() {
         document.getElementById("mainContainer").innerHTML = `
                 <div class="loading-state">
                     <div class="loading-spinner"></div>
-                    <h2>Loading your business card...</h2>
+                    <h2>Chargement de votre carte de visite...</h2>
                 </div>
             `;
       }
@@ -489,7 +518,7 @@
       function showError(message) {
         document.getElementById("mainContainer").innerHTML = `
                 <div class="error-state">
-                    <h2>Oops! Something went wrong</h2>
+                    <h2>Oups ! Quelque chose s'est mal passé</h2>
                     <p>${message}</p>
                 </div>
             `;
@@ -507,49 +536,70 @@
           linkedin: "fab fa-linkedin",
           tiktok: "fab fa-tiktok",
           youtube: "fab fa-youtube",
-          snapchat: "fab fa-snapchat",
-          viber: "fab fa-viber",
-          telegram: "fab fa-telegram",
         };
         return icons[type] || icons[platform] || "fas fa-link";
       }
 
       function getSubtitleForType(type, platform) {
         const subtitles = {
-          phone: "Call us",
-          address: "Get directions",
-          menu: "View our menu",
-          instagram: "Follow us",
-          facebook: "Like our page",
-          whatsapp: "Chat with us",
-          twitter: "Follow us",
-          linkedin: "Connect with us",
+          phone: "Appelez-nous",
+          address: "Obtenir les directions",
+          menu: "Voir notre menu",
+          instagram: "Suivez-nous",
+          facebook: "Aimez notre page",
+          whatsapp: "Discutez avec nous",
+          twitter: "Suivez-nous",
+          linkedin: "Connectez-vous avec nous",
         };
-        return subtitles[type] || subtitles[platform] || "Visit link";
+        return subtitles[type] || subtitles[platform] || "Visiter le lien";
       }
 
+      // Helper to improve color contrast for better readability
       function improveColorContrast(gradient) {
         if (!gradient)
           return "linear-gradient(135deg, #667eea 0%, #764ba2 100%)";
-        if (gradient.includes("gradient")) return gradient;
 
+        // If it's already a gradient, return as is
+        if (gradient.includes("gradient")) {
+          return gradient;
+        }
+
+        // If it's a solid color, check if it's too bright
         const color = gradient.startsWith("#") ? gradient : "#667eea";
+
+        // Convert hex to RGB to check brightness
         const hex = color.replace("#", "");
         const r = parseInt(hex.substr(0, 2), 16);
         const g = parseInt(hex.substr(2, 2), 16);
         const b = parseInt(hex.substr(4, 2), 16);
+
+        // Calculate brightness (0-255)
         const brightness = (r * 299 + g * 587 + b * 114) / 1000;
 
+        // If too bright (over 180), create a gradient to a darker version
         if (brightness > 180) {
+          // Create a darker version by reducing RGB values
           const darkerR = Math.max(0, Math.round(r * 0.3));
           const darkerG = Math.max(0, Math.round(g * 0.3));
           const darkerB = Math.max(0, Math.round(b * 0.3));
           const darkerHex = `#${darkerR.toString(16).padStart(2, "0")}${darkerG
             .toString(16)
             .padStart(2, "0")}${darkerB.toString(16).padStart(2, "0")}`;
+
           return `linear-gradient(135deg, ${color} 0%, ${darkerHex} 100%)`;
         }
 
+        // If color is fine, return as is
+        return gradient;
+      }
+
+      // Helper to extract the first color from a gradient or return the color itself
+      function getMainColor(gradient) {
+        if (!gradient) return "#ff9966";
+        if (gradient.startsWith("linear-gradient")) {
+          const match = gradient.match(/#([0-9a-fA-F]{3,8})/);
+          return match ? match[0] : "#ff9966";
+        }
         return gradient;
       }
 
@@ -560,14 +610,22 @@
         const businessId = path || "los-tacos";
 
         try {
-          const business = await db.getBusiness(businessId);
+          const res = await fetch("/businesses.json");
+          if (!res.ok) {
+            throw new Error(
+              `Failed to load business data: ${res.status} ${res.statusText}`
+            );
+          }
+          const businesses = await res.json();
+          const business = businesses[businessId];
 
           if (!business) {
-            showError(`Business "${businessId}" not found.`);
+            showError(`Entreprise "${businessId}" introuvable.`);
             return;
           }
 
-          const name = business.name || "Business Name";
+          // Extract business data
+          const name = business.name || "Nom de l'entreprise";
           const image =
             business.image ||
             "https://via.placeholder.com/140x140?text=" +
@@ -579,12 +637,14 @@
           const menu = business.menu || "";
           const socials = business.socials || {};
 
+          // Set background with improved contrast
           const improvedGradient = improveColorContrast(gradient);
           document.body.style.background = improvedGradient;
           document.title = name;
 
+          // Build links array
           const links = [];
-
+          // Ajout du bouton Gallery si présent dans le JSON
           if (
             business.gallery &&
             Array.isArray(business.gallery.images) &&
@@ -601,6 +661,7 @@
             });
           }
 
+          // Add address link
           if (business.address) {
             if (
               typeof business.address === "object" &&
@@ -610,37 +671,52 @@
               links.push({
                 type: "address",
                 title: business.address.text,
-                subtitle: "Get directions",
+                subtitle: "Obtenir les directions",
                 url: business.address.url,
+                external: true,
+              });
+            } else if (typeof business.address === "string") {
+              links.push({
+                type: "address",
+                title: business.address,
+                subtitle: "Obtenir les directions",
+                url: `https://maps.google.com/?q=${encodeURIComponent(
+                  business.address
+                )}`,
                 external: true,
               });
             }
           }
 
+          // Add phone link - FIXED: external: true
           if (phone) {
             links.push({
               type: "phone",
               title: phone,
-              subtitle: "Call us",
+              subtitle: "Appelez-nous",
               url: `tel:${phone}`,
               external: true,
             });
           }
 
+          // Add menu link
           if (menu) {
+            // Use Google Docs viewer for PDF display (works with GitHub raw URLs)
             const googleViewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(
               menu
             )}&embedded=true`;
+
             links.push({
               type: "menu",
-              title: "View Menu",
-              subtitle: "Discover our offers",
+              title: "Voir le Menu",
+              subtitle: "Découvrez nos offres",
               url: googleViewerUrl,
               external: false,
               modal: true,
             });
           }
 
+          // Add social links
           Object.entries(socials).forEach(([platform, url]) => {
             links.push({
               type: platform,
@@ -651,6 +727,7 @@
             });
           });
 
+          // Render the page - FIXED: Always use link.url in href
           const linksHtml = links
             .map((link, index) => {
               if (link.type === "gallery") {
@@ -707,17 +784,20 @@
                                name.charAt(0)
                              )}&bg=667eea&color=fff'">
                         <h1 class="profile-name">${name}</h1>
-                        <p class="profile-bio">Connect with us through these links</p>
+                        <p class="profile-bio">Connectez-vous avec nous via ces liens</p>
                     </div>
                     <div class="links-container">
                         ${linksHtml}
                     </div>
                 `;
 
+          // Setup modal functionality
           setupModalHandlers();
         } catch (error) {
           console.error("Error loading business:", error);
-          showError("Unable to load business information. Please try again.");
+          showError(
+            "Impossible de charger les informations de l'entreprise. Veuillez réessayer."
+          );
         }
       }
 
@@ -725,6 +805,7 @@
         const modalOverlay = document.getElementById("modalOverlay");
         const modalIframe = document.getElementById("modalIframe");
         const modalClose = document.getElementById("modalClose");
+        // Gallery modal elements
         const galleryModal = document.getElementById("galleryModal");
         const galleryClose = document.getElementById("galleryClose");
         const carouselImage = document.getElementById("carouselImage");
@@ -734,6 +815,7 @@
         let galleryImages = [];
         let currentImageIndex = 0;
 
+        // Handle menu modal links
         document.querySelectorAll('[data-modal="true"]').forEach((link) => {
           link.addEventListener("click", (e) => {
             e.preventDefault();
@@ -744,6 +826,7 @@
           });
         });
 
+        // Handle gallery modal links
         document.querySelectorAll('[data-gallery="true"]').forEach((link) => {
           link.addEventListener("click", (e) => {
             e.preventDefault();
@@ -774,6 +857,7 @@
           showGalleryImage();
         });
 
+        // Close gallery modal
         function closeGallery() {
           galleryModal.style.display = "none";
           carouselImage.src = "";
@@ -783,7 +867,13 @@
         galleryModal.addEventListener("click", (e) => {
           if (e.target === galleryModal) closeGallery();
         });
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && galleryModal.style.display === "flex") {
+            closeGallery();
+          }
+        });
 
+        // Close menu modal handlers
         function closeModal() {
           modalOverlay.classList.remove("active");
           modalIframe.src = "";
@@ -793,15 +883,14 @@
         modalOverlay.addEventListener("click", (e) => {
           if (e.target === modalOverlay) closeModal();
         });
-
         document.addEventListener("keydown", (e) => {
-          if (e.key === "Escape") {
-            if (modalOverlay.classList.contains("active")) closeModal();
-            if (galleryModal.style.display === "flex") closeGallery();
+          if (e.key === "Escape" && modalOverlay.classList.contains("active")) {
+            closeModal();
           }
         });
       }
 
+      // Load business data when page loads
       document.addEventListener("DOMContentLoaded", loadBusiness);
     </script>
   </body>
