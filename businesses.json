@@ -1515,5 +1515,21 @@
       "tiktok": "https://www.tiktok.com/@adelbradai155",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130771786456 "
     }
+  },
+  "Bilixo-Sanitaire-et-robinetteries": {
+    "name": "Bilixo",
+    "image": "",
+    "phone": "0541234679",
+    "gradient": "linear-gradient(1deg,rgba(219, 168, 29, 1) 0%, rgba(56, 44, 44, 1) 50%, rgba(48, 46, 41, 1) 100%)",
+    "address": {
+      "text": "Boumerdes",
+      "url": "https://maps.app.goo.gl/ct6c37AufUN8goUV7"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/BILIXOPRO",
+      "instagram": "https://www.instagram.com/bilixo_/",
+      "tiktok": "https://www.tiktok.com/@bilixo35",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130541234679"
+    }
   }
 }
