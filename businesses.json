@@ -1466,5 +1466,21 @@
       "instagram": "https://www.instagram.com/accessories_el.malika?igsh=aXMxeHQ0dm03YTRh",
       "tiktok": "https://www.tiktok.com/@accessories.el_malika?_r=1&_d=ef197clb414ba0&sec_uid=MS4wLjABAAAAFyTcKagSUDvIsBR3R935hHM-_Pb8u72ohUQWgVTO8QPTRXeq-kBGLgrzBUSmBaJN&share_author_id=7045001445976392709&sharer_language=ar&source=h5_m&u_code=dmal4m67a4j76m&timestamp=1765008427&user_id=7045001445976392709&sec_user_id=MS4wLjABAAAAFyTcKagSUDvIsBR3R935hHM-_Pb8u72ohUQWgVTO8QPTRXeq-kBGLgrzBUSmBaJN&item_author_type=1&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7579360584098809607&share_link_id=4eea247c-0915-4d47-9a70-1db123f3672b&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1"
     }
+  },
+  "Aura-Clinique-Dentaire": {
+    "name": "Aura Clinique Dentaire",
+    "image": "",
+    "phone": "0782163091",
+    "gradient": "linear-gradient(354deg,rgba(81, 33, 158, 1) 0%, rgba(211, 218, 235, 1) 100%)",
+    "address": {
+      "text": "Oran",
+      "url": "https://maps.app.goo.gl/Kw1RDGf6KxWnYB6r9"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/aura.clinique.dentaire.2025?rdid=lwnhKtxDKYkQSKjz&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1K6g8SdrXu%2F#",
+      "instagram": "https://www.instagram.com/aura.clinique_dentaire?igsh=MXNxZjB4dXZwbW5vNw%3D%3D",
+      "tiktok": "https://www.tiktok.com/@auraclinque?_r=1&_t=ZS-91yrbBaePYI",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130782163091"
+    }
   }
 }
