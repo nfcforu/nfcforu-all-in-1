@@ -142,15 +142,25 @@
                 class="w-full p-2 border rounded"
               />
             </div>
+
             <div>
               <label class="block text-sm font-bold mb-1">Phone</label>
               <input
                 type="text"
                 id="editPhone"
                 class="w-full p-2 border rounded"
+                placeholder="e.g. 0555..."
               />
             </div>
-
+            <div>
+              <label class="block text-sm font-bold mb-1">Email</label>
+              <input
+                type="email"
+                id="editEmail"
+                class="w-full p-2 border rounded"
+                placeholder="contact@example.com"
+              />
+            </div>
             <div class="col-span-2">
               <label class="block text-sm font-bold mb-1">Image URL</label>
               <input
@@ -205,10 +215,10 @@
             </div>
 
             <div class="col-span-2 border-t pt-4 mt-2">
-              <h3 class="font-bold mb-2">Social Media Links</h3>
+              <h3 class="font-bold mb-2">Social Media & Links</h3>
               <div class="grid grid-cols-1 gap-2">
                 <div class="flex items-center gap-2">
-                  <i class="fab fa-facebook w-6"></i>
+                  <i class="fab fa-facebook w-6 text-blue-600"></i>
                   <input
                     type="text"
                     id="socialFb"
@@ -217,7 +227,7 @@
                   />
                 </div>
                 <div class="flex items-center gap-2">
-                  <i class="fab fa-instagram w-6"></i>
+                  <i class="fab fa-instagram w-6 text-pink-600"></i>
                   <input
                     type="text"
                     id="socialInsta"
@@ -226,7 +236,7 @@
                   />
                 </div>
                 <div class="flex items-center gap-2">
-                  <i class="fab fa-tiktok w-6"></i>
+                  <i class="fab fa-tiktok w-6 text-black"></i>
                   <input
                     type="text"
                     id="socialTiktok"
@@ -235,7 +245,7 @@
                   />
                 </div>
                 <div class="flex items-center gap-2">
-                  <i class="fab fa-whatsapp w-6"></i>
+                  <i class="fab fa-whatsapp w-6 text-green-500"></i>
                   <input
                     type="text"
                     id="socialWhatsapp"
@@ -244,7 +254,34 @@
                   />
                 </div>
                 <div class="flex items-center gap-2">
-                  <i class="fas fa-globe w-6"></i>
+                  <i class="fab fa-snapchat w-6 text-yellow-500"></i>
+                  <input
+                    type="text"
+                    id="socialSnapchat"
+                    placeholder="Snapchat URL"
+                    class="w-full p-2 border rounded"
+                  />
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fab fa-telegram w-6 text-blue-400"></i>
+                  <input
+                    type="text"
+                    id="socialTelegram"
+                    placeholder="Telegram URL (t.me/...)"
+                    class="w-full p-2 border rounded"
+                  />
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fab fa-viber w-6 text-purple-600"></i>
+                  <input
+                    type="text"
+                    id="socialViber"
+                    placeholder="Viber URL or Number"
+                    class="w-full p-2 border rounded"
+                  />
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-globe w-6 text-gray-500"></i>
                   <input
                     type="text"
                     id="socialWeb"
@@ -284,13 +321,11 @@
     </div>
 
     <script>
-      // Configuration
       const FILENAME = "businesses.json";
       let globalData = {};
-      let currentSha = ""; // Required for GitHub updates
+      let currentSha = "";
       let credentials = { user: "", repo: "", token: "" };
 
-      // Initialize from LocalStorage
       window.onload = () => {
         const stored = localStorage.getItem("nfc_creds");
         if (stored) {
@@ -305,10 +340,8 @@
         credentials.user = document.getElementById("ghUsername").value;
         credentials.repo = document.getElementById("ghRepo").value;
         credentials.token = document.getElementById("ghToken").value;
-
         if (!credentials.user || !credentials.repo || !credentials.token)
           return alert("Fill all fields");
-
         localStorage.setItem("nfc_creds", JSON.stringify(credentials));
         document.getElementById("loginModal").classList.add("hidden");
         document.getElementById("app").classList.remove("hidden");
@@ -318,44 +351,34 @@
       async function loadData() {
         showToast("Loading data...", true);
         const url = `https://api.github.com/repos/${credentials.user}/${credentials.repo}/contents/${FILENAME}`;
-
         try {
           const response = await fetch(url, {
             headers: { Authorization: `token ${credentials.token}` },
           });
-
           if (!response.ok) throw new Error("Failed to fetch data");
-
           const data = await response.json();
           currentSha = data.sha;
-
-          // GitHub API returns content in Base64
-          // We use decodeURIComponent(escape(atob())) to handle UTF-8 characters (Arabic) correctly
           const jsonContent = decodeURIComponent(
             escape(window.atob(data.content))
           );
           globalData = JSON.parse(jsonContent);
-
           renderGrid();
           showToast("Data loaded successfully");
         } catch (error) {
           console.error(error);
-          alert("Error loading data. Check console or credentials.");
+          alert("Error loading data. Check console.");
         }
       }
 
       function renderGrid() {
         const grid = document.getElementById("businessGrid");
         grid.innerHTML = "";
-
         Object.entries(globalData).forEach(([key, biz]) => {
           const card = document.createElement("div");
           card.className =
             "bg-white p-4 rounded-lg shadow hover:shadow-md transition relative group";
           card.dataset.name = biz.name.toLowerCase();
-
           const imgSrc = biz.image || "https://via.placeholder.com/150";
-
           card.innerHTML = `
                     <div class="flex items-center gap-4 mb-4">
                         <img src="${imgSrc}" class="w-16 h-16 rounded-full object-cover border-2 border-gray-100">
@@ -368,15 +391,19 @@
                         <span><i class="fas fa-phone"></i> ${
                           biz.phone || "-"
                         }</span>
-                        <div class="flex gap-2">
+                         <div class="flex gap-2">
                              ${
                                biz.menu
                                  ? '<i class="fas fa-file-pdf text-red-500" title="Has Menu"></i>'
                                  : ""
                              }
+                             ${
+                               biz.email
+                                 ? '<i class="fas fa-envelope text-gray-500" title="Has Email"></i>'
+                                 : ""
+                             }
                         </div>
                     </div>
-                    
                     <div class="mt-4 flex gap-2 border-t pt-3">
                         <button onclick="editBusiness('${key}')" class="flex-1 bg-blue-50 text-blue-600 py-1 rounded hover:bg-blue-100">Edit</button>
                         <button onclick="deleteBusiness('${key}')" class="flex-1 bg-red-50 text-red-600 py-1 rounded hover:bg-red-100">Delete</button>
@@ -391,7 +418,6 @@
         const modal = document.getElementById("editModal");
         const form = document.getElementById("businessForm");
         const idInput = document.getElementById("editId");
-
         form.reset();
         modal.classList.remove("hidden");
 
@@ -404,9 +430,9 @@
           idInput.readOnly = true;
           idInput.classList.add("bg-gray-200");
 
-          // Populate fields
           document.getElementById("editName").value = data.name || "";
           document.getElementById("editPhone").value = data.phone || "";
+          document.getElementById("editEmail").value = data.email || ""; // Load Email
           document.getElementById("editImage").value = data.image || "";
           document.getElementById("editGradient").value = data.gradient || "";
           document.getElementById("editMenu").value = data.menu || "";
@@ -429,6 +455,13 @@
               data.socials.whatsapp || "";
             document.getElementById("socialWeb").value =
               data.socials.website || "";
+            // Load New Socials
+            document.getElementById("socialSnapchat").value =
+              data.socials.snapchat || "";
+            document.getElementById("socialTelegram").value =
+              data.socials.telegram || "";
+            document.getElementById("socialViber").value =
+              data.socials.viber || "";
           }
         } else {
           document.getElementById("modalTitle").textContent =
@@ -450,11 +483,11 @@
         const id = document.getElementById("editId").value.trim();
         if (!id) return alert("ID is required");
 
-        // Construct Object
         const newBiz = {
           name: document.getElementById("editName").value,
           image: document.getElementById("editImage").value,
           phone: document.getElementById("editPhone").value,
+          email: document.getElementById("editEmail").value || undefined, // Save Email
           gradient: document.getElementById("editGradient").value,
           menu: document.getElementById("editMenu").value || undefined,
           address: {
@@ -464,13 +497,16 @@
           socials: {},
         };
 
-        // Clean up empty socials
         const socMap = {
           facebook: "socialFb",
           instagram: "socialInsta",
           tiktok: "socialTiktok",
           whatsapp: "socialWhatsapp",
           website: "socialWeb",
+          // Map New Socials
+          snapchat: "socialSnapchat",
+          telegram: "socialTelegram",
+          viber: "socialViber",
         };
 
         for (const [key, fieldId] of Object.entries(socMap)) {
@@ -478,12 +514,8 @@
           if (val) newBiz.socials[key] = val;
         }
 
-        // Update Global Data
         globalData[id] = newBiz;
-
-        // Push to GitHub
         await pushToGitHub();
-
         document.getElementById("editModal").classList.add("hidden");
         btn.textContent = "Save Changes";
         btn.disabled = false;
@@ -501,20 +533,15 @@
       async function pushToGitHub() {
         showToast("Saving to GitHub...", true);
         const url = `https://api.github.com/repos/${credentials.user}/${credentials.repo}/contents/${FILENAME}`;
-
-        // Convert JSON to formatted string
         const jsonString = JSON.stringify(globalData, null, 2);
-        // Encode to Base64 (handling UTF-8)
         const contentEncoded = window.btoa(
           unescape(encodeURIComponent(jsonString))
         );
-
         const payload = {
           message: `Update businesses.json via Dashboard`,
           content: contentEncoded,
           sha: currentSha,
         };
-
         try {
           const res = await fetch(url, {
             method: "PUT",
@@ -524,16 +551,14 @@
             },
             body: JSON.stringify(payload),
           });
-
           if (!res.ok) throw new Error("Failed to push");
-
           const data = await res.json();
-          currentSha = data.content.sha; // Update SHA for next commit
+          currentSha = data.content.sha;
           renderGrid();
           showToast("Saved! Update will be live in 1-2 mins.");
         } catch (err) {
           console.error(err);
-          alert("Failed to save to GitHub. Check console.");
+          alert("Failed to save to GitHub.");
         }
       }
 
