@@ -1473,7 +1473,7 @@
     "name": "Aura Clinique Dentaire",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-06%20at%2011.51.43_281d543a.jpg",
     "phone": "0799471646",
-    "gradient": "linear-gradient(354deg,rgba(81, 33, 158, 1) 0%, rgba(211, 218, 235, 1) 100%)",
+    "gradient": "linear-gradient(165deg,rgba(163, 108, 212, 1) 0%, rgba(38, 10, 110, 1) 100%)",
     "address": {
       "text": "Oran",
       "url": "https://maps.app.goo.gl/Kw1RDGf6KxWnYB6r9"
