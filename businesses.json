@@ -1488,7 +1488,7 @@
     "name": "Hachem Serrab",
     "image": "",
     "phone": "0771380462",
-    "gradient": "linear-gradient(4deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%)",
+    "gradient": "linear-gradient(172deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%)",
     "address": {
       "text": "Constantine",
       "url": "https://maps.app.goo.gl/bawQQSLecFSqTULa9"
