@@ -1,8 +1,8 @@
 {
-    "los-tacos": {
+  "los-tacos": {
     "name": "Sac De Luxe",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-09-24 at 16.33.50_cf05da8e.jpg",
-     "address": {
+    "address": {
       "url": "https://www.google.com/maps/place/Boutique+Sac+de+luxe/@36.2059736,5.4329927,17z/data=!4m6!3m5!1s0x12f31529b79ae597:0x8855050ad922e288!8m2!3d36.2059736!4d5.4355676!16s%2Fg%2F11s4bjzf4k?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
       "text": "Boulvard n°03, Sétif"
     },
@@ -11,24 +11,24 @@
     "socials": {
       "facebook": "https://web.facebook.com/sac2lux",
       "whatsapp": "https://api.whatsapp.com/send?phone=%2B213782746952&fbclid=IwVERTSANA9qlleHRuA2FlbQIxMAABHiTFOvpE0tSm4h4NuBJWOgfe7GQddnsGreBOXORdLKSmWUMKUcRSe5mlkh9R_aem_v1coVSt8xLts_HUUOFyFsw&sfnsn=wa",
-      "tiktok":"https://www.tiktok.com/@sac_2_luxe"
+      "tiktok": "https://www.tiktok.com/@sac_2_luxe"
     }
   },
   "sac-de-lux": {
     "name": "Sac De Luxe",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-09-24 at 16.33.50_cf05da8e.jpg",
-     "address": {
+    "address": {
       "url": "https://www.google.com/maps/place/Boutique+Sac+de+luxe/@36.2059736,5.4329927,17z/data=!4m6!3m5!1s0x12f31529b79ae597:0x8855050ad922e288!8m2!3d36.2059736!4d5.4355676!16s%2Fg%2F11s4bjzf4k?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
       "text": "Boulvard n°03, Sétif"
-  },
+    },
     "phone": "0772935076",
     "gradient": "#FBCF53",
     "socials": {
       "facebook": "https://web.facebook.com/sac2lux",
       "whatsapp": "https://api.whatsapp.com/send?phone=%2B213782746952&fbclid=IwVERTSANA9qlleHRuA2FlbQIxMAABHiTFOvpE0tSm4h4NuBJWOgfe7GQddnsGreBOXORdLKSmWUMKUcRSe5mlkh9R_aem_v1coVSt8xLts_HUUOFyFsw&sfnsn=wa",
-      "tiktok":"https://www.tiktok.com/@sac_2_luxe"
+      "tiktok": "https://www.tiktok.com/@sac_2_luxe"
     },
-      "gallery": {
+    "gallery": {
       "name": "Programme D'entrainement",
       "images": [
         "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/ChatGPT Image 24 sept. 2025, 18_57_40.png",
@@ -65,10 +65,13 @@
     "socials": {
       "instagram": "https://www.instagram.com/big_mode.19/",
       "facebook": "https://www.facebook.com/people/BIG-MODE/100077852154033/",
-      "tiktok":"https://www.tiktok.com/@big_mode.setif"
+      "tiktok": "https://www.tiktok.com/@big_mode.setif",
+      "viber": "viber://chat?number=%2B213556310559",
+      "telegram": "https://t.me/Big_mode19",
+      "email": "big@gmail.com"
     }
   },
-    "omyga-gym": {
+  "omyga-gym": {
     "name": "OMYGA GYM",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/ChatGPT Image 24 sept. 2025, 18_57_40.png",
     "address": {
@@ -80,7 +83,7 @@
     "socials": {
       "instagram": "https://www.instagram.com/kikou_bnn?igsh=a25kOTN0c2RxeWc2 ",
       "facebook": "https://www.facebook.com/share/1EV7NR9vuD/?mibextid=wwXIfr",
-      "tiktok":"https://www.tiktok.com/@big_mode.setif"
+      "tiktok": "https://www.tiktok.com/@big_mode.setif"
     }
   },
   "Gami-glamour": {
@@ -95,7 +98,7 @@
     "socials": {
       "instagram": "https://www.instagram.com/gamiglamour/",
       "facebook": "https://www.facebook.com/people/Gami-Glamour/61558820503224/?rdid=TwiOt391YAOZza3p&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1GfFHzP8iu%2F",
-      "tiktok":"https://www.tiktok.com/@gamiglamourr?_t=ZS-904nhlrGqXA&_r=1"
+      "tiktok": "https://www.tiktok.com/@gamiglamourr?_t=ZS-904nhlrGqXA&_r=1"
     }
   }
 }
