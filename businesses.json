@@ -1451,5 +1451,20 @@
       "instagram": "https://www.instagram.com/medi_m_dental?igsh=MW92OXZvdWdkc3Y1cg%3D%3D&fbclid=IwY2xjawOaqN1leHRuA2FlbQIxMABicmlkETEwQXZyamZEY0IzUUxmYTJpc3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEeL9eXZELLWFa8GvVG9x-0Ff1NDcZyy6z1G5eOQvT2ziLYfobyqhJd_GtGA5k_aem_BqKQZClIJNvvyItatnUOww",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213661820296"
     }
+  },
+  "Accesoires-Malika": {
+    "name": "أكسسوارات الملكة",
+    "image": "",
+    "phone": "0660390045",
+    "gradient": "linear-gradient(179deg,rgba(79, 65, 47, 1) 2%, rgba(168, 59, 59, 1) 100%)",
+    "address": {
+      "text": "PG5Q+8MV M'Sila",
+      "url": "https://www.google.com/maps/place/35°42'30.1\"N+4°32'21.0\"E/@35.7083793,4.536618,17z/data=!4m4!3m3!8m2!3d35.7083642!4d4.5391654?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/elmalika.accessories?rdid=sNIiO5QMTx2R7XzP&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AKYwGorzj%2F#",
+      "instagram": "https://www.instagram.com/accessories_el.malika?igsh=aXMxeHQ0dm03YTRh",
+      "tiktok": "https://www.tiktok.com/@accessories.el_malika?_r=1&_d=ef197clb414ba0&sec_uid=MS4wLjABAAAAFyTcKagSUDvIsBR3R935hHM-_Pb8u72ohUQWgVTO8QPTRXeq-kBGLgrzBUSmBaJN&share_author_id=7045001445976392709&sharer_language=ar&source=h5_m&u_code=dmal4m67a4j76m&timestamp=1765008427&user_id=7045001445976392709&sec_user_id=MS4wLjABAAAAFyTcKagSUDvIsBR3R935hHM-_Pb8u72ohUQWgVTO8QPTRXeq-kBGLgrzBUSmBaJN&item_author_type=1&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7579360584098809607&share_link_id=4eea247c-0915-4d47-9a70-1db123f3672b&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1"
+    }
   }
 }
