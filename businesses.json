@@ -1520,7 +1520,7 @@
     "name": "Bilixo",
     "image": "",
     "phone": "0541234679",
-    "gradient": "linear-gradient(1deg,rgba(219, 168, 29, 1) 0%, rgba(56, 44, 44, 1) 50%, rgba(48, 46, 41, 1) 100%)",
+    "gradient": "linear-gradient(1deg,rgba(219, 168, 29, 1) 0%, rgba(56, 44, 44, 1) 94%, rgba(48, 46, 41, 1) 100%)",
     "address": {
       "text": "Boumerdes",
       "url": "https://maps.app.goo.gl/ct6c37AufUN8goUV7"
