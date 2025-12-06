@@ -1483,5 +1483,20 @@
       "tiktok": "https://www.tiktok.com/@auraclinque?_r=1&_t=ZS-91yrbBaePYI",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130782163091"
     }
+  },
+  "Hachem-Serrab": {
+    "name": "Hachem Serrab",
+    "image": "",
+    "phone": "0771380462",
+    "gradient": "linear-gradient(4deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%)",
+    "address": {
+      "text": "Constantine",
+      "url": "https://maps.app.goo.gl/bawQQSLecFSqTULa9"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/hachem.serrab?rdid=F1qDO97Uzg75N94O&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1KozZWHBUs%2F#",
+      "instagram": "https://www.instagram.com/hachemserrab?igsh=bHNnczk4bjdxZzRo",
+      "tiktok": "https://www.tiktok.com/@hachemserrab?_r=1&_t=ZM-91zlhymxflT"
+    }
   }
 }
