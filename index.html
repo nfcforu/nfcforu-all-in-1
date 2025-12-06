@@ -1,663 +1,266 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="page-title">Business Card</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <style>
-      * {
-        box-sizing: border-box;
+<script>
+  // 1. Helper to get the correct Font Awesome icon class
+  function getIconClass(type) {
+    // Clean up type to ensure it matches common keys
+    const cleanType = type.toLowerCase().trim();
+
+    switch (cleanType) {
+      // Social Media
+      case "instagram":
+        return "fab fa-instagram";
+      case "facebook":
+        return "fab fa-facebook-f";
+      case "whatsapp":
+        return "fab fa-whatsapp";
+      case "tiktok":
+        return "fab fa-tiktok";
+      case "twitter":
+        return "fab fa-twitter";
+      case "linkedin":
+        return "fab fa-linkedin-in";
+      case "snapchat":
+        return "fab fa-snapchat-ghost";
+      case "youtube":
+        return "fab fa-youtube";
+      case "viber":
+        return "fab fa-viber";
+      case "telegram":
+        return "fab fa-telegram-plane";
+      // Contact & Functional
+      case "email":
+        return "fas fa-envelope";
+      case "phone":
+        return "fas fa-phone-alt";
+      case "address":
+        return "fas fa-map-marker-alt";
+      case "menu":
+        return "fas fa-utensils"; // Fork and Knife icon
+      case "gallery":
+        return "fas fa-images";
+      case "website":
+        return "fas fa-globe";
+      case "web":
+        return "fas fa-globe";
+      default:
+        return "fas fa-link"; // Default link icon
+    }
+  }
+
+  // 2. Helper to get gradient
+  function getGradient(color) {
+    if (!color) return "linear-gradient(135deg, #667eea 0%, #764ba2 100%)";
+    // If it's already a gradient string, return it
+    if (color.includes("gradient")) return color;
+
+    // If it's a hex code, make a gradient
+    const hex = color.replace("#", "");
+    const r = parseInt(hex.substr(0, 2), 16);
+    const g = parseInt(hex.substr(2, 2), 16);
+    const b = parseInt(hex.substr(4, 2), 16);
+    const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+
+    if (brightness > 180) {
+      // If light color, darken the second stop
+      return `linear-gradient(135deg, ${color} 0%, #000000 100%)`;
+    }
+    // If dark color, just use it or slightly vary it
+    return `linear-gradient(135deg, ${color} 0%, ${color} 100%)`;
+  }
+
+  // 3. Helper for subtitles
+  function getSubtitleForType(defaultSubtitle, type) {
+    switch (type) {
+      case "phone":
+        return "Appelez-nous";
+      case "address":
+        return "Obtenir les directions";
+      case "menu":
+        return "Découvrez nos offres";
+      case "gallery":
+        return "Voir notre portfolio";
+      case "email":
+        return "Envoyez-nous un message";
+      case "website":
+        return "Visitez notre site";
+      case "instagram":
+        return "Suivez-nous";
+      default:
+        return "Visiter le lien";
+    }
+  }
+
+  // DOM elements
+  const mainContainer = document.getElementById("mainContainer");
+  const modalOverlay = document.getElementById("modalOverlay");
+  const modalIframe = document.getElementById("modalIframe");
+  const modalTitle = document.querySelector(".modal-title"); // Fixed selector
+  const modalClose = document.getElementById("modalClose");
+
+  const galleryModal = document.getElementById("galleryModal");
+  const carouselImage = document.getElementById("carouselImage");
+  const prevImage = document.getElementById("prevImage");
+  const nextImage = document.getElementById("nextImage");
+  const galleryClose = document.getElementById("galleryClose");
+
+  let currentImageIndex = 0;
+  let galleryImages = [];
+
+  // Core function to load and render the business card
+  async function loadBusiness() {
+    // FIX: Use pathname (URL path) to get the ID, not query params
+    // This makes /sac-de-lux work correctly
+    let path = window.location.pathname.replace(/^\/+|\/+$/g, "");
+
+    // Default to 'los-tacos' if path is empty or index.html
+    if (path === "" || path === "index.html" || path === "_redirects") {
+      path = "los-tacos";
+    }
+
+    const businessKey = path;
+
+    let businessesData;
+    try {
+      // Add timestamp to prevent caching issues with JSON
+      const response = await fetch(`businesses.json?t=${new Date().getTime()}`);
+      if (!response.ok) throw new Error("HTTP error " + response.status);
+      businessesData = await response.json();
+    } catch (error) {
+      console.error("Could not load business data:", error);
+      mainContainer.innerHTML =
+        '<div class="error-state"><h2>Erreur</h2><p>Impossible de charger les données.</p></div>';
+      return;
+    }
+
+    const data = businessesData[businessKey];
+    if (!data) {
+      mainContainer.innerHTML = `<div class="error-state"><h2>Erreur</h2><p>Entreprise "${businessKey}" introuvable.</p></div>`;
+      return;
+    }
+
+    const {
+      name,
+      image,
+      address,
+      phone,
+      email,
+      gradient,
+      menu,
+      socials,
+      gallery,
+    } = data;
+
+    // --- Build the links array ---
+    const links = [];
+
+    // Email Link
+    if (email) {
+      // Fix typo in specific email if present
+      let cleanEmail = email.trim();
+      if (cleanEmail.endsWith("coma")) cleanEmail = cleanEmail.slice(0, -1); // Fix "gmail.coma" typo
+
+      links.push({
+        type: "email",
+        title: "Email",
+        subtitle: cleanEmail,
+        url: `mailto:${cleanEmail}`,
+        external: true,
+      });
+    }
+
+    // Address Link
+    if (address) {
+      let addrUrl = typeof address === "string" ? address : address.url;
+      // If it's just text, generate a Google Maps search link
+      if (!addrUrl || addrUrl.length < 5) {
+        addrUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+          address.text || address
+        )}`;
       }
 
-      body {
-        margin: 0;
-        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-          Roboto, sans-serif;
-        min-height: 100vh;
-        background: #1e1e1e;
-        color: #fff;
-        line-height: 1.4;
-        overflow-x: hidden;
+      links.push({
+        type: "address",
+        title: address.text || "Notre Adresse",
+        subtitle: getSubtitleForType("", "address"),
+        url: addrUrl,
+        external: true,
+      });
+    }
+
+    // Phone Link
+    if (phone) {
+      // Clean phone number for tel: link (remove spaces/dashes)
+      const cleanPhone = phone.replace(/[^+\d]/g, "");
+      links.push({
+        type: "phone",
+        title: phone,
+        subtitle: getSubtitleForType("", "phone"),
+        url: `tel:${cleanPhone}`,
+        external: true,
+      });
+    }
+
+    // Menu Link
+    if (menu) {
+      // Use Google Docs Viewer for PDFs
+      const googleViewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(
+        menu
+      )}&embedded=true`;
+      links.push({
+        type: "menu",
+        title: "Voir le Menu",
+        subtitle: getSubtitleForType("", "menu"),
+        url: googleViewerUrl,
+        external: false,
+        modal: true,
+      });
+    }
+
+    // Gallery Link (Button)
+    if (gallery && gallery.images && gallery.images.length > 0) {
+      links.push({
+        type: "gallery",
+        title: gallery.name || "Galerie Photos",
+        subtitle: getSubtitleForType("", "gallery"),
+        external: false,
+        modal: true,
+      });
+      galleryImages = gallery.images;
+    }
+
+    // Social Links
+    Object.entries(socials || {}).forEach(([platform, url]) => {
+      if (!url) return;
+
+      let finalUrl = url;
+      // Fix specific protocol handlers if needed
+      if (
+        platform === "viber" &&
+        !url.startsWith("viber://") &&
+        !url.startsWith("http")
+      ) {
+        // Attempt to fix viber number format if it's just digits
+        const viberNum = url.replace(/[^+\d]/g, "");
+        finalUrl = `viber://chat?number=${viberNum}`;
       }
 
-      .main-container {
-        max-width: 680px;
-        margin: 0 auto;
-        padding: 40px 20px 60px;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+      links.push({
+        type: platform,
+        title: platform.charAt(0).toUpperCase() + platform.slice(1),
+        subtitle: getSubtitleForType("", platform),
+        url: finalUrl,
+        external: true,
+      });
+    });
 
-      /* Profile Section - Linktree Style */
-      .profile-header {
-        text-align: center;
-        margin-bottom: 40px;
-        animation: fadeInUp 0.6s ease-out;
-      }
-
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .profile-avatar {
-        width: 140px;
-        height: 140px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid #fff;
-        margin-bottom: 20px;
-        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
-        transition: transform 0.3s ease;
-        cursor: pointer;
-      }
-
-      .profile-avatar:hover {
-        transform: scale(1.05);
-      }
-
-      .profile-name {
-        font-size: 1.8rem;
-        font-weight: 700;
-        margin-bottom: 8px;
-        letter-spacing: -0.02em;
-      }
-
-      .profile-bio {
-        font-size: 1rem;
-        color: rgba(255, 255, 255, 0.8);
-        margin-bottom: 0;
-        max-width: 300px;
-      }
-
-      /* Links Container */
-      .links-container {
-        width: 100%;
-        max-width: 480px;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-
-      /* Link Items - Modern Linktree Style */
-      .link-item {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 20px;
-        padding: 20px;
-        text-decoration: none;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        position: relative;
-        overflow: hidden;
-        animation: fadeInUp 0.6s ease-out backwards;
-        will-change: transform;
-      }
-
-      .link-item:nth-child(1) {
-        animation-delay: 0.1s;
-      }
-      .link-item:nth-child(2) {
-        animation-delay: 0.2s;
-      }
-      .link-item:nth-child(3) {
-        animation-delay: 0.3s;
-      }
-      .link-item:nth-child(4) {
-        animation-delay: 0.4s;
-      }
-      .link-item:nth-child(5) {
-        animation-delay: 0.5s;
-      }
-      .link-item:nth-child(6) {
-        animation-delay: 0.6s;
-      }
-
-      .link-item:hover {
-        transform: translateY(-4px) scale(1.02);
-        background: rgba(255, 255, 255, 0.15);
-        border-color: rgba(255, 255, 255, 0.3);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-      }
-
-      .link-item:active {
-        transform: translateY(-2px) scale(0.98);
-      }
-
-      .link-icon {
-        width: 44px;
-        height: 44px;
-        border-radius: 12px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 16px;
-        font-size: 1.2rem;
-        flex-shrink: 0;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      }
-
-      .link-content {
-        flex: 1;
-        min-width: 0;
-      }
-
-      .link-title {
-        font-size: 1.1rem;
-        font-weight: 600;
-        margin-bottom: 2px;
-        line-height: 1.3;
-      }
-
-      .link-subtitle {
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.7);
-        line-height: 1.2;
-      }
-
-      .link-arrow {
-        font-size: 1.2rem;
-        color: rgba(255, 255, 255, 0.6);
-        transition: transform 0.3s ease;
-      }
-
-      .link-item:hover .link-arrow {
-        transform: translateX(4px);
-        color: rgba(255, 255, 255, 0.9);
-      }
-
-      /* Special styling for different link types */
-      .link-item.phone .link-icon {
-        background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-      }
-      .link-item.address .link-icon {
-        background: linear-gradient(135deg, #fd746c 0%, #ff9068 100%);
-      }
-      .link-item.menu .link-icon {
-        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-      }
-      .link-item.instagram .link-icon {
-        background: linear-gradient(
-          135deg,
-          #f09433 0%,
-          #e6683c 25%,
-          #dc2743 50%,
-          #cc2366 75%,
-          #bc1888 100%
-        );
-      }
-      .link-item.facebook .link-icon {
-        background: linear-gradient(135deg, #1877f2 0%, #42a5f5 100%);
-      }
-      .link-item.whatsapp .link-icon {
-        background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
-      }
-      .link-item.email .link-icon {
-        background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
-      } /* Added style for Email */
-
-      /* Modal Styles - (Partial styles shown in snippet) */
-      .modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.7);
-        display: none;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      .modal-overlay.active {
-        display: flex;
-        opacity: 1;
-      }
-
-      .modal-content {
-        background: #fff;
-        border-radius: 12px;
-        width: 90%;
-        max-width: 600px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        transform: scale(0.95);
-        transition: transform 0.3s ease;
-        display: flex;
-        flex-direction: column;
-        max-height: 90vh;
-      }
-
-      .modal-overlay.active .modal-content {
-        transform: scale(1);
-      }
-
-      .modal-header {
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #eee;
-        flex-shrink: 0;
-        background: #1e1e1e;
-        color: #fff;
-      }
-
-      .modal-title {
-        margin: 0;
-        font-size: 1.2rem;
-      }
-
-      .modal-close {
-        background: none;
-        border: none;
-        color: #fff;
-        font-size: 1.5rem;
-        cursor: pointer;
-        padding: 5px;
-        line-height: 1;
-      }
-
-      .modal-body {
-        flex-grow: 1;
-        overflow: auto;
-      }
-
-      .modal-iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-        display: block;
-      }
-
-      /* Gallery Modal Styles */
-      .gallery-modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        display: none;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-      }
-
-      .gallery-content {
-        position: relative;
-        max-width: 90%;
-        max-height: 90%;
-        display: flex;
-        align-items: center;
-      }
-
-      .carousel-image {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-        border-radius: 12px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        transition: opacity 0.3s ease;
-      }
-
-      .carousel-button {
-        position: absolute;
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 15px;
-        cursor: pointer;
-        z-index: 10;
-        font-size: 20px;
-        border-radius: 50%;
-        transition: background 0.3s ease;
-      }
-
-      .carousel-button:hover {
-        background: rgba(0, 0, 0, 0.8);
-      }
-
-      #prevImage {
-        left: -50px;
-      }
-
-      #nextImage {
-        right: -50px;
-      }
-
-      .gallery-close {
-        position: absolute;
-        top: -30px;
-        right: -30px;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 2rem;
-        cursor: pointer;
-        z-index: 11;
-      }
-
-      /* Responsive Adjustments */
-      @media (max-width: 768px) {
-        .modal-content {
-          width: 95%;
-          margin: 20px;
-          height: 95vh;
-          border-radius: 12px;
-        }
-        .modal-header {
-          padding: 16px 20px;
-        }
-        #prevImage {
-          left: 10px;
-        }
-        #nextImage {
-          right: 10px;
-        }
-        .carousel-button {
-          padding: 10px;
-        }
-        .gallery-close {
-          top: 10px;
-          right: 10px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .main-container {
-          padding: 20px 12px 40px;
-        }
-        .profile-header {
-          margin-bottom: 32px;
-        }
-        .link-item {
-          padding: 16px;
-        }
-        .modal-content {
-          margin: 10px;
-          height: calc(100vh - 20px);
-        }
-      }
-
-      /* Dark theme variations */
-      .theme-gradient {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      }
-      .theme-dark {
-        background: #0d1117;
-      }
-      .theme-warm {
-        background: linear-gradient(135deg, #ff9a8b 0%, #a8edea 100%);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="main-container" id="mainContainer"></div>
-
-    <div class="modal-overlay" id="modalOverlay">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title" id="modalTitle">Menu</h3>
-          <button class="modal-close" id="modalClose">&times;</button>
-        </div>
-        <div class="modal-body">
-          <iframe
-            id="modalIframe"
-            class="modal-iframe"
-            frameborder="0"
-          ></iframe>
-        </div>
-      </div>
-    </div>
-
-    <div class="gallery-modal-overlay" id="galleryModal">
-      <div class="gallery-content">
-        <button class="gallery-close" id="galleryClose">&times;</button>
-        <button class="carousel-button" id="prevImage" style="display: none">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <img
-          src=""
-          alt="Gallery Image"
-          class="carousel-image"
-          id="carouselImage"
-        />
-        <button class="carousel-button" id="nextImage" style="display: none">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-      </div>
-    </div>
-
-    <script>
-      // Helper to get a gradient (logic preserved)
-      function getGradient(color) {
-        if (!color) return "linear-gradient(135deg, #667eea 0%, #764ba2 100%)";
-        if (
-          color.startsWith("linear-gradient") ||
-          color.startsWith("radial-gradient")
-        )
-          return color;
-        const hex = color.replace("#", "");
-        const r = parseInt(hex.substr(0, 2), 16);
-        const g = parseInt(hex.substr(2, 2), 16);
-        const b = parseInt(hex.substr(4, 2), 16);
-        const brightness = (r * 299 + g * 587 + b * 114) / 1000;
-        if (brightness > 180) {
-          const darkerR = Math.max(0, Math.round(r * 0.3));
-          const darkerG = Math.max(0, Math.round(g * 0.3));
-          const darkerB = Math.max(0, Math.round(b * 0.3));
-          const darkerHex = `#${darkerR.toString(16).padStart(2, "0")}${darkerG
-            .toString(16)
-            .padStart(2, "0")}${darkerB.toString(16).padStart(2, "0")}`;
-          return `linear-gradient(135deg, ${color} 0%, ${darkerHex} 100%)`;
-        }
-        return `linear-gradient(135deg, ${color} 0%, #222222 100%)`;
-      }
-
-      // 1. New function to map link type to Font Awesome icon class (ICON FIX)
-      function getIconClass(type) {
-        switch (type) {
-          case "instagram":
-            return "fab fa-instagram";
-          case "facebook":
-            return "fab fa-facebook-f";
-          case "whatsapp":
-            return "fab fa-whatsapp";
-          case "tiktok":
-            return "fab fa-tiktok";
-          case "twitter":
-            return "fab fa-twitter";
-          case "linkedin":
-            return "fab fa-linkedin-in";
-          case "snapchat":
-            return "fab fa-snapchat-ghost";
-          case "viber":
-            return "fab fa-viber";
-          case "telegram":
-            return "fab fa-telegram-plane";
-          case "email":
-            return "fas fa-envelope";
-          case "phone":
-            return "fas fa-phone-alt";
-          case "address":
-            return "fas fa-map-marker-alt";
-          case "menu":
-            return "fas fa-book-open";
-          case "gallery":
-            return "fas fa-camera-retro";
-          default:
-            return "fas fa-link";
-        }
-      }
-
-      // Helper function for subtitles (logic preserved)
-      function getSubtitleForType(defaultSubtitle, type) {
-        if (type === "phone") return "Appelez-nous";
-        if (type === "address") return "Voir sur la carte";
-        if (type === "menu") return "Découvrez nos offres";
-        if (type === "gallery") return "Découvrez nos produits";
-        if (type === "email") return "Envoyez-nous un message";
-        return defaultSubtitle || "Retrouvez-nous";
-      }
-
-      // DOM elements
-      const mainContainer = document.getElementById("mainContainer");
-      const modalOverlay = document.getElementById("modalOverlay");
-      const modalIframe = document.getElementById("modalIframe");
-      const modalTitle = document.getElementById("modalTitle");
-      const modalClose = document.getElementById("modalClose");
-
-      const galleryModal = document.getElementById("galleryModal");
-      const carouselImage = document.getElementById("carouselImage");
-      const prevImage = document.getElementById("prevImage");
-      const nextImage = document.getElementById("nextImage");
-      const galleryClose = document.getElementById("galleryClose");
-
-      let currentImageIndex = 0;
-      let galleryImages = [];
-
-      // Core function to load and render the business card
-      async function loadBusiness() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const businessKey = urlParams.get("business") || "los-tacos";
-
-        let businessesData;
-        try {
-          const response = await fetch("businesses.json");
-          businessesData = await response.json();
-        } catch (error) {
-          console.error("Could not load business data:", error);
-          mainContainer.innerHTML =
-            "<h1>Error: Could not load business data.</h1>";
-          return;
-        }
-
-        const data = businessesData[businessKey];
-        if (!data) {
-          mainContainer.innerHTML = `<h1>Business "${businessKey}" not found.</h1>`;
-          return;
-        }
-
-        const {
-          name,
-          image,
-          address,
-          phone,
-          email, // Extracted email
-          gradient,
-          menu,
-          socials,
-          gallery,
-        } = data;
-
-        // 1. Build the links array
-        const links = [];
-
-        // Add email link - FIX: Use mailto: protocol
-        if (email) {
-          // Check for malformed email (e.g., trailing 'a' in Teravezatravel@gmail.coma)
-          const cleanedEmail =
-            email.endsWith("a") && email.includes("@gmail.com")
-              ? email.slice(0, -1)
-              : email;
-
-          links.push({
-            type: "email",
-            title: "Email",
-            subtitle: cleanedEmail,
-            url: `mailto:${cleanedEmail}`, // FIX applied here
-            external: true,
-          });
-        }
-
-        // Add address link
-        if (address) {
-          links.push({
-            type: "address",
-            title: address.text,
-            subtitle: getSubtitleForType("", "address"),
-            url: address.url,
-            external: true,
-          });
-        }
-
-        // Add phone link
-        if (phone) {
-          links.push({
-            type: "phone",
-            title: phone,
-            subtitle: getSubtitleForType("", "phone"),
-            url: `tel:${phone}`,
-            external: true,
-          });
-        }
-
-        // Add menu link
-        if (menu) {
-          const googleViewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(
-            menu
-          )}&embedded=true`;
-          links.push({
-            type: "menu",
-            title: "Voir le Menu",
-            subtitle: getSubtitleForType("", "menu"),
-            url: googleViewerUrl,
-            external: false,
-            modal: true,
-          });
-        }
-
-        // Add social links
-        Object.entries(socials || {}).forEach(([platform, url]) => {
-          links.push({
-            type: platform,
-            title: platform.charAt(0).toUpperCase() + platform.slice(1),
-            subtitle: getSubtitleForType("", platform),
-            url: url,
-            external: true,
-          });
-        });
-
-        // Add gallery link
-        if (gallery && gallery.length > 0) {
-          links.push({
-            type: "gallery",
-            title: "Galerie Photos",
-            subtitle: getSubtitleForType("", "gallery"),
-            external: false,
-            modal: true,
-          });
-          galleryImages = gallery;
-        }
-
-        // 2. Render the links HTML
-        const linksHtml = links
-          .map((link, index) => {
-            if (link.type === "gallery") {
-              // Special handling for gallery link to open modal
-              return `
-                        <a href="#" class="link-item gallery" data-index="${index}" id="galleryLink">
+    // --- Render HTML ---
+    const linksHtml = links
+      .map((link, index) => {
+        // Special handling for Gallery
+        if (link.type === "gallery") {
+          return `
+                        <a href="#" class="link-item gallery" id="galleryLink" style="animation-delay: ${
+                          0.1 + index * 0.1
+                        }s">
                             <div class="link-icon">
                                 <i class="${getIconClass("gallery")}"></i>
                             </div>
@@ -672,22 +275,31 @@
                             </div>
                         </a>
                     `;
-            }
+        }
 
-            const linkTarget = link.external
-              ? 'target="_blank" rel="noopener noreferrer"'
-              : "";
-            const modalAttribute =
-              link.modal && link.type === "menu"
-                ? `data-modal-url="${link.url}"`
-                : "";
+        // Standard Links
+        const linkTarget = link.external
+          ? 'target="_blank" rel="noopener noreferrer"'
+          : "";
+        const modalAttribute =
+          link.modal && link.type === "menu"
+            ? `data-modal-url="${link.url}"`
+            : "";
+        const clickHandler =
+          link.modal && link.type === "menu"
+            ? 'onclick="openMenuModal(event, this.href, this.dataset.title)"'
+            : "";
 
-            return `
-                    <a href="${link.url}" class="link-item ${
-              link.type
-            }" ${linkTarget} ${modalAttribute} data-index="${index}">
+        return `
+                    <a href="${link.url}" 
+                       class="link-item ${link.type}" 
+                       ${linkTarget} 
+                       ${modalAttribute} 
+                       data-title="${link.title}"
+                       style="animation-delay: ${0.1 + index * 0.1}s">
                         <div class="link-icon">
-                            <i class="${getIconClass(link.type)}"></i> </div>
+                            <i class="${getIconClass(link.type)}"></i>
+                        </div>
                         <div class="link-content">
                             <div class="link-title">${link.title}</div>
                             <div class="link-subtitle">${link.subtitle}</div>
@@ -697,128 +309,135 @@
                         </div>
                     </a>
                 `;
-          })
-          .join("");
+      })
+      .join("");
 
-        const contentHtml = `
-                <header class="profile-header">
-                    <img src="${image}" alt="${name}" class="profile-avatar">
+    // Header Image
+    // Check if image is a URL or Google Map URL. If map, use placeholder.
+    const isMapImage = image.includes("maps.google");
+    const imgSrc = isMapImage
+      ? `https://ui-avatars.com/api/?name=${encodeURIComponent(
+          name
+        )}&background=random&size=140`
+      : image;
+
+    const contentHtml = `
+                <div class="profile-header">
+                    <img src="${imgSrc}" alt="${name}" class="profile-avatar" onerror="this.src='https://via.placeholder.com/140'">
                     <h1 class="profile-name">${name}</h1>
-                    <p class="profile-bio">Mon profil professionnel</p>
-                </header>
-
-                <section class="links-container">
+                    <p class="profile-bio">Bienvenue sur notre profil</p>
+                </div>
+                <div class="links-container">
                     ${linksHtml}
-                </section>
+                </div>
             `;
 
-        document.getElementById("mainContainer").innerHTML = contentHtml;
-        document.getElementById("page-title").textContent = name;
-        document.body.style.background = getGradient(gradient);
+    document.getElementById("mainContainer").innerHTML = contentHtml;
+    document.title = name;
+    document.body.style.background = getGradient(gradient);
 
-        // --- Setup Event Listeners after rendering ---
+    // --- Attach Event Listeners ---
 
-        // Setup menu modal listener
-        document
-          .querySelectorAll(".link-item[data-modal-url]")
-          .forEach((link) => {
-            link.addEventListener("click", (e) => {
-              e.preventDefault();
-              const url = link.getAttribute("data-modal-url");
-              openModal(url, link.querySelector(".link-title").textContent);
-            });
-          });
-
-        // Setup gallery modal listener
-        const galleryLink = document.getElementById("galleryLink");
-        if (galleryLink) {
-          galleryLink.addEventListener("click", (e) => {
-            e.preventDefault();
-            openGallery();
-          });
-        }
-
-        // Helper functions for modals
-        function openModal(url, title) {
-          modalTitle.textContent = title;
-          modalIframe.src = url;
-          modalOverlay.classList.add("active");
-          document.body.style.overflow = "hidden";
-        }
-
-        function openGallery() {
-          if (galleryImages.length === 0) return;
-          currentImageIndex = 0;
-          showGalleryImage();
-          galleryModal.style.display = "flex";
-          document.body.style.overflow = "hidden";
-        }
-
-        function showGalleryImage() {
-          carouselImage.src = galleryImages[currentImageIndex];
-          prevImage.style.display = galleryImages.length > 1 ? "block" : "none";
-          nextImage.style.display = galleryImages.length > 1 ? "block" : "none";
-        }
-
-        // Gallery navigation
-        if (prevImage && nextImage) {
-          prevImage.addEventListener("click", () => {
-            currentImageIndex =
-              (currentImageIndex - 1 + galleryImages.length) %
-              galleryImages.length;
-            showGalleryImage();
-          });
-          nextImage.addEventListener("click", () => {
-            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-            showGalleryImage();
-          });
-        }
-      }
-
-      // Modal close handlers
-      function closeModal() {
-        if (modalOverlay) modalOverlay.classList.remove("active");
-        if (modalIframe) modalIframe.src = "";
-        document.body.style.overflow = "";
-      }
-      if (modalClose) modalClose.addEventListener("click", closeModal);
-      if (modalOverlay)
-        modalOverlay.addEventListener("click", (e) => {
-          if (e.target === modalOverlay) closeModal();
-        });
-      document.addEventListener("keydown", (e) => {
-        if (
-          e.key === "Escape" &&
-          modalOverlay &&
-          modalOverlay.classList.contains("active")
-        ) {
-          closeModal();
-        }
+    // 1. Menu Modal Listeners
+    document.querySelectorAll(".link-item[data-modal-url]").forEach((item) => {
+      item.addEventListener("click", function (e) {
+        e.preventDefault();
+        const url = this.getAttribute("data-modal-url");
+        const title = this.getAttribute("data-title");
+        openModal(url, title);
       });
+    });
 
-      // Gallery close handlers
-      function closeGallery() {
-        if (galleryModal) galleryModal.style.display = "none";
-        if (carouselImage) carouselImage.src = "";
-        document.body.style.overflow = "";
-      }
-      if (galleryClose) galleryClose.addEventListener("click", closeGallery);
-      if (galleryModal)
-        galleryModal.addEventListener("click", (e) => {
-          if (e.target === galleryModal) closeGallery();
-        });
-      document.addEventListener("keydown", (e) => {
-        if (
-          e.key === "Escape" &&
-          galleryModal &&
-          galleryModal.style.display === "flex"
-        ) {
-          closeGallery();
-        }
+    // 2. Gallery Listener
+    const galLink = document.getElementById("galleryLink");
+    if (galLink) {
+      galLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        openGallery();
       });
+    }
+  }
 
-      // Load business data when page loads
-      document.addEventListener("DOMContentLoaded", loadBusiness);
-    </script>
-  </body>
-</html>
+  // --- Modal Functions ---
+
+  function openModal(url, title) {
+    if (modalTitle) modalTitle.textContent = title;
+    if (modalIframe) modalIframe.src = url;
+    if (modalOverlay) modalOverlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    if (modalOverlay) modalOverlay.classList.remove("active");
+    if (modalIframe) modalIframe.src = "";
+    document.body.style.overflow = "";
+  }
+
+  // Gallery Functions
+  function openGallery() {
+    if (!galleryImages || galleryImages.length === 0) return;
+    currentImageIndex = 0;
+    updateGalleryImage();
+    if (galleryModal) galleryModal.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeGallery() {
+    if (galleryModal) galleryModal.style.display = "none";
+    if (carouselImage) carouselImage.src = "";
+    document.body.style.overflow = "";
+  }
+
+  function updateGalleryImage() {
+    if (carouselImage) carouselImage.src = galleryImages[currentImageIndex];
+
+    // Toggle arrows
+    if (prevImage)
+      prevImage.style.display = galleryImages.length > 1 ? "block" : "none";
+    if (nextImage)
+      nextImage.style.display = galleryImages.length > 1 ? "block" : "none";
+  }
+
+  // --- Global Event Listeners ---
+
+  // Modal Close (X button & Overlay click)
+  if (modalClose) modalClose.addEventListener("click", closeModal);
+  if (modalOverlay)
+    modalOverlay.addEventListener("click", (e) => {
+      if (e.target === modalOverlay) closeModal();
+    });
+
+  // Gallery Close (X button & Overlay click)
+  if (galleryClose) galleryClose.addEventListener("click", closeGallery);
+  if (galleryModal)
+    galleryModal.addEventListener("click", (e) => {
+      if (e.target === galleryModal) closeGallery(); // Close if clicking background
+    });
+
+  // Gallery Navigation
+  if (prevImage)
+    prevImage.addEventListener("click", (e) => {
+      e.stopPropagation(); // Prevent closing modal
+      currentImageIndex =
+        (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+      updateGalleryImage();
+    });
+  if (nextImage)
+    nextImage.addEventListener("click", (e) => {
+      e.stopPropagation(); // Prevent closing modal
+      currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+      updateGalleryImage();
+    });
+
+  // Keyboard support (Escape key)
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      if (modalOverlay && modalOverlay.classList.contains("active"))
+        closeModal();
+      if (galleryModal && galleryModal.style.display === "flex") closeGallery();
+    }
+  });
+
+  // Start
+  document.addEventListener("DOMContentLoaded", loadBusiness);
+</script>
