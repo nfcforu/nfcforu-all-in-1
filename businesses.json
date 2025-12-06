@@ -1500,5 +1500,20 @@
       "tiktok": "https://www.tiktok.com/@hachemserrab?_r=1&_t=ZM-91zlhymxflT",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130771380462"
     }
+  },
+  "Adel-Bradai": {
+    "name": "Adel Bradai",
+    "image": "",
+    "phone": "0771786456 ",
+    "gradient": "linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%",
+    "address": {
+      "text": "Djouab",
+      "url": "https://maps.app.goo.gl/FgnBkNWKUSwzect18"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/adel.bradai.18",
+      "tiktok": "https://www.tiktok.com/@adelbradai155",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130771786456 "
+    }
   }
 }
