@@ -1473,7 +1473,7 @@
     "name": "Aura Clinique Dentaire",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-06%20at%2011.51.43_281d543a.jpg",
     "phone": "0799471646",
-    "gradient": "linear-gradient(354deg,rgba(81, 33, 158, 1) 0%, rgba(211, 218, 235, 1) 100%)",
+    "gradient": "linear-gradient(165deg,rgba(163, 108, 212, 1) 0%, rgba(38, 10, 110, 1) 100%)",
     "address": {
       "text": "Oran",
       "url": "https://maps.app.goo.gl/Kw1RDGf6KxWnYB6r9"
@@ -1487,7 +1487,7 @@
   },
   "Hachem-Serrab": {
     "name": "Hachem Serrab",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-06%20at%2012.38.02_455cbaaa.jpg",
     "phone": "0771380462",
     "gradient": "linear-gradient(172deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%)",
     "address": {
@@ -1499,6 +1499,37 @@
       "instagram": "https://www.instagram.com/hachemserrab?igsh=bHNnczk4bjdxZzRo",
       "tiktok": "https://www.tiktok.com/@hachemserrab?_r=1&_t=ZM-91zlhymxflT",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130771380462"
+    }
+  },
+  "Adel-Bradai": {
+    "name": "Adel Bradai",
+    "image": "",
+    "phone": "0771786456 ",
+    "gradient": "linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%",
+    "address": {
+      "text": "Djouab",
+      "url": "https://maps.app.goo.gl/FgnBkNWKUSwzect18"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/adel.bradai.18",
+      "tiktok": "https://www.tiktok.com/@adelbradai155",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130771786456 "
+    }
+  },
+  "Bilixo-Sanitaire-et-robinetteries": {
+    "name": "Bilixo",
+    "image": "",
+    "phone": "0541234679",
+    "gradient": "linear-gradient(1deg,rgba(219, 168, 29, 1) 0%, rgba(56, 44, 44, 1) 94%, rgba(48, 46, 41, 1) 100%)",
+    "address": {
+      "text": "Boumerdes",
+      "url": "https://maps.app.goo.gl/ct6c37AufUN8goUV7"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/BILIXOPRO",
+      "instagram": "https://www.instagram.com/bilixo_/",
+      "tiktok": "https://www.tiktok.com/@bilixo35",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130541234679"
     }
   }
 }
