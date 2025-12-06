@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NFC Business Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      .loader {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 min-h-screen">
+    <div
+      id="loginModal"
+      class="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-center z-50"
+    >
+      <div class="bg-white p-8 rounded-lg shadow-xl w-96">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Dashboard Login</h2>
+        <div class="mb-4">
+          <label class="block text-sm font-bold mb-2">GitHub Username</label>
+          <input
+            type="text"
+            id="ghUsername"
+            class="w-full p-2 border rounded"
+            placeholder="e.g., nfcforu"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-bold mb-2">Repository Name</label>
+          <input
+            type="text"
+            id="ghRepo"
+            class="w-full p-2 border rounded"
+            placeholder="e.g., nfcforu-all-in-1"
+          />
+        </div>
+        <div class="mb-6">
+          <label class="block text-sm font-bold mb-2"
+            >Personal Access Token</label
+          >
+          <input
+            type="password"
+            id="ghToken"
+            class="w-full p-2 border rounded"
+            placeholder="ghp_..."
+          />
+        </div>
+        <button
+          onclick="authenticate()"
+          class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+        >
+          Connect
+        </button>
+      </div>
+    </div>
+
+    <div id="app" class="hidden container mx-auto px-4 py-8">
+      <div class="flex justify-between items-center mb-8">
+        <h1 class="text-3xl font-bold text-gray-800">Business Manager</h1>
+        <div class="flex gap-2">
+          <button
+            onclick="loadData()"
+            class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300"
+          >
+            <i class="fas fa-sync"></i> Refresh
+          </button>
+          <button
+            onclick="openModal('new')"
+            class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+          >
+            <i class="fas fa-plus"></i> Add New
+          </button>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <input
+          type="text"
+          id="search"
+          onkeyup="filterGrid()"
+          placeholder="Search businesses..."
+          class="w-full p-3 border rounded-lg shadow-sm"
+        />
+      </div>
+
+      <div
+        id="businessGrid"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      ></div>
+    </div>
+
+    <div
+      id="editModal"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40 overflow-y-auto py-10"
+    >
+      <div
+        class="bg-white rounded-lg shadow-xl w-full max-w-2xl m-4 p-6 relative"
+      >
+        <h2 id="modalTitle" class="text-2xl font-bold mb-4">Edit Business</h2>
+
+        <form id="businessForm" onsubmit="saveBusiness(event)">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="col-span-2">
+              <label class="block text-sm font-bold mb-1">ID (URL Slug)</label>
+              <input
+                type="text"
+                id="editId"
+                required
+                class="w-full p-2 border rounded bg-gray-50"
+                placeholder="e.g., los-tacos"
+              />
+              <p class="text-xs text-gray-500">
+                This appears in the URL. No spaces.
+              </p>
+            </div>
+
+            <div>
+              <label class="block text-sm font-bold mb-1">Business Name</label>
+              <input
+                type="text"
+                id="editName"
+                required
+                class="w-full p-2 border rounded"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-bold mb-1">Phone</label>
+              <input
+                type="text"
+                id="editPhone"
+                class="w-full p-2 border rounded"
+                placeholder="e.g. 0555..."
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-bold mb-1">Email</label>
+              <input
+                type="email"
+                id="editEmail"
+                class="w-full p-2 border rounded"
+                placeholder="contact@example.com"
+              />
+            </div>
+            <div class="col-span-2">
+              <label class="block text-sm font-bold mb-1">Image URL</label>
+              <input
+                type="text"
+                id="editImage"
+                class="w-full p-2 border rounded"
+              />
+            </div>
+            <div class="col-span-2">
+              <label class="block text-sm font-bold mb-1"
+                >Gradient / Background Color</label
+              >
+              <div class="flex gap-2">
+                <input
+                  type="text"
+                  id="editGradient"
+                  class="w-full p-2 border rounded"
+                  placeholder="linear-gradient(...) or #Hex"
+                />
+                <input
+                  type="color"
+                  onchange="document.getElementById('editGradient').value = this.value"
+                  class="h-10 w-10 cursor-pointer"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-bold mb-1">Address Text</label>
+              <input
+                type="text"
+                id="editAddrText"
+                class="w-full p-2 border rounded"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-bold mb-1">Maps URL</label>
+              <input
+                type="text"
+                id="editAddrUrl"
+                class="w-full p-2 border rounded"
+              />
+            </div>
+
+            <div class="col-span-2">
+              <label class="block text-sm font-bold mb-1">Menu PDF URL</label>
+              <input
+                type="text"
+                id="editMenu"
+                class="w-full p-2 border rounded"
+              />
+            </div>
+
+            <div class="col-span-2 border-t pt-4 mt-2">
+              <h3 class="font-bold mb-2">Social Media & Links</h3>
+              <div class="grid grid-cols-1 gap-2">
+                <div class="flex items-center gap-2">
+                  <i class="fab fa-facebook w-6 text-blue-600"></i>
+                  <input
+                    type="text"
+                    id="socialFb"
+                    placeholder="Facebook URL"
+                    class="w-full p-2 border rounded"
+                  />
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fab fa-instagram w-6 text-pink-600"></i>
+                  <input
+                    type="text"
+                    id="socialInsta"
+                    placeholder="Instagram URL"
+                    class="w-full p-2 border rounded"
+                  />
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fab fa-tiktok w-6 text-black"></i>
+                  <input
+                    type="text"
+                    id="socialTiktok"
+                    placeholder="TikTok URL"
+                    class="w-full p-2 border rounded"
+                  />
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fab fa-whatsapp w-6 text-green-500"></i>
+                  <input
+                    type="text"
+                    id="socialWhatsapp"
+                    placeholder="WhatsApp URL"
+                    class="w-full p-2 border rounded"
+                  />
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fab fa-snapchat w-6 text-yellow-500"></i>
+                  <input
+                    type="text"
+                    id="socialSnapchat"
+                    placeholder="Snapchat URL"
+                    class="w-full p-2 border rounded"
+                  />
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fab fa-telegram w-6 text-blue-400"></i>
+                  <input
+                    type="text"
+                    id="socialTelegram"
+                    placeholder="Telegram URL (t.me/...)"
+                    class="w-full p-2 border rounded"
+                  />
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fab fa-viber w-6 text-purple-600"></i>
+                  <input
+                    type="text"
+                    id="socialViber"
+                    placeholder="Viber URL or Number"
+                    class="w-full p-2 border rounded"
+                  />
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-globe w-6 text-gray-500"></i>
+                  <input
+                    type="text"
+                    id="socialWeb"
+                    placeholder="Website / Other"
+                    class="w-full p-2 border rounded"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-end gap-3 mt-6">
+            <button
+              type="button"
+              onclick="document.getElementById('editModal').classList.add('hidden')"
+              class="px-4 py-2 text-gray-600 hover:text-gray-800"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              id="saveBtn"
+              class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+            >
+              Save Changes
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div
+      id="toast"
+      class="hidden fixed bottom-5 right-5 bg-gray-800 text-white px-6 py-3 rounded shadow-lg z-50"
+    >
+      Operation successful
+    </div>
+
+    <script>
+      const FILENAME = "businesses.json";
+      let globalData = {};
+      let currentSha = "";
+      let credentials = { user: "", repo: "", token: "" };
+
+      window.onload = () => {
+        const stored = localStorage.getItem("nfc_creds");
+        if (stored) {
+          credentials = JSON.parse(stored);
+          document.getElementById("ghUsername").value = credentials.user;
+          document.getElementById("ghRepo").value = credentials.repo;
+          document.getElementById("ghToken").value = credentials.token;
+        }
+      };
+
+      function authenticate() {
+        credentials.user = document.getElementById("ghUsername").value;
+        credentials.repo = document.getElementById("ghRepo").value;
+        credentials.token = document.getElementById("ghToken").value;
+        if (!credentials.user || !credentials.repo || !credentials.token)
+          return alert("Fill all fields");
+        localStorage.setItem("nfc_creds", JSON.stringify(credentials));
+        document.getElementById("loginModal").classList.add("hidden");
+        document.getElementById("app").classList.remove("hidden");
+        loadData();
+      }
+
+      async function loadData() {
+        showToast("Loading data...", true);
+        const url = `https://api.github.com/repos/${credentials.user}/${credentials.repo}/contents/${FILENAME}`;
+        try {
+          const response = await fetch(url, {
+            headers: { Authorization: `token ${credentials.token}` },
+          });
+          if (!response.ok) throw new Error("Failed to fetch data");
+          const data = await response.json();
+          currentSha = data.sha;
+          const jsonContent = decodeURIComponent(
+            escape(window.atob(data.content))
+          );
+          globalData = JSON.parse(jsonContent);
+          renderGrid();
+          showToast("Data loaded successfully");
+        } catch (error) {
+          console.error(error);
+          alert("Error loading data. Check console.");
+        }
+      }
+
+      function renderGrid() {
+        const grid = document.getElementById("businessGrid");
+        grid.innerHTML = "";
+        Object.entries(globalData).forEach(([key, biz]) => {
+          const card = document.createElement("div");
+          card.className =
+            "bg-white p-4 rounded-lg shadow hover:shadow-md transition relative group";
+          card.dataset.name = biz.name.toLowerCase();
+          const imgSrc = biz.image || "https://via.placeholder.com/150";
+          card.innerHTML = `
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="${imgSrc}" class="w-16 h-16 rounded-full object-cover border-2 border-gray-100">
+                        <div>
+                            <h3 class="font-bold text-lg">${biz.name}</h3>
+                            <p class="text-xs text-gray-500 text-ellipsis overflow-hidden">ID: ${key}</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center text-sm text-gray-600 mt-2">
+                        <span><i class="fas fa-phone"></i> ${
+                          biz.phone || "-"
+                        }</span>
+                         <div class="flex gap-2">
+                             ${
+                               biz.menu
+                                 ? '<i class="fas fa-file-pdf text-red-500" title="Has Menu"></i>'
+                                 : ""
+                             }
+                             ${
+                               biz.email
+                                 ? '<i class="fas fa-envelope text-gray-500" title="Has Email"></i>'
+                                 : ""
+                             }
+                        </div>
+                    </div>
+                    <div class="mt-4 flex gap-2 border-t pt-3">
+                        <button onclick="editBusiness('${key}')" class="flex-1 bg-blue-50 text-blue-600 py-1 rounded hover:bg-blue-100">Edit</button>
+                        <button onclick="deleteBusiness('${key}')" class="flex-1 bg-red-50 text-red-600 py-1 rounded hover:bg-red-100">Delete</button>
+                        <a href="/${key}" target="_blank" class="flex-1 bg-gray-50 text-gray-600 py-1 rounded hover:bg-gray-100 text-center"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                `;
+          grid.appendChild(card);
+        });
+      }
+
+      function openModal(mode, key = null) {
+        const modal = document.getElementById("editModal");
+        const form = document.getElementById("businessForm");
+        const idInput = document.getElementById("editId");
+        form.reset();
+        modal.classList.remove("hidden");
+
+        if (mode === "edit" && key) {
+          const data = globalData[key];
+          document.getElementById(
+            "modalTitle"
+          ).textContent = `Edit: ${data.name}`;
+          idInput.value = key;
+          idInput.readOnly = true;
+          idInput.classList.add("bg-gray-200");
+
+          document.getElementById("editName").value = data.name || "";
+          document.getElementById("editPhone").value = data.phone || "";
+          document.getElementById("editEmail").value = data.email || ""; // Load Email
+          document.getElementById("editImage").value = data.image || "";
+          document.getElementById("editGradient").value = data.gradient || "";
+          document.getElementById("editMenu").value = data.menu || "";
+
+          if (data.address) {
+            document.getElementById("editAddrText").value =
+              data.address.text || "";
+            document.getElementById("editAddrUrl").value =
+              data.address.url || "";
+          }
+
+          if (data.socials) {
+            document.getElementById("socialFb").value =
+              data.socials.facebook || "";
+            document.getElementById("socialInsta").value =
+              data.socials.instagram || "";
+            document.getElementById("socialTiktok").value =
+              data.socials.tiktok || "";
+            document.getElementById("socialWhatsapp").value =
+              data.socials.whatsapp || "";
+            document.getElementById("socialWeb").value =
+              data.socials.website || "";
+            // Load New Socials
+            document.getElementById("socialSnapchat").value =
+              data.socials.snapchat || "";
+            document.getElementById("socialTelegram").value =
+              data.socials.telegram || "";
+            document.getElementById("socialViber").value =
+              data.socials.viber || "";
+          }
+        } else {
+          document.getElementById("modalTitle").textContent =
+            "Add New Business";
+          idInput.value = "";
+          idInput.readOnly = false;
+          idInput.classList.remove("bg-gray-200");
+        }
+      }
+
+      window.editBusiness = (key) => openModal("edit", key);
+
+      async function saveBusiness(e) {
+        e.preventDefault();
+        const btn = document.getElementById("saveBtn");
+        btn.textContent = "Saving...";
+        btn.disabled = true;
+
+        const id = document.getElementById("editId").value.trim();
+        if (!id) return alert("ID is required");
+
+        const newBiz = {
+          name: document.getElementById("editName").value,
+          image: document.getElementById("editImage").value,
+          phone: document.getElementById("editPhone").value,
+          email: document.getElementById("editEmail").value || undefined, // Save Email
+          gradient: document.getElementById("editGradient").value,
+          menu: document.getElementById("editMenu").value || undefined,
+          address: {
+            text: document.getElementById("editAddrText").value,
+            url: document.getElementById("editAddrUrl").value,
+          },
+          socials: {},
+        };
+
+        const socMap = {
+          facebook: "socialFb",
+          instagram: "socialInsta",
+          tiktok: "socialTiktok",
+          whatsapp: "socialWhatsapp",
+          website: "socialWeb",
+          // Map New Socials
+          snapchat: "socialSnapchat",
+          telegram: "socialTelegram",
+          viber: "socialViber",
+        };
+
+        for (const [key, fieldId] of Object.entries(socMap)) {
+          const val = document.getElementById(fieldId).value;
+          if (val) newBiz.socials[key] = val;
+        }
+
+        globalData[id] = newBiz;
+        await pushToGitHub();
+        document.getElementById("editModal").classList.add("hidden");
+        btn.textContent = "Save Changes";
+        btn.disabled = false;
+      }
+
+      window.deleteBusiness = async (key) => {
+        if (
+          !confirm(`Are you sure you want to delete ${globalData[key].name}?`)
+        )
+          return;
+        delete globalData[key];
+        await pushToGitHub();
+      };
+
+      async function pushToGitHub() {
+        showToast("Saving to GitHub...", true);
+        const url = `https://api.github.com/repos/${credentials.user}/${credentials.repo}/contents/${FILENAME}`;
+        const jsonString = JSON.stringify(globalData, null, 2);
+        const contentEncoded = window.btoa(
+          unescape(encodeURIComponent(jsonString))
+        );
+        const payload = {
+          message: `Update businesses.json via Dashboard`,
+          content: contentEncoded,
+          sha: currentSha,
+        };
+        try {
+          const res = await fetch(url, {
+            method: "PUT",
+            headers: {
+              Authorization: `token ${credentials.token}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+          });
+          if (!res.ok) throw new Error("Failed to push");
+          const data = await res.json();
+          currentSha = data.content.sha;
+          renderGrid();
+          showToast("Saved! Update will be live in 1-2 mins.");
+        } catch (err) {
+          console.error(err);
+          alert("Failed to save to GitHub.");
+        }
+      }
+
+      function filterGrid() {
+        const term = document.getElementById("search").value.toLowerCase();
+        document.querySelectorAll("#businessGrid > div").forEach((card) => {
+          card.style.display = card.dataset.name.includes(term)
+            ? "block"
+            : "none";
+        });
+      }
+
+      function showToast(msg, persist = false) {
+        const t = document.getElementById("toast");
+        t.textContent = msg;
+        t.classList.remove("hidden");
+        if (!persist) setTimeout(() => t.classList.add("hidden"), 3000);
+      }
+    </script>
+  </body>
+</html>
