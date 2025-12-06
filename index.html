@@ -2,7 +2,7 @@
   // 1. Helper to get the correct Font Awesome icon class
   function getIconClass(type) {
     // Clean up type to ensure it matches common keys
-    const cleanType = type.toLowerCase().trim();
+    const cleanType = type ? type.toLowerCase().trim() : "link";
 
     switch (cleanType) {
       // Social Media
@@ -84,6 +84,10 @@
         return "Visitez notre site";
       case "instagram":
         return "Suivez-nous";
+      case "viber":
+        return "Discutez sur Viber";
+      case "telegram":
+        return "Rejoignez-nous";
       default:
         return "Visiter le lien";
     }
@@ -93,7 +97,8 @@
   const mainContainer = document.getElementById("mainContainer");
   const modalOverlay = document.getElementById("modalOverlay");
   const modalIframe = document.getElementById("modalIframe");
-  const modalTitle = document.querySelector(".modal-title"); // Fixed selector
+  // FIX: Use querySelector because your HTML uses class="modal-title", not id
+  const modalTitle = document.querySelector(".modal-title");
   const modalClose = document.getElementById("modalClose");
 
   const galleryModal = document.getElementById("galleryModal");
@@ -107,8 +112,7 @@
 
   // Core function to load and render the business card
   async function loadBusiness() {
-    // FIX: Use pathname (URL path) to get the ID, not query params
-    // This makes /sac-de-lux work correctly
+    // Fix: Get ID from URL path (e.g., /omyga-gym -> omyga-gym)
     let path = window.location.pathname.replace(/^\/+|\/+$/g, "");
 
     // Default to 'los-tacos' if path is empty or index.html
@@ -120,8 +124,18 @@
 
     let businessesData;
     try {
-      // Add timestamp to prevent caching issues with JSON
-      const response = await fetch(`businesses.json?t=${new Date().getTime()}`);
+      // FIX: Added '/' at the start to force absolute path from root
+      // Added timestamp to prevent caching issues
+      const response = await fetch(
+        `/businesses.json?t=${new Date().getTime()}`
+      );
+
+      // Check if we accidentally got the HTML page instead of JSON (common SPA error)
+      const contentType = response.headers.get("content-type");
+      if (contentType && contentType.indexOf("application/json") === -1) {
+        throw new Error("Received HTML instead of JSON");
+      }
+
       if (!response.ok) throw new Error("HTTP error " + response.status);
       businessesData = await response.json();
     } catch (error) {
@@ -156,7 +170,7 @@
     if (email) {
       // Fix typo in specific email if present
       let cleanEmail = email.trim();
-      if (cleanEmail.endsWith("coma")) cleanEmail = cleanEmail.slice(0, -1); // Fix "gmail.coma" typo
+      if (cleanEmail.endsWith("coma")) cleanEmail = cleanEmail.slice(0, -1);
 
       links.push({
         type: "email",
@@ -170,7 +184,7 @@
     // Address Link
     if (address) {
       let addrUrl = typeof address === "string" ? address : address.url;
-      // If it's just text, generate a Google Maps search link
+      // If it's just text or empty URL, generate a Google Maps search link
       if (!addrUrl || addrUrl.length < 5) {
         addrUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
           address.text || address
@@ -179,7 +193,9 @@
 
       links.push({
         type: "address",
-        title: address.text || "Notre Adresse",
+        title:
+          (typeof address === "object" ? address.text : address) ||
+          "Notre Adresse",
         subtitle: getSubtitleForType("", "address"),
         url: addrUrl,
         external: true,
@@ -238,9 +254,12 @@
         !url.startsWith("viber://") &&
         !url.startsWith("http")
       ) {
-        // Attempt to fix viber number format if it's just digits
         const viberNum = url.replace(/[^+\d]/g, "");
         finalUrl = `viber://chat?number=${viberNum}`;
+      }
+      if (platform === "telegram" && !url.startsWith("https://")) {
+        const username = url.replace("@", "");
+        finalUrl = `https://t.me/${username}`;
       }
 
       links.push({
@@ -285,10 +304,6 @@
           link.modal && link.type === "menu"
             ? `data-modal-url="${link.url}"`
             : "";
-        const clickHandler =
-          link.modal && link.type === "menu"
-            ? 'onclick="openMenuModal(event, this.href, this.dataset.title)"'
-            : "";
 
         return `
                     <a href="${link.url}" 
@@ -312,14 +327,14 @@
       })
       .join("");
 
-    // Header Image
-    // Check if image is a URL or Google Map URL. If map, use placeholder.
-    const isMapImage = image.includes("maps.google");
-    const imgSrc = isMapImage
-      ? `https://ui-avatars.com/api/?name=${encodeURIComponent(
-          name
-        )}&background=random&size=140`
-      : image;
+    // Header Image check
+    const isMapImage = image && image.includes("maps.google");
+    const imgSrc =
+      isMapImage || !image
+        ? `https://ui-avatars.com/api/?name=${encodeURIComponent(
+            name
+          )}&background=random&size=140`
+        : image;
 
     const contentHtml = `
                 <div class="profile-header">
