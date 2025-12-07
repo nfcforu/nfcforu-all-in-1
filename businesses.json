@@ -1503,7 +1503,7 @@
   },
   "Adel-Bradai": {
     "name": "Adel Bradai",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-07%20at%2010.42.29_f747ad3e.jpg",
     "phone": "0771786456 ",
     "gradient": "linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%",
     "address": {
@@ -1518,7 +1518,7 @@
     }
   },
   "Bilixo-Sanitaire-et-robinetteries": {
-    "name": "Bilixo",
+    "name": "BILIXO",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-06%20at%2015.12.20_0df42ef2.jpg",
     "phone": "0541234679",
     "gradient": "linear-gradient(1deg,rgba(219, 168, 29, 1) 0%, rgba(56, 44, 44, 1) 94%, rgba(48, 46, 41, 1) 100%)",
@@ -1535,7 +1535,7 @@
   },
   "Salim-Radaoui": {
     "name": "Lobo Radaoui",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-07%20at%2011.30.01_953a2ffc.jpg",
     "phone": "0552715768",
     "gradient": "linear-gradient(182deg,rgba(245, 245, 245, 1) 0%, rgba(222, 24, 24, 1) 100%)",
     "address": {
@@ -1548,6 +1548,21 @@
       "tiktok": "https://www.tiktok.com/@_salim_",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213552715768",
       "snapchat": "https://www.snapchat.com/add/salimradoui2021"
+    }
+  },
+  "Robe_Soiree_Feminin": {
+    "name": "Robe Soirée Féminin",
+    "image": "",
+    "phone": "0672983916",
+    "gradient": "linear-gradient(181deg,rgba(245, 245, 245, 1) 0%, rgba(227, 90, 230, 1) 100%)",
+    "address": {
+      "text": "Msila",
+      "url": "https://maps.app.goo.gl/TFfBuwb4Yp6J6mHT9"
+    },
+    "socials": {
+      "instagram": "https://www.instagram.com/robe_soiree_feminin_28?igsh=MWxpa285ajk1OTZtbQ%3D%3D",
+      "tiktok": "https://www.tiktok.com/@feminin_28?_r=1&_t=ZS-91oGmY0bbiy",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213672983916"
     }
   }
 }
