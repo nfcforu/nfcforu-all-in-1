@@ -1549,5 +1549,20 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213552715768",
       "snapchat": "https://www.snapchat.com/add/salimradoui2021"
     }
+  },
+  "Robe_Soiree_Feminin": {
+    "name": "Robe Soirée Féminin",
+    "image": "",
+    "phone": "0672983916",
+    "gradient": "linear-gradient(181deg,rgba(245, 245, 245, 1) 0%, rgba(227, 90, 230, 1) 100%)",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "instagram": "https://www.instagram.com/robe_soiree_feminin_28?igsh=MWxpa285ajk1OTZtbQ%3D%3D",
+      "tiktok": "https://www.tiktok.com/@feminin_28?_r=1&_t=ZS-91oGmY0bbiy",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213672983916"
+    }
   }
 }
