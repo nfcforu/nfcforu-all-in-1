@@ -1532,5 +1532,22 @@
       "tiktok": "https://www.tiktok.com/@bilixo35",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130541234679"
     }
+  },
+  "Salim-Radaoui": {
+    "name": "Lobo Radaoui",
+    "image": "",
+    "phone": "0552715768",
+    "gradient": "linear-gradient(182deg,rgba(245, 245, 245, 1) 0%, rgba(222, 24, 24, 1) 100%)",
+    "address": {
+      "text": "Relizane",
+      "url": "https://maps.app.goo.gl/RomDRgadwcyzCYMY9"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=100063470113797",
+      "instagram": "https://www.instagram.com/salimradoui/",
+      "tiktok": "https://www.tiktok.com/@_salim_",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213552715768",
+      "snapchat": "https://www.snapchat.com/add/salimradoui2021"
+    }
   }
 }
