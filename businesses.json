@@ -1513,12 +1513,13 @@
     "socials": {
       "facebook": "https://www.facebook.com/adel.bradai.18",
       "tiktok": "https://www.tiktok.com/@adelbradai155",
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130771786456 "
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130771786456 ",
+      "viber": "viber://chat?number=%2B‪+213771786456"
     }
   },
   "Bilixo-Sanitaire-et-robinetteries": {
     "name": "Bilixo",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-06%20at%2015.12.20_0df42ef2.jpg",
     "phone": "0541234679",
     "gradient": "linear-gradient(1deg,rgba(219, 168, 29, 1) 0%, rgba(56, 44, 44, 1) 94%, rgba(48, 46, 41, 1) 100%)",
     "address": {
