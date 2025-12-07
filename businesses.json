@@ -14,23 +14,6 @@
       "tiktok": "https://www.tiktok.com/@sac_2_luxe"
     }
   },
-  "FIVE-PIZZA": {
-    "name": "FIVE-PIZZA",
-    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/FIVE-PIZZA.jpg",
-    "address": {
-      "url": "https://maps.app.goo.gl/PGkGdHucNpADAZc67",
-      "text": "Rue Harrag Mohamed Senoussi, Sétif"
-    },
-    "phone": "+1122334455",
-    "gradient": "#F7DA1E",
-    "menu": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/menu.pdf",
-    "socials": {
-      "instagram": "https://instagram.com/quicktechrepair",
-      "facebook": "https://facebook.com/quicktechrepair",
-      "twitter": "https://twitter.com/quicktech",
-      "linkedin": "https://linkedin.com/company/quicktechrepair"
-    }
-  },
   "BIG-MODE": {
     "name": "BIG MODE",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/ChatGPT Image 24 sept. 2025, 18_57_40.png",
