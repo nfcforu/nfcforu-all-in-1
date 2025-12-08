@@ -1585,7 +1585,7 @@
   },
   "LG-Electronics-El-Bayadh": {
     "name": "LG Electronics El Bayadh",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-08%20at%2011.57.18_907cd4e6.jpg",
     "phone": "0552 30 34 86",
     "gradient": "linear-gradient(181deg,rgba(180, 58, 60, 1) 0%, rgba(255, 15, 15, 1) 38%, rgba(240, 230, 230, 1) 81%)",
     "address": {
