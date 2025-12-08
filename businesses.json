@@ -1533,5 +1533,20 @@
       "tiktok": "https://www.tiktok.com/@zaiima23?_r=1&_t=ZS-9223jhbp53k",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213659776558"
     }
+  },
+  "Automatisme-Industriel-El-Eulma": {
+    "name": "Automatisme Industriel El Eulma",
+    "image": "",
+    "phone": "07 95440146",
+    "gradient": "linear-gradient(176deg,rgba(3, 3, 10, 1) 0%, rgba(9, 9, 121, 1) 44%, rgba(0, 212, 255, 1) 100%)",
+    "address": {
+      "text": "el eulma",
+      "url": "https://maps.app.goo.gl/XDVcBDLDWrKFvSRW9"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/khaled.boumezbeur.54?mibextid=wwXIfr",
+      "tiktok": "https://www.tiktok.com/@automatismeeleulma?_r=1&_t=ZS-92205T4RL2w",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213556378083"
+    }
   }
 }
