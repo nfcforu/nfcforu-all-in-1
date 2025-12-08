@@ -1517,5 +1517,21 @@
       "tiktok": "https://www.tiktok.com/@feminin_28?_r=1&_t=ZS-91oGmY0bbiy",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213672983916"
     }
+  },
+  "Prof-Sara-Hemaidia": {
+    "name": "Prof Sara Hemaidia",
+    "image": "",
+    "phone": "0659776558",
+    "gradient": "linear-gradient(181deg,rgba(245, 245, 245, 1) 0%, rgba(115, 34, 103, 1) 100%)",
+    "address": {
+      "text": "Annaba",
+      "url": "https://maps.app.goo.gl/1V2Gtr4gcAQnnHRw6"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1KW4nRi4x1/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/elzzaima23?igsh=MTN1b202NDRocXUwNw%3D%3D&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@zaiima23?_r=1&_t=ZS-9223jhbp53k",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213659776558"
+    }
   }
 }
