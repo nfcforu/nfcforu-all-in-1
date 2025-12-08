@@ -1643,5 +1643,21 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770705659",
       "snapchat": "https://www.snapchat.com/@youcefchennaoui?share_id=oYLOq06MLhs&locale=fr-FR"
     }
+  },
+  "Bibiche-Cosmetique": {
+    "name": "Bibiche Cosmetique ",
+    "image": "",
+    "phone": "0663290343",
+    "gradient": "linear-gradient(179deg,rgba(42, 38, 43, 1) 0%, rgba(224, 171, 11, 1) 100%)",
+    "address": {
+      "text": "Ben Mehdi",
+      "url": "https://maps.app.goo.gl/kqcJsyBw9ppkX7ws8"
+    },
+    "socials": {
+      "facebook": "www.facebook.com/share/1DuWLfnAax/",
+      "instagram": "https://www.instagram.com/bibiche_cosmitique?igsh=MWR6Y3JjNWgwd3Zqcg%3D%3D",
+      "tiktok": "https://www.tiktok.com/@bibiche.cosmtique6?_r=1&_t=ZS-923qvSJszzM",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213663290343"
+    }
   }
 }
