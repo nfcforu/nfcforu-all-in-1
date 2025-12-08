@@ -1548,5 +1548,21 @@
       "tiktok": "https://www.tiktok.com/@automatismeeleulma?_r=1&_t=ZS-92205T4RL2w",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213556378083"
     }
+  },
+  "DIGISAT-CHEZ-WALID": {
+    "name": "DIGISAT CHEZ WALID",
+    "image": "",
+    "phone": "0662279278",
+    "gradient": "linear-gradient(179deg,rgba(0, 0, 0, 1) 1%, rgba(145, 13, 13, 1) 41%)",
+    "address": {
+      "text": "Draria",
+      "url": "https://maps.app.goo.gl/5vdvakMsJdgN1dvT8"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1A9NwCncix/",
+      "instagram": "https://www.instagram.com/digisat2024/",
+      "tiktok": "https://www.tiktok.com/@wadiesat?_r=1&_t=ZN-9224SdpHqUw",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213662279278"
+    }
   }
 }
