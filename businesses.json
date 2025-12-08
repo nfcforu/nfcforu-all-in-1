@@ -1600,7 +1600,7 @@
     "name": "KN-Cosmetique",
     "image": "",
     "phone": "06963866",
-    "gradient": "linear-gradient(181deg,rgba(138, 96, 6, 1) 37%, rgba(240, 230, 230, 1) 81%)",
+    "gradient": "linear-gradient(1deg,rgba(145, 103, 31, 1) 39%, rgba(43, 31, 31, 1) 81%)",
     "address": {
       "text": "Sidi Abdelli",
       "url": "https://maps.app.goo.gl/rJYRiyUUpozSRbey5"
