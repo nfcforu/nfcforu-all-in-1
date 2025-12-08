@@ -1531,7 +1531,8 @@
       "facebook": "https://www.facebook.com/share/1KW4nRi4x1/?mibextid=wwXIfr",
       "instagram": "https://www.instagram.com/elzzaima23?igsh=MTN1b202NDRocXUwNw%3D%3D&utm_source=qr",
       "tiktok": "https://www.tiktok.com/@zaiima23?_r=1&_t=ZS-9223jhbp53k",
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213659776558"
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213659776558",
+      "youtube": "https://youtube.com/@-bu3rs3lv9e?si=LDSYEWCJxIX_ErnM"
     }
   },
   "Automatisme-Industriel-El-Eulma": {
@@ -1550,7 +1551,7 @@
     }
   },
   "DIGISAT-CHEZ-WALID": {
-    "name": "DIGISAT CHEZ WALID",
+    "name": "DIGISAT CHEZ WADIE",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-08%20at%2008.25.55_ee8ca92e.jpg",
     "phone": "0662279278",
     "gradient": "linear-gradient(179deg,rgba(0, 0, 0, 1) 1%, rgba(145, 13, 13, 1) 41%)",
@@ -1594,6 +1595,36 @@
     "socials": {
       "facebook": "https://www.facebook.com/LGElBayadh",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213552 30 34 86"
+    }
+  },
+  "KN-COSMETIQUE": {
+    "name": "KN-Cosmetique",
+    "image": "",
+    "phone": "06963866",
+    "gradient": "linear-gradient(1deg,rgba(145, 103, 31, 1) 39%, rgba(43, 31, 31, 1) 81%)",
+    "address": {
+      "text": "Sidi Abdelli",
+      "url": "https://maps.app.goo.gl/rJYRiyUUpozSRbey5"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/khaled.kenadil",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213555036927"
+    }
+  },
+  "Boutique-moh-zawali": {
+    "name": "Boutique moh zawali",
+    "image": "",
+    "phone": "0770310441",
+    "gradient": "linear-gradient(5deg,rgba(253, 29, 29, 1) 27%, rgba(207, 186, 186, 1) 80%)",
+    "address": {
+      "text": "bechar",
+      "url": "https://maps.app.goo.gl/nA2wzo7gbC17r7439"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/zawali08?rdid=KJ6UGHrpk1QuFfzp&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BaYPXYtN1%2F#",
+      "instagram": "https://www.tiktok.com/@mohamedzawali4?_r=1&_t=ZS-9237NAZrnqm",
+      "tiktok": "https://www.tiktok.com/@mohamedzawali4?_r=1&_t=ZS-9237NAZrnqm",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770310441"
     }
   }
 }
