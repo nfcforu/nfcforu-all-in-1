@@ -1627,5 +1627,21 @@
       "tiktok": "https://www.tiktok.com/@mohamedzawali4?_r=1&_t=ZS-9237NAZrnqm",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770310441"
     }
+  },
+  "Patisserie-Cherchelloise-chez-chennaoui": {
+    "name": "Patisserie Cherchelloise chez Chennaoui",
+    "image": "",
+    "phone": "0555347458",
+    "gradient": "linear-gradient(1deg,rgba(168, 37, 37, 1) 53%, rgba(71, 55, 55, 1) 86%)",
+    "address": {
+      "text": "Cherchell",
+      "url": "https://maps.app.goo.gl/RtTrocsmDkGg2rij8"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/patisseriechennaoui?rdid=bQwbSRc6x8V2pZ9T&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BWepAZq7Z%2F#",
+      "instagram": "https://www.instagram.com/pch20_02?utm_source=qr&igsh=MWxmYmtlZXR6eTZtMQ%3D%3D",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770705659",
+      "snapchat": "https://www.snapchat.com/@youcefchennaoui?share_id=oYLOq06MLhs&locale=fr-FR"
+    }
   }
 }
