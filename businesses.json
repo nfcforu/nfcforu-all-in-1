@@ -1,19 +1,4 @@
 {
-  "los-tacos": {
-    "name": "LOS TACOS",
-    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/LOS-TACOS.jpg",
-    "address": {
-      "url": "https://maps.app.goo.gl/FP8HbyrL1eQ5ndRTA",
-      "text": "Rue Harrag Mohamed Senoussi, Sétif"
-    },
-    "phone": "0662698843",
-    "gradient": "linear-gradient(135deg, #145960 0%, #004E52 100%)",
-    "menu": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/menu.pdf",
-    "socials": {
-      "instagram": "https://www.instagram.com/pzlostacos/",
-      "facebook": "https://web.facebook.com/pzlostacos"
-    }
-  },
   "sac-de-lux": {
     "name": "Sac De Luxe",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-09-24 at 16.33.50_cf05da8e.jpg",
@@ -27,38 +12,6 @@
       "facebook": "https://web.facebook.com/sac2lux",
       "whatsapp": "https://api.whatsapp.com/send?phone=%2B213782746952&fbclid=IwVERTSANA9qlleHRuA2FlbQIxMAABHiTFOvpE0tSm4h4NuBJWOgfe7GQddnsGreBOXORdLKSmWUMKUcRSe5mlkh9R_aem_v1coVSt8xLts_HUUOFyFsw&sfnsn=wa",
       "tiktok": "https://www.tiktok.com/@sac_2_luxe"
-    }
-  },
-  "FIVE-PIZZA": {
-    "name": "FIVE-PIZZA",
-    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/FIVE-PIZZA.jpg",
-    "address": {
-      "url": "https://maps.app.goo.gl/PGkGdHucNpADAZc67",
-      "text": "Rue Harrag Mohamed Senoussi, Sétif"
-    },
-    "phone": "+1122334455",
-    "gradient": "#F7DA1E",
-    "menu": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/menu.pdf",
-    "socials": {
-      "instagram": "https://instagram.com/quicktechrepair",
-      "facebook": "https://facebook.com/quicktechrepair",
-      "twitter": "https://twitter.com/quicktech",
-      "linkedin": "https://linkedin.com/company/quicktechrepair"
-    }
-  },
-  "BIG-MODE": {
-    "name": "BIG MODE",
-    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/ChatGPT Image 24 sept. 2025, 18_57_40.png",
-    "address": {
-      "url": "https://www.google.com/maps/place/Cabinet+de+p%C3%A9diatrie+dr+Amarnia.+F/@36.2067853,5.4360213,21z/data=!4m6!3m5!1s0x12f315979b5fc95f:0x4dd815694fe459d!8m2!3d36.2067419!4d5.4362794!16s%2Fg%2F11lgdr2gzj?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
-      "text": "Boulvard n°03, Sétif"
-    },
-    "phone": "0556310559",
-    "gradient": "#EADABE",
-    "socials": {
-      "instagram": "https://www.instagram.com/big_mode.19/",
-      "facebook": "https://www.facebook.com/people/BIG-MODE/100077852154033/",
-      "tiktok": "https://www.tiktok.com/@big_mode.setif"
     }
   },
   "moka-mode-19": {
@@ -1552,7 +1505,7 @@
   },
   "Robe_Soiree_Feminin": {
     "name": "Robe Soirée Féminin",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-07%20at%2012.14.11_b68cefd1.jpg",
     "phone": "0672983916",
     "gradient": "linear-gradient(181deg,rgba(245, 245, 245, 1) 0%, rgba(227, 90, 230, 1) 100%)",
     "address": {
@@ -1563,6 +1516,53 @@
       "instagram": "https://www.instagram.com/robe_soiree_feminin_28?igsh=MWxpa285ajk1OTZtbQ%3D%3D",
       "tiktok": "https://www.tiktok.com/@feminin_28?_r=1&_t=ZS-91oGmY0bbiy",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213672983916"
+    }
+  },
+  "Prof-Sara-Hemaidia": {
+    "name": "Prof Sara Hemaidia",
+    "image": "",
+    "phone": "0659776558",
+    "gradient": "linear-gradient(181deg,rgba(245, 245, 245, 1) 0%, rgba(115, 34, 103, 1) 100%)",
+    "address": {
+      "text": "Annaba",
+      "url": "https://maps.app.goo.gl/1V2Gtr4gcAQnnHRw6"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1KW4nRi4x1/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/elzzaima23?igsh=MTN1b202NDRocXUwNw%3D%3D&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@zaiima23?_r=1&_t=ZS-9223jhbp53k",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213659776558"
+    }
+  },
+  "Automatisme-Industriel-El-Eulma": {
+    "name": "Automatisme Industriel El Eulma",
+    "image": "",
+    "phone": "07 95440146",
+    "gradient": "linear-gradient(176deg,rgba(3, 3, 10, 1) 0%, rgba(9, 9, 121, 1) 44%, rgba(0, 212, 255, 1) 100%)",
+    "address": {
+      "text": "el eulma",
+      "url": "https://maps.app.goo.gl/XDVcBDLDWrKFvSRW9"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/khaled.boumezbeur.54?mibextid=wwXIfr",
+      "tiktok": "https://www.tiktok.com/@automatismeeleulma?_r=1&_t=ZS-92205T4RL2w",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213556378083"
+    }
+  },
+  "DIGISAT-CHEZ-WALID": {
+    "name": "DIGISAT CHEZ WALID",
+    "image": "",
+    "phone": "0662279278",
+    "gradient": "linear-gradient(179deg,rgba(0, 0, 0, 1) 1%, rgba(145, 13, 13, 1) 41%)",
+    "address": {
+      "text": "Draria",
+      "url": "https://maps.app.goo.gl/5vdvakMsJdgN1dvT8"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1A9NwCncix/",
+      "instagram": "https://www.instagram.com/digisat2024/",
+      "tiktok": "https://www.tiktok.com/@wadiesat?_r=1&_t=ZN-9224SdpHqUw",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213662279278"
     }
   }
 }
