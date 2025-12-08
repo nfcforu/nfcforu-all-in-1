@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <style>
       .loader {
@@ -161,6 +161,7 @@
                 placeholder="contact@example.com"
               />
             </div>
+
             <div class="col-span-2">
               <label class="block text-sm font-bold mb-1">Image URL</label>
               <input
@@ -253,6 +254,25 @@
                     class="w-full p-2 border rounded"
                   />
                 </div>
+
+                <div class="flex items-center gap-2">
+                  <i class="fab fa-youtube w-6 text-red-600"></i>
+                  <input
+                    type="text"
+                    id="socialYoutube"
+                    placeholder="YouTube URL"
+                    class="w-full p-2 border rounded"
+                  />
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-brands fa-threads w-6 text-black"></i>
+                  <input
+                    type="text"
+                    id="socialThreads"
+                    placeholder="Threads URL"
+                    class="w-full p-2 border rounded"
+                  />
+                </div>
                 <div class="flex items-center gap-2">
                   <i class="fab fa-snapchat w-6 text-yellow-500"></i>
                   <input
@@ -280,6 +300,7 @@
                     class="w-full p-2 border rounded"
                   />
                 </div>
+
                 <div class="flex items-center gap-2">
                   <i class="fas fa-globe w-6 text-gray-500"></i>
                   <input
@@ -432,7 +453,7 @@
 
           document.getElementById("editName").value = data.name || "";
           document.getElementById("editPhone").value = data.phone || "";
-          document.getElementById("editEmail").value = data.email || ""; // Load Email
+          document.getElementById("editEmail").value = data.email || "";
           document.getElementById("editImage").value = data.image || "";
           document.getElementById("editGradient").value = data.gradient || "";
           document.getElementById("editMenu").value = data.menu || "";
@@ -455,13 +476,17 @@
               data.socials.whatsapp || "";
             document.getElementById("socialWeb").value =
               data.socials.website || "";
-            // Load New Socials
             document.getElementById("socialSnapchat").value =
               data.socials.snapchat || "";
             document.getElementById("socialTelegram").value =
               data.socials.telegram || "";
             document.getElementById("socialViber").value =
               data.socials.viber || "";
+            // New Fields
+            document.getElementById("socialYoutube").value =
+              data.socials.youtube || "";
+            document.getElementById("socialThreads").value =
+              data.socials.threads || "";
           }
         } else {
           document.getElementById("modalTitle").textContent =
@@ -487,7 +512,7 @@
           name: document.getElementById("editName").value,
           image: document.getElementById("editImage").value,
           phone: document.getElementById("editPhone").value,
-          email: document.getElementById("editEmail").value || undefined, // Save Email
+          email: document.getElementById("editEmail").value || undefined,
           gradient: document.getElementById("editGradient").value,
           menu: document.getElementById("editMenu").value || undefined,
           address: {
@@ -503,10 +528,11 @@
           tiktok: "socialTiktok",
           whatsapp: "socialWhatsapp",
           website: "socialWeb",
-          // Map New Socials
           snapchat: "socialSnapchat",
           telegram: "socialTelegram",
           viber: "socialViber",
+          youtube: "socialYoutube", // Added
+          threads: "socialThreads", // Added
         };
 
         for (const [key, fieldId] of Object.entries(socMap)) {
