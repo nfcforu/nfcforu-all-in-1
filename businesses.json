@@ -1520,7 +1520,7 @@
   },
   "Prof-Sara-Hemaidia": {
     "name": "Prof Sara Hemaidia",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-08%20at%2007.40.02_2b23303a.jpg",
     "phone": "0659776558",
     "gradient": "linear-gradient(181deg,rgba(245, 245, 245, 1) 0%, rgba(115, 34, 103, 1) 100%)",
     "address": {
@@ -1536,7 +1536,7 @@
   },
   "Automatisme-Industriel-El-Eulma": {
     "name": "Automatisme Industriel El Eulma",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-08%20at%2007.52.20_467fbe2c.jpg",
     "phone": "07 95440146",
     "gradient": "linear-gradient(176deg,rgba(3, 3, 10, 1) 0%, rgba(9, 9, 121, 1) 44%, rgba(0, 212, 255, 1) 100%)",
     "address": {
@@ -1551,7 +1551,7 @@
   },
   "DIGISAT-CHEZ-WALID": {
     "name": "DIGISAT CHEZ WALID",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-08%20at%2008.25.55_ee8ca92e.jpg",
     "phone": "0662279278",
     "gradient": "linear-gradient(179deg,rgba(0, 0, 0, 1) 1%, rgba(145, 13, 13, 1) 41%)",
     "address": {
@@ -1563,6 +1563,37 @@
       "instagram": "https://www.instagram.com/digisat2024/",
       "tiktok": "https://www.tiktok.com/@wadiesat?_r=1&_t=ZN-9224SdpHqUw",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213662279278"
+    }
+  },
+  "Original-Store": {
+    "name": "Original Store",
+    "image": "",
+    "phone": "0550133312",
+    "gradient": "linear-gradient(178deg,rgba(38, 66, 66, 1) 30%, rgba(253, 187, 45, 1) 100%)",
+    "address": {
+      "text": "Kalitous",
+      "url": "https://maps.app.goo.gl/A6e5bvufTxhJmy1y7"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1BWeDsoeGL/",
+      "instagram": "https://www.instagram.com/original.store_riha?igsh=MTgwYmNxemx4eDV1eQ==",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213550133312",
+      "telegram": "https://t.me/+213550133312",
+      "viber": "viber://chat?number=%2B‪+213550133312"
+    }
+  },
+  "LG-Electronics-El-Bayadh": {
+    "name": "LG Electronics El Bayadh",
+    "image": "",
+    "phone": "0552 30 34 86",
+    "gradient": "linear-gradient(181deg,rgba(180, 58, 60, 1) 0%, rgba(255, 15, 15, 1) 38%, rgba(240, 230, 230, 1) 81%)",
+    "address": {
+      "text": "EL Bayadh",
+      "url": "https://maps.app.goo.gl/J21HqKDESKEWe3km7"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/LGElBayadh",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213552 30 34 86"
     }
   }
 }
