@@ -1564,5 +1564,22 @@
       "tiktok": "https://www.tiktok.com/@wadiesat?_r=1&_t=ZN-9224SdpHqUw",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213662279278"
     }
+  },
+  "Original-Store": {
+    "name": "Original Store",
+    "image": "",
+    "phone": "0550133312",
+    "gradient": "linear-gradient(178deg,rgba(38, 66, 66, 1) 30%, rgba(253, 187, 45, 1) 100%)",
+    "address": {
+      "text": "Kalitous",
+      "url": "https://maps.app.goo.gl/A6e5bvufTxhJmy1y7"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1BWeDsoeGL/",
+      "instagram": "https://www.instagram.com/original.store_riha?igsh=MTgwYmNxemx4eDV1eQ==",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213550133312",
+      "telegram": "https://t.me/+213550133312",
+      "viber": "viber://chat?number=%2B‪+213550133312"
+    }
   }
 }
