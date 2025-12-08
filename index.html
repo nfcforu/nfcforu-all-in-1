@@ -6,7 +6,7 @@
     <title id="page-title">Business Card</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <style>
       * {
@@ -149,7 +149,7 @@
       }
       .link-item.email .link-icon {
         background: linear-gradient(135deg, #5b6e7e 0%, #8ca1b1 100%);
-      } /* Email */
+      }
       .link-item.address .link-icon {
         background: linear-gradient(135deg, #fd746c 0%, #ff9068 100%);
       }
@@ -174,14 +174,22 @@
       }
       .link-item.telegram .link-icon {
         background: linear-gradient(135deg, #2aabee 0%, #229ed9 100%);
-      } /* Telegram */
+      }
       .link-item.snapchat .link-icon {
         background: linear-gradient(135deg, #fffc00 0%, #f5f200 100%);
         color: #000;
-      } /* Snapchat */
+      }
       .link-item.viber .link-icon {
         background: linear-gradient(135deg, #7360f2 0%, #665cac 100%);
-      } /* Viber */
+      }
+
+      /* New Styles for YouTube and Threads */
+      .link-item.youtube .link-icon {
+        background: linear-gradient(135deg, #ff0000 0%, #c4302b 100%);
+      }
+      .link-item.threads .link-icon {
+        background: linear-gradient(135deg, #000000 0%, #333333 100%);
+      }
 
       /* Modal Styles */
       .modal-overlay {
@@ -462,6 +470,9 @@
           snapchat: "fab fa-snapchat-ghost",
           telegram: "fab fa-telegram",
           viber: "fab fa-viber",
+          // New Icons (Supported by FA 6.5.1)
+          youtube: "fab fa-youtube",
+          threads: "fa-brands fa-threads",
         };
         return icons[type] || icons[platform] || "fas fa-link";
       }
@@ -480,6 +491,8 @@
           snapchat: "Ajoutez-nous sur Snap",
           telegram: "Rejoignez-nous",
           viber: "Contactez-nous sur Viber",
+          youtube: "Regardez notre chaîne",
+          threads: "Suivez-nous sur Threads",
         };
         return subtitles[type] || subtitles[platform] || "Visiter le lien";
       }
@@ -593,7 +606,7 @@
             });
           }
 
-          // Email (Handling new field)
+          // Email
           if (email) {
             links.push({
               type: "email",
@@ -619,7 +632,7 @@
             });
           }
 
-          // Socials (Automatically handles new types like telegram, viber, snapchat if in JSON)
+          // Socials
           Object.entries(socials).forEach(([platform, url]) => {
             links.push({
               type: platform,
