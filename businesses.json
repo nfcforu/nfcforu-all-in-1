@@ -1595,19 +1595,5 @@
       "facebook": "https://www.facebook.com/LGElBayadh",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213552 30 34 86"
     }
-  },
-  "KN-Cosmétique": {
-    "name": "KN Cosmétique",
-    "image": "",
-    "phone": "0696386636",
-    "gradient": "linear-gradient(181deg,rgba(138, 96, 6, 1) 37%, rgba(240, 230, 230, 1) 81%)",
-    "address": {
-      "text": "Sidi Abdelli",
-      "url": "https://maps.app.goo.gl/4TFDD3oe3MjxcRjV8"
-    },
-    "socials": {
-      "facebook": "https://www.facebook.com/khaled.kenadil",
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213555036927"
-    }
   }
 }
