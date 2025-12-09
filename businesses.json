@@ -1630,8 +1630,8 @@
   },
   "Patisserie-Cherchelloise-chez-chennaoui": {
     "name": "Patisserie Cherchelloise chez Chennaoui",
-    "image": "",
-    "phone": "0555347458",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-08%20at%2021.54.06_deb900bd.jpg",
+    "phone": "0770705659",
     "gradient": "linear-gradient(1deg,rgba(168, 37, 37, 1) 53%, rgba(71, 55, 55, 1) 86%)",
     "address": {
       "text": "Cherchell",
@@ -1646,7 +1646,7 @@
   },
   "Bibiche-Cosmetique": {
     "name": "Bibiche Cosmetique ",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-08%20at%2022.07.50_5c341a10.jpg",
     "phone": "0663290343",
     "gradient": "linear-gradient(179deg,rgba(42, 38, 43, 1) 0%, rgba(224, 171, 11, 1) 100%)",
     "address": {
@@ -1662,7 +1662,7 @@
   },
   "MAD-Concept": {
     "name": "MAD Concept ",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-08%20at%2022.14.11_68cfc9a9.jpg",
     "phone": "0560 955 355",
     "gradient": "linear-gradient(59deg,rgba(217, 204, 208, 1) 0%, rgba(18, 21, 23, 1) 100%)",
     "address": {
@@ -1675,6 +1675,40 @@
       "tiktok": "https://www.tiktok.com/@madconcept_?_d=secCgYIASAHKAESPgo8hXiDh0jbrGzVX1mxK4b%2BezlzM%2BHDTiZ2m1ePJkIbr14dUTkMVBlcufgt2jMP4j%2F7ZoWsbjqr%2BLZsJKHfGgA%3D&_r=1&_svg=1&checksum=681076a52d4c1160aac5a283edbf447146d5a5095ea901e0583f6e058d30c3fa&lang=fr&sec_uid=MS4wLjABAAAAWghc51xnFhA-eyYmLLP288ZZtGFAn0YuU-93loMHp_42xyzbSna6sHbDO8Cyh76g&sec_user_id=MS4wLjABAAAAWuCvSP7kFPL8mQIvLi8Gaujnjc9RZC_xSnrNO__khDkSYu_PWl7bNODu-9ZWeMuW&share_app_id=1340&share_author_id=7137442058282173445&share_link_id=cc9ac57f-7786-42cd-83f7-648a28823561&share_region=DZ&share_scene=1&sharer_language=fr&source=h5_m&timestamp=1765210299&u_code=e12flgl5l410la&ugbiz_name=Account&user_id=7080989858286060550&utm_campaign=client_share&utm_source=whatsapp",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B+213 550 19 21 93",
       "website": "http://www.madconcept.dz"
+    }
+  },
+  "Librairie-et-papiterie-Amine": {
+    "name": "Librairie et papeterie Amine ",
+    "image": "",
+    "phone": "0774579448",
+    "gradient": "linear-gradient(178deg,rgba(22, 12, 28, 1) 0%, rgba(219, 26, 26, 1) 50%, rgba(196, 119, 12, 1) 80%)",
+    "address": {
+      "text": "Oran",
+      "url": "https://maps.app.goo.gl/1GLnNaW7ysJBkmDd7"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61559848868485",
+      "instagram": "https://www.instagram.com/librairie_papiterie_amine?utm_source=qr&igsh=MXdpZDM2dnJnZ2txaQ%3D%3D",
+      "whatsapp": "https://api.whatsapp.com/send?phone=+213774579448",
+      "telegram": "https://t.me/librairieetpapiterieamine"
+    }
+  },
+  "OM-achad-asinat": {
+    "name": "ام شهد اسينات",
+    "image": "",
+    "phone": "0672265616",
+    "gradient": "linear-gradient(179deg,rgba(20, 11, 26, 1) 3%, rgba(212, 171, 25, 1) 80%)",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/am.shhd.asynat?mibextid=wwXIfr&rdid=89c7WvZVke81V3vS&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15RuTneD4cD%2F%3Fmibextid%3DwwXIfr#",
+      "instagram": "https://www.instagram.com/michaislami?igsh=NTM5NmlqYng5bmd1&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@islami.abiza?_r=1&_t=ZN-924w6kWBzyo",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213672265616",
+      "snapchat": "https://snapchat.com/t/ZCGAoQ9X",
+      "youtube": "https://www.youtube.com/@michaislami1755"
     }
   }
 }
