@@ -1692,5 +1692,23 @@
       "whatsapp": "https://api.whatsapp.com/send?phone=+213774579448",
       "telegram": "https://t.me/librairieetpapiterieamine"
     }
+  },
+  "OM-achad-asinat": {
+    "name": "ام شهد اسينات",
+    "image": "",
+    "phone": "0672265616",
+    "gradient": "linear-gradient(65deg,rgba(22, 12, 28, 1) 0%, rgba(196, 119, 12, 1) 80%)",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/am.shhd.asynat?mibextid=wwXIfr&rdid=89c7WvZVke81V3vS&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15RuTneD4cD%2F%3Fmibextid%3DwwXIfr#",
+      "instagram": "https://www.instagram.com/michaislami?igsh=NTM5NmlqYng5bmd1&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@islami.abiza?_r=1&_t=ZN-924w6kWBzyo",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213672265616",
+      "snapchat": "https://snapchat.com/t/ZCGAoQ9X",
+      "youtube": "https://www.youtube.com/@michaislami1755"
+    }
   }
 }
