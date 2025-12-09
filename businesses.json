@@ -1547,7 +1547,8 @@
     "socials": {
       "facebook": "https://www.facebook.com/khaled.boumezbeur.54?mibextid=wwXIfr",
       "tiktok": "https://www.tiktok.com/@automatismeeleulma?_r=1&_t=ZS-92205T4RL2w",
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213556378083"
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213556378083",
+      "youtube": "https://www.youtube.com/@Automatisme-industriel.Eleulma"
     }
   },
   "DIGISAT-CHEZ-WALID": {
@@ -1568,7 +1569,7 @@
   },
   "Original-Store": {
     "name": "Original Store",
-    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-08%20at%2012.19.25_8c02bd07.jpg",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-08%20at%2013.10.39_e747ad9a.jpg",
     "phone": "0550133312",
     "gradient": "linear-gradient(178deg,rgba(38, 66, 66, 1) 30%, rgba(253, 187, 45, 1) 100%)",
     "address": {
@@ -1600,7 +1601,7 @@
   "KN-COSMETIQUE": {
     "name": "KN-Cosmetique",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-08%20at%2011.59.16_fc58b758.jpg",
-    "phone": "06963866",
+    "phone": "0696386636",
     "gradient": "linear-gradient(1deg,rgba(145, 103, 31, 1) 39%, rgba(43, 31, 31, 1) 81%)",
     "address": {
       "text": "Sidi Abdelli",
@@ -1625,6 +1626,55 @@
       "instagram": "https://www.tiktok.com/@mohamedzawali4?_r=1&_t=ZS-9237NAZrnqm",
       "tiktok": "https://www.tiktok.com/@mohamedzawali4?_r=1&_t=ZS-9237NAZrnqm",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770310441"
+    }
+  },
+  "Patisserie-Cherchelloise-chez-chennaoui": {
+    "name": "Patisserie Cherchelloise chez Chennaoui",
+    "image": "",
+    "phone": "0555347458",
+    "gradient": "linear-gradient(1deg,rgba(168, 37, 37, 1) 53%, rgba(71, 55, 55, 1) 86%)",
+    "address": {
+      "text": "Cherchell",
+      "url": "https://maps.app.goo.gl/RtTrocsmDkGg2rij8"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/patisseriechennaoui?rdid=bQwbSRc6x8V2pZ9T&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BWepAZq7Z%2F#",
+      "instagram": "https://www.instagram.com/pch20_02?utm_source=qr&igsh=MWxmYmtlZXR6eTZtMQ%3D%3D",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770705659",
+      "snapchat": "https://www.snapchat.com/@youcefchennaoui?share_id=oYLOq06MLhs&locale=fr-FR"
+    }
+  },
+  "Bibiche-Cosmetique": {
+    "name": "Bibiche Cosmetique ",
+    "image": "",
+    "phone": "0663290343",
+    "gradient": "linear-gradient(179deg,rgba(42, 38, 43, 1) 0%, rgba(224, 171, 11, 1) 100%)",
+    "address": {
+      "text": "Ben Mehdi",
+      "url": "https://maps.app.goo.gl/kqcJsyBw9ppkX7ws8"
+    },
+    "socials": {
+      "facebook": "www.facebook.com/share/1DuWLfnAax/",
+      "instagram": "https://www.instagram.com/bibiche_cosmitique?igsh=MWR6Y3JjNWgwd3Zqcg%3D%3D",
+      "tiktok": "https://www.tiktok.com/@bibiche.cosmtique6?_r=1&_t=ZS-923qvSJszzM",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213663290343"
+    }
+  },
+  "MAD-Concept": {
+    "name": "MAD Concept ",
+    "image": "",
+    "phone": "0560 955 355",
+    "gradient": "linear-gradient(59deg,rgba(217, 204, 208, 1) 0%, rgba(18, 21, 23, 1) 100%)",
+    "address": {
+      "text": "El Achour",
+      "url": "https://maps.app.goo.gl/zvBxwNsNWBgk66Mi7"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/mad.stores?rdid=q6F9G1rPzrv3FCaO&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BaC5VLqLh%2F#",
+      "instagram": "https://www.instagram.com/madconcept_?igsh=MXZwa21oaWViYXd1NQ%3D%3D",
+      "tiktok": "https://www.tiktok.com/@madconcept_?_d=secCgYIASAHKAESPgo8hXiDh0jbrGzVX1mxK4b%2BezlzM%2BHDTiZ2m1ePJkIbr14dUTkMVBlcufgt2jMP4j%2F7ZoWsbjqr%2BLZsJKHfGgA%3D&_r=1&_svg=1&checksum=681076a52d4c1160aac5a283edbf447146d5a5095ea901e0583f6e058d30c3fa&lang=fr&sec_uid=MS4wLjABAAAAWghc51xnFhA-eyYmLLP288ZZtGFAn0YuU-93loMHp_42xyzbSna6sHbDO8Cyh76g&sec_user_id=MS4wLjABAAAAWuCvSP7kFPL8mQIvLi8Gaujnjc9RZC_xSnrNO__khDkSYu_PWl7bNODu-9ZWeMuW&share_app_id=1340&share_author_id=7137442058282173445&share_link_id=cc9ac57f-7786-42cd-83f7-648a28823561&share_region=DZ&share_scene=1&sharer_language=fr&source=h5_m&timestamp=1765210299&u_code=e12flgl5l410la&ugbiz_name=Account&user_id=7080989858286060550&utm_campaign=client_share&utm_source=whatsapp",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B+213 550 19 21 93",
+      "website": "http://www.madconcept.dz"
     }
   }
 }
