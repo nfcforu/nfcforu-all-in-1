@@ -1676,5 +1676,21 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B+213 550 19 21 93",
       "website": "http://www.madconcept.dz"
     }
+  },
+  "Librairie-et-papiterie-Amine": {
+    "name": "Librairie et papeterie Amine ",
+    "image": "",
+    "phone": "0774579448",
+    "gradient": "linear-gradient(178deg,rgba(22, 12, 28, 1) 0%, rgba(219, 26, 26, 1) 50%, rgba(196, 119, 12, 1) 80%)",
+    "address": {
+      "text": "Oran",
+      "url": "https://maps.app.goo.gl/1GLnNaW7ysJBkmDd7"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61559848868485",
+      "instagram": "https://www.instagram.com/librairie_papiterie_amine?utm_source=qr&igsh=MXdpZDM2dnJnZ2txaQ%3D%3D",
+      "whatsapp": "https://api.whatsapp.com/send?phone=+213774579448",
+      "telegram": "https://t.me/librairieetpapiterieamine"
+    }
   }
 }
