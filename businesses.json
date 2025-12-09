@@ -1711,5 +1711,21 @@
       "snapchat": "https://snapchat.com/t/ZCGAoQ9X",
       "youtube": "https://www.youtube.com/@michaislami1755"
     }
+  },
+  "WOMAN-S-SHOES": {
+    "name": "WOMANS`S SHOES",
+    "image": "",
+    "phone": "0696363614",
+    "gradient": "linear-gradient(1deg,rgba(168, 2, 2, 1) 49%, rgba(235, 221, 221, 1) 99%)",
+    "address": {
+      "text": "Batna",
+      "url": "https://maps.app.goo.gl/SCSzrGe3mYaG4Dsn8"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/17rpRkWF9k/",
+      "instagram": "https://www.instagram.com/sho_esstore05?igsh=M3c1dnltOWt6c2xl",
+      "tiktok": "https://www.tiktok.com/@shose.store59",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213696363614"
+    }
   }
 }
