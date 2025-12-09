@@ -1713,10 +1713,10 @@
     }
   },
   "WOMAN-S-SHOES": {
-    "name": "WOMANS`S SHOES",
+    "name": "Shoes Store ",
     "image": "",
     "phone": "0696363614",
-    "gradient": "linear-gradient(1deg,rgba(168, 2, 2, 1) 49%, rgba(235, 221, 221, 1) 99%)",
+    "gradient": "linear-gradient(1deg,rgba(222, 69, 153, 1) 51%, rgba(46, 22, 34, 1) 89%)",
     "address": {
       "text": "Batna",
       "url": "https://maps.app.goo.gl/SCSzrGe3mYaG4Dsn8"
