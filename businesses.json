@@ -1743,5 +1743,22 @@
       "tiktok": "https://www.tiktok.com/@grifaplus?_r=1&_t=ZS-926cMtIXfVf",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213663809485"
     }
+  },
+  "Optic-Belaid-Ritadj": {
+    "name": "Optic Belaid Ritadj ",
+    "image": "",
+    "phone": "0770364173",
+    "gradient": "linear-gradient(179deg,rgba(247, 247, 247, 1) 0%, rgba(64, 64, 199, 1) 0%, rgba(0, 212, 255, 1) 100%)",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=100064163497981",
+      "instagram": "https://www.instagram.com/reel/DRHIyK2jDww/?igsh=MWdhd3Q3aDhuM3Jvdg%3D%3D&fbclid=IwY2xjawOmb9tleHRuA2FlbQIxMABicmlkETEybFdFcHR0RHlWU084NkRZc3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEe6B5Khcfcj85NToFqhMEwmePmm0EIRqLyHrG8CWpyjvv5xy7SJBl9PAj-Ezs_aem_PLidq4kfObv4bq29XNLkNQ",
+      "tiktok": "https://www.tiktok.com/@optic.belaid.rita/video/7581865029968956692?_r=1&_t=ZS-926hVdgPYM0",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213556037774",
+      "viber": "viber://chat?number=%2B‪+213556 03 77 74"
+    }
   }
 }
