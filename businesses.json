@@ -1776,5 +1776,19 @@
       "tiktok": "https://www.tiktok.com/@bonheur.emballage",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213660 52 00 05"
     }
+  },
+  "Beauty-cosmetique": {
+    "name": "Beauty Cosmetique ",
+    "image": "",
+    "phone": "0697 55 12 00",
+    "gradient": "linear-gradient(1deg,rgba(80, 28, 153, 1) 0%, rgba(212, 201, 201, 1) 100%)",
+    "address": {
+      "text": "Berriane",
+      "url": "https://maps.app.goo.gl/inczcu2prEtYrjL56"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1Bnibri2D5/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213697 55 12 00"
+    }
   }
 }
