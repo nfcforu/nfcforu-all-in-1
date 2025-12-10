@@ -1714,7 +1714,7 @@
   },
   "WOMAN-S-SHOES": {
     "name": "Shoes Store ",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/Screenshot%202025-12-10%20102042.png",
     "phone": "0696363614",
     "gradient": "linear-gradient(1deg,rgba(222, 69, 153, 1) 51%, rgba(46, 22, 34, 1) 89%)",
     "address": {
