@@ -1730,10 +1730,9 @@
   },
   "Boutique-Grifa": {
     "name": "Boutique Grifa",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-10%20at%2013.30.11_08064dec.jpg",
     "phone": "0666325309",
     "gradient": "linear-gradient(176deg,rgba(48, 47, 47, 1) 0%, rgba(191, 161, 25, 1) 100%)",
-    "menu": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-10%20at%2013.30.11_08064dec.jpg",
     "address": {
       "text": " Tebessa",
       "url": "https://maps.app.goo.gl/B5AzZ55cLgP2AiVq7"
