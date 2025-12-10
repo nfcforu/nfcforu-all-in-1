@@ -1795,7 +1795,7 @@
     "name": "HM PVC",
     "image": "",
     "phone": "0776758973",
-    "gradient": " linear-gradient(0deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 62%, rgba(0, 212, 255, 1) 100%)",
+    "gradient": "linear-gradient(78deg,rgba(0, 0, 3, 1) 0%, rgba(22, 174, 204, 1) 100%)",
     "address": {
       "text": "Medea",
       "url": "https://maps.app.goo.gl/PFPza16A5AWKYNJW6"
