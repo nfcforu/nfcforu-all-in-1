@@ -1790,5 +1790,20 @@
       "facebook": "https://www.facebook.com/share/1Bnibri2D5/",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213697 55 12 00"
     }
+  },
+  "HM-PVC": {
+    "name": "HM PVC",
+    "image": "",
+    "phone": "0776758973",
+    "gradient": "inear-gradient(0deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 62%, rgba(0, 212, 255, 1) 100%)",
+    "address": {
+      "text": "Medea",
+      "url": "https://maps.app.goo.gl/PFPza16A5AWKYNJW6"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61577943520353&rdid=bO45RB0Qp965vLSg&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BeqUaiHez%2F#",
+      "tiktok": "https://www.tiktok.com/@artofpvc?fbclid=IwY2xjawOm4xhleHRuA2FlbQIxMABicmlkETFSQjNLcG1SU2VDRU90cW1Vc3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEe9i0CcpnvcAEgvq5aNLGAqwBU5k9W0DWxIxckASJ1kM5kzemDu-J_rMkFY7Q_aem_hg2Y4gafDnsHqMqCMhPGCA",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213776758973"
+    }
   }
 }
