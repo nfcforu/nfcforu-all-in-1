@@ -1714,7 +1714,7 @@
   },
   "WOMAN-S-SHOES": {
     "name": "Shoes Store ",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/Screenshot%202025-12-10%20102042.png",
     "phone": "0696363614",
     "gradient": "linear-gradient(1deg,rgba(222, 69, 153, 1) 51%, rgba(46, 22, 34, 1) 89%)",
     "address": {
@@ -1726,6 +1726,22 @@
       "instagram": "https://www.instagram.com/sho_esstore05?igsh=M3c1dnltOWt6c2xl",
       "tiktok": "https://www.tiktok.com/@shose.store59",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213696363614"
+    }
+  },
+  "Boutique-Grifa": {
+    "name": "Boutique Grifa",
+    "image": "",
+    "phone": "0666325309",
+    "gradient": "linear-gradient(176deg,rgba(48, 47, 47, 1) 0%, rgba(191, 161, 25, 1) 100%)",
+    "address": {
+      "text": " Tebessa",
+      "url": "https://maps.app.goo.gl/B5AzZ55cLgP2AiVq7"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=100064068131999",
+      "instagram": "www.instagram.com/grifaplussss?igsh=MTJuZDZ5NmpmaWRhZA==",
+      "tiktok": "https://www.tiktok.com/@grifaplus?_r=1&_t=ZS-926cMtIXfVf",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213663809485"
     }
   }
 }
