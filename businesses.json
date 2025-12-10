@@ -1647,7 +1647,7 @@
   "Bibiche-Cosmetique": {
     "name": "Bibiche Cosmetique ",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-08%20at%2022.07.50_5c341a10.jpg",
-    "phone": "0663290343",
+    "phone": "0698231212",
     "gradient": "linear-gradient(179deg,rgba(42, 38, 43, 1) 0%, rgba(224, 171, 11, 1) 100%)",
     "address": {
       "text": "Ben Mehdi",
@@ -1657,7 +1657,7 @@
       "facebook": "www.facebook.com/share/1DuWLfnAax/",
       "instagram": "https://www.instagram.com/bibiche_cosmitique?igsh=MWR6Y3JjNWgwd3Zqcg%3D%3D",
       "tiktok": "https://www.tiktok.com/@bibiche.cosmtique6?_r=1&_t=ZS-923qvSJszzM",
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213663290343"
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213698231212"
     }
   },
   "MAD-Concept": {
@@ -1679,7 +1679,7 @@
   },
   "Librairie-et-papiterie-Amine": {
     "name": "Librairie et papeterie Amine ",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-09%20at%2013.27.01_349150b6.jpg",
     "phone": "0774579448",
     "gradient": "linear-gradient(178deg,rgba(22, 12, 28, 1) 0%, rgba(219, 26, 26, 1) 50%, rgba(196, 119, 12, 1) 80%)",
     "address": {
@@ -1695,12 +1695,13 @@
   },
   "OM-achad-asinat": {
     "name": "ام شهد اسينات",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-09%20at%2013.34.19_058c2948.jpg",
     "phone": "0672265616",
+    "email": "michaislali31@gmail.com",
     "gradient": "linear-gradient(179deg,rgba(20, 11, 26, 1) 3%, rgba(212, 171, 25, 1) 80%)",
     "address": {
-      "text": "",
-      "url": ""
+      "text": "Tamanrasset, Algeria",
+      "url": "https://www.google.com/maps/@22.7864749,5.5212244,4012m/data=!3m2!1e3!4b1!4m5!7m4!1m2!1s108380399000886927533!2sChZJcmt2UVZaNDJfcjd4SXpCVlZheWJ3EggHBkWFHUzrWQ%3D%3D!2e2?hl=fr&entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D"
     },
     "socials": {
       "facebook": "https://www.facebook.com/am.shhd.asynat?mibextid=wwXIfr&rdid=89c7WvZVke81V3vS&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15RuTneD4cD%2F%3Fmibextid%3DwwXIfr#",
@@ -1709,6 +1710,22 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213672265616",
       "snapchat": "https://snapchat.com/t/ZCGAoQ9X",
       "youtube": "https://www.youtube.com/@michaislami1755"
+    }
+  },
+  "WOMAN-S-SHOES": {
+    "name": "Shoes Store ",
+    "image": "",
+    "phone": "0696363614",
+    "gradient": "linear-gradient(1deg,rgba(222, 69, 153, 1) 51%, rgba(46, 22, 34, 1) 89%)",
+    "address": {
+      "text": "Batna",
+      "url": "https://maps.app.goo.gl/SCSzrGe3mYaG4Dsn8"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/17rpRkWF9k/",
+      "instagram": "https://www.instagram.com/sho_esstore05?igsh=M3c1dnltOWt6c2xl",
+      "tiktok": "https://www.tiktok.com/@shose.store59",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213696363614"
     }
   }
 }
