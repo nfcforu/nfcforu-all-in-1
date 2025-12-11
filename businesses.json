@@ -1746,19 +1746,64 @@
   },
   "Optic-Belaid-Ritadj": {
     "name": "Optic Belaid Ritadj ",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-10%20at%2015.00.02_0b4d2c0d.jpg",
     "phone": "0770364173",
-    "gradient": "linear-gradient(92deg,rgba(247, 247, 247, 1) 0%, rgba(103, 103, 158, 1) 35%, rgba(0, 212, 255, 1) 100%)",
+    "gradient": "linear-gradient(179deg,rgba(247, 247, 247, 1) 0%, rgba(64, 64, 199, 1) 0%, rgba(0, 212, 255, 1) 100%)",
     "address": {
-      "text": "Bachdjerah",
-      "url": "https://maps.app.goo.gl/ixknbsi4edf1MiX39"
+      "text": "",
+      "url": ""
     },
     "socials": {
-      "facebook": "https://www.facebook.com/profile.php?id=61584489886595",
-      "instagram": "https://www.instagram.com/reel/DRHIyK2jDww/?igsh=MWdhd3Q3aDhuM3Jvdg%3D%3D&fbclid=IwY2xjawOmYKJleHRuA2FlbQIxMABicmlkETEybFdFcHR0RHlWU084NkRZc3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEe3ZT3At75LYqdP6j6IPXu0-EKFIdUkzuk2BQqmd4BKZLpLCYVcuNhyr33bPY_aem_Iss8yEilq0b9VKOlwl4fYA",
+      "facebook": "https://www.facebook.com/profile.php?id=100064163497981",
+      "instagram": "https://www.instagram.com/reel/DRHIyK2jDww/?igsh=MWdhd3Q3aDhuM3Jvdg%3D%3D&fbclid=IwY2xjawOmb9tleHRuA2FlbQIxMABicmlkETEybFdFcHR0RHlWU084NkRZc3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEe6B5Khcfcj85NToFqhMEwmePmm0EIRqLyHrG8CWpyjvv5xy7SJBl9PAj-Ezs_aem_PLidq4kfObv4bq29XNLkNQ",
       "tiktok": "https://www.tiktok.com/@optic.belaid.rita/video/7581865029968956692?_r=1&_t=ZS-926hVdgPYM0",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213556037774",
-      "telegram": "https://t.me/+213556 03 77 74"
+      "viber": "viber://chat?number=%2B‪+213556 03 77 74"
+    }
+  },
+  "Bonheur-Emballage": {
+    "name": "Bonheur Emballage",
+    "image": "",
+    "phone": "0670394591",
+    "gradient": "linear-gradient(359deg,rgba(176, 18, 76, 1) 0%, rgba(61, 51, 40, 1) 100%)",
+    "address": {
+      "text": "Maascr",
+      "url": "https://maps.app.goo.gl/GyKhdM2XRzDKsFw76"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1GeAvFcs6Q/",
+      "instagram": "https://www.instagram.com/bonheuremballage?igsh=MWhmY2RzOWR4Mndkaw==",
+      "tiktok": "https://www.tiktok.com/@bonheur.emballage",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213660 52 00 05"
+    }
+  },
+  "Beauty-cosmetique": {
+    "name": "Beauty Cosmetique ",
+    "image": "",
+    "phone": "0697 55 12 00",
+    "gradient": "linear-gradient(1deg,rgba(80, 28, 153, 1) 0%, rgba(212, 201, 201, 1) 100%)",
+    "address": {
+      "text": "Berriane",
+      "url": "https://maps.app.goo.gl/inczcu2prEtYrjL56"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1Bnibri2D5/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213697 55 12 00"
+    }
+  },
+  "HM-PVC": {
+    "name": "HM PVC",
+    "image": "",
+    "phone": "0776758973",
+    "gradient": "linear-gradient(78deg,rgba(0, 0, 3, 1) 0%, rgba(22, 174, 204, 1) 100%)",
+    "address": {
+      "text": "Medea",
+      "url": "https://maps.app.goo.gl/PFPza16A5AWKYNJW6"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61577943520353&rdid=bO45RB0Qp965vLSg&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BeqUaiHez%2F#",
+      "tiktok": "https://www.tiktok.com/@artofpvc?fbclid=IwY2xjawOm4xhleHRuA2FlbQIxMABicmlkETFSQjNLcG1SU2VDRU90cW1Vc3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEe9i0CcpnvcAEgvq5aNLGAqwBU5k9W0DWxIxckASJ1kM5kzemDu-J_rMkFY7Q_aem_hg2Y4gafDnsHqMqCMhPGCA",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213776758973"
     }
   }
 }
