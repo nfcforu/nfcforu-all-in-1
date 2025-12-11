@@ -1836,5 +1836,21 @@
       "tiktok": "https://www.tiktok.com/@saidi_kids?_r=1&_t=ZS-928BumtnQ99&fbclid=IwY2xjawOnjBdleHRuA2FlbQIxMABicmlkETFLbFphMVRodWZVVTRtb3F0c3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEePhVUssVBG_TwlBNdnkEwJy5i17j3vb8lq2P_w0gRnSLuh-Hcou3doVVPQ08_aem_UK37PwNIrdEuHGNZfSUFUg",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213797139203"
     }
+  },
+  "MAMLAKAT-ELOUTOUR-FAKHIRA": {
+    "name": "مملكة العطور الفاخرة",
+    "image": "",
+    "phone": "0662477910",
+    "gradient": "linear-gradient(115deg,rgba(99, 96, 10, 1) 0%, rgba(4, 5, 8, 1) 100%)",
+    "address": {
+      "text": " Djamaa",
+      "url": "https://maps.app.goo.gl/paz9wK7ZstNs7jwG6"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1BeXYqoA1u/",
+      "instagram": "https://www.instagram.com/allaeddinekouizi?igsh=ZHgyeHl5eTQ0cnVu",
+      "tiktok": "https://www.tiktok.com/@allakouizi22?_r=1&_t=ZS-928D2sNm4aS",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213662477910"
+    }
   }
 }
