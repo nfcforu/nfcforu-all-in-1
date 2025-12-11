@@ -1748,10 +1748,10 @@
     "name": "Optic Belaid Ritadj ",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-10%20at%2015.00.02_0b4d2c0d.jpg",
     "phone": "0770364173",
-    "gradient": "linear-gradient(179deg,rgba(247, 247, 247, 1) 0%, rgba(64, 64, 199, 1) 0%, rgba(0, 212, 255, 1) 100%)",
+    "gradient": "linear-gradient(90deg,rgba(13, 0, 0, 1) 0%, rgba(6, 107, 140, 1) 0%)",
     "address": {
-      "text": "",
-      "url": ""
+      "text": " Bachdjerah",
+      "url": "https://maps.app.goo.gl/2jQvbTmhFUjo145y9"
     },
     "socials": {
       "facebook": "https://www.facebook.com/profile.php?id=100064163497981",
@@ -1763,7 +1763,7 @@
   },
   "Bonheur-Emballage": {
     "name": "Bonheur Emballage",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-10%20at%2016.47.09_f161da15.jpg",
     "phone": "0670394591",
     "gradient": "linear-gradient(359deg,rgba(176, 18, 76, 1) 0%, rgba(61, 51, 40, 1) 100%)",
     "address": {
@@ -1779,7 +1779,7 @@
   },
   "Beauty-cosmetique": {
     "name": "Beauty Cosmetique ",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-10%20at%2023.30.54_ea7f47ba.jpg",
     "phone": "0697 55 12 00",
     "gradient": "linear-gradient(1deg,rgba(80, 28, 153, 1) 0%, rgba(212, 201, 201, 1) 100%)",
     "address": {
@@ -1793,7 +1793,7 @@
   },
   "HM-PVC": {
     "name": "HM PVC",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-10%20at%2023.40.20_b9e5cbf9.jpg",
     "phone": "0776758973",
     "gradient": "linear-gradient(78deg,rgba(0, 0, 3, 1) 0%, rgba(22, 174, 204, 1) 100%)",
     "address": {
@@ -1804,6 +1804,37 @@
       "facebook": "https://www.facebook.com/profile.php?id=61577943520353&rdid=bO45RB0Qp965vLSg&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BeqUaiHez%2F#",
       "tiktok": "https://www.tiktok.com/@artofpvc?fbclid=IwY2xjawOm4xhleHRuA2FlbQIxMABicmlkETFSQjNLcG1SU2VDRU90cW1Vc3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEe9i0CcpnvcAEgvq5aNLGAqwBU5k9W0DWxIxckASJ1kM5kzemDu-J_rMkFY7Q_aem_hg2Y4gafDnsHqMqCMhPGCA",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213776758973"
+    }
+  },
+  "CaZa-Foulard": {
+    "name": "CaZa Foulard ",
+    "image": "",
+    "phone": "0 772 29 58 37",
+    "gradient": "linear-gradient(86deg,rgba(0, 0, 3, 1) 0%, rgba(204, 22, 131, 1) 100%)",
+    "address": {
+      "text": "Les Eucalyptus",
+      "url": "https://maps.app.goo.gl/6uCuHub8jfSyYgsB9"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61563329876017&mibextid=wwXIfr&rdid=XGiMlWNfmBuZKGuR&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BWUasCU1b%2F%3Fmibextid%3DwwXIfr#",
+      "instagram": "https://www.instagram.com/caza.foulard16?igsh=dWpvYXBwcWpibHZj&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@caza.foulard?_r=1&_t=ZS-927uZZndkCf",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213772295837"
+    }
+  },
+  "Saidi-kids": {
+    "name": "Saidi kids",
+    "image": "",
+    "phone": "0797139203",
+    "gradient": "linear-gradient(90deg,rgba(13, 0, 0, 1) 0%, rgba(219, 195, 11, 1) 100%)",
+    "address": {
+      "text": " Zeboudja",
+      "url": "https://maps.app.goo.gl/NjsQrzWSDYmYY7Dz6"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=100063463630075",
+      "tiktok": "https://www.tiktok.com/@saidi_kids?_r=1&_t=ZS-928BumtnQ99&fbclid=IwY2xjawOnjBdleHRuA2FlbQIxMABicmlkETFLbFphMVRodWZVVTRtb3F0c3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEePhVUssVBG_TwlBNdnkEwJy5i17j3vb8lq2P_w0gRnSLuh-Hcou3doVVPQ08_aem_UK37PwNIrdEuHGNZfSUFUg",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213797139203"
     }
   }
 }
