@@ -1852,5 +1852,21 @@
       "tiktok": "https://www.tiktok.com/@allakouizi22?_r=1&_t=ZS-928D2sNm4aS",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213662477910"
     }
+  },
+  "karizma-Style": {
+    "name": "karizma Style  ",
+    "image": "",
+    "phone": "0665 33 65 21",
+    "gradient": " linear-gradient(115deg,rgba(26, 8, 8, 1) 0%, rgba(194, 6, 6, 1) 100%)",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61581918998456&sk=reels_tab",
+      "tiktok": "https://www.tiktok.com/@karizmastyle/video/7581060302872055047?_r=1&u_code=e418j46bg2mcc3&preview_pb=0&sharer_language=fr&_d=eldgbebg1kilih&share_item_id=7581060302872055047&source=h5_m&timestamp=1765451359&user_id=7145486343991919618&sec_user_id=MS4wLjABAAAA1efDl_XyH5mGre1o_jtNWc2sHpHlFFQhQp0NipoNZiHz0ErRKBlLo_d0GJ7jjMyk&item_author_type=1&social_share_type=0&utm_source=whatsapp&utm_campaign=client_share&utm_medium=android&share_iid=7582280478356702984&share_link_id=c00b9f35-bb5e-4d4a-9564-4f217dcd125d&share_app_id=1233&ugbiz_name=MAIN&ug_btm=b8727%2Cb2878&link_reflow_popup_iteration_sharer=%7B%22click_empty_to_play%22%3A1%2C%22dynamic_cover%22%3A1%2C%22follow_to_play_duration%22%3A-1.0%2C%22profile_clickable%22%3A1%7D&enable_checksum=1",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213665 33 65 21",
+      "telegram": "https://t.me/+213665 33 65 21"
+    }
   }
 }
