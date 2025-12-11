@@ -1867,5 +1867,21 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213665 33 65 21",
       "telegram": "https://t.me/+213665 33 65 21"
     }
+  },
+  "TEA-TABNIDJA": {
+    "name": "شاي و تبنيجة",
+    "image": "",
+    "phone": "0540839453",
+    "gradient": "linear-gradient(90deg,rgba(66, 61, 61, 1) 0%, rgba(196, 120, 14, 1) 100%)",
+    "address": {
+      "text": "Bordj El Kiffan",
+      "url": "https://maps.app.goo.gl/W8W1XZ8iXvs7fUCH8"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61570038714423&mibextid=ZbWKwL",
+      "tiktok": "https://www.tiktok.com/@user488156146167?_r=1&_t=ZS-928S3prXJLA&fbclid=IwY2xjawOnz6dleHRuA2FlbQIxMABicmlkETFnNG9RSVhzOGY4dmxqZU1Wc3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEeZ1MvptkKCA3nqm6DNa2oEA4aIxmYPkP3ZIozqOMTFK6MPZS1B3OlqCpzdUQ_aem_ID9621g6nxryMbEgP4EupQ",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213540839453",
+      "viber": "viber://chat?number=%2B‪+213540839453"
+    }
   }
 }
