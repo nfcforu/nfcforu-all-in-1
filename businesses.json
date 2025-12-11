@@ -1821,5 +1821,20 @@
       "tiktok": "https://www.tiktok.com/@caza.foulard?_r=1&_t=ZS-927uZZndkCf",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213772295837"
     }
+  },
+  "Saidi-kids": {
+    "name": "Saidi kids",
+    "image": "",
+    "phone": "0797139203",
+    "gradient": "linear-gradient(90deg,rgba(13, 0, 0, 1) 0%, rgba(219, 195, 11, 1) 100%)",
+    "address": {
+      "text": " Zeboudja",
+      "url": "https://maps.app.goo.gl/NjsQrzWSDYmYY7Dz6"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=100063463630075",
+      "tiktok": "https://www.tiktok.com/@saidi_kids?_r=1&_t=ZS-928BumtnQ99&fbclid=IwY2xjawOnjBdleHRuA2FlbQIxMABicmlkETFLbFphMVRodWZVVTRtb3F0c3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEePhVUssVBG_TwlBNdnkEwJy5i17j3vb8lq2P_w0gRnSLuh-Hcou3doVVPQ08_aem_UK37PwNIrdEuHGNZfSUFUg",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213797139203"
+    }
   }
 }
