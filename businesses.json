@@ -1808,7 +1808,7 @@
   },
   "CaZa-Foulard": {
     "name": "CaZa Foulard ",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-11%20at%2010.06.25_d4127e2b.jpg",
     "phone": "0 772 29 58 37",
     "gradient": "linear-gradient(86deg,rgba(0, 0, 3, 1) 0%, rgba(204, 22, 131, 1) 100%)",
     "address": {
@@ -1824,7 +1824,7 @@
   },
   "Saidi-kids": {
     "name": "Saidi kids",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-11%20at%2011.38.51_71c5e613.jpg",
     "phone": "0797139203",
     "gradient": "linear-gradient(90deg,rgba(13, 0, 0, 1) 0%, rgba(219, 195, 11, 1) 100%)",
     "address": {
@@ -1835,6 +1835,22 @@
       "facebook": "https://www.facebook.com/profile.php?id=100063463630075",
       "tiktok": "https://www.tiktok.com/@saidi_kids?_r=1&_t=ZS-928BumtnQ99&fbclid=IwY2xjawOnjBdleHRuA2FlbQIxMABicmlkETFLbFphMVRodWZVVTRtb3F0c3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEePhVUssVBG_TwlBNdnkEwJy5i17j3vb8lq2P_w0gRnSLuh-Hcou3doVVPQ08_aem_UK37PwNIrdEuHGNZfSUFUg",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213797139203"
+    }
+  },
+  "MAMLAKAT-ELOUTOUR-FAKHIRA": {
+    "name": "مملكة العطور الفاخرة",
+    "image": "",
+    "phone": "0662477910",
+    "gradient": "linear-gradient(115deg,rgba(99, 96, 10, 1) 0%, rgba(4, 5, 8, 1) 100%)",
+    "address": {
+      "text": " Djamaa",
+      "url": "https://maps.app.goo.gl/paz9wK7ZstNs7jwG6"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1BeXYqoA1u/",
+      "instagram": "https://www.instagram.com/allaeddinekouizi?igsh=ZHgyeHl5eTQ0cnVu",
+      "tiktok": "https://www.tiktok.com/@allakouizi22?_r=1&_t=ZS-928D2sNm4aS",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213662477910"
     }
   }
 }
