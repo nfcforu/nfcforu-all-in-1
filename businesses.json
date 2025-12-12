@@ -1745,20 +1745,20 @@
     }
   },
   "Optic-Belaid-Ritadj": {
-    "name": "Optic Belaid Ritadj ",
-    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-10%20at%2015.00.02_0b4d2c0d.jpg",
+    "name": "Optic Belaid Ritadj 👑",
+    "image": "linear-gradient(90deg,rgba(209, 209, 230, 1) 0%, rgba(9, 131, 156, 1) 0%)",
     "phone": "0770364173",
-    "gradient": "linear-gradient(90deg,rgba(13, 0, 0, 1) 0%, rgba(6, 107, 140, 1) 0%)",
+    "gradient": "linear-gradient(90deg,rgba(209, 209, 230, 1) 0%, rgba(9, 131, 156, 1) 0%)",
     "address": {
       "text": " Bachdjerah",
       "url": "https://maps.app.goo.gl/2jQvbTmhFUjo145y9"
     },
     "socials": {
-      "facebook": "https://www.facebook.com/profile.php?id=100064163497981",
-      "instagram": "https://www.instagram.com/reel/DRHIyK2jDww/?igsh=MWdhd3Q3aDhuM3Jvdg%3D%3D&fbclid=IwY2xjawOmb9tleHRuA2FlbQIxMABicmlkETEybFdFcHR0RHlWU084NkRZc3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEe6B5Khcfcj85NToFqhMEwmePmm0EIRqLyHrG8CWpyjvv5xy7SJBl9PAj-Ezs_aem_PLidq4kfObv4bq29XNLkNQ",
-      "tiktok": "https://www.tiktok.com/@optic.belaid.rita/video/7581865029968956692?_r=1&_t=ZS-926hVdgPYM0",
+      "facebook": "https://www.facebook.com/profile.php?id=61584489886595&rdid=LdSrl8V1EktBRhXF&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1A6shHFNDD%2F#",
+      "instagram": "https://www.instagram.com/optique_belaid_ritadj/",
+      "tiktok": "https://www.tiktok.com/@optic.belaid.rita?_r=1&_t=ZS-928X3B7s0IP&fbclid=IwY2xjawOny1tleHRuA2FlbQIxMABicmlkETE5ZVNKeWl6eDJKTFJGc1JSc3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEeUA6rmLtmzgSnN97n40_XKYOMqyNSb1WV8F-TklX1GAahG5KO_AbzQ9sE_bE_aem_ZwPh_oZFjB10YsZd8gby3A",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213556037774",
-      "viber": "viber://chat?number=%2B‪+213556 03 77 74"
+      "viber": "viber://chat?number=%2B‪+213556037774"
     }
   },
   "Bonheur-Emballage": {
@@ -1783,7 +1783,7 @@
     "phone": "0697 55 12 00",
     "gradient": "linear-gradient(1deg,rgba(80, 28, 153, 1) 0%, rgba(212, 201, 201, 1) 100%)",
     "address": {
-      "text": "Berriane",
+      "text": "محل بيوتي كوسميتيك محل بن ضيف",
       "url": "https://maps.app.goo.gl/inczcu2prEtYrjL56"
     },
     "socials": {
@@ -1809,7 +1809,7 @@
   "CaZa-Foulard": {
     "name": "CaZa Foulard ",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-11%20at%2010.06.25_d4127e2b.jpg",
-    "phone": "0 772 29 58 37",
+    "phone": "",
     "gradient": "linear-gradient(86deg,rgba(0, 0, 3, 1) 0%, rgba(204, 22, 131, 1) 100%)",
     "address": {
       "text": "Les Eucalyptus",
@@ -1818,8 +1818,7 @@
     "socials": {
       "facebook": "https://www.facebook.com/profile.php?id=61563329876017&mibextid=wwXIfr&rdid=XGiMlWNfmBuZKGuR&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BWUasCU1b%2F%3Fmibextid%3DwwXIfr#",
       "instagram": "https://www.instagram.com/caza.foulard16?igsh=dWpvYXBwcWpibHZj&utm_source=qr",
-      "tiktok": "https://www.tiktok.com/@caza.foulard?_r=1&_t=ZS-927uZZndkCf",
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213772295837"
+      "tiktok": "https://www.tiktok.com/@caza.foulard?_r=1&_t=ZS-927uZZndkCf"
     }
   },
   "Saidi-kids": {
@@ -1839,7 +1838,7 @@
   },
   "MAMLAKAT-ELOUTOUR-FAKHIRA": {
     "name": "مملكة العطور الفاخرة",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-11%20at%2011.47.37_b143728f.jpg",
     "phone": "0662477910",
     "gradient": "linear-gradient(115deg,rgba(99, 96, 10, 1) 0%, rgba(4, 5, 8, 1) 100%)",
     "address": {
@@ -1851,6 +1850,38 @@
       "instagram": "https://www.instagram.com/allaeddinekouizi?igsh=ZHgyeHl5eTQ0cnVu",
       "tiktok": "https://www.tiktok.com/@allakouizi22?_r=1&_t=ZS-928D2sNm4aS",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213662477910"
+    }
+  },
+  "karizma-Style": {
+    "name": "karizma Style  ",
+    "image": "",
+    "phone": "0665 33 65 21",
+    "gradient": " linear-gradient(115deg,rgba(26, 8, 8, 1) 0%, rgba(194, 6, 6, 1) 100%)",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61581918998456&sk=reels_tab",
+      "tiktok": "https://www.tiktok.com/@karizmastyle/video/7581060302872055047?_r=1&u_code=e418j46bg2mcc3&preview_pb=0&sharer_language=fr&_d=eldgbebg1kilih&share_item_id=7581060302872055047&source=h5_m&timestamp=1765451359&user_id=7145486343991919618&sec_user_id=MS4wLjABAAAA1efDl_XyH5mGre1o_jtNWc2sHpHlFFQhQp0NipoNZiHz0ErRKBlLo_d0GJ7jjMyk&item_author_type=1&social_share_type=0&utm_source=whatsapp&utm_campaign=client_share&utm_medium=android&share_iid=7582280478356702984&share_link_id=c00b9f35-bb5e-4d4a-9564-4f217dcd125d&share_app_id=1233&ugbiz_name=MAIN&ug_btm=b8727%2Cb2878&link_reflow_popup_iteration_sharer=%7B%22click_empty_to_play%22%3A1%2C%22dynamic_cover%22%3A1%2C%22follow_to_play_duration%22%3A-1.0%2C%22profile_clickable%22%3A1%7D&enable_checksum=1",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213665 33 65 21",
+      "telegram": "https://t.me/+213665 33 65 21"
+    }
+  },
+  "TEA-TABNIDJA": {
+    "name": "شاي و تبنيجة",
+    "image": "",
+    "phone": "0540839453",
+    "gradient": "linear-gradient(90deg,rgba(66, 61, 61, 1) 0%, rgba(196, 120, 14, 1) 100%)",
+    "address": {
+      "text": "Bordj El Kiffan",
+      "url": "https://maps.app.goo.gl/W8W1XZ8iXvs7fUCH8"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61570038714423&mibextid=ZbWKwL",
+      "tiktok": "https://www.tiktok.com/@user488156146167?_r=1&_t=ZS-928S3prXJLA&fbclid=IwY2xjawOnz6dleHRuA2FlbQIxMABicmlkETFnNG9RSVhzOGY4dmxqZU1Wc3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEeZ1MvptkKCA3nqm6DNa2oEA4aIxmYPkP3ZIozqOMTFK6MPZS1B3OlqCpzdUQ_aem_ID9621g6nxryMbEgP4EupQ",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213540839453",
+      "viber": "viber://chat?number=%2B‪+213540839453"
     }
   }
 }
