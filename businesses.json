@@ -1883,5 +1883,21 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213540839453",
       "viber": "viber://chat?number=%2B‪+213540839453"
     }
+  },
+  "ALMANARAH": {
+    "name": "ALMANARAH",
+    "image": "",
+    "phone": "046832230",
+    "gradient": "",
+    "address": {
+      "text": "Djidiouia",
+      "url": "https://maps.app.goo.gl/CaNQgo3WWSG2fQwf8"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61580863153889&rdid=UrTtCpgbifqOWtKh&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17wDH1X8HL%2F#",
+      "instagram": "https://www.instagram.com/dr.ihsan.alzo3bi/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213670424000",
+      "youtube": "https://www.youtube.com/@ihsanalzubi"
+    }
   }
 }
