@@ -1888,7 +1888,7 @@
     "name": "ALMANARAH",
     "image": "",
     "phone": "046832230",
-    "gradient": "",
+    "gradient": "linear-gradient(184deg,rgba(255, 255, 255, 1) 0%, rgba(4, 128, 35, 1) 100%)",
     "address": {
       "text": "Djidiouia",
       "url": "https://maps.app.goo.gl/CaNQgo3WWSG2fQwf8"
