@@ -118,19 +118,19 @@
   "EL-Bezzi-home-decor": {
     "name": "EL-Bezzi Home Decor",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-09-28 at 16.57.53_bcc1f39b.jpg",
-    "address": {
-      "url": "https://www.google.com/maps/place/El-Bezzi+home+d%C3%A9cor/@36.2016881,5.4291612,17z/data=!3m1!4b1!4m6!3m5!1s0x12f30ba0bb7cc02b:0xcaeff4e9045baa2d!8m2!3d36.2016881!4d5.4317361!16s%2Fg%2F11sbfkfkbf?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D",
-      "text": "Sétif"
-    },
     "phone": "0553366385",
     "gradient": "linear-gradient(185deg,rgba(19, 16, 17, 1) 0%, rgba(236, 199, 124, 1) 100%)",
+    "address": {
+      "text": "Sétif",
+      "url": "https://www.google.com/maps/place/El-Bezzi+home+d%C3%A9cor/@36.2016881,5.4291612,17z/data=!3m1!4b1!4m6!3m5!1s0x12f30ba0bb7cc02b:0xcaeff4e9045baa2d!8m2!3d36.2016881!4d5.4317361!16s%2Fg%2F11sbfkfkbf?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D"
+    },
     "socials": {
       "facebook": "https://www.facebook.com/wpcelbezzi",
-      "tiktok": "https://www.tiktok.com/@elbezzi_home_decor",
       "instagram": "https://www.instagram.com/el_bezzi_home_decor",
+      "tiktok": "https://www.tiktok.com/@elbezzi_home_decor",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213553366385",
-      "viber": "viber://chat?number=%2B+213770515710",
-      "telegram": "https://t.me/Bezzihome"
+      "telegram": "https://t.me/Bezzihome",
+      "viber": "viber://chat?number=%2B213770515710"
     }
   },
   "The-Computer": {
@@ -1758,7 +1758,7 @@
       "instagram": "https://www.instagram.com/optique_belaid_ritadj/",
       "tiktok": "https://www.tiktok.com/@optic.belaid.rita?_r=1&_t=ZS-928X3B7s0IP&fbclid=IwY2xjawOny1tleHRuA2FlbQIxMABicmlkETE5ZVNKeWl6eDJKTFJGc1JSc3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEeUA6rmLtmzgSnN97n40_XKYOMqyNSb1WV8F-TklX1GAahG5KO_AbzQ9sE_bE_aem_ZwPh_oZFjB10YsZd8gby3A",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213556037774",
-      "viber": "viber://chat?number=%2B‪+213556037774"
+      "viber": "viber://chat?number=%2B‪213556037774"
     }
   },
   "Bonheur-Emballage": {
@@ -1858,8 +1858,8 @@
     "phone": "0665 33 65 21",
     "gradient": " linear-gradient(115deg,rgba(26, 8, 8, 1) 0%, rgba(194, 6, 6, 1) 100%)",
     "address": {
-      "text": "",
-      "url": ""
+      "text": "Ain Fakroun",
+      "url": "https://maps.app.goo.gl/KPfe2kVw1dFiQ3fF8"
     },
     "socials": {
       "facebook": "https://www.facebook.com/profile.php?id=61581918998456&sk=reels_tab",
@@ -1870,7 +1870,7 @@
   },
   "TEA-TABNIDJA": {
     "name": "شاي و تبنيجة",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-11%20at%2017.35.12_8dac07d2.jpg",
     "phone": "0540839453",
     "gradient": "linear-gradient(90deg,rgba(66, 61, 61, 1) 0%, rgba(196, 120, 14, 1) 100%)",
     "address": {
@@ -1882,6 +1882,22 @@
       "tiktok": "https://www.tiktok.com/@user488156146167?_r=1&_t=ZS-928S3prXJLA&fbclid=IwY2xjawOnz6dleHRuA2FlbQIxMABicmlkETFnNG9RSVhzOGY4dmxqZU1Wc3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEeZ1MvptkKCA3nqm6DNa2oEA4aIxmYPkP3ZIozqOMTFK6MPZS1B3OlqCpzdUQ_aem_ID9621g6nxryMbEgP4EupQ",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213540839453",
       "viber": "viber://chat?number=%2B‪+213540839453"
+    }
+  },
+  "ALMANARAH": {
+    "name": "ALMANARAH",
+    "image": "",
+    "phone": "046832230",
+    "gradient": "linear-gradient(184deg,rgba(255, 255, 255, 1) 0%, rgba(4, 128, 35, 1) 100%)",
+    "address": {
+      "text": "Djidiouia",
+      "url": "https://maps.app.goo.gl/CaNQgo3WWSG2fQwf8"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61580863153889&rdid=UrTtCpgbifqOWtKh&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17wDH1X8HL%2F#",
+      "instagram": "https://www.instagram.com/dr.ihsan.alzo3bi/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213670424000",
+      "youtube": "https://www.youtube.com/@ihsanalzubi"
     }
   }
 }
