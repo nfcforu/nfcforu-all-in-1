@@ -831,17 +831,18 @@
   "OSM": {
     "name": "OSM",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-23 at 15.58.58_2f6e9a04.jpg",
-    "address": {
-      "url": "https://maps.app.goo.gl/aqMqZqLv9y6pqL177",
-      "text": "El Oued"
-    },
     "phone": "0663782923",
     "gradient": "linear-gradient(193deg,rgba(25, 64, 97, 1) 0%, rgba(254, 252, 240, 1) 100%)",
+    "address": {
+      "text": "El Oued",
+      "url": "https://maps.app.goo.gl/aqMqZqLv9y6pqL177"
+    },
     "socials": {
       "facebook": "https://www.facebook.com/share/1Nw4ZsYu4r/",
       "tiktok": "http://tiktok.com/@aalamazajik",
-      "telegram": "https://t.me/Ossamalakhal",
-      "whatsapp": "https://wa.me/213663782923"
+      "whatsapp": "https://wa.me/213663782923",
+      "website": "https://beta.mostakbli.dz/invite?code=910353HZ",
+      "telegram": "https://t.me/Ossamalakhal"
     }
   },
   "El-Rissala-Academie": {
