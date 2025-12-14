@@ -831,18 +831,17 @@
   "OSM": {
     "name": "OSM",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-11-23 at 15.58.58_2f6e9a04.jpg",
+    "address": {
+      "url": "https://maps.app.goo.gl/aqMqZqLv9y6pqL177",
+      "text": "El Oued"
+    },
     "phone": "0663782923",
     "gradient": "linear-gradient(193deg,rgba(25, 64, 97, 1) 0%, rgba(254, 252, 240, 1) 100%)",
-    "address": {
-      "text": "El Oued",
-      "url": "https://maps.app.goo.gl/aqMqZqLv9y6pqL177"
-    },
     "socials": {
       "facebook": "https://www.facebook.com/share/1Nw4ZsYu4r/",
       "tiktok": "http://tiktok.com/@aalamazajik",
-      "whatsapp": "https://wa.me/213663782923",
-      "website": "https://beta.mostakbli.dz/invite?code=910353HZ",
-      "telegram": "https://t.me/Ossamalakhal"
+      "telegram": "https://t.me/Ossamalakhal",
+      "whatsapp": "https://wa.me/213663782923"
     }
   },
   "El-Rissala-Academie": {
@@ -1655,7 +1654,7 @@
       "url": "https://maps.app.goo.gl/kqcJsyBw9ppkX7ws8"
     },
     "socials": {
-      "facebook": "www.facebook.com/share/1DuWLfnAax/",
+      "facebook": "https://www.facebook.com/people/Bibiche-cosm%C3%A9tique/61568797753192/?rdid=tI1SWwmOnhmLFWFh&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DuWLfnAax%2F",
       "instagram": "https://www.instagram.com/bibiche_cosmitique?igsh=MWR6Y3JjNWgwd3Zqcg%3D%3D",
       "tiktok": "https://www.tiktok.com/@bibiche.cosmtique6?_r=1&_t=ZS-923qvSJszzM",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213698231212"
@@ -1833,8 +1832,8 @@
     },
     "socials": {
       "facebook": "https://www.facebook.com/profile.php?id=100063463630075",
-      "instagram": "https://www.instagram.com/sydykyds_saidi?igsh=MTM4ZWltbmM5bm54aw%3D%3D&fbclid=IwY2xjawOqV0JleHRuA2FlbQIxMABicmlkETE4aENkWk04TmJnN3VSbFBSc3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEeSj5xgOL_hhb9N6Ae0KV4uZBRLaPGsgcZJvwqV8Awd6We-Z32qpmtM40TVzo_aem_LoldlZcVrjL5_9o1soREMw",
       "tiktok": "https://www.tiktok.com/@saidi_kids?_r=1&_t=ZS-928BumtnQ99&fbclid=IwY2xjawOnjBdleHRuA2FlbQIxMABicmlkETFLbFphMVRodWZVVTRtb3F0c3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEePhVUssVBG_TwlBNdnkEwJy5i17j3vb8lq2P_w0gRnSLuh-Hcou3doVVPQ08_aem_UK37PwNIrdEuHGNZfSUFUg",
+      "instagram": "https://www.instagram.com/sydykyds_saidi?igsh=MTM4ZWltbmM5bm54aw%3D%3D&fbclid=IwY2xjawOqV0JleHRuA2FlbQIxMABicmlkETE4aENkWk04TmJnN3VSbFBSc3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEeSj5xgOL_hhb9N6Ae0KV4uZBRLaPGsgcZJvwqV8Awd6We-Z32qpmtM40TVzo_aem_LoldlZcVrjL5_9o1soREMw",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213797139203"
     }
   },
