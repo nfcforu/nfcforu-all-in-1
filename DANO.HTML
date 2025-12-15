@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dano-Nuts | L'Excellence des Fruits Secs</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* --- CSS STYLES --- */
+      :root {
+        --primary-gold: #c5a059;
+        --deep-brown: #2c1e1a;
+        --soft-cream: #fdfaf5;
+        --text-gray: #4a4a4a;
+        --white: #ffffff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--soft-cream);
+        color: var(--text-gray);
+        line-height: 1.6;
+        scroll-behavior: smooth;
+      }
+
+      /* Navigation */
+      header {
+        background: var(--white);
+        padding: 15px 5%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-family: "Playfair Display", serif;
+        font-size: 1.8rem;
+        color: var(--deep-brown);
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--deep-brown);
+        margin-left: 25px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        transition: 0.3s;
+      }
+
+      nav a:hover {
+        color: var(--primary-gold);
+      }
+
+      /* Hero Section */
+      .hero {
+        height: 70vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+          url("https://images.unsplash.com/photo-1536620300801-9878200639f7?q=80&w=2000&auto=format&fit=crop")
+            center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding: 20px;
+      }
+
+      .hero-content h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 3.5rem;
+        margin-bottom: 10px;
+      }
+
+      .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+        font-weight: 300;
+      }
+
+      .btn-main {
+        padding: 12px 35px;
+        background: var(--primary-gold);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      .btn-main:hover {
+        background: var(--deep-brown);
+      }
+
+      /* Products Section */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 20px;
+      }
+
+      .section-title {
+        text-align: center;
+        font-family: "Playfair Display", serif;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        color: var(--deep-brown);
+      }
+
+      /* Filters */
+      .filters {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+        gap: 10px;
+      }
+
+      .filter-btn {
+        padding: 8px 25px;
+        border: 1px solid var(--primary-gold);
+        background: transparent;
+        cursor: pointer;
+        border-radius: 50px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      .filter-btn.active,
+      .filter-btn:hover {
+        background: var(--primary-gold);
+        color: white;
+      }
+
+      /* Grid */
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 30px;
+      }
+
+      .product-card {
+        background: var(--white);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        transition: transform 0.4s;
+      }
+
+      .product-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .product-image {
+        width: 100%;
+        height: 250px;
+        background-color: #eee;
+        object-fit: cover;
+      }
+
+      .product-info {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .product-info h3 {
+        font-family: "Playfair Display", serif;
+        margin-bottom: 8px;
+        color: var(--deep-brown);
+      }
+
+      .price {
+        display: block;
+        font-weight: 700;
+        color: var(--primary-gold);
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+      }
+
+      .wa-btn {
+        display: inline-flex;
+        align-items: center;
+        background: #25d366;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 600;
+        gap: 8px;
+      }
+
+      /* Video Section */
+      .video-section {
+        background: var(--deep-brown);
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+      }
+
+      .video-wrapper {
+        max-width: 800px;
+        margin: 30px auto 0;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      video {
+        width: 100%;
+        display: block;
+      }
+
+      /* Footer */
+      footer {
+        background: var(--white);
+        text-align: center;
+        padding: 50px 20px;
+        border-top: 1px solid #eee;
+      }
+
+      .contact-info {
+        margin-bottom: 20px;
+      }
+      .contact-info p {
+        margin: 5px 0;
+      }
+
+      @media (max-width: 768px) {
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+        header {
+          flex-direction: column;
+          gap: 15px;
+        }
+        nav a {
+          margin: 0 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">DANO-NUTS</div>
+      <nav>
+        <a href="#home">Accueil</a>
+        <a href="#products">Produits</a>
+        <a href="#videos">Galerie</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Dano-Nuts</h1>
+        <p>La tradition française du fruit sec de haute qualité.</p>
+        <a href="#products" class="btn-main">Découvrir nos produits</a>
+      </div>
+    </section>
+
+    <main class="container" id="products">
+      <h2 class="section-title">Notre Collection</h2>
+
+      <div class="filters">
+        <button class="filter-btn active" onclick="filterProducts('all', this)">
+          Tous
+        </button>
+        <button class="filter-btn" onclick="filterProducts('cru', this)">
+          Crus (Naturels)
+        </button>
+        <button class="filter-btn" onclick="filterProducts('grille', this)">
+          Grillés (Roasted)
+        </button>
+        <button class="filter-btn" onclick="filterProducts('coffret', this)">
+          Coffrets Cadeaux
+        </button>
+      </div>
+
+      <div class="product-grid" id="product-list"></div>
+    </main>
+
+    <section id="videos" class="video-section">
+      <h2 class="section-title" style="color: white">Savoir-Faire</h2>
+      <p>Découvrez comment nous préparons vos produits avec soin.</p>
+      <div class="video-wrapper">
+        <video
+          controls
+          poster="https://via.placeholder.com/800x450?text=Dano-Nuts+Process"
+        >
+          <source src="votre-video.mp4" type="video/mp4" />
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="contact-info">
+        <h2 class="logo">DANO-NUTS</h2>
+        <p>📍 Qualité Premium - Livraison disponible</p>
+        <p>📞 Tel: +213 (Numéro du Client)</p>
+      </div>
+      <p>© 2025 Dano-Nuts. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+      // Data for 50-100 products
+      // Replace 'img' with your actual image paths
+      const products = [
+        {
+          id: 1,
+          name: "Amandes de Californie",
+          cat: "cru",
+          price: "2400 DA",
+          img: "https://images.unsplash.com/photo-1508029051707-3363406540be?w=500&auto=format",
+        },
+        {
+          id: 2,
+          name: "Pistaches Grillées Salées",
+          cat: "grille",
+          price: "3200 DA",
+          img: "https://images.unsplash.com/photo-1551101853-4375b42d130e?w=500&auto=format",
+        },
+        {
+          id: 3,
+          name: "Noix de Cajou",
+          cat: "cru",
+          price: "2800 DA",
+          img: "https://images.unsplash.com/photo-1596503460377-669b22416f06?w=500&auto=format",
+        },
+        {
+          id: 4,
+          name: "Coffret Prestige Mixte",
+          cat: "coffret",
+          price: "5500 DA",
+          img: "https://images.unsplash.com/photo-1623110503716-e52e24a13f6e?w=500&auto=format",
+        },
+        {
+          id: 5,
+          name: "Noisettes Grillées",
+          cat: "grille",
+          price: "2600 DA",
+          img: "https://images.unsplash.com/photo-1507747551048-93663a8a07f0?w=500&auto=format",
+        },
+        {
+          id: 6,
+          name: "Coffret Cadeau Ramadhan",
+          cat: "coffret",
+          price: "4000 DA",
+          img: "https://images.unsplash.com/photo-1623110503716-e52e24a13f6e?w=500&auto=format",
+        },
+        // Add more products here easily
+      ];
+
+      const productList = document.getElementById("product-list");
+      const waNumber = "213XXXXXXXXX"; // REPLACE WITH CLIENT'S ACTUAL WHATSAPP
+
+      function renderProducts(items) {
+        productList.innerHTML = "";
+        items.forEach((p) => {
+          const card = `
+                    <div class="product-card">
+                        <img src="${p.img}" class="product-image" alt="${p.name}">
+                        <div class="product-info">
+                            <h3>${p.name}</h3>
+                            <span class="price">${p.price}</span>
+                            <a href="https://wa.me/${waNumber}?text=Bonjour, je souhaite commander: ${p.name}" target="_blank" class="wa-btn">
+                                💬 Commander sur WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                `;
+          productList.innerHTML += card;
+        });
+      }
+
+      function filterProducts(category, btn) {
+        // Update Active Button
+        document
+          .querySelectorAll(".filter-btn")
+          .forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        // Filter Logic
+        if (category === "all") {
+          renderProducts(products);
+        } else {
+          const filtered = products.filter((p) => p.cat === category);
+          renderProducts(filtered);
+        }
+      }
+
+      // Initial Load
+      renderProducts(products);
+    </script>
+  </body>
+</html>
