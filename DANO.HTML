@@ -6,18 +6,20 @@
     <title>Dano-Nuts | L'Excellence des Fruits Secs</title>
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
 
     <style>
       /* --- CSS STYLES --- */
       :root {
-        --primary-gold: #c5a059;
-        --deep-brown: #2c1e1a;
-        --soft-cream: #fdfaf5;
-        --text-gray: #4a4a4a;
-        --white: #ffffff;
+        /* Colors extracted from the Logo */
+        --bg-dark: #05080f; /* The dark background of the logo */
+        --card-dark: #121824; /* Slightly lighter for cards */
+        --primary-yellow: #ffd500; /* Matches "NUTS" */
+        --accent-cyan: #00e5ff; /* Matches the blue glow/line */
+        --text-white: #ffffff;
+        --text-gray: #b0b0b0;
       }
 
       * {
@@ -28,51 +30,56 @@
 
       body {
         font-family: "Poppins", sans-serif;
-        background-color: var(--soft-cream);
-        color: var(--text-gray);
+        background-color: var(--bg-dark); /* Dark Mode */
+        color: var(--text-white);
         line-height: 1.6;
         scroll-behavior: smooth;
       }
 
       /* Navigation */
       header {
-        background: var(--white);
-        padding: 15px 5%;
+        background: rgba(5, 8, 15, 0.95); /* Semi-transparent dark */
+        padding: 10px 5%;
         position: sticky;
         top: 0;
         z-index: 1000;
-        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 2px 20px rgba(0, 229, 255, 0.1); /* Slight cyan glow */
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border-bottom: 1px solid #222;
       }
 
-      .logo {
-        font-family: "Playfair Display", serif;
-        font-size: 1.8rem;
-        color: var(--deep-brown);
-        font-weight: 700;
-        letter-spacing: 1px;
+      .nav-logo-img {
+        height: 70px; /* Adjust size of logo here */
+        object-fit: contain;
       }
 
       nav a {
         text-decoration: none;
-        color: var(--deep-brown);
+        color: var(--text-white);
         margin-left: 25px;
         font-weight: 600;
         font-size: 0.9rem;
         text-transform: uppercase;
         transition: 0.3s;
+        position: relative;
       }
 
       nav a:hover {
-        color: var(--primary-gold);
+        color: var(--primary-yellow);
+        text-shadow: 0 0 10px rgba(255, 213, 0, 0.5);
       }
 
       /* Hero Section */
       .hero {
-        height: 70vh;
-        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        height: 75vh;
+        /* Darkened the image significantly so text pops */
+        background: linear-gradient(
+            to bottom,
+            rgba(5, 8, 15, 0.7),
+            rgba(5, 8, 15, 0.9)
+          ),
           url("https://images.unsplash.com/photo-1536620300801-9878200639f7?q=80&w=2000&auto=format&fit=crop")
             center/cover;
         display: flex;
@@ -85,43 +92,56 @@
 
       .hero-content h1 {
         font-family: "Playfair Display", serif;
-        font-size: 3.5rem;
+        font-size: 4rem;
         margin-bottom: 10px;
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+      }
+
+      .hero-content span {
+        color: var(--primary-yellow);
       }
 
       .hero-content p {
-        font-size: 1.2rem;
-        margin-bottom: 25px;
+        font-size: 1.3rem;
+        margin-bottom: 30px;
         font-weight: 300;
+        color: #ddd;
       }
 
       .btn-main {
-        padding: 12px 35px;
-        background: var(--primary-gold);
-        color: white;
+        padding: 14px 40px;
+        background: var(--primary-yellow);
+        color: var(--bg-dark);
         text-decoration: none;
         border-radius: 50px;
-        font-weight: 600;
+        font-weight: 700;
         transition: 0.3s;
+        box-shadow: 0 0 15px rgba(255, 213, 0, 0.3);
       }
 
       .btn-main:hover {
-        background: var(--deep-brown);
+        background: var(--text-white);
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
       }
 
       /* Products Section */
       .container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 60px 20px;
+        padding: 80px 20px;
       }
 
       .section-title {
         text-align: center;
         font-family: "Playfair Display", serif;
-        font-size: 2.5rem;
-        margin-bottom: 40px;
-        color: var(--deep-brown);
+        font-size: 2.8rem;
+        margin-bottom: 50px;
+        color: var(--text-white);
+      }
+
+      .section-title span {
+        border-bottom: 3px solid var(--accent-cyan);
       }
 
       /* Filters */
@@ -130,13 +150,14 @@
         justify-content: center;
         flex-wrap: wrap;
         margin-bottom: 40px;
-        gap: 10px;
+        gap: 15px;
       }
 
       .filter-btn {
-        padding: 8px 25px;
-        border: 1px solid var(--primary-gold);
+        padding: 10px 30px;
+        border: 2px solid var(--accent-cyan);
         background: transparent;
+        color: var(--text-white);
         cursor: pointer;
         border-radius: 50px;
         font-family: "Poppins", sans-serif;
@@ -146,8 +167,9 @@
 
       .filter-btn.active,
       .filter-btn:hover {
-        background: var(--primary-gold);
-        color: white;
+        background: var(--accent-cyan);
+        color: var(--bg-dark);
+        box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
       }
 
       /* Grid */
@@ -158,41 +180,46 @@
       }
 
       .product-card {
-        background: var(--white);
-        border-radius: 15px;
+        background: var(--card-dark);
+        border-radius: 20px;
         overflow: hidden;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-        transition: transform 0.4s;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        border: 1px solid #2a2a2a;
+        transition: transform 0.4s, box-shadow 0.4s;
       }
 
       .product-card:hover {
         transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 229, 255, 0.1); /* Subtle neon glow on hover */
+        border-color: var(--accent-cyan);
       }
 
       .product-image {
         width: 100%;
         height: 250px;
-        background-color: #eee;
+        background-color: #222;
         object-fit: cover;
       }
 
       .product-info {
-        padding: 20px;
+        padding: 25px;
         text-align: center;
       }
 
       .product-info h3 {
         font-family: "Playfair Display", serif;
-        margin-bottom: 8px;
-        color: var(--deep-brown);
+        margin-bottom: 10px;
+        color: var(--text-white);
+        font-size: 1.4rem;
       }
 
       .price {
         display: block;
         font-weight: 700;
-        color: var(--primary-gold);
-        font-size: 1.2rem;
-        margin-bottom: 15px;
+        color: var(--primary-yellow);
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        text-shadow: 0 0 10px rgba(255, 213, 0, 0.2);
       }
 
       .wa-btn {
@@ -200,28 +227,35 @@
         align-items: center;
         background: #25d366;
         color: white;
-        padding: 8px 20px;
-        border-radius: 5px;
+        padding: 10px 25px;
+        border-radius: 50px;
         text-decoration: none;
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         font-weight: 600;
-        gap: 8px;
+        gap: 10px;
+        transition: 0.3s;
+      }
+
+      .wa-btn:hover {
+        background: #20b857;
+        box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
       }
 
       /* Video Section */
       .video-section {
-        background: var(--deep-brown);
-        color: white;
+        background: linear-gradient(var(--bg-dark), #0f1521);
         text-align: center;
         padding: 80px 20px;
+        border-top: 1px solid #222;
       }
 
       .video-wrapper {
         max-width: 800px;
-        margin: 30px auto 0;
-        border-radius: 15px;
+        margin: 40px auto 0;
+        border-radius: 20px;
         overflow: hidden;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 40px rgba(0, 229, 255, 0.1);
+        border: 2px solid #333;
       }
 
       video {
@@ -231,17 +265,32 @@
 
       /* Footer */
       footer {
-        background: var(--white);
+        background: #000;
         text-align: center;
-        padding: 50px 20px;
-        border-top: 1px solid #eee;
+        padding: 60px 20px;
+        border-top: 1px solid #222;
+        color: var(--text-gray);
+      }
+
+      footer .logo-text {
+        font-family: "Playfair Display", serif;
+        color: var(--text-white);
+        font-size: 2rem;
+        margin-bottom: 10px;
       }
 
       .contact-info {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
       }
       .contact-info p {
-        margin: 5px 0;
+        margin: 8px 0;
+      }
+
+      /* Highlighting phone number */
+      .contact-phone {
+        color: var(--primary-yellow);
+        font-weight: bold;
+        font-size: 1.2rem;
       }
 
       @media (max-width: 768px) {
@@ -260,7 +309,12 @@
   </head>
   <body>
     <header>
-      <div class="logo">DANO-NUTS</div>
+      <img
+        src="ChatGPT Image 26 oct. 2025, 15_51_05.jpg"
+        alt="Dano Nuts Logo"
+        class="nav-logo-img"
+      />
+
       <nav>
         <a href="#home">Accueil</a>
         <a href="#products">Produits</a>
@@ -271,14 +325,14 @@
 
     <section id="home" class="hero">
       <div class="hero-content">
-        <h1>Dano-Nuts</h1>
-        <p>La tradition française du fruit sec de haute qualité.</p>
-        <a href="#products" class="btn-main">Découvrir nos produits</a>
+        <h1>Bienvenue chez <span>Dano Nuts</span></h1>
+        <p>Le goût authentique, la qualité premium.</p>
+        <a href="#products" class="btn-main">Découvrir la Collection</a>
       </div>
     </section>
 
     <main class="container" id="products">
-      <h2 class="section-title">Notre Collection</h2>
+      <h2 class="section-title"><span>Nos Produits</span></h2>
 
       <div class="filters">
         <button class="filter-btn active" onclick="filterProducts('all', this)">
@@ -299,12 +353,14 @@
     </main>
 
     <section id="videos" class="video-section">
-      <h2 class="section-title" style="color: white">Savoir-Faire</h2>
-      <p>Découvrez comment nous préparons vos produits avec soin.</p>
+      <h2 class="section-title">Notre <span>Savoir-Faire</span></h2>
+      <p style="color: #ccc">
+        Découvrez les coulisses de la préparation de nos fruits secs.
+      </p>
       <div class="video-wrapper">
         <video
           controls
-          poster="https://via.placeholder.com/800x450?text=Dano-Nuts+Process"
+          poster="https://via.placeholder.com/800x450/121824/FFD500?text=Dano-Nuts+Video"
         >
           <source src="votre-video.mp4" type="video/mp4" />
           Votre navigateur ne supporte pas la vidéo.
@@ -314,16 +370,15 @@
 
     <footer id="contact">
       <div class="contact-info">
-        <h2 class="logo">DANO-NUTS</h2>
-        <p>📍 Qualité Premium - Livraison disponible</p>
-        <p>📞 Tel: +213 (Numéro du Client)</p>
+        <div class="logo-text">DANO NUTS</div>
+        <p>📍 Qualité Premium - Livraison 58 Wilayas</p>
+        <p class="contact-phone">📞 +213 XX XX XX XX</p>
       </div>
       <p>© 2025 Dano-Nuts. Tous droits réservés.</p>
     </footer>
 
     <script>
-      // Data for 50-100 products
-      // Replace 'img' with your actual image paths
+      // Data for products
       const products = [
         {
           id: 1,
@@ -362,16 +417,15 @@
         },
         {
           id: 6,
-          name: "Coffret Cadeau Ramadhan",
+          name: "Mélange Énergie",
           cat: "coffret",
           price: "4000 DA",
-          img: "https://images.unsplash.com/photo-1623110503716-e52e24a13f6e?w=500&auto=format",
+          img: "https://images.unsplash.com/photo-1606923829579-0cb981a83e2e?w=500&auto=format",
         },
-        // Add more products here easily
       ];
 
       const productList = document.getElementById("product-list");
-      const waNumber = "213XXXXXXXXX"; // REPLACE WITH CLIENT'S ACTUAL WHATSAPP
+      const waNumber = "213XXXXXXXXX"; // REPLACE WITH CLIENT'S ACTUAL WHATSAPP NUMBER
 
       function renderProducts(items) {
         productList.innerHTML = "";
@@ -383,7 +437,7 @@
                             <h3>${p.name}</h3>
                             <span class="price">${p.price}</span>
                             <a href="https://wa.me/${waNumber}?text=Bonjour, je souhaite commander: ${p.name}" target="_blank" class="wa-btn">
-                                💬 Commander sur WhatsApp
+                                💬 Commander
                             </a>
                         </div>
                     </div>
