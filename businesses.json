@@ -1900,5 +1900,20 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213670424000",
       "youtube": "https://www.youtube.com/@ihsanalzubi"
     }
+  },
+  "Pantum-Algerie": {
+    "name": "Pantum-Algerie ",
+    "image": "",
+    "phone": "028 41 44 84",
+    "gradient": "linear-gradient(268deg,rgba(184, 18, 18, 1) 69%, rgba(218, 232, 223, 1) 100%)",
+    "address": {
+      "text": "Blida",
+      "url": "https://maps.app.goo.gl/ReeX2rLNeNUpAEGd6"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/PantumAlgerie?mibextid=wwXIfr&rdid=Ranevs94GB8JcWUN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19H42f1C7j%2F%3Fmibextid%3DwwXIfr#",
+      "instagram": "https://www.instagram.com/pantum_algerie?igsh=MXRla3M4Zm12Yndubg%3D%3D",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213560068090"
+    }
   }
 }
