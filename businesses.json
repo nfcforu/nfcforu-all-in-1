@@ -1784,7 +1784,7 @@
     "gradient": "linear-gradient(1deg,rgba(80, 28, 153, 1) 0%, rgba(212, 201, 201, 1) 100%)",
     "address": {
       "text": "محل بيوتي كوسميتيك محل بن ضيف",
-      "url": "https://maps.app.goo.gl/inczcu2prEtYrjL56"
+      "url": "https://maps.app.goo.gl/ZGYNksXkVP8QeRim8"
     },
     "socials": {
       "facebook": "https://www.facebook.com/share/1Bnibri2D5/",
@@ -1888,17 +1888,32 @@
   "ALMANARAH": {
     "name": "ALMANARAH",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-12%20at%2015.42.27_f55565e8.jpg",
-    "phone": "046832230",
+    "phone": "0670 42 40 00",
     "gradient": "linear-gradient(184deg,rgba(255, 255, 255, 1) 0%, rgba(4, 128, 35, 1) 100%)",
     "address": {
       "text": "Djidiouia",
-      "url": "https://maps.app.goo.gl/CaNQgo3WWSG2fQwf8"
+      "url": "https://l.facebook.com/l.php?u=https%3A%2F%2Fg.page%2Fr%2FCVGoXdGtws4HEAE%2Freview%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExSFFaV2pxOHp6S25sUXVLaHNydGMGYXBwX2lkDzUxNDc3MTU2OTIyODA2MQABHtii42DWEwvYKzvAK29c1FZaUBp6GkSeUPuFmCCjtymYmIFNxYDaLN9vvYAe_aem_POvPjgbNBxwuleG2QOIuTA&h=AT0It52x6RnNb1YvbQfi4LSaRM0gm_ZH4m3fFwFKRc3qSsMSsbV3X_35tzmfAlGg9OV1C_-thdxtiHbdmE7drRi8jdwUilCsKH_hp9mFjZCxg5jgeqACpONRBR-umXOROnpsnw"
     },
     "socials": {
       "facebook": "https://www.facebook.com/profile.php?id=61580863153889&rdid=UrTtCpgbifqOWtKh&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17wDH1X8HL%2F#",
       "instagram": "https://www.instagram.com/dr.ihsan.alzo3bi/",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213670424000",
       "youtube": "https://www.youtube.com/@ihsanalzubi"
+    }
+  },
+  "Pantum-Algerie": {
+    "name": "Pantum-Algerie ",
+    "image": "",
+    "phone": "028 41 44 84",
+    "gradient": "linear-gradient(2deg,rgba(176, 12, 12, 1) 60%, rgba(255, 255, 255, 1) 100%)",
+    "address": {
+      "text": "Blida",
+      "url": "https://maps.app.goo.gl/ReeX2rLNeNUpAEGd6"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/PantumAlgerie?mibextid=wwXIfr&rdid=Ranevs94GB8JcWUN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19H42f1C7j%2F%3Fmibextid%3DwwXIfr#",
+      "instagram": "https://www.instagram.com/pantum_algerie?igsh=MXRla3M4Zm12Yndubg%3D%3D",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213560068090"
     }
   }
 }
