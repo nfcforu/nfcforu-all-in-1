@@ -1918,7 +1918,7 @@
   },
   "Ink-well": {
     "name": "Inkwell ",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-15%20at%2013.18.04_63f8a228.jpg",
     "phone": "028 41 44 84",
     "gradient": "linear-gradient(274deg,rgba(23, 2, 2, 1) 64%, rgba(250, 245, 245, 1) 100%)",
     "address": {
