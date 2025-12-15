@@ -1915,5 +1915,20 @@
       "instagram": "https://www.instagram.com/pantum_algerie?igsh=MXRla3M4Zm12Yndubg%3D%3D",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213560068090"
     }
+  },
+  "Ink-well": {
+    "name": "Inkwell ",
+    "image": "",
+    "phone": "028 41 44 84",
+    "gradient": "linear-gradient(274deg,rgba(23, 2, 2, 1) 64%, rgba(250, 245, 245, 1) 100%)",
+    "address": {
+      "text": "Blida",
+      "url": "https://maps.app.goo.gl/xKBHrvCFRePztQScA"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/inkwellOfficiel?mibextid=wwXIfr&rdid=h91Nk5gQLYRysLYm&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F179pZy9Q33%2F%3Fmibextid%3DwwXIfr#",
+      "instagram": "https://www.instagram.com/inkwell_midad?igsh=a2c0ODBheXBhZnVs",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213550484848"
+    }
   }
 }
