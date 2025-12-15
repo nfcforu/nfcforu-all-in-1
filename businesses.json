@@ -1905,7 +1905,7 @@
     "name": "Pantum-Algerie ",
     "image": "",
     "phone": "028 41 44 84",
-    "gradient": "linear-gradient(268deg,rgba(184, 18, 18, 1) 69%, rgba(218, 232, 223, 1) 100%)",
+    "gradient": "linear-gradient(2deg,rgba(143, 20, 20, 1) 40%, rgba(255, 255, 255, 1) 100%)",
     "address": {
       "text": "Blida",
       "url": "https://maps.app.goo.gl/ReeX2rLNeNUpAEGd6"
