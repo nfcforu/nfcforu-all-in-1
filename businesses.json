@@ -1946,5 +1946,21 @@
       "tiktok": "https://www.tiktok.com/@showroom.condor.b4",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213542117209"
     }
+  },
+  "bon-prix": {
+    "name": "bon prix",
+    "image": "",
+    "phone": "0556 43 22 57",
+    "gradient": "linear-gradient(58deg,rgba(11, 120, 38, 1) 59%, rgba(190, 194, 196, 1) 100%)",
+    "address": {
+      "text": "Bab Ezzouar",
+      "url": "maps.app.goo.gl/vxubGhsHw8EfxA1U8?g_st=ic"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61581639573678&mibextid=wwXIfr&rdid=xha8IKo8VWV2Tw6c&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JqksTcXuh%2F%3Fmibextid%3DwwXIfr#",
+      "instagram": "https://www.instagram.com/cosmetique_bonprix_babezzouar?igsh=ZzZmN3RqbDMzaTJw&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@cosmetique__bonprix__bbz?_r=1&_t=ZS-92BWZQ2Ym76",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213556 43 22 57"
+    }
   }
 }
