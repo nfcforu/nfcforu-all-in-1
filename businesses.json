@@ -1930,5 +1930,21 @@
       "instagram": "https://www.instagram.com/inkwell_midad?igsh=a2c0ODBheXBhZnVs",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213550484848"
     }
+  },
+  "Showroom-Condor-Berhoum": {
+    "name": "Showroom Condor Berhoum ",
+    "image": "",
+    "phone": "0542117209",
+    "gradient": "linear-gradient(58deg,rgba(9, 9, 121, 1) 49%, rgba(192, 225, 235, 1) 100%)",
+    "address": {
+      "text": "Berhoum",
+      "url": "https://maps.app.goo.gl/VVkuSKvtEufpSfzf9"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61570459802790&rdid=wUGRnNoh2XKltR6z&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16aZA4EKRY%2F#",
+      "instagram": "https://www.instagram.com/showroom_condor?igsh=MWhjOWd3anM3emV5aA%3D%3D&fbclid=IwY2xjawOwuEZleHRuA2FlbQIxMABicmlkETEzOVR5T0gyY09HVmNUbTRtc3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEe0_lxYgpgK7BdsWk3t4EzXRahkB778YKAYmGxqraf7922Dq_17-zJkdFZ_pE_aem_N5zaU4co9mcMWYHNOlHzyw",
+      "tiktok": "https://www.tiktok.com/@showroom.condor.b4",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213542117209"
+    }
   }
 }
