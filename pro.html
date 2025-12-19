@@ -9,9 +9,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
-        font-family: "Inter", sans-serif;
+        font-family: "Cairo", sans-serif;
       }
       .card-hover:hover {
         transform: translateY(-5px);
@@ -61,25 +65,14 @@
     </header>
 
     <main class="flex-grow container mx-auto px-4 py-12 max-w-6xl">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl font-extrabold text-gray-900 mb-4">
-          Trusted by the Best
+      <div class="text-center mb-16" dir="rtl">
+        <h2 class="text-4xl font-extrabold text-gray-900 mb-4 leading-tight">
+          موثوق بنا من قبل الأفضل
         </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Join hundreds of businesses using our NFC technology to connect with
-          their customers instantly.
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          انضم إلى مئات الشركات التي تستخدم تقنية NFC الخاصة بنا للتواصل مع
+          عملائها فوراً.
         </p>
-      </div>
-
-      <div class="max-w-md mx-auto mb-12 relative">
-        <i class="fas fa-search absolute left-4 top-3.5 text-gray-400"></i>
-        <input
-          type="text"
-          id="searchInput"
-          onkeyup="filterCards()"
-          placeholder="Search our partners..."
-          class="w-full pl-12 pr-4 py-3 rounded-full border border-gray-200 shadow-sm focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition"
-        />
       </div>
 
       <div
@@ -111,11 +104,6 @@
           <div class="h-4 w-32 rounded skeleton"></div>
         </div>
       </div>
-
-      <div id="noResults" class="hidden text-center py-12">
-        <i class="fas fa-search text-gray-300 text-4xl mb-3"></i>
-        <p class="text-gray-500">No partners found matching that name.</p>
-      </div>
     </main>
 
     <footer class="bg-white border-t mt-12 py-8">
@@ -146,7 +134,6 @@
             card.target = "_blank"; // Open in new tab
             card.className =
               "group bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:border-blue-200 transition-all duration-300 flex flex-col items-center text-center card-hover relative overflow-hidden";
-            card.dataset.name = client.name.toLowerCase();
 
             // Fallback for image
             const imgSrc =
@@ -191,9 +178,6 @@
                     `;
             grid.appendChild(card);
           });
-
-          // Update "Trusted by..." count if you want dynamic numbers
-          // document.getElementById('clientCount').innerText = sortedClients.length;
         } catch (error) {
           console.error(error);
           document.getElementById("clientsGrid").innerHTML = `
@@ -202,26 +186,6 @@
                     </div>
                 `;
         }
-      }
-
-      function filterCards() {
-        const input = document.getElementById("searchInput");
-        const filter = input.value.toLowerCase();
-        const cards = document.querySelectorAll("#clientsGrid > a");
-        let hasVisible = false;
-
-        cards.forEach((card) => {
-          const name = card.dataset.name;
-          if (name.includes(filter)) {
-            card.style.display = "flex";
-            hasVisible = true;
-          } else {
-            card.style.display = "none";
-          }
-        });
-
-        const noResults = document.getElementById("noResults");
-        noResults.style.display = hasVisible ? "none" : "block";
       }
 
       document.addEventListener("DOMContentLoaded", loadClients);
