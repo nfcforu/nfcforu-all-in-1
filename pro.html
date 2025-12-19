@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Partners | NFC Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+      }
+      .skeleton {
+        background: linear-gradient(
+          90deg,
+          #f0f0f0 25%,
+          #e0e0e0 50%,
+          #f0f0f0 75%
+        );
+        background-size: 200% 100%;
+        animation: loading 1.5s infinite;
+      }
+      @keyframes loading {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+    <header class="bg-white border-b sticky top-0 z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="bg-blue-600 text-white w-10 h-10 rounded-lg flex items-center justify-center text-xl font-bold"
+          >
+            <i class="fas fa-wifi"></i>
+          </div>
+          <h1 class="text-xl font-bold tracking-tight">
+            NFC<span class="text-blue-600">ForU</span>
+          </h1>
+        </div>
+        <a
+          href="mailto:contact@nfcforu.com"
+          class="text-sm font-medium text-gray-500 hover:text-blue-600"
+        >
+          Contact Us
+        </a>
+      </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-12 max-w-6xl">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-extrabold text-gray-900 mb-4">
+          Trusted by the Best
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Join hundreds of businesses using our NFC technology to connect with
+          their customers instantly.
+        </p>
+      </div>
+
+      <div class="max-w-md mx-auto mb-12 relative">
+        <i class="fas fa-search absolute left-4 top-3.5 text-gray-400"></i>
+        <input
+          type="text"
+          id="searchInput"
+          onkeyup="filterCards()"
+          placeholder="Search our partners..."
+          class="w-full pl-12 pr-4 py-3 rounded-full border border-gray-200 shadow-sm focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition"
+        />
+      </div>
+
+      <div
+        id="clientsGrid"
+        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+      >
+        <div
+          class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 h-64 flex flex-col items-center justify-center gap-4"
+        >
+          <div class="w-20 h-20 rounded-full skeleton"></div>
+          <div class="h-4 w-32 rounded skeleton"></div>
+        </div>
+        <div
+          class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 h-64 flex flex-col items-center justify-center gap-4"
+        >
+          <div class="w-20 h-20 rounded-full skeleton"></div>
+          <div class="h-4 w-32 rounded skeleton"></div>
+        </div>
+        <div
+          class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 h-64 flex flex-col items-center justify-center gap-4"
+        >
+          <div class="w-20 h-20 rounded-full skeleton"></div>
+          <div class="h-4 w-32 rounded skeleton"></div>
+        </div>
+        <div
+          class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 h-64 flex flex-col items-center justify-center gap-4"
+        >
+          <div class="w-20 h-20 rounded-full skeleton"></div>
+          <div class="h-4 w-32 rounded skeleton"></div>
+        </div>
+      </div>
+
+      <div id="noResults" class="hidden text-center py-12">
+        <i class="fas fa-search text-gray-300 text-4xl mb-3"></i>
+        <p class="text-gray-500">No partners found matching that name.</p>
+      </div>
+    </main>
+
+    <footer class="bg-white border-t mt-12 py-8">
+      <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+        <p>&copy; 2025 NFC Solutions. Powering local businesses.</p>
+      </div>
+    </footer>
+
+    <script>
+      async function loadClients() {
+        try {
+          // Fetch the same businesses.json used by the dashboard
+          const response = await fetch("/businesses.json");
+          if (!response.ok) throw new Error("Could not load clients");
+          const data = await response.json();
+
+          const grid = document.getElementById("clientsGrid");
+          grid.innerHTML = ""; // Clear skeletons
+
+          // Sort businesses alphabetically by name
+          const sortedClients = Object.entries(data).sort((a, b) =>
+            a[1].name.localeCompare(b[1].name)
+          );
+
+          sortedClients.forEach(([id, client]) => {
+            const card = document.createElement("a");
+            card.href = `/${id}`; // Link to their profile
+            card.target = "_blank"; // Open in new tab
+            card.className =
+              "group bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:border-blue-200 transition-all duration-300 flex flex-col items-center text-center card-hover relative overflow-hidden";
+            card.dataset.name = client.name.toLowerCase();
+
+            // Fallback for image
+            const imgSrc =
+              client.image ||
+              `https://via.placeholder.com/150?text=${client.name.charAt(0)}`;
+
+            card.innerHTML = `
+                        <div class="absolute top-3 right-3 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity" title="Verified Partner">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+
+                        <div class="relative w-24 h-24 mb-4">
+                            <img src="${imgSrc}" alt="${client.name}" 
+                                 class="w-full h-full object-cover rounded-full border-4 border-gray-50 group-hover:border-blue-50 transition-colors shadow-sm">
+                        </div>
+                        
+                        <h3 class="font-bold text-gray-800 text-lg group-hover:text-blue-600 transition-colors">${
+                          client.name
+                        }</h3>
+                        
+                        <div class="mt-3 flex gap-3 text-gray-400 text-sm">
+                            ${
+                              client.socials?.instagram
+                                ? '<i class="fab fa-instagram hover:text-pink-600 transition"></i>'
+                                : ""
+                            }
+                            ${
+                              client.socials?.facebook
+                                ? '<i class="fab fa-facebook hover:text-blue-600 transition"></i>'
+                                : ""
+                            }
+                            ${
+                              client.menu
+                                ? '<i class="fas fa-utensils hover:text-orange-500 transition"></i>'
+                                : ""
+                            }
+                        </div>
+
+                        <span class="mt-4 text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0">
+                            View Profile
+                        </span>
+                    `;
+            grid.appendChild(card);
+          });
+
+          // Update "Trusted by..." count if you want dynamic numbers
+          // document.getElementById('clientCount').innerText = sortedClients.length;
+        } catch (error) {
+          console.error(error);
+          document.getElementById("clientsGrid").innerHTML = `
+                    <div class="col-span-full text-center text-red-500">
+                        Failed to load partner network. Please refresh.
+                    </div>
+                `;
+        }
+      }
+
+      function filterCards() {
+        const input = document.getElementById("searchInput");
+        const filter = input.value.toLowerCase();
+        const cards = document.querySelectorAll("#clientsGrid > a");
+        let hasVisible = false;
+
+        cards.forEach((card) => {
+          const name = card.dataset.name;
+          if (name.includes(filter)) {
+            card.style.display = "flex";
+            hasVisible = true;
+          } else {
+            card.style.display = "none";
+          }
+        });
+
+        const noResults = document.getElementById("noResults");
+        noResults.style.display = hasVisible ? "none" : "block";
+      }
+
+      document.addEventListener("DOMContentLoaded", loadClients);
+    </script>
+  </body>
+</html>
