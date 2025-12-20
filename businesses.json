@@ -1980,5 +1980,20 @@
       "snapchat": "https://www.snapchat.com/@prvvt20?share_id=xRQ52I2LRQCTqPBLKNkzjQ&locale=fr_DZ&fbclid=IwY2xjawOzP01leHRuA2FlbQIxMABicmlkETFBNXN2ejFOMlg3cXVGSWJ5c3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEejo0_TIRBvrF5hMawjNlig6eT3RKMKC4DOZiBzc5Wmlq-DVpYrYpjWsmmBtQ_aem_ANvL0223br4b6Bg-RNxbIg",
       "telegram": "https://t.me/+213559252784"
     }
+  },
+  "Dr.KOURAS-MOHAMMED-NOUR": {
+    "name": "Dr.KOURAS MOHAMMED NOUR",
+    "image": "",
+    "phone": "034 50 40 44",
+    "gradient": " linear-gradient(41deg,rgba(58, 180, 133, 1) 16%, rgba(13, 10, 171, 1) 75%, rgba(212, 212, 210, 1) 100%)",
+    "address": {
+      "text": "",
+      "url": "https://maps.app.goo.gl/XNaBQprugCqMML76A"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/Dr.KOURAS/",
+      "instagram": " https://www.instagram.com/dr.kouras/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213668 99 42 03"
+    }
   }
 }
