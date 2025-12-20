@@ -1949,7 +1949,7 @@
   },
   "bon-prix": {
     "name": "bon prix",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-19%20at%2010.36.43_e284178d.jpg",
     "phone": "0556 43 22 57",
     "gradient": "linear-gradient(58deg,rgba(145, 125, 26, 1) 24%, rgba(23, 22, 22, 1) 100%)",
     "address": {
