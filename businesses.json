@@ -1962,5 +1962,23 @@
       "tiktok": "https://www.tiktok.com/@cosmetique__bonprix__bbz?_r=1&_t=ZS-92BWZQ2Ym76",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213556 43 22 57"
     }
+  },
+  "Mon-ecole-pro": {
+    "name": "Mon ecole pro",
+    "image": "",
+    "phone": "0559252784",
+    "email": "Monecolepro@gmail.com",
+    "gradient": "linear-gradient(41deg,rgba(74, 58, 180, 1) 16%, rgba(219, 15, 15, 1) 75%, rgba(242, 242, 240, 1) 100%)",
+    "address": {
+      "text": "Ghelizane",
+      "url": "https://maps.app.goo.gl/1mbLwGkaNFkHYKW29"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61563993750680&mibextid=wwXIfr&rdid=g3HttQK4U7Cj16BB&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1EFDBoBGNf%2F%3Fmibextid%3DwwXIfr#",
+      "instagram": "https://www.instagram.com/monecole.pro?igsh=ZmFtazRuNzY1dTQ1&utm_source=qr&fbclid=IwY2xjawOzPvFleHRuA2FlbQIxMABicmlkETFBNXN2ejFOMlg3cXVGSWJ5c3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEerwm56oUeVYViH0-3s8fe-dg0Qor-ipQ1j_rT1evqkzhq5jFNWijZqNMgnhY_aem_ZvqPigP0Kj3ybfoqNSpyTw",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213559252784",
+      "snapchat": "https://www.snapchat.com/@prvvt20?share_id=xRQ52I2LRQCTqPBLKNkzjQ&locale=fr_DZ&fbclid=IwY2xjawOzP01leHRuA2FlbQIxMABicmlkETFBNXN2ejFOMlg3cXVGSWJ5c3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEejo0_TIRBvrF5hMawjNlig6eT3RKMKC4DOZiBzc5Wmlq-DVpYrYpjWsmmBtQ_aem_ANvL0223br4b6Bg-RNxbIg",
+      "telegram": "https://t.me/+213559252784"
+    }
   }
 }
