@@ -1949,7 +1949,7 @@
   },
   "bon-prix": {
     "name": "bon prix",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-19%20at%2010.36.43_e284178d.jpg",
     "phone": "0556 43 22 57",
     "gradient": "linear-gradient(58deg,rgba(145, 125, 26, 1) 24%, rgba(23, 22, 22, 1) 100%)",
     "address": {
@@ -1965,8 +1965,8 @@
   },
   "Mon-ecole-pro": {
     "name": "Mon ecole pro",
-    "image": "",
-    "phone": "0559252784",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-20%20at%2008.47.56_72eec492.jpg",
+    "phone": "0774189252",
     "email": "Monecolepro@gmail.com",
     "gradient": "linear-gradient(41deg,rgba(74, 58, 180, 1) 16%, rgba(219, 15, 15, 1) 75%, rgba(242, 242, 240, 1) 100%)",
     "address": {
@@ -1979,6 +1979,21 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213559252784",
       "snapchat": "https://www.snapchat.com/@prvvt20?share_id=xRQ52I2LRQCTqPBLKNkzjQ&locale=fr_DZ&fbclid=IwY2xjawOzP01leHRuA2FlbQIxMABicmlkETFBNXN2ejFOMlg3cXVGSWJ5c3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEejo0_TIRBvrF5hMawjNlig6eT3RKMKC4DOZiBzc5Wmlq-DVpYrYpjWsmmBtQ_aem_ANvL0223br4b6Bg-RNxbIg",
       "telegram": "https://t.me/+213559252784"
+    }
+  },
+  "Dr.KOURAS-MOHAMMED-NOUR": {
+    "name": "Dr.KOURAS MOHAMMED NOUR",
+    "image": "",
+    "phone": "034 50 40 44",
+    "gradient": " linear-gradient(41deg,rgba(58, 180, 133, 1) 16%, rgba(13, 10, 171, 1) 75%, rgba(212, 212, 210, 1) 100%)",
+    "address": {
+      "text": "Jijel",
+      "url": "https://maps.app.goo.gl/fVRpef9aMyVVJtj2A"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/Dr.KOURAS/",
+      "instagram": " https://www.instagram.com/dr.kouras/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213668 99 42 03"
     }
   }
 }
