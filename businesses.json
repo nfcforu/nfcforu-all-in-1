@@ -2013,5 +2013,21 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213665945474",
       "snapchat": "https://www.snapchat.com/add/abdouhanou24"
     }
+  },
+  "Guettari-Informatique": {
+    "name": "Guettari Informatique",
+    "image": "",
+    "phone": "0560606656",
+    "gradient": "linear-gradient(53deg,rgba(9, 59, 121, 1) 35%, rgba(190, 226, 235, 1) 100%)",
+    "address": {
+      "text": "Ain benien",
+      "url": "https://maps.app.goo.gl/dUtKuSTjXyeU8YnW7"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61554540494665&mibextid=wwXIfr&rdid=whSEyFJL5EGBhYT3&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17a2534Z9w%2F%3Fmibextid%3DwwXIfr#",
+      "instagram": "https://www.instagram.com/informatique.guettari?igsh=MXF3aDRtbGY2dGliZQ%3D%3D&utm_source=ig_contact_invite",
+      "tiktok": "https://www.tiktok.com/@guettariinformatique",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213560606656"
+    }
   }
 }
