@@ -2016,7 +2016,7 @@
   },
   "Guettari-Informatique": {
     "name": "Guettari Informatique",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-21%20at%2011.43.40.jpeg",
     "phone": "0560606656",
     "gradient": "linear-gradient(53deg,rgba(9, 59, 121, 1) 35%, rgba(190, 226, 235, 1) 100%)",
     "address": {
@@ -2028,6 +2028,20 @@
       "instagram": "https://www.instagram.com/informatique.guettari?igsh=MXF3aDRtbGY2dGliZQ%3D%3D&utm_source=ig_contact_invite",
       "tiktok": "https://www.tiktok.com/@guettariinformatique",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213560606656"
+    }
+  },
+  "Planet-Phone": {
+    "name": "Planet Phone ",
+    "image": "",
+    "phone": "",
+    "gradient": "linear-gradient(51deg,rgba(9, 43, 121, 1) 35%, rgba(0, 0, 0, 1) 100%)",
+    "address": {
+      "text": "Tipaza",
+      "url": "https://maps.app.goo.gl/B4M2TiyzokNJEZi89"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61578337775391&rdid=LhFKIkC8S9bGirSc&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17XwgvbU84%2F#",
+      "tiktok": "https://www.tiktok.com/@planet.phone42?_r=1&_t=ZS-92P88F2t7A1"
     }
   }
 }
