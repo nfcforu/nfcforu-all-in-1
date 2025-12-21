@@ -1995,5 +1995,23 @@
       "instagram": " https://www.instagram.com/dr.kouras/",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213668 99 42 03"
     }
+  },
+  "Abdou-Hanou": {
+    "name": "Abdou Hanou",
+    "image": "",
+    "phone": "0665945474",
+    "email": "abdouhanou17@gmail.com",
+    "gradient": "linear-gradient(50deg,rgba(166, 104, 5, 1) 0%, rgba(167, 167, 201, 1) 50%, rgba(12, 57, 194, 1) 100%)",
+    "address": {
+      "text": "Ain Merium",
+      "url": "https://maps.app.goo.gl/5kPUwCb6ZMUEipK19"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/abdou.hanou.2025",
+      "instagram": "https://www.instagram.com/hanouabdou/",
+      "tiktok": "https://www.tiktok.com/@abdouhanou6",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213665945474",
+      "snapchat": "https://www.snapchat.com/add/abdouhanou24"
+    }
   }
 }
