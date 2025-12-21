@@ -1,0 +1,49 @@
+{
+  "los-tacos": {
+    "info": {
+      "name": "Los Tacos",
+      "logo": "https://cdn-icons-png.flaticon.com/512/3063/3063822.png",
+      "cover": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+      "description": "Authentic Mexican Street Food • $$",
+      "phone": "0550123456",
+      "wifi": "LosTacos_Guest / tacos123",
+      "instagram": "https://instagram.com",
+      "location": "https://maps.google.com"
+    },
+    "categories": ["Popular", "Tacos", "Burritos", "Drinks"],
+    "items": [
+      {
+        "id": 1,
+        "category": "Popular",
+        "name": "Birria Tacos",
+        "price": "800 DA",
+        "desc": "Slow-cooked beef with consommé for dipping. Cheesy and crispy.",
+        "image": "https://images.unsplash.com/photo-1504185945330-7a3ca1380535?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "id": 2,
+        "category": "Tacos",
+        "name": "Chicken Tinga",
+        "price": "400 DA",
+        "desc": "Shredded chicken in chipotle tomato sauce.",
+        "image": "https://images.unsplash.com/photo-1613514785940-daed07799d9b?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "id": 3,
+        "category": "Burritos",
+        "name": "California Burrito",
+        "price": "900 DA",
+        "desc": "Carne asada, fries, cheese, and guacamole.",
+        "image": "https://images.unsplash.com/photo-1566740933430-b5558f678f97?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "id": 4,
+        "category": "Drinks",
+        "name": "Horchata",
+        "price": "250 DA",
+        "desc": "Traditional rice milk drink with cinnamon.",
+        "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=400&q=80"
+      }
+    ]
+  }
+}
