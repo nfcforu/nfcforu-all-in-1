@@ -1998,7 +1998,7 @@
   },
   "Abdou-Hanou": {
     "name": "Abdou Hanou",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-21%20at%2011.22.02.jpeg",
     "phone": "0665945474",
     "email": "abdouhanou17@gmail.com",
     "gradient": "linear-gradient(50deg,rgba(166, 104, 5, 1) 0%, rgba(167, 167, 201, 1) 50%, rgba(12, 57, 194, 1) 100%)",
@@ -2012,6 +2012,22 @@
       "tiktok": "https://www.tiktok.com/@abdouhanou6",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213665945474",
       "snapchat": "https://www.snapchat.com/add/abdouhanou24"
+    }
+  },
+  "Guettari-Informatique": {
+    "name": "Guettari Informatique",
+    "image": "",
+    "phone": "0560606656",
+    "gradient": "linear-gradient(53deg,rgba(9, 59, 121, 1) 35%, rgba(190, 226, 235, 1) 100%)",
+    "address": {
+      "text": "Ain benien",
+      "url": "https://maps.app.goo.gl/dUtKuSTjXyeU8YnW7"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61554540494665&mibextid=wwXIfr&rdid=whSEyFJL5EGBhYT3&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17a2534Z9w%2F%3Fmibextid%3DwwXIfr#",
+      "instagram": "https://www.instagram.com/informatique.guettari?igsh=MXF3aDRtbGY2dGliZQ%3D%3D&utm_source=ig_contact_invite",
+      "tiktok": "https://www.tiktok.com/@guettariinformatique",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213560606656"
     }
   }
 }
