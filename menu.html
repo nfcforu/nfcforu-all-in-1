@@ -28,9 +28,6 @@
         -ms-overflow-style: none;
         scrollbar-width: none;
       }
-      .smooth-scroll {
-        scroll-behavior: smooth;
-      }
 
       /* Skeleton Animation */
       .skeleton {
@@ -52,7 +49,6 @@
         }
       }
 
-      /* Mobile Optimization */
       .item-card:active {
         transform: scale(0.98);
         background-color: #f9fafb;
@@ -79,23 +75,40 @@
       id="error"
       class="hidden fixed inset-0 bg-white z-50 flex flex-col items-center justify-center p-6 text-center"
     >
-      <i class="fas fa-exclamation-triangle text-4xl text-yellow-500 mb-4"></i>
-      <h2 class="text-xl font-bold mb-2">Menu Not Found</h2>
-      <p class="text-gray-500">
-        Please check the URL or scan the QR code again.
-      </p>
+      <div id="errorContent"></div>
     </div>
 
     <main id="app" class="hidden opacity-0 transition-opacity duration-500">
-      <div class="relative h-48 md:h-64 w-full">
-        <img id="coverImg" src="" class="w-full h-full object-cover" />
-        <div
-          class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
-        ></div>
+      <div class="relative h-48 md:h-64 w-full overflow-hidden">
+        <div class="absolute inset-0">
+          <img
+            id="coverBg"
+            src=""
+            class="w-full h-full object-cover blur-xl scale-110 opacity-60"
+          />
+          <div class="absolute inset-0 bg-black/40"></div>
+        </div>
 
-        <div class="absolute bottom-4 left-4 right-4 text-white">
-          <h1 id="restName" class="text-3xl font-bold mb-1 shadow-sm"></h1>
-          <p id="restDesc" class="text-sm opacity-90 font-light"></p>
+        <div
+          class="absolute bottom-0 left-0 right-0 p-6 text-white flex items-end gap-4 bg-gradient-to-t from-black/80 to-transparent"
+        >
+          <img
+            id="logoImg"
+            src=""
+            class="w-20 h-20 rounded-full border-4 border-white shadow-lg bg-white object-cover"
+          />
+          <div class="mb-1">
+            <h1
+              id="restName"
+              class="text-2xl font-bold shadow-sm leading-tight"
+            ></h1>
+            <p
+              id="restPhone"
+              class="text-sm opacity-90 font-light flex items-center gap-2 mt-1"
+            >
+              <i class="fas fa-phone"></i> <span></span>
+            </p>
+          </div>
         </div>
 
         <button
@@ -149,7 +162,7 @@
         <div
           class="w-12 h-1 bg-gray-300 rounded-full mx-auto mb-6 sm:hidden"
         ></div>
-        <h2 class="text-2xl font-bold mb-6">Restaurant Info</h2>
+        <h2 class="text-2xl font-bold mb-6">Contact Info</h2>
 
         <div class="space-y-4">
           <a
@@ -165,7 +178,9 @@
             </div>
             <div>
               <div class="font-bold text-sm">Location</div>
-              <div class="text-xs text-gray-500">Get Directions</div>
+              <div id="addressDisplay" class="text-xs text-gray-500">
+                Get Directions
+              </div>
             </div>
           </a>
 
@@ -181,40 +196,14 @@
             </div>
             <div>
               <div class="font-bold text-sm">Call Us</div>
-              <div id="phoneDisplay" class="text-xs text-gray-500"></div>
+              <div id="phoneDisplayModal" class="text-xs text-gray-500"></div>
             </div>
           </a>
 
-          <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-xl">
-            <div
-              class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600"
-            >
-              <i class="fas fa-wifi"></i>
-            </div>
-            <div>
-              <div class="font-bold text-sm">WiFi Password</div>
-              <div id="wifiDisplay" class="text-xs text-gray-500">
-                Ask waiter
-              </div>
-            </div>
-          </div>
-
-          <div class="flex gap-3 mt-6">
-            <a
-              id="socialInsta"
-              href="#"
-              target="_blank"
-              class="flex-1 py-3 text-center bg-black text-white rounded-xl text-sm font-medium"
-              >Instagram</a
-            >
-            <a
-              id="socialFb"
-              href="#"
-              target="_blank"
-              class="flex-1 py-3 text-center bg-blue-600 text-white rounded-xl text-sm font-medium"
-              >Facebook</a
-            >
-          </div>
+          <div
+            class="flex gap-3 mt-6 flex-wrap"
+            id="socialLinksContainer"
+          ></div>
         </div>
       </div>
     </div>
@@ -234,7 +223,11 @@
         >
           ✕
         </button>
-        <img id="modalImg" src="" class="w-full h-64 object-cover" />
+        <img
+          id="modalImg"
+          src=""
+          class="w-full h-64 object-cover bg-gray-100"
+        />
         <div class="p-6">
           <div class="flex justify-between items-start mb-2">
             <h3 id="modalTitle" class="text-xl font-bold leading-tight"></h3>
@@ -258,65 +251,167 @@
     </div>
 
     <script>
-      let menuData = {};
+      // --- CSV PARSER ---
+      // Simple parser that handles basic CSV structure
+      function parseCSV(str) {
+        const arr = [];
+        let quote = false; // 'true' means we're inside a quoted field
 
-      // 1. Get ID from URL (e.g., menu.html?id=los-tacos)
-      const urlParams = new URLSearchParams(window.location.search);
-      const businessId = urlParams.get("id") || "los-tacos"; // Default for testing
+        // Iterate over each character, keep track of current row and col (index)
+        for (let row = 0, col = 0, c = 0; c < str.length; c++) {
+          let cc = str[c],
+            nc = str[c + 1]; // Current character, next character
+          arr[row] = arr[row] || []; // Create a new row if necessary
+          arr[row][col] = arr[row][col] || ""; // Create a new column (start with empty string) if necessary
 
-      async function init() {
-        try {
-          const res = await fetch("menus.json");
-          if (!res.ok) throw new Error("JSON not found");
-
-          const allMenus = await res.json();
-          menuData = allMenus[businessId];
-
-          if (!menuData) {
-            document.getElementById("loader").classList.add("hidden");
-            document.getElementById("error").classList.remove("hidden");
-            return;
+          // If the current character is a quotation mark, and we're inside a
+          // quoted field, and the next character is also a quotation mark,
+          // add a quotation mark to the current column and skip the next character
+          if (cc == '"' && quote && nc == '"') {
+            arr[row][col] += cc;
+            ++c;
           }
 
-          renderApp();
+          // If it's just one quotation mark, begin/end quoted field
+          else if (cc == '"') {
+            quote = !quote;
+          }
+
+          // If it's a comma and we're not in a quoted field, move on to the next column
+          else if (cc == "," && !quote) {
+            ++col;
+          }
+
+          // If it's a newline (CRLF) and we're not in a quoted field, skip the next character
+          // and move on to the next row and move to column 0 of that new row
+          else if (cc == "\r" && nc == "\n" && !quote) {
+            ++row;
+            col = 0;
+            ++c;
+          }
+
+          // If it's a newline (LF or CR) and we're not in a quoted field,
+          // move on to the next row and move to column 0 of that new row
+          else if ((cc == "\n" || cc == "\r") && !quote) {
+            ++row;
+            col = 0;
+          }
+
+          // Otherwise, push the current character to the current column
+          else {
+            arr[row][col] += cc;
+          }
+        }
+        return arr;
+      }
+
+      async function init() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const businessId = urlParams.get("id") || "los-tacos";
+
+        try {
+          // 1. Fetch Business Info (JSON)
+          const resBiz = await fetch("/businesses.json");
+          if (!resBiz.ok) throw new Error("Could not load businesses.json");
+          const bizDataAll = await resBiz.json();
+          const bizInfo = bizDataAll[businessId];
+
+          if (!bizInfo)
+            throw new Error(
+              `Business ID "${businessId}" not found in businesses.json`
+            );
+
+          // 2. Fetch Menu Items (CSV)
+          const resMenu = await fetch("/menus.csv");
+          if (!resMenu.ok) throw new Error("Could not load menus.csv");
+          const csvText = await resMenu.text();
+
+          // Parse CSV
+          const rows = parseCSV(csvText);
+          // Assume Row 0 is headers: id, category, name, price, description, image
+          // We'll verify headers or just assume standard order if headers match roughly
+
+          const menuItems = [];
+          // Start at index 1 to skip headers
+          for (let i = 1; i < rows.length; i++) {
+            const row = rows[i];
+            if (row.length < 3) continue; // Skip empty rows
+
+            // Column mapping: 0=id, 1=category, 2=name, 3=price, 4=desc, 5=image
+            if (row[0].trim() === businessId) {
+              menuItems.push({
+                category: row[1],
+                name: row[2],
+                price: row[3],
+                desc: row[4],
+                image: row[5],
+              });
+            }
+          }
+
+          renderApp(bizInfo, menuItems);
         } catch (err) {
           console.error(err);
           document.getElementById("loader").classList.add("hidden");
           document.getElementById("error").classList.remove("hidden");
+          document.getElementById("errorContent").innerHTML = `
+                    <i class="fas fa-exclamation-triangle text-4xl text-yellow-500 mb-4"></i>
+                    <h2 class="text-xl font-bold mb-2">Error Loading Menu</h2>
+                    <p class="text-gray-500 text-sm">${err.message}</p>
+                `;
         }
       }
 
-      function renderApp() {
-        // Header Info
-        const info = menuData.info;
-        document.getElementById("coverImg").src = info.cover;
+      function renderApp(info, items) {
+        // --- 1. Render Header (From JSON) ---
         document.getElementById("restName").textContent = info.name;
-        document.getElementById("restDesc").textContent = info.description;
 
-        // Modal Info
-        document.getElementById("phoneDisplay").textContent = info.phone;
-        document.getElementById("linkPhone").href = `tel:${info.phone}`;
-        document.getElementById("wifiDisplay").textContent = info.wifi || "-";
-        document.getElementById("linkMap").href = info.location;
+        // Use Logo as Main Image and Background
+        const logoUrl = info.image || "https://via.placeholder.com/150";
+        document.getElementById("logoImg").src = logoUrl;
+        document.getElementById("coverBg").src = logoUrl; // Blurry background
 
-        const instaBtn = document.getElementById("socialInsta");
-        if (info.instagram) instaBtn.href = info.instagram;
-        else instaBtn.style.display = "none";
+        document.getElementById("restPhone").querySelector("span").textContent =
+          info.phone || "";
 
-        const fbBtn = document.getElementById("socialFb");
-        if (info.facebook) fbBtn.href = info.facebook;
-        else fbBtn.style.display = "none";
+        // Modal Data
+        if (info.phone)
+          document.getElementById("linkPhone").href = `tel:${info.phone}`;
+        document.getElementById("phoneDisplayModal").textContent =
+          info.phone || "";
 
-        // Categories
+        if (info.address) {
+          const addrText =
+            typeof info.address === "string" ? info.address : info.address.text;
+          const addrUrl =
+            typeof info.address === "string" ? "#" : info.address.url;
+          document.getElementById("addressDisplay").textContent = addrText;
+          document.getElementById("linkMap").href = addrUrl;
+        }
+
+        // Socials
+        const socialContainer = document.getElementById("socialLinksContainer");
+        if (info.socials) {
+          Object.entries(info.socials).forEach(([key, url]) => {
+            const btn = document.createElement("a");
+            btn.href = url;
+            btn.target = "_blank";
+            btn.className =
+              "flex-1 py-3 text-center bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-xl text-sm font-medium capitalize transition";
+            btn.innerText = key;
+            socialContainer.appendChild(btn);
+          });
+        }
+
+        // --- 2. Render Menu (From CSV) ---
         const nav = document.getElementById("categoryNav");
         const container = document.getElementById("menuContainer");
 
-        // Clean containers
-        nav.innerHTML = "";
-        container.innerHTML = "";
+        // Get unique categories
+        const categories = [...new Set(items.map((i) => i.category))];
 
-        menuData.categories.forEach((cat, index) => {
-          // 1. Add Pill to Nav
+        categories.forEach((cat, index) => {
+          // Nav Pill
           const pill = document.createElement("button");
           pill.className = `category-pill px-5 py-2 rounded-full text-sm font-medium border border-gray-200 whitespace-nowrap transition ${
             index === 0 ? "active" : "bg-white text-gray-600"
@@ -325,10 +420,10 @@
           pill.onclick = () => scrollToCategory(cat, pill);
           nav.appendChild(pill);
 
-          // 2. Add Section to Body
+          // Section
           const section = document.createElement("div");
-          section.id = `cat-${cat}`;
-          section.className = "scroll-mt-40 mb-8"; // Offset for sticky header
+          section.id = `cat-${cat.replace(/\s+/g, "-")}`; // Safe ID
+          section.className = "scroll-mt-40 mb-8";
 
           const title = document.createElement("h2");
           title.className = "text-xl font-bold mb-4";
@@ -338,18 +433,18 @@
           const grid = document.createElement("div");
           grid.className = "grid gap-4";
 
-          // Filter items for this category
-          const items = menuData.items.filter((i) => i.category === cat);
-          items.forEach((item) => {
+          // Items in this category
+          const catItems = items.filter((i) => i.category === cat);
+          catItems.forEach((item) => {
             const card = document.createElement("div");
             card.className =
               "item-card flex gap-4 p-3 rounded-xl border border-gray-100 bg-white shadow-sm cursor-pointer transition";
             card.onclick = () => openItem(item);
 
-            // Check if image exists
-            const imgHtml = item.image
-              ? `<img src="${item.image}" class="w-24 h-24 rounded-lg object-cover flex-shrink-0 bg-gray-100">`
-              : "";
+            const imgHtml =
+              item.image && item.image.trim() !== ""
+                ? `<img src="${item.image}" class="w-24 h-24 rounded-lg object-cover flex-shrink-0 bg-gray-100">`
+                : "";
 
             card.innerHTML = `
                         <div class="flex-grow min-w-0 flex flex-col justify-between py-1">
@@ -368,16 +463,15 @@
           container.appendChild(section);
         });
 
-        // Reveal App
+        // Show UI
         document.getElementById("loader").classList.add("hidden");
         const app = document.getElementById("app");
         app.classList.remove("hidden");
         setTimeout(() => app.classList.remove("opacity-0"), 50);
       }
 
-      // Navigation Logic
+      // --- Helpers ---
       function scrollToCategory(cat, btn) {
-        // Update Active Pill
         document.querySelectorAll(".category-pill").forEach((el) => {
           el.classList.remove(
             "active",
@@ -390,8 +484,8 @@
         btn.classList.remove("bg-white", "text-gray-600");
         btn.classList.add("active");
 
-        // Scroll
-        const section = document.getElementById(`cat-${cat}`);
+        const safeId = `cat-${cat.replace(/\s+/g, "-")}`;
+        const section = document.getElementById(safeId);
         if (section) {
           const headerOffset = 140;
           const elementPosition = section.getBoundingClientRect().top;
@@ -401,15 +495,12 @@
         }
       }
 
-      // Filter Logic
       function filterMenu() {
         const term = document.getElementById("search").value.toLowerCase();
         const sections = document.querySelectorAll("#menuContainer > div");
-
         sections.forEach((section) => {
           let hasVisibleItems = false;
           const items = section.querySelectorAll(".item-card");
-
           items.forEach((card) => {
             const text = card.innerText.toLowerCase();
             if (text.includes(term)) {
@@ -419,23 +510,17 @@
               card.style.display = "none";
             }
           });
-
-          // Hide category title if no items match
           section.style.display = hasVisibleItems ? "block" : "none";
         });
       }
 
-      // Info Modal
       function toggleInfo() {
         const modal = document.getElementById("infoModal");
         const content = document.getElementById("infoContent");
-
         if (modal.classList.contains("hidden")) {
           modal.classList.remove("hidden");
           modal.classList.add("flex");
-          setTimeout(() => {
-            content.classList.remove("translate-y-full");
-          }, 10);
+          setTimeout(() => content.classList.remove("translate-y-full"), 10);
         } else {
           content.classList.add("translate-y-full");
           setTimeout(() => {
@@ -445,14 +530,14 @@
         }
       }
 
-      // Item Modal
       function openItem(item) {
         document.getElementById("modalImg").src =
-          item.image || "https://via.placeholder.com/400x300?text=No+Image";
+          item.image && item.image.trim() !== ""
+            ? item.image
+            : "https://via.placeholder.com/400x300?text=No+Image";
         document.getElementById("modalTitle").textContent = item.name;
         document.getElementById("modalDesc").textContent = item.desc;
         document.getElementById("modalPrice").textContent = item.price;
-
         const modal = document.getElementById("itemModal");
         modal.classList.remove("hidden");
         modal.classList.add("flex");
