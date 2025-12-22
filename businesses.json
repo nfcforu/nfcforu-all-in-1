@@ -2043,5 +2043,21 @@
       "facebook": "https://www.facebook.com/profile.php?id=61578337775391&rdid=LhFKIkC8S9bGirSc&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17XwgvbU84%2F#",
       "tiktok": "https://www.tiktok.com/@planet.phone42?_r=1&_t=ZS-92P88F2t7A1"
     }
+  },
+  "Tarek-Maghili": {
+    "name": "Tarek Maghili",
+    "image": "",
+    "phone": "0660874508",
+    "gradient": "linear-gradient(312deg,rgba(22, 22, 23, 1) 0%, rgba(222, 145, 38, 1) 100%)",
+    "address": {
+      "text": "Tamanrasset",
+      "url": "https://maps.app.goo.gl/qzHVU36sawuoEHya9"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61583492880676",
+      "instagram": "https://www.instagram.com/ta_re_k_be_n_hasan/",
+      "tiktok": "https://www.tiktok.com/@tarekmaghili",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213660874508"
+    }
   }
 }
