@@ -2021,7 +2021,7 @@
     "gradient": "linear-gradient(53deg,rgba(9, 59, 121, 1) 35%, rgba(190, 226, 235, 1) 100%)",
     "address": {
       "text": "Ain benien",
-      "url": "https://maps.app.goo.gl/dUtKuSTjXyeU8YnW7"
+      "url": "https://www.google.com/maps/place/Guettari+informatique/@36.800152,2.9149708,698m/data=!3m1!1e3!4m18!1m9!3m8!1s0x128fbb04721bc833:0xf9e6b30d0239bf0b!2sGuettari+informatique!8m2!3d36.800152!4d2.9149708!9m1!1b1!16s%2Fg%2F11flvyr34c!3m7!1s0x128fbb04721bc833:0xf9e6b30d0239bf0b!8m2!3d36.800152!4d2.9149708!9m1!1b1!16s%2Fg%2F11flvyr34c!18m1!1e1?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
     },
     "socials": {
       "facebook": "https://www.facebook.com/profile.php?id=61554540494665&mibextid=wwXIfr&rdid=whSEyFJL5EGBhYT3&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17a2534Z9w%2F%3Fmibextid%3DwwXIfr#",
@@ -2042,6 +2042,22 @@
     "socials": {
       "facebook": "https://www.facebook.com/profile.php?id=61578337775391&rdid=LhFKIkC8S9bGirSc&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17XwgvbU84%2F#",
       "tiktok": "https://www.tiktok.com/@planet.phone42?_r=1&_t=ZS-92P88F2t7A1"
+    }
+  },
+  "Tarek-Maghili": {
+    "name": "Tarek Maghili",
+    "image": "",
+    "phone": "0660874508",
+    "gradient": "linear-gradient(312deg,rgba(22, 22, 23, 1) 0%, rgba(222, 145, 38, 1) 100%)",
+    "address": {
+      "text": "Tamanrasset",
+      "url": "https://maps.app.goo.gl/qzHVU36sawuoEHya9"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61583492880676",
+      "instagram": "https://www.instagram.com/ta_re_k_be_n_hasan/",
+      "tiktok": "https://www.tiktok.com/@tarekmaghili",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213660874508"
     }
   }
 }
