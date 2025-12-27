@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nurse Dashboard</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+      .refresh-btn {
+        padding: 10px 20px;
+        background: #28a745;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Daily Patient List</h2>
+    <button class="refresh-btn" onclick="loadQueue()">Refresh List</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Order</th>
+          <th>Patient Name</th>
+          <th>Time Joined</th>
+        </tr>
+      </thead>
+      <tbody id="queueList"></tbody>
+    </table>
+
+    <script>
+      async function loadQueue() {
+        const response = await fetch("/api/queue");
+        const data = await response.json();
+        const list = document.getElementById("queueList");
+        list.innerHTML = "";
+
+        data.forEach((p, index) => {
+          list.innerHTML += `<tr>
+                    <td>${index + 1}</td>
+                    <td>${p.name}</td>
+                    <td>${p.time}</td>
+                </tr>`;
+        });
+      }
+      // Auto-refresh every 30 seconds
+      setInterval(loadQueue, 30000);
+      loadQueue();
+    </script>
+  </body>
+</html>
