@@ -376,7 +376,10 @@
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhnYWhhc3Jma3RweWxkamtuZGhoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY5MDMyMzgsImV4cCI6MjA4MjQ3OTIzOH0.0Oec4OpBjHS5OL6QMY3bvs3jT2KGfkvECgGKZfNLXb4";
 
       // Initialize Supabase client
-      const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+      const supabaseClient = window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_KEY
+      );
 
       // ============================================
       // BRANDING CONFIGURATION
@@ -426,7 +429,7 @@
         const selectedDate = document.getElementById("dateFilter").value;
 
         try {
-          const { data: reservations, error } = await supabase
+          const { data: reservations, error } = await supabaseClient
             .from("reservations")
             .select("*")
             .eq("date", selectedDate)
@@ -518,7 +521,7 @@
         }
 
         try {
-          const { error } = await supabase
+          const { error } = await supabaseClient
             .from("reservations")
             .delete()
             .eq("id", id);
@@ -545,7 +548,7 @@
         }
 
         try {
-          const { error } = await supabase
+          const { error } = await supabaseClient
             .from("reservations")
             .delete()
             .eq("date", selectedDate);
@@ -563,7 +566,7 @@
       function setupRealtimeSubscription() {
         const selectedDate = document.getElementById("dateFilter").value;
 
-        supabase
+        supabaseClient
           .channel("reservations-changes")
           .on(
             "postgres_changes",
