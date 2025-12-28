@@ -2046,7 +2046,7 @@
   },
   "Tarek-Maghili": {
     "name": "Tarek Maghili",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-22%20at%2012.03.04.jpeg",
     "phone": "0660874508",
     "gradient": "linear-gradient(312deg,rgba(22, 22, 23, 1) 0%, rgba(222, 145, 38, 1) 100%)",
     "address": {
@@ -2058,6 +2058,22 @@
       "instagram": "https://www.instagram.com/ta_re_k_be_n_hasan/",
       "tiktok": "https://www.tiktok.com/@tarekmaghili",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213660874508"
+    }
+  },
+  "Youcef_Moda": {
+    "name": "Youcef Moda",
+    "image": "",
+    "phone": "0774548263",
+    "gradient": "linear-gradient(203deg,rgba(22, 22, 23, 1) 0%, rgba(235, 182, 7, 1) 100%)",
+    "address": {
+      "text": "Setif",
+      "url": "https://maps.app.goo.gl/nXyMQpoW86KUoXrN6"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=100064362385134&rdid=KZ3cgdwXcTMpKHeV&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AEWNzKXgK%2F#",
+      "instagram": "https://www.instagram.com/youcefmoda/",
+      "tiktok": "https://www.tiktok.com/@youcef_moda_4?_r=1&_t=ZS-92bDQcde7tf",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213774548263"
     }
   }
 }
