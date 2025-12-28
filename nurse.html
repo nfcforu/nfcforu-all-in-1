@@ -1,67 +1,591 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Nurse Dashboard</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinic Dashboard</title>
     <style>
-      body {
-        font-family: sans-serif;
-        padding: 20px;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
+
+      :root {
+        --primary-color: #2563eb;
+        --secondary-color: #1e40af;
+        --text-color: #1f2937;
+        --bg-color: #f3f4f6;
+        --card-bg: #ffffff;
+        --success-color: #10b981;
+        --danger-color: #ef4444;
+        --border-color: #e5e7eb;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        min-height: 100vh;
+      }
+
+      .dashboard-header {
+        background: var(--card-bg);
+        border-bottom: 2px solid var(--border-color);
+        padding: 20px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .logo-small {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: white;
+      }
+
+      .header-title h1 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 2px;
+      }
+
+      .header-title p {
+        font-size: 14px;
+        color: #6b7280;
+      }
+
+      .header-right {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .date-filter {
+        padding: 10px 16px;
+        border: 2px solid var(--border-color);
+        border-radius: 8px;
+        font-size: 14px;
+        background: white;
+      }
+
+      .refresh-btn {
+        padding: 10px 20px;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .refresh-btn:hover {
+        background: var(--secondary-color);
+      }
+
+      .dashboard-content {
+        padding: 30px;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .stats-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+
+      .stat-card {
+        background: var(--card-bg);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      .stat-label {
+        font-size: 13px;
+        color: #6b7280;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 8px;
+      }
+
+      .stat-value {
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--primary-color);
+      }
+
+      .table-container {
+        background: var(--card-bg);
+        border-radius: 12px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+      }
+
+      .table-header {
+        padding: 20px 30px;
+        border-bottom: 2px solid var(--border-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .table-title {
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .clear-all-btn {
+        padding: 8px 16px;
+        background: var(--danger-color);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .clear-all-btn:hover {
+        background: #dc2626;
+      }
+
+      .table-wrapper {
+        overflow-x: auto;
+      }
+
       table {
         width: 100%;
         border-collapse: collapse;
-        margin-top: 20px;
       }
-      th,
-      td {
-        border: 1px solid #ddd;
-        padding: 12px;
-        text-align: left;
+
+      thead {
+        background: #f9fafb;
       }
+
       th {
-        background-color: #f4f4f4;
+        text-align: left;
+        padding: 16px 24px;
+        font-size: 13px;
+        font-weight: 700;
+        color: #6b7280;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-bottom: 2px solid var(--border-color);
       }
-      .refresh-btn {
-        padding: 10px 20px;
-        background: #28a745;
+
+      td {
+        padding: 20px 24px;
+        border-bottom: 1px solid var(--border-color);
+        font-size: 15px;
+      }
+
+      tbody tr {
+        transition: background 0.2s ease;
+      }
+
+      tbody tr:hover {
+        background: #f9fafb;
+      }
+
+      .position-badge {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 32px;
+        font-weight: 700;
+        font-size: 14px;
+      }
+
+      .time-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        background: #dbeafe;
+        color: #1e40af;
+        border-radius: 12px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .action-btn {
+        padding: 8px 16px;
+        background: var(--danger-color);
         color: white;
         border: none;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 600;
         cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .action-btn:hover {
+        background: #dc2626;
+      }
+
+      .empty-state {
+        text-align: center;
+        padding: 60px 20px;
+        color: #6b7280;
+      }
+
+      .empty-state-icon {
+        font-size: 64px;
+        margin-bottom: 16px;
+      }
+
+      .empty-state-text {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .empty-state-subtext {
+        font-size: 14px;
+      }
+
+      @media (max-width: 768px) {
+        .dashboard-header {
+          padding: 15px 20px;
+        }
+
+        .dashboard-content {
+          padding: 20px 15px;
+        }
+
+        .header-title h1 {
+          font-size: 20px;
+        }
+
+        .stats-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .table-header {
+          padding: 15px 20px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+        }
+
+        th,
+        td {
+          padding: 12px 16px;
+          font-size: 13px;
+        }
+
+        .stat-value {
+          font-size: 24px;
+        }
       }
     </style>
   </head>
   <body>
-    <h2>Daily Patient List</h2>
-    <button class="refresh-btn" onclick="loadQueue()">Refresh List</button>
-    <table>
-      <thead>
-        <tr>
-          <th>Order</th>
-          <th>Patient Name</th>
-          <th>Time Joined</th>
-        </tr>
-      </thead>
-      <tbody id="queueList"></tbody>
-    </table>
+    <div class="dashboard-header">
+      <div class="header-left">
+        <div class="logo-small">🏥</div>
+        <div class="header-title">
+          <h1 id="dashboardTitle">Clinic Dashboard</h1>
+          <p id="dashboardSubtitle">Patient Queue Management</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <input type="date" id="dateFilter" class="date-filter" />
+        <button class="refresh-btn" onclick="loadReservations()">
+          🔄 Refresh
+        </button>
+      </div>
+    </div>
 
+    <div class="dashboard-content">
+      <div class="stats-container">
+        <div class="stat-card">
+          <div class="stat-label">Total Today</div>
+          <div class="stat-value" id="totalCount">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Next Patient</div>
+          <div class="stat-value" id="nextPatient">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Avg Age</div>
+          <div class="stat-value" id="avgAge">—</div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <div class="table-header">
+          <h2 class="table-title">Patient Queue</h2>
+          <button class="clear-all-btn" onclick="clearAllReservations()">
+            Clear All
+          </button>
+        </div>
+        <div class="table-wrapper">
+          <table id="reservationsTable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Age</th>
+                <th>Date</th>
+                <th>Time Added</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <!-- Data will be inserted here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
-      async function loadQueue() {
-        const response = await fetch("/api/queue");
-        const data = await response.json();
-        const list = document.getElementById("queueList");
-        list.innerHTML = "";
+      // ============================================
+      // SUPABASE CONFIGURATION
+      // ============================================
+      const SUPABASE_URL = "https://xgahasrfktpyldjkndhh.supabase.co";
+      const SUPABASE_KEY =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhnYWhhc3Jma3RweWxkamtuZGhoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY5MDMyMzgsImV4cCI6MjA4MjQ3OTIzOH0.0Oec4OpBjHS5OL6QMY3bvs3jT2KGfkvECgGKZfNLXb4";
 
-        data.forEach((p, index) => {
-          list.innerHTML += `<tr>
-                    <td>${index + 1}</td>
-                    <td>${p.name}</td>
-                    <td>${p.time}</td>
-                </tr>`;
+      // Initialize Supabase client
+      const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+      // ============================================
+      // BRANDING CONFIGURATION
+      // ============================================
+      const clinicConfig = {
+        name: "Medical Clinic",
+        subtitle: "Patient Queue Management",
+        primaryColor: "#2563eb",
+        secondaryColor: "#1e40af",
+      };
+
+      // Apply branding
+      function applyBranding() {
+        document.getElementById("dashboardTitle").textContent =
+          clinicConfig.name + " Dashboard";
+        document.getElementById("dashboardSubtitle").textContent =
+          clinicConfig.subtitle;
+
+        document.documentElement.style.setProperty(
+          "--primary-color",
+          clinicConfig.primaryColor
+        );
+        document.documentElement.style.setProperty(
+          "--secondary-color",
+          clinicConfig.secondaryColor
+        );
+      }
+
+      // Set date filter to today
+      function setDateFilter() {
+        const today = new Date().toISOString().split("T")[0];
+        document.getElementById("dateFilter").value = today;
+      }
+
+      // Format time
+      function formatTime(timestamp) {
+        const date = new Date(timestamp);
+        return date.toLocaleTimeString("en-US", {
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: true,
         });
       }
-      // Auto-refresh every 30 seconds
-      setInterval(loadQueue, 30000);
-      loadQueue();
+
+      // Load reservations from Supabase
+      async function loadReservations() {
+        const selectedDate = document.getElementById("dateFilter").value;
+
+        try {
+          const { data: reservations, error } = await supabase
+            .from("reservations")
+            .select("*")
+            .eq("date", selectedDate)
+            .order("timestamp", { ascending: true });
+
+          if (error) throw error;
+
+          // Update stats
+          updateStats(reservations || []);
+
+          // Update table
+          updateTable(reservations || []);
+        } catch (error) {
+          console.error("Error loading reservations:", error);
+          updateStats([]);
+          updateTable([]);
+        }
+      }
+
+      // Update statistics
+      function updateStats(reservations) {
+        document.getElementById("totalCount").textContent = reservations.length;
+
+        if (reservations.length > 0) {
+          document.getElementById("nextPatient").textContent =
+            reservations[0].name.split(" ")[0];
+
+          const avgAge = Math.round(
+            reservations.reduce((sum, res) => sum + parseInt(res.age), 0) /
+              reservations.length
+          );
+          document.getElementById("avgAge").textContent = avgAge;
+        } else {
+          document.getElementById("nextPatient").textContent = "—";
+          document.getElementById("avgAge").textContent = "—";
+        }
+      }
+
+      // Update table
+      function updateTable(reservations) {
+        const tbody = document.getElementById("tableBody");
+
+        if (reservations.length === 0) {
+          tbody.innerHTML = `
+                    <tr>
+                        <td colspan="7">
+                            <div class="empty-state">
+                                <div class="empty-state-icon">📋</div>
+                                <div class="empty-state-text">No reservations found</div>
+                                <div class="empty-state-subtext">Patients will appear here when they scan the NFC tag</div>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+          return;
+        }
+
+        tbody.innerHTML = reservations
+          .map(
+            (res, index) => `
+                <tr>
+                    <td><span class="position-badge">${index + 1}</span></td>
+                    <td><strong>${res.name}</strong></td>
+                    <td>${res.phone}</td>
+                    <td>${res.age}</td>
+                    <td>${res.date}</td>
+                    <td><span class="time-badge">${formatTime(
+                      res.timestamp
+                    )}</span></td>
+                    <td>
+                        <button class="action-btn" onclick="removeReservation(${
+                          res.id
+                        })">Remove</button>
+                    </td>
+                </tr>
+            `
+          )
+          .join("");
+      }
+
+      // Remove single reservation
+      async function removeReservation(id) {
+        if (
+          !confirm(
+            "Are you sure you want to remove this patient from the queue?"
+          )
+        ) {
+          return;
+        }
+
+        try {
+          const { error } = await supabase
+            .from("reservations")
+            .delete()
+            .eq("id", id);
+
+          if (error) throw error;
+
+          loadReservations();
+        } catch (error) {
+          console.error("Error removing reservation:", error);
+          alert("Failed to remove reservation. Please try again.");
+        }
+      }
+
+      // Clear all reservations for selected date
+      async function clearAllReservations() {
+        const selectedDate = document.getElementById("dateFilter").value;
+
+        if (
+          !confirm(
+            `Are you sure you want to clear all reservations for ${selectedDate}?`
+          )
+        ) {
+          return;
+        }
+
+        try {
+          const { error } = await supabase
+            .from("reservations")
+            .delete()
+            .eq("date", selectedDate);
+
+          if (error) throw error;
+
+          loadReservations();
+        } catch (error) {
+          console.error("Error clearing reservations:", error);
+          alert("Failed to clear reservations. Please try again.");
+        }
+      }
+
+      // Subscribe to real-time changes
+      function setupRealtimeSubscription() {
+        const selectedDate = document.getElementById("dateFilter").value;
+
+        supabase
+          .channel("reservations-changes")
+          .on(
+            "postgres_changes",
+            { event: "*", schema: "public", table: "reservations" },
+            (payload) => {
+              console.log("Change detected:", payload);
+              loadReservations();
+            }
+          )
+          .subscribe();
+      }
+
+      // Listen for date filter changes
+      document
+        .getElementById("dateFilter")
+        .addEventListener("change", loadReservations);
+
+      // Initialize
+      applyBranding();
+      setDateFilter();
+      loadReservations();
+      setupRealtimeSubscription();
     </script>
   </body>
 </html>
