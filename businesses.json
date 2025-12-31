@@ -227,16 +227,16 @@
   "Boutique-jaguar": {
     "name": "Boutique Jaguar",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp Image 2025-09-28 at 21.51.57_e96309ae.jpg",
-    "address": {
-      "url": "https://www.google.com/maps/place/Boutique+Jaguar/@36.1887419,5.4126607,20.08z/data=!4m14!1m7!3m6!1s0x12f315004e924c43:0x88a2fe718285fd9b!2sVitalia!8m2!3d36.1889779!4d5.4131611!16s%2Fg%2F11mcn6r7f0!3m5!1s0x12f3150079f0d89b:0x4c809e7cf1274b4e!8m2!3d36.1888912!4d5.4130658!16s%2Fg%2F11vzdd3p8x?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D",
-      "text": "Rue Rekaif Ali, Sétif"
-    },
     "phone": "0554392087",
     "gradient": "#1A8051",
+    "address": {
+      "text": "Rue Rekaif Ali, Sétif",
+      "url": "https://www.google.com/maps/place/Boutique+Jaguar/@36.1887419,5.4126607,20.08z/data=!4m14!1m7!3m6!1s0x12f315004e924c43:0x88a2fe718285fd9b!2sVitalia!8m2!3d36.1889779!4d5.4131611!16s%2Fg%2F11mcn6r7f0!3m5!1s0x12f3150079f0d89b:0x4c809e7cf1274b4e!8m2!3d36.1888912!4d5.4130658!16s%2Fg%2F11vzdd3p8x?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D"
+    },
     "socials": {
-      "tiktok": "https://www.tiktok.com/@boutique.jaguar.19",
+      "facebook": "https://www.facebook.com/profile.php?id=61559514929996",
       "instagram": "https://www.instagram.com/boutique.jagua.r19/",
-      "facebook": "https://www.facebook.com/profile.php?id=61559514929996"
+      "tiktok": "https://www.tiktok.com/@boutique.jaguar.19.2?_r=1&_t=ZS-92dOn6wcyXt"
     }
   },
   "patisserie-sofrane": {
@@ -1892,7 +1892,7 @@
     "gradient": "linear-gradient(184deg,rgba(255, 255, 255, 1) 0%, rgba(4, 128, 35, 1) 100%)",
     "address": {
       "text": "Djidiouia",
-      "url": "https://l.facebook.com/l.php?u=https%3A%2F%2Fg.page%2Fr%2FCVGoXdGtws4HEAE%2Freview%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExSFFaV2pxOHp6S25sUXVLaHNydGMGYXBwX2lkDzUxNDc3MTU2OTIyODA2MQABHtii42DWEwvYKzvAK29c1FZaUBp6GkSeUPuFmCCjtymYmIFNxYDaLN9vvYAe_aem_POvPjgbNBxwuleG2QOIuTA&h=AT0It52x6RnNb1YvbQfi4LSaRM0gm_ZH4m3fFwFKRc3qSsMSsbV3X_35tzmfAlGg9OV1C_-thdxtiHbdmE7drRi8jdwUilCsKH_hp9mFjZCxg5jgeqACpONRBR-umXOROnpsnw"
+      "url": "https://maps.app.goo.gl/fYNqYKtaykY41RGe7"
     },
     "socials": {
       "facebook": "https://www.facebook.com/profile.php?id=61580863153889&rdid=UrTtCpgbifqOWtKh&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17wDH1X8HL%2F#",
@@ -2062,7 +2062,7 @@
   },
   "Youcef_Moda": {
     "name": "Youcef Moda",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-28%20at%2013.35.31.jpeg",
     "phone": "0774548263",
     "gradient": "linear-gradient(203deg,rgba(22, 22, 23, 1) 0%, rgba(235, 182, 7, 1) 100%)",
     "address": {
@@ -2071,9 +2071,25 @@
     },
     "socials": {
       "facebook": "https://www.facebook.com/profile.php?id=100064362385134&rdid=KZ3cgdwXcTMpKHeV&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AEWNzKXgK%2F#",
-      "instagram": "https://www.instagram.com/youcefmoda/",
+      "instagram": "https://www.instagram.com/youcef_moda_4?igsh=bDE3NHZndGM0bzQ1",
       "tiktok": "https://www.tiktok.com/@youcef_moda_4?_r=1&_t=ZS-92bDQcde7tf",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213774548263"
+    }
+  },
+  "Rahaf-Eline-Decor": {
+    "name": "Rahaf Eline Decor",
+    "image": "",
+    "phone": "0770789313",
+    "gradient": "linear-gradient(203deg,rgba(22, 22, 23, 1) 0%, rgba(235, 182, 7, 1) 100%)",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/rahaf.eline.decor",
+      "instagram": "https://www.instagram.com/rahaf_eline_decor/",
+      "tiktok": "https://www.tiktok.com/@rahaf.eline.dcor",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770789313"
     }
   }
 }
