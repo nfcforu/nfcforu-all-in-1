@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clinic Dashboard</title>
+    <title>Tableau de bord Clinique</title>
     <style>
       * {
         margin: 0;
@@ -209,6 +209,10 @@
         background: #f9fafb;
       }
 
+      tbody tr.visited {
+        background: #f0fdf4;
+      }
+
       .position-badge {
         display: inline-block;
         width: 32px;
@@ -232,9 +236,31 @@
         font-weight: 600;
       }
 
+      .status-badge {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .status-badge.visited {
+        background: #d1fae5;
+        color: #065f46;
+      }
+
+      .status-badge.waiting {
+        background: #fef3c7;
+        color: #92400e;
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: 8px;
+      }
+
       .action-btn {
         padding: 8px 16px;
-        background: var(--danger-color);
         color: white;
         border: none;
         border-radius: 6px;
@@ -244,7 +270,19 @@
         transition: all 0.3s ease;
       }
 
-      .action-btn:hover {
+      .visited-btn {
+        background: var(--success-color);
+      }
+
+      .visited-btn:hover {
+        background: #059669;
+      }
+
+      .remove-btn {
+        background: var(--danger-color);
+      }
+
+      .remove-btn:hover {
         background: #dc2626;
       }
 
@@ -302,6 +340,10 @@
         .stat-value {
           font-size: 24px;
         }
+
+        .action-buttons {
+          flex-direction: column;
+        }
       }
     </style>
   </head>
@@ -310,14 +352,16 @@
       <div class="header-left">
         <div class="logo-small">🏥</div>
         <div class="header-title">
-          <h1 id="dashboardTitle">Clinic Dashboard</h1>
-          <p id="dashboardSubtitle">Patient Queue Management</p>
+          <h1 id="dashboardTitle">Tableau de bord Clinique</h1>
+          <p id="dashboardSubtitle">
+            Gestion de la file d'attente des patients
+          </p>
         </div>
       </div>
       <div class="header-right">
         <input type="date" id="dateFilter" class="date-filter" />
         <button class="refresh-btn" onclick="loadReservations()">
-          🔄 Refresh
+          🔄 Actualiser
         </button>
       </div>
     </div>
@@ -325,24 +369,28 @@
     <div class="dashboard-content">
       <div class="stats-container">
         <div class="stat-card">
-          <div class="stat-label">Total Today</div>
+          <div class="stat-label">Total Aujourd'hui</div>
           <div class="stat-value" id="totalCount">0</div>
         </div>
         <div class="stat-card">
-          <div class="stat-label">Next Patient</div>
+          <div class="stat-label">Prochain Patient</div>
           <div class="stat-value" id="nextPatient">—</div>
         </div>
         <div class="stat-card">
-          <div class="stat-label">Avg Age</div>
+          <div class="stat-label">Âge Moyen</div>
           <div class="stat-value" id="avgAge">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Consultés</div>
+          <div class="stat-value" id="visitedCount">0</div>
         </div>
       </div>
 
       <div class="table-container">
         <div class="table-header">
-          <h2 class="table-title">Patient Queue</h2>
+          <h2 class="table-title">File d'attente des patients</h2>
           <button class="clear-all-btn" onclick="clearAllReservations()">
-            Clear All
+            Tout effacer
           </button>
         </div>
         <div class="table-wrapper">
@@ -350,16 +398,17 @@
             <thead>
               <tr>
                 <th>#</th>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>Age</th>
+                <th>Nom</th>
+                <th>Téléphone</th>
+                <th>Âge</th>
                 <th>Date</th>
-                <th>Time Added</th>
-                <th>Action</th>
+                <th>Heure d'ajout</th>
+                <th>Statut</th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody id="tableBody">
-              <!-- Data will be inserted here -->
+              <!-- Les données seront insérées ici -->
             </tbody>
           </table>
         </div>
@@ -369,32 +418,32 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
       // ============================================
-      // SUPABASE CONFIGURATION
+      // CONFIGURATION SUPABASE
       // ============================================
       const SUPABASE_URL = "https://xgahasrfktpyldjkndhh.supabase.co";
       const SUPABASE_KEY =
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhnYWhhc3Jma3RweWxkamtuZGhoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY5MDMyMzgsImV4cCI6MjA4MjQ3OTIzOH0.0Oec4OpBjHS5OL6QMY3bvs3jT2KGfkvECgGKZfNLXb4";
 
-      // Initialize Supabase client
+      // Initialiser le client Supabase
       const supabaseClient = window.supabase.createClient(
         SUPABASE_URL,
         SUPABASE_KEY
       );
 
       // ============================================
-      // BRANDING CONFIGURATION
+      // CONFIGURATION DE LA MARQUE
       // ============================================
       const clinicConfig = {
-        name: "Medical Clinic",
-        subtitle: "Patient Queue Management",
+        name: "Clinique Médicale",
+        subtitle: "Gestion de la file d'attente des patients",
         primaryColor: "#2563eb",
         secondaryColor: "#1e40af",
       };
 
-      // Apply branding
+      // Appliquer la marque
       function applyBranding() {
         document.getElementById("dashboardTitle").textContent =
-          clinicConfig.name + " Dashboard";
+          "Tableau de bord " + clinicConfig.name;
         document.getElementById("dashboardSubtitle").textContent =
           clinicConfig.subtitle;
 
@@ -408,23 +457,22 @@
         );
       }
 
-      // Set date filter to today
+      // Définir le filtre de date à aujourd'hui
       function setDateFilter() {
         const today = new Date().toISOString().split("T")[0];
         document.getElementById("dateFilter").value = today;
       }
 
-      // Format time
+      // Formater l'heure
       function formatTime(timestamp) {
         const date = new Date(timestamp);
-        return date.toLocaleTimeString("en-US", {
+        return date.toLocaleTimeString("fr-FR", {
           hour: "2-digit",
           minute: "2-digit",
-          hour12: true,
         });
       }
 
-      // Load reservations from Supabase
+      // Charger les réservations depuis Supabase
       async function loadReservations() {
         const selectedDate = document.getElementById("dateFilter").value;
 
@@ -437,49 +485,57 @@
 
           if (error) throw error;
 
-          // Update stats
+          // Mettre à jour les statistiques
           updateStats(reservations || []);
 
-          // Update table
+          // Mettre à jour le tableau
           updateTable(reservations || []);
         } catch (error) {
-          console.error("Error loading reservations:", error);
+          console.error("Erreur lors du chargement des réservations:", error);
           updateStats([]);
           updateTable([]);
         }
       }
 
-      // Update statistics
+      // Mettre à jour les statistiques
       function updateStats(reservations) {
         document.getElementById("totalCount").textContent = reservations.length;
 
-        if (reservations.length > 0) {
-          document.getElementById("nextPatient").textContent =
-            reservations[0].name.split(" ")[0];
+        const visitedPatients = reservations.filter((r) => r.visited).length;
+        document.getElementById("visitedCount").textContent = visitedPatients;
 
+        const waitingPatients = reservations.filter((r) => !r.visited);
+
+        if (waitingPatients.length > 0) {
+          document.getElementById("nextPatient").textContent =
+            waitingPatients[0].name.split(" ")[0];
+        } else {
+          document.getElementById("nextPatient").textContent = "—";
+        }
+
+        if (reservations.length > 0) {
           const avgAge = Math.round(
             reservations.reduce((sum, res) => sum + parseInt(res.age), 0) /
               reservations.length
           );
           document.getElementById("avgAge").textContent = avgAge;
         } else {
-          document.getElementById("nextPatient").textContent = "—";
           document.getElementById("avgAge").textContent = "—";
         }
       }
 
-      // Update table
+      // Mettre à jour le tableau
       function updateTable(reservations) {
         const tbody = document.getElementById("tableBody");
 
         if (reservations.length === 0) {
           tbody.innerHTML = `
                     <tr>
-                        <td colspan="7">
+                        <td colspan="8">
                             <div class="empty-state">
                                 <div class="empty-state-icon">📋</div>
-                                <div class="empty-state-text">No reservations found</div>
-                                <div class="empty-state-subtext">Patients will appear here when they scan the NFC tag</div>
+                                <div class="empty-state-text">Aucune réservation trouvée</div>
+                                <div class="empty-state-subtext">Les patients apparaîtront ici lorsqu'ils scanneront le tag NFC</div>
                             </div>
                         </td>
                     </tr>
@@ -490,7 +546,7 @@
         tbody.innerHTML = reservations
           .map(
             (res, index) => `
-                <tr>
+                <tr class="${res.visited ? "visited" : ""}">
                     <td><span class="position-badge">${index + 1}</span></td>
                     <td><strong>${res.name}</strong></td>
                     <td>${res.phone}</td>
@@ -500,9 +556,29 @@
                       res.timestamp
                     )}</span></td>
                     <td>
-                        <button class="action-btn" onclick="removeReservation(${
-                          res.id
-                        })">Remove</button>
+                        <span class="status-badge ${
+                          res.visited ? "visited" : "waiting"
+                        }">
+                            ${res.visited ? "✓ Consulté" : "⏳ En attente"}
+                        </span>
+                    </td>
+                    <td>
+                        <div class="action-buttons">
+                            ${
+                              !res.visited
+                                ? `
+                                <button class="action-btn visited-btn" onclick="markAsVisited(${res.id})">
+                                    ✓ Consulté
+                                </button>
+                            `
+                                : ""
+                            }
+                            <button class="action-btn remove-btn" onclick="removeReservation(${
+                              res.id
+                            })">
+                                Supprimer
+                            </button>
+                        </div>
                     </td>
                 </tr>
             `
@@ -510,11 +586,28 @@
           .join("");
       }
 
-      // Remove single reservation
+      // Marquer comme consulté
+      async function markAsVisited(id) {
+        try {
+          const { error } = await supabaseClient
+            .from("reservations")
+            .update({ visited: true })
+            .eq("id", id);
+
+          if (error) throw error;
+
+          loadReservations();
+        } catch (error) {
+          console.error("Erreur lors de la mise à jour du statut:", error);
+          alert("Échec de la mise à jour du statut. Veuillez réessayer.");
+        }
+      }
+
+      // Supprimer une réservation
       async function removeReservation(id) {
         if (
           !confirm(
-            "Are you sure you want to remove this patient from the queue?"
+            "Êtes-vous sûr de vouloir supprimer ce patient de la file d'attente ?"
           )
         ) {
           return;
@@ -530,18 +623,23 @@
 
           loadReservations();
         } catch (error) {
-          console.error("Error removing reservation:", error);
-          alert("Failed to remove reservation. Please try again.");
+          console.error(
+            "Erreur lors de la suppression de la réservation:",
+            error
+          );
+          alert(
+            "Échec de la suppression de la réservation. Veuillez réessayer."
+          );
         }
       }
 
-      // Clear all reservations for selected date
+      // Effacer toutes les réservations pour la date sélectionnée
       async function clearAllReservations() {
         const selectedDate = document.getElementById("dateFilter").value;
 
         if (
           !confirm(
-            `Are you sure you want to clear all reservations for ${selectedDate}?`
+            `Êtes-vous sûr de vouloir effacer toutes les réservations pour le ${selectedDate} ?`
           )
         ) {
           return;
@@ -557,34 +655,32 @@
 
           loadReservations();
         } catch (error) {
-          console.error("Error clearing reservations:", error);
-          alert("Failed to clear reservations. Please try again.");
+          console.error("Erreur lors de l'effacement des réservations:", error);
+          alert("Échec de l'effacement des réservations. Veuillez réessayer.");
         }
       }
 
-      // Subscribe to real-time changes
+      // S'abonner aux changements en temps réel
       function setupRealtimeSubscription() {
-        const selectedDate = document.getElementById("dateFilter").value;
-
         supabaseClient
           .channel("reservations-changes")
           .on(
             "postgres_changes",
             { event: "*", schema: "public", table: "reservations" },
             (payload) => {
-              console.log("Change detected:", payload);
+              console.log("Changement détecté:", payload);
               loadReservations();
             }
           )
           .subscribe();
       }
 
-      // Listen for date filter changes
+      // Écouter les changements du filtre de date
       document
         .getElementById("dateFilter")
         .addEventListener("change", loadReservations);
 
-      // Initialize
+      // Initialiser
       applyBranding();
       setDateFilter();
       loadReservations();

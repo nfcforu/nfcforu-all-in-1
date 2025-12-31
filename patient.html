@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clinic Reservation</title>
+    <title>Réservation Clinique</title>
     <style>
       * {
         margin: 0;
@@ -184,50 +184,57 @@
     <div class="container">
       <div class="header">
         <div class="logo-container">
-          <img id="clinicLogo" src="" alt="Clinic Logo" style="display: none" />
+          <img
+            id="clinicLogo"
+            src=""
+            alt="Logo Clinique"
+            style="display: none"
+          />
           <div class="logo-placeholder" id="logoPlaceholder">🏥</div>
         </div>
-        <h1 class="clinic-name" id="clinicName">Medical Clinic</h1>
-        <p class="clinic-subtitle" id="clinicSubtitle">Book Your Appointment</p>
+        <h1 class="clinic-name" id="clinicName">Clinique Médicale</h1>
+        <p class="clinic-subtitle" id="clinicSubtitle">
+          Réservez votre rendez-vous
+        </p>
       </div>
 
       <div id="messageBox" class="message"></div>
 
       <form id="reservationForm">
         <div class="form-group">
-          <label for="date">Appointment Date</label>
+          <label for="date">Date du rendez-vous</label>
           <input type="date" id="date" name="date" required />
         </div>
 
         <div class="form-group">
-          <label for="name">Full Name</label>
+          <label for="name">Nom complet</label>
           <input
             type="text"
             id="name"
             name="name"
-            placeholder="Enter your full name"
+            placeholder="Entrez votre nom complet"
             required
           />
         </div>
 
         <div class="form-group">
-          <label for="phone">Phone Number</label>
+          <label for="phone">Numéro de téléphone</label>
           <input
             type="tel"
             id="phone"
             name="phone"
-            placeholder="Enter your phone number"
+            placeholder="Entrez votre numéro de téléphone"
             required
           />
         </div>
 
         <div class="form-group">
-          <label for="age">Age</label>
+          <label for="age">Âge</label>
           <input
             type="number"
             id="age"
             name="age"
-            placeholder="Enter your age"
+            placeholder="Entrez votre âge"
             min="1"
             max="150"
             required
@@ -235,7 +242,7 @@
         </div>
 
         <button type="submit" class="submit-btn" id="submitBtn">
-          Confirm Reservation
+          Confirmer la réservation
         </button>
       </form>
     </div>
@@ -243,30 +250,30 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
       // ============================================
-      // SUPABASE CONFIGURATION
+      // CONFIGURATION SUPABASE
       // ============================================
       const SUPABASE_URL = "https://xgahasrfktpyldjkndhh.supabase.co";
       const SUPABASE_KEY =
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhnYWhhc3Jma3RweWxkamtuZGhoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY5MDMyMzgsImV4cCI6MjA4MjQ3OTIzOH0.0Oec4OpBjHS5OL6QMY3bvs3jT2KGfkvECgGKZfNLXb4";
 
-      // Initialize Supabase client
+      // Initialiser le client Supabase
       const supabaseClient = window.supabase.createClient(
         SUPABASE_URL,
         SUPABASE_KEY
       );
 
       // ============================================
-      // BRANDING CONFIGURATION
+      // CONFIGURATION DE LA MARQUE
       // ============================================
       const clinicConfig = {
-        name: "Medical Clinic",
-        subtitle: "Book Your Appointment",
+        name: "Clinique Médicale",
+        subtitle: "Réservez votre rendez-vous",
         primaryColor: "#2563eb",
         secondaryColor: "#1e40af",
-        logoUrl: "", // Add logo URL here: 'https://example.com/logo.png'
+        logoUrl: "", // Ajoutez l'URL du logo ici: 'https://example.com/logo.png'
       };
 
-      // Apply branding
+      // Appliquer la marque
       function applyBranding() {
         document.getElementById("clinicName").textContent = clinicConfig.name;
         document.getElementById("clinicSubtitle").textContent =
@@ -289,14 +296,14 @@
         }
       }
 
-      // Set minimum date to today
+      // Définir la date minimale à aujourd'hui
       function setMinDate() {
         const today = new Date().toISOString().split("T")[0];
         document.getElementById("date").min = today;
         document.getElementById("date").value = today;
       }
 
-      // Show message
+      // Afficher le message
       function showMessage(text, type) {
         const msgBox = document.getElementById("messageBox");
         msgBox.textContent = text;
@@ -307,7 +314,7 @@
         }, 5000);
       }
 
-      // Handle form submission
+      // Gérer la soumission du formulaire
       document
         .getElementById("reservationForm")
         .addEventListener("submit", async function (e) {
@@ -315,39 +322,40 @@
 
           const submitBtn = document.getElementById("submitBtn");
           submitBtn.disabled = true;
-          submitBtn.textContent = "Submitting...";
+          submitBtn.textContent = "Envoi en cours...";
 
           const formData = {
             date: document.getElementById("date").value,
             name: document.getElementById("name").value,
             phone: document.getElementById("phone").value,
             age: parseInt(document.getElementById("age").value),
+            visited: false,
           };
 
           try {
-            // Insert data into Supabase
+            // Insérer les données dans Supabase
             const { data, error } = await supabaseClient
               .from("reservations")
               .insert([formData]);
 
             if (error) throw error;
 
-            showMessage("Reservation confirmed successfully! ✓", "success");
+            showMessage("Réservation confirmée avec succès ! ✓", "success");
             document.getElementById("reservationForm").reset();
             setMinDate();
           } catch (error) {
             showMessage(
-              "Failed to submit reservation. Please try again.",
+              "Échec de la soumission de la réservation. Veuillez réessayer.",
               "error"
             );
-            console.error("Error:", error);
+            console.error("Erreur:", error);
           } finally {
             submitBtn.disabled = false;
-            submitBtn.textContent = "Confirm Reservation";
+            submitBtn.textContent = "Confirmer la réservation";
           }
         });
 
-      // Initialize
+      // Initialiser
       applyBranding();
       setMinDate();
     </script>
