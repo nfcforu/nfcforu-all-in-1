@@ -2075,5 +2075,21 @@
       "tiktok": "https://www.tiktok.com/@youcef_moda_4?_r=1&_t=ZS-92bDQcde7tf",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213774548263"
     }
+  },
+  "Rahaf-Eline-Decor": {
+    "name": "Rahaf Eline Decor",
+    "image": "",
+    "phone": "0770789313",
+    "gradient": "linear-gradient(203deg,rgba(22, 22, 23, 1) 0%, rgba(235, 182, 7, 1) 100%)",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/rahaf.eline.decor",
+      "instagram": "https://www.instagram.com/rahaf_eline_decor/",
+      "tiktok": "https://www.tiktok.com/@rahaf.eline.dcor",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770789313"
+    }
   }
 }
