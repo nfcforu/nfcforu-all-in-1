@@ -542,13 +542,16 @@
         document
           .querySelectorAll(".filter-btn")
           .forEach((btn) => btn.classList.remove("active"));
-        document
-          .getElementById(
-            "filter" +
-              filter.charAt(0).toUpperCase() +
-              filter.slice(1).replace("-", "")
-          )
-          .classList.add("active");
+
+        if (filter === "all") {
+          document.getElementById("filterAll").classList.add("active");
+        } else if (filter === "waiting") {
+          document.getElementById("filterWaiting").classList.add("active");
+        } else if (filter === "consulted") {
+          document.getElementById("filterConsulted").classList.add("active");
+        } else if (filter === "no-show") {
+          document.getElementById("filterNoShow").classList.add("active");
+        }
 
         // Réafficher le tableau avec le filtre
         updateTable(allReservations);
