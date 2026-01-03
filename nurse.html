@@ -568,15 +568,32 @@
         const selectedDate = document.getElementById("dateFilter").value;
 
         try {
-          const { data: reservations, error } = await supabaseClient
+          // Charger les réservations
+          const { data: reservations, error: resError } = await supabaseClient
             .from("reservations")
             .select("*")
             .eq("date", selectedDate)
             .order("timestamp", { ascending: true });
 
-          if (error) throw error;
+          if (resError) throw resError;
 
-          allReservations = reservations || [];
+          // Charger les statuts
+          const { data: statuses, error: statusError } = await supabaseClient
+            .from("patient_status")
+            .select("*");
+
+          if (statusError) throw statusError;
+
+          // Combiner réservations avec statuts
+          allReservations = (reservations || []).map((res) => {
+            const statusRecord = statuses?.find(
+              (s) => s.reservation_id === res.id
+            );
+            return {
+              ...res,
+              status: statusRecord ? statusRecord.status : "waiting",
+            };
+          });
 
           // Mettre à jour les statistiques
           updateStats(allReservations);
@@ -700,10 +717,17 @@
       // Marquer comme consulté
       async function markAsConsulted(id) {
         try {
-          const { error } = await supabaseClient
-            .from("reservations")
-            .update({ status: "consulted" })
-            .eq("id", id);
+          // Insérer ou mettre à jour dans la table patient_status
+          const { error } = await supabaseClient.from("patient_status").upsert(
+            {
+              reservation_id: id,
+              status: "consulted",
+              updated_at: new Date().toISOString(),
+            },
+            {
+              onConflict: "reservation_id",
+            }
+          );
 
           if (error) throw error;
 
@@ -717,10 +741,17 @@
       // Marquer comme pas venu
       async function markAsNoShow(id) {
         try {
-          const { error } = await supabaseClient
-            .from("reservations")
-            .update({ status: "no-show" })
-            .eq("id", id);
+          // Insérer ou mettre à jour dans la table patient_status
+          const { error } = await supabaseClient.from("patient_status").upsert(
+            {
+              reservation_id: id,
+              status: "no-show",
+              updated_at: new Date().toISOString(),
+            },
+            {
+              onConflict: "reservation_id",
+            }
+          );
 
           if (error) throw error;
 
