@@ -19,6 +19,7 @@
         --card-bg: #ffffff;
         --success-color: #10b981;
         --danger-color: #ef4444;
+        --warning-color: #f59e0b;
         --border-color: #e5e7eb;
       }
 
@@ -148,11 +149,39 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
       }
 
       .table-title {
         font-size: 18px;
         font-weight: 700;
+      }
+
+      .filter-buttons {
+        display: flex;
+        gap: 8px;
+        background: #f3f4f6;
+        padding: 4px;
+        border-radius: 8px;
+      }
+
+      .filter-btn {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: transparent;
+        color: #6b7280;
+      }
+
+      .filter-btn.active {
+        background: white;
+        color: var(--primary-color);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
       }
 
       .clear-all-btn {
@@ -209,8 +238,12 @@
         background: #f9fafb;
       }
 
-      tbody tr.visited {
+      tbody tr.consulted {
         background: #f0fdf4;
+      }
+
+      tbody tr.no-show {
+        background: #fef3c7;
       }
 
       .position-badge {
@@ -244,12 +277,17 @@
         font-weight: 600;
       }
 
-      .status-badge.visited {
+      .status-badge.waiting {
+        background: #dbeafe;
+        color: #1e40af;
+      }
+
+      .status-badge.consulted {
         background: #d1fae5;
         color: #065f46;
       }
 
-      .status-badge.waiting {
+      .status-badge.no-show {
         background: #fef3c7;
         color: #92400e;
       }
@@ -270,20 +308,20 @@
         transition: all 0.3s ease;
       }
 
-      .visited-btn {
+      .consulted-btn {
         background: var(--success-color);
       }
 
-      .visited-btn:hover {
+      .consulted-btn:hover {
         background: #059669;
       }
 
-      .remove-btn {
-        background: var(--danger-color);
+      .no-show-btn {
+        background: var(--warning-color);
       }
 
-      .remove-btn:hover {
-        background: #dc2626;
+      .no-show-btn:hover {
+        background: #d97706;
       }
 
       .empty-state {
@@ -326,9 +364,6 @@
 
         .table-header {
           padding: 15px 20px;
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 10px;
         }
 
         th,
@@ -343,6 +378,11 @@
 
         .action-buttons {
           flex-direction: column;
+        }
+
+        .filter-buttons {
+          width: 100%;
+          justify-content: center;
         }
       }
     </style>
@@ -369,29 +409,56 @@
     <div class="dashboard-content">
       <div class="stats-container">
         <div class="stat-card">
-          <div class="stat-label">Total Aujourd'hui</div>
+          <div class="stat-label">Total</div>
           <div class="stat-value" id="totalCount">0</div>
         </div>
         <div class="stat-card">
-          <div class="stat-label">Prochain Patient</div>
-          <div class="stat-value" id="nextPatient">—</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-label">Âge Moyen</div>
-          <div class="stat-value" id="avgAge">—</div>
+          <div class="stat-label">En Attente</div>
+          <div class="stat-value" id="waitingCount">0</div>
         </div>
         <div class="stat-card">
           <div class="stat-label">Consultés</div>
-          <div class="stat-value" id="visitedCount">0</div>
+          <div class="stat-value" id="consultedCount">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Pas Venu</div>
+          <div class="stat-value" id="noShowCount">0</div>
         </div>
       </div>
 
       <div class="table-container">
         <div class="table-header">
           <h2 class="table-title">File d'attente des patients</h2>
-          <button class="clear-all-btn" onclick="clearAllReservations()">
-            Tout effacer
-          </button>
+          <div class="filter-buttons">
+            <button
+              class="filter-btn active"
+              onclick="setFilter('all')"
+              id="filterAll"
+            >
+              Tous
+            </button>
+            <button
+              class="filter-btn"
+              onclick="setFilter('waiting')"
+              id="filterWaiting"
+            >
+              En attente
+            </button>
+            <button
+              class="filter-btn"
+              onclick="setFilter('consulted')"
+              id="filterConsulted"
+            >
+              Consultés
+            </button>
+            <button
+              class="filter-btn"
+              onclick="setFilter('no-show')"
+              id="filterNoShow"
+            >
+              Pas venu
+            </button>
+          </div>
         </div>
         <div class="table-wrapper">
           <table id="reservationsTable">
@@ -440,6 +507,10 @@
         secondaryColor: "#1e40af",
       };
 
+      // État du filtre
+      let currentFilter = "all";
+      let allReservations = [];
+
       // Appliquer la marque
       function applyBranding() {
         document.getElementById("dashboardTitle").textContent =
@@ -461,6 +532,26 @@
       function setDateFilter() {
         const today = new Date().toISOString().split("T")[0];
         document.getElementById("dateFilter").value = today;
+      }
+
+      // Changer le filtre
+      function setFilter(filter) {
+        currentFilter = filter;
+
+        // Mettre à jour les boutons actifs
+        document
+          .querySelectorAll(".filter-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        document
+          .getElementById(
+            "filter" +
+              filter.charAt(0).toUpperCase() +
+              filter.slice(1).replace("-", "")
+          )
+          .classList.add("active");
+
+        // Réafficher le tableau avec le filtre
+        updateTable(allReservations);
       }
 
       // Formater l'heure
@@ -485,13 +576,16 @@
 
           if (error) throw error;
 
+          allReservations = reservations || [];
+
           // Mettre à jour les statistiques
-          updateStats(reservations || []);
+          updateStats(allReservations);
 
           // Mettre à jour le tableau
-          updateTable(reservations || []);
+          updateTable(allReservations);
         } catch (error) {
           console.error("Erreur lors du chargement des réservations:", error);
+          allReservations = [];
           updateStats([]);
           updateTable([]);
         }
@@ -499,36 +593,43 @@
 
       // Mettre à jour les statistiques
       function updateStats(reservations) {
+        const waiting = reservations.filter(
+          (r) => r.status === "waiting" || !r.status
+        ).length;
+        const consulted = reservations.filter(
+          (r) => r.status === "consulted"
+        ).length;
+        const noShow = reservations.filter(
+          (r) => r.status === "no-show"
+        ).length;
+
         document.getElementById("totalCount").textContent = reservations.length;
-
-        const visitedPatients = reservations.filter((r) => r.visited).length;
-        document.getElementById("visitedCount").textContent = visitedPatients;
-
-        const waitingPatients = reservations.filter((r) => !r.visited);
-
-        if (waitingPatients.length > 0) {
-          document.getElementById("nextPatient").textContent =
-            waitingPatients[0].name.split(" ")[0];
-        } else {
-          document.getElementById("nextPatient").textContent = "—";
-        }
-
-        if (reservations.length > 0) {
-          const avgAge = Math.round(
-            reservations.reduce((sum, res) => sum + parseInt(res.age), 0) /
-              reservations.length
-          );
-          document.getElementById("avgAge").textContent = avgAge;
-        } else {
-          document.getElementById("avgAge").textContent = "—";
-        }
+        document.getElementById("waitingCount").textContent = waiting;
+        document.getElementById("consultedCount").textContent = consulted;
+        document.getElementById("noShowCount").textContent = noShow;
       }
 
       // Mettre à jour le tableau
       function updateTable(reservations) {
         const tbody = document.getElementById("tableBody");
 
-        if (reservations.length === 0) {
+        // Filtrer selon le filtre actif
+        let filteredReservations = reservations;
+        if (currentFilter === "waiting") {
+          filteredReservations = reservations.filter(
+            (r) => r.status === "waiting" || !r.status
+          );
+        } else if (currentFilter === "consulted") {
+          filteredReservations = reservations.filter(
+            (r) => r.status === "consulted"
+          );
+        } else if (currentFilter === "no-show") {
+          filteredReservations = reservations.filter(
+            (r) => r.status === "no-show"
+          );
+        }
+
+        if (filteredReservations.length === 0) {
           tbody.innerHTML = `
                     <tr>
                         <td colspan="8">
@@ -543,10 +644,24 @@
           return;
         }
 
-        tbody.innerHTML = reservations
-          .map(
-            (res, index) => `
-                <tr class="${res.visited ? "visited" : ""}">
+        tbody.innerHTML = filteredReservations
+          .map((res, index) => {
+            const status = res.status || "waiting";
+            const statusLabel =
+              status === "consulted"
+                ? "✓ Consulté"
+                : status === "no-show"
+                ? "✗ Pas venu"
+                : "⏳ En attente";
+            const rowClass =
+              status === "consulted"
+                ? "consulted"
+                : status === "no-show"
+                ? "no-show"
+                : "";
+
+            return `
+                <tr class="${rowClass}">
                     <td><span class="position-badge">${index + 1}</span></td>
                     <td><strong>${res.name}</strong></td>
                     <td>${res.phone}</td>
@@ -556,107 +671,63 @@
                       res.timestamp
                     )}</span></td>
                     <td>
-                        <span class="status-badge ${
-                          res.visited ? "visited" : "waiting"
-                        }">
-                            ${res.visited ? "✓ Consulté" : "⏳ En attente"}
+                        <span class="status-badge ${status}">
+                            ${statusLabel}
                         </span>
                     </td>
                     <td>
+                        ${
+                          status === "waiting"
+                            ? `
                         <div class="action-buttons">
-                            ${
-                              !res.visited
-                                ? `
-                                <button class="action-btn visited-btn" onclick="markAsVisited(${res.id})">
-                                    ✓ Consulté
-                                </button>
-                            `
-                                : ""
-                            }
-                            <button class="action-btn remove-btn" onclick="removeReservation(${
-                              res.id
-                            })">
-                                Supprimer
+                            <button class="action-btn consulted-btn" onclick="markAsConsulted(${res.id})">
+                                ✓ Consulté
+                            </button>
+                            <button class="action-btn no-show-btn" onclick="markAsNoShow(${res.id})">
+                                ✗ Pas venu
                             </button>
                         </div>
+                        `
+                            : `<span style="color: #9ca3af;">—</span>`
+                        }
                     </td>
                 </tr>
-            `
-          )
+            `;
+          })
           .join("");
       }
 
       // Marquer comme consulté
-      async function markAsVisited(id) {
+      async function markAsConsulted(id) {
         try {
           const { error } = await supabaseClient
             .from("reservations")
-            .update({ visited: true })
+            .update({ status: "consulted" })
             .eq("id", id);
 
           if (error) throw error;
 
           loadReservations();
         } catch (error) {
-          console.error("Erreur lors de la mise à jour du statut:", error);
-          alert("Échec de la mise à jour du statut. Veuillez réessayer.");
+          console.error("Erreur:", error);
+          alert("Échec de la mise à jour. Veuillez réessayer.");
         }
       }
 
-      // Supprimer une réservation
-      async function removeReservation(id) {
-        if (
-          !confirm(
-            "Êtes-vous sûr de vouloir supprimer ce patient de la file d'attente ?"
-          )
-        ) {
-          return;
-        }
-
+      // Marquer comme pas venu
+      async function markAsNoShow(id) {
         try {
           const { error } = await supabaseClient
             .from("reservations")
-            .delete()
+            .update({ status: "no-show" })
             .eq("id", id);
 
           if (error) throw error;
 
           loadReservations();
         } catch (error) {
-          console.error(
-            "Erreur lors de la suppression de la réservation:",
-            error
-          );
-          alert(
-            "Échec de la suppression de la réservation. Veuillez réessayer."
-          );
-        }
-      }
-
-      // Effacer toutes les réservations pour la date sélectionnée
-      async function clearAllReservations() {
-        const selectedDate = document.getElementById("dateFilter").value;
-
-        if (
-          !confirm(
-            `Êtes-vous sûr de vouloir effacer toutes les réservations pour le ${selectedDate} ?`
-          )
-        ) {
-          return;
-        }
-
-        try {
-          const { error } = await supabaseClient
-            .from("reservations")
-            .delete()
-            .eq("date", selectedDate);
-
-          if (error) throw error;
-
-          loadReservations();
-        } catch (error) {
-          console.error("Erreur lors de l'effacement des réservations:", error);
-          alert("Échec de l'effacement des réservations. Veuillez réessayer.");
+          console.error("Erreur:", error);
+          alert("Échec de la mise à jour. Veuillez réessayer.");
         }
       }
 
