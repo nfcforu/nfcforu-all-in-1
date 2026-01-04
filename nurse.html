@@ -875,9 +875,9 @@
                     </td>
                     <td>
                         <div class="action-buttons">
-                            <button class="action-btn edit-btn" onclick="openEditModal(${
-                              res.id
-                            })">
+                            <button class="action-btn edit-btn" onclick='openEditModal(${JSON.stringify(
+                              res
+                            )})'>
                                 ✏️ Modifier
                             </button>
                             <button class="action-btn delete-btn" onclick="deleteReservation(${
@@ -928,8 +928,7 @@
       }
 
       // Ouvrir le modal d'édition
-      function openEditModal(id) {
-        const reservation = allReservations.find((r) => r.id === id);
+      function openEditModal(reservation) {
         if (!reservation) return;
 
         document.getElementById("editId").value = reservation.id;
