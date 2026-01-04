@@ -696,20 +696,35 @@
                         </span>
                     </td>
                     <td>
-                        ${
-                          status === "waiting"
-                            ? `
                         <div class="action-buttons">
+                            ${
+                              status !== "consulted"
+                                ? `
                             <button class="action-btn consulted-btn" onclick="markAsConsulted(${res.id})">
                                 ✓ Consulté
                             </button>
+                            `
+                                : ""
+                            }
+                            ${
+                              status !== "no-show"
+                                ? `
                             <button class="action-btn no-show-btn" onclick="markAsNoShow(${res.id})">
                                 ✗ Pas venu
                             </button>
+                            `
+                                : ""
+                            }
+                            ${
+                              status !== "waiting"
+                                ? `
+                            <button class="action-btn" style="background: #6b7280;" onclick="markAsWaiting(${res.id})">
+                                ⏳ En attente
+                            </button>
+                            `
+                                : ""
+                            }
                         </div>
-                        `
-                            : `<span style="color: #9ca3af;">—</span>`
-                        }
                     </td>
                 </tr>
             `;
@@ -755,6 +770,24 @@
               onConflict: "reservation_id",
             }
           );
+
+          if (error) throw error;
+
+          loadReservations();
+        } catch (error) {
+          console.error("Erreur:", error);
+          alert("Échec de la mise à jour. Veuillez réessayer.");
+        }
+      }
+
+      // Marquer comme en attente
+      async function markAsWaiting(id) {
+        try {
+          // Supprimer le statut pour revenir à "en attente"
+          const { error } = await supabaseClient
+            .from("patient_status")
+            .delete()
+            .eq("reservation_id", id);
 
           if (error) throw error;
 
