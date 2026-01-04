@@ -951,7 +951,7 @@
         .addEventListener("submit", async function (e) {
           e.preventDefault();
 
-          const id = document.getElementById("editId").value;
+          const id = parseInt(document.getElementById("editId").value);
           const updatedData = {
             name: document.getElementById("editName").value,
             phone: document.getElementById("editPhone").value,
@@ -959,19 +959,27 @@
             date: document.getElementById("editDate").value,
           };
 
+          console.log("Updating reservation:", id, updatedData);
+
           try {
-            const { error } = await supabaseClient
+            const { data, error } = await supabaseClient
               .from("reservations")
               .update(updatedData)
-              .eq("id", id);
+              .eq("id", id)
+              .select();
 
-            if (error) throw error;
+            if (error) {
+              console.error("Update error:", error);
+              throw error;
+            }
+
+            console.log("Update successful:", data);
 
             closeEditModal();
-            loadReservations();
+            await loadReservations();
             alert("Réservation modifiée avec succès !");
           } catch (error) {
-            console.error("Erreur:", error);
+            console.error("Erreur complète:", error);
             alert("Échec de la modification. Veuillez réessayer.");
           }
         });
