@@ -223,7 +223,7 @@
       }
 
       tbody tr.consulted {
-        background: #f0fdf4;
+        background: #d1fae5;
       }
 
       tbody tr.no-show {
@@ -538,6 +538,13 @@
         <button class="refresh-btn" onclick="loadReservations()">
           🔄 Actualiser
         </button>
+        <button
+          class="refresh-btn"
+          style="background: var(--success-color)"
+          onclick="openAddModal()"
+        >
+          ➕ Nouvelle réservation
+        </button>
       </div>
     </div>
 
@@ -651,6 +658,44 @@
               Annuler
             </button>
             <button type="submit" class="modal-btn save">Enregistrer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Add Modal -->
+    <div id="addModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Nouvelle réservation</h2>
+          <button class="close-btn" onclick="closeAddModal()">×</button>
+        </div>
+        <form id="addForm">
+          <div class="form-group">
+            <label for="addName">Nom complet</label>
+            <input type="text" id="addName" required />
+          </div>
+          <div class="form-group">
+            <label for="addPhone">Téléphone</label>
+            <input type="tel" id="addPhone" required />
+          </div>
+          <div class="form-group">
+            <label for="addAge">Âge</label>
+            <input type="number" id="addAge" min="1" max="150" required />
+          </div>
+          <div class="form-group">
+            <label for="addDate">Date</label>
+            <input type="date" id="addDate" required />
+          </div>
+          <div class="modal-actions">
+            <button
+              type="button"
+              class="modal-btn cancel"
+              onclick="closeAddModal()"
+            >
+              Annuler
+            </button>
+            <button type="submit" class="modal-btn save">Ajouter</button>
           </div>
         </form>
       </div>
@@ -945,6 +990,19 @@
         document.getElementById("editModal").classList.remove("show");
       }
 
+      // Ouvrir le modal d'ajout
+      function openAddModal() {
+        const today = new Date().toISOString().split("T")[0];
+        document.getElementById("addDate").value = today;
+        document.getElementById("addModal").classList.add("show");
+      }
+
+      // Fermer le modal d'ajout
+      function closeAddModal() {
+        document.getElementById("addModal").classList.remove("show");
+        document.getElementById("addForm").reset();
+      }
+
       // Gérer la soumission du formulaire d'édition
       document
         .getElementById("editForm")
@@ -959,7 +1017,12 @@
             date: document.getElementById("editDate").value,
           };
 
-          console.log("Updating reservation:", id, updatedData);
+          console.log(
+            "Updating reservation ID:",
+            id,
+            "with data:",
+            updatedData
+          );
 
           try {
             const { data, error } = await supabaseClient
@@ -968,19 +1031,28 @@
               .eq("id", id)
               .select();
 
+            console.log("Response:", { data, error });
+
             if (error) {
               console.error("Update error:", error);
               throw error;
             }
 
-            console.log("Update successful:", data);
+            if (!data || data.length === 0) {
+              console.warn("No rows updated - checking if record exists");
+              const { data: existing } = await supabaseClient
+                .from("reservations")
+                .select("*")
+                .eq("id", id);
+              console.log("Existing record:", existing);
+            }
 
             closeEditModal();
-            await loadReservations();
+            setTimeout(() => loadReservations(), 500);
             alert("Réservation modifiée avec succès !");
           } catch (error) {
             console.error("Erreur complète:", error);
-            alert("Échec de la modification. Veuillez réessayer.");
+            alert("Échec de la modification: " + error.message);
           }
         });
 
@@ -1017,11 +1089,52 @@
 
       // Fermer le modal en cliquant à l'extérieur
       window.onclick = function (event) {
-        const modal = document.getElementById("editModal");
-        if (event.target === modal) {
+        const editModal = document.getElementById("editModal");
+        const addModal = document.getElementById("addModal");
+        if (event.target === editModal) {
           closeEditModal();
         }
+        if (event.target === addModal) {
+          closeAddModal();
+        }
       };
+
+      // Gérer la soumission du formulaire d'ajout
+      document
+        .getElementById("addForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const newReservation = {
+            name: document.getElementById("addName").value,
+            phone: document.getElementById("addPhone").value,
+            age: parseInt(document.getElementById("addAge").value),
+            date: document.getElementById("addDate").value,
+          };
+
+          console.log("Adding new reservation:", newReservation);
+
+          try {
+            const { data, error } = await supabaseClient
+              .from("reservations")
+              .insert([newReservation])
+              .select();
+
+            if (error) {
+              console.error("Insert error:", error);
+              throw error;
+            }
+
+            console.log("Insert successful:", data);
+
+            closeAddModal();
+            await loadReservations();
+            alert("Réservation ajoutée avec succès !");
+          } catch (error) {
+            console.error("Erreur complète:", error);
+            alert("Échec de l'ajout: " + error.message);
+          }
+        });
 
       // S'abonner aux changements en temps réel
       function setupRealtimeSubscription() {
