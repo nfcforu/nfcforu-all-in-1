@@ -169,6 +169,160 @@
         display: block;
       }
 
+      /* Success Modal */
+      .success-modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        animation: fadeIn 0.3s;
+      }
+
+      .success-modal.show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .success-modal-content {
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        max-width: 450px;
+        width: 90%;
+        text-align: center;
+        animation: slideUp 0.4s;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      @keyframes slideUp {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .success-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--success-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 48px;
+        animation: scaleIn 0.5s;
+      }
+
+      @keyframes scaleIn {
+        from {
+          transform: scale(0);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+
+      .success-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--text-color);
+        margin-bottom: 12px;
+      }
+
+      .success-message {
+        font-size: 15px;
+        color: #6b7280;
+        margin-bottom: 24px;
+      }
+
+      .tracking-number-box {
+        background: #f3f4f6;
+        border: 2px dashed var(--primary-color);
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      .tracking-label {
+        font-size: 13px;
+        font-weight: 600;
+        color: #6b7280;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 8px;
+      }
+
+      .tracking-number {
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--primary-color);
+        letter-spacing: 2px;
+        font-family: "Courier New", monospace;
+      }
+
+      .copy-btn {
+        width: 100%;
+        padding: 14px;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .copy-btn:hover {
+        background: var(--secondary-color);
+        transform: translateY(-2px);
+      }
+
+      .copy-btn.copied {
+        background: var(--success-color);
+      }
+
+      .close-modal-btn {
+        width: 100%;
+        padding: 14px;
+        background: #f3f4f6;
+        color: #6b7280;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .close-modal-btn:hover {
+        background: #e5e7eb;
+      }
+
       @media (max-width: 480px) {
         .container {
           padding: 30px 20px;
@@ -176,6 +330,14 @@
 
         .clinic-name {
           font-size: 20px;
+        }
+
+        .success-modal-content {
+          padding: 30px 20px;
+        }
+
+        .tracking-number {
+          font-size: 24px;
         }
       }
     </style>
@@ -247,6 +409,32 @@
       </form>
     </div>
 
+    <!-- Success Modal -->
+    <div id="successModal" class="success-modal">
+      <div class="success-modal-content">
+        <div class="success-icon">✓</div>
+        <h2 class="success-title">Réservation confirmée !</h2>
+        <p class="success-message">
+          Votre rendez-vous a été enregistré avec succès. Conservez votre numéro
+          de suivi.
+        </p>
+
+        <div class="tracking-number-box">
+          <div class="tracking-label">Numéro de suivi</div>
+          <div class="tracking-number" id="trackingNumber">------</div>
+        </div>
+
+        <button class="copy-btn" id="copyBtn" onclick="copyTrackingNumber()">
+          <span id="copyIcon">📋</span>
+          <span id="copyText">Copier le numéro</span>
+        </button>
+
+        <button class="close-modal-btn" onclick="closeSuccessModal()">
+          Fermer
+        </button>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
       // ============================================
@@ -273,6 +461,8 @@
         logoUrl: "", // Ajoutez l'URL du logo ici: 'https://example.com/logo.png'
       };
 
+      let currentTrackingNumber = "";
+
       // Appliquer la marque
       function applyBranding() {
         document.getElementById("clinicName").textContent = clinicConfig.name;
@@ -296,6 +486,16 @@
         }
       }
 
+      // Générer un numéro de suivi unique
+      function generateTrackingNumber() {
+        const prefix = "TRK";
+        const timestamp = Date.now().toString().slice(-6);
+        const random = Math.floor(Math.random() * 1000)
+          .toString()
+          .padStart(3, "0");
+        return `${prefix}${timestamp}${random}`;
+      }
+
       // Définir la date minimale à aujourd'hui
       function setMinDate() {
         const today = new Date().toISOString().split("T")[0];
@@ -314,6 +514,49 @@
         }, 5000);
       }
 
+      // Afficher le modal de succès
+      function showSuccessModal(trackingNumber) {
+        currentTrackingNumber = trackingNumber;
+        document.getElementById("trackingNumber").textContent = trackingNumber;
+        document.getElementById("successModal").classList.add("show");
+      }
+
+      // Fermer le modal de succès
+      function closeSuccessModal() {
+        document.getElementById("successModal").classList.remove("show");
+        document.getElementById("reservationForm").reset();
+        setMinDate();
+        // Réinitialiser le bouton de copie
+        document.getElementById("copyBtn").classList.remove("copied");
+        document.getElementById("copyText").textContent = "Copier le numéro";
+        document.getElementById("copyIcon").textContent = "📋";
+      }
+
+      // Copier le numéro de suivi
+      function copyTrackingNumber() {
+        navigator.clipboard
+          .writeText(currentTrackingNumber)
+          .then(() => {
+            const btn = document.getElementById("copyBtn");
+            const icon = document.getElementById("copyIcon");
+            const text = document.getElementById("copyText");
+
+            btn.classList.add("copied");
+            icon.textContent = "✓";
+            text.textContent = "Copié !";
+
+            setTimeout(() => {
+              btn.classList.remove("copied");
+              icon.textContent = "📋";
+              text.textContent = "Copier le numéro";
+            }, 2000);
+          })
+          .catch((err) => {
+            console.error("Erreur de copie:", err);
+            alert("Numéro de suivi: " + currentTrackingNumber);
+          });
+      }
+
       // Gérer la soumission du formulaire
       document
         .getElementById("reservationForm")
@@ -324,24 +567,27 @@
           submitBtn.disabled = true;
           submitBtn.textContent = "Envoi en cours...";
 
+          const trackingNumber = generateTrackingNumber();
+
           const formData = {
             date: document.getElementById("date").value,
             name: document.getElementById("name").value,
             phone: document.getElementById("phone").value,
             age: parseInt(document.getElementById("age").value),
+            tracking_number: trackingNumber,
           };
 
           try {
             // Insérer les données dans Supabase
             const { data, error } = await supabaseClient
               .from("reservations")
-              .insert([formData]);
+              .insert([formData])
+              .select();
 
             if (error) throw error;
 
-            showMessage("Réservation confirmée avec succès ! ✓", "success");
-            document.getElementById("reservationForm").reset();
-            setMinDate();
+            // Afficher le modal de succès avec le numéro de suivi
+            showSuccessModal(trackingNumber);
           } catch (error) {
             showMessage(
               "Échec de la soumission de la réservation. Veuillez réessayer.",
@@ -353,6 +599,14 @@
             submitBtn.textContent = "Confirmer la réservation";
           }
         });
+
+      // Fermer le modal en cliquant à l'extérieur
+      window.onclick = function (event) {
+        const modal = document.getElementById("successModal");
+        if (event.target === modal) {
+          closeSuccessModal();
+        }
+      };
 
       // Initialiser
       applyBranding();

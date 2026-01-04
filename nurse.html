@@ -534,6 +534,13 @@
         </div>
       </div>
       <div class="header-right">
+        <input
+          type="text"
+          id="searchInput"
+          class="date-filter"
+          placeholder="🔍 Rechercher par N° de suivi"
+          style="min-width: 250px"
+        />
         <input type="date" id="dateFilter" class="date-filter" />
         <button class="refresh-btn" onclick="loadReservations()">
           🔄 Actualiser
@@ -607,6 +614,7 @@
             <thead>
               <tr>
                 <th>#</th>
+                <th>N° Suivi</th>
                 <th>Nom</th>
                 <th>Téléphone</th>
                 <th>Âge</th>
@@ -788,14 +796,25 @@
       // Charger les réservations depuis Supabase
       async function loadReservations() {
         const selectedDate = document.getElementById("dateFilter").value;
+        const searchQuery = document
+          .getElementById("searchInput")
+          .value.trim()
+          .toUpperCase();
 
         try {
-          // Charger les réservations
-          const { data: reservations, error: resError } = await supabaseClient
-            .from("reservations")
-            .select("*")
-            .eq("date", selectedDate)
-            .order("timestamp", { ascending: true });
+          let query = supabaseClient.from("reservations").select("*");
+
+          // Si recherche par numéro de suivi
+          if (searchQuery) {
+            query = query.ilike("tracking_number", `%${searchQuery}%`);
+          } else {
+            // Sinon filtrer par date
+            query = query.eq("date", selectedDate);
+          }
+
+          query = query.order("timestamp", { ascending: true });
+
+          const { data: reservations, error: resError } = await query;
 
           if (resError) throw resError;
 
@@ -871,7 +890,7 @@
         if (filteredReservations.length === 0) {
           tbody.innerHTML = `
                     <tr>
-                        <td colspan="8">
+                        <td colspan="9">
                             <div class="empty-state">
                                 <div class="empty-state-icon">📋</div>
                                 <div class="empty-state-text">Aucune réservation trouvée</div>
@@ -892,10 +911,12 @@
                 : status === "no-show"
                 ? "no-show"
                 : "";
+            const trackingNumber = res.tracking_number || "N/A";
 
             return `
                 <tr class="${rowClass}">
                     <td><span class="position-badge">${index + 1}</span></td>
+                    <td><strong style="font-family: 'Courier New', monospace; color: var(--primary-color);">${trackingNumber}</strong></td>
                     <td><strong>${res.name}</strong></td>
                     <td>${res.phone}</td>
                     <td>${res.age}</td>
@@ -1155,6 +1176,11 @@
       document
         .getElementById("dateFilter")
         .addEventListener("change", loadReservations);
+
+      // Écouter les changements de la recherche
+      document
+        .getElementById("searchInput")
+        .addEventListener("input", loadReservations);
 
       // Initialiser
       applyBranding();
