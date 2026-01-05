@@ -24,7 +24,7 @@
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           Oxygen, Ubuntu, Cantarell, sans-serif;
-        background-color: var(--bg-color);
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: var(--text-color);
         min-height: 100vh;
         display: flex;
@@ -35,16 +35,32 @@
 
       .container {
         background: var(--card-bg);
-        border-radius: 16px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        max-width: 480px;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        max-width: 500px;
         width: 100%;
-        padding: 40px 30px;
+        padding: 50px 40px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: linear-gradient(
+          90deg,
+          var(--primary-color),
+          var(--success-color)
+        );
       }
 
       .header {
         text-align: center;
-        margin-bottom: 35px;
+        margin-bottom: 40px;
       }
 
       .logo-container {
@@ -52,11 +68,16 @@
         height: 100px;
         margin: 0 auto 20px;
         border-radius: 50%;
-        background: var(--primary-color);
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
       }
 
       .logo-container img {
@@ -71,102 +92,181 @@
       }
 
       .clinic-name {
-        font-size: 24px;
+        font-size: 28px;
         font-weight: 700;
         color: var(--text-color);
         margin-bottom: 8px;
       }
 
       .clinic-subtitle {
-        font-size: 14px;
+        font-size: 15px;
         color: #6b7280;
+        font-weight: 500;
+      }
+
+      .form-info {
+        background: #f0f9ff;
+        border-left: 4px solid var(--primary-color);
+        padding: 16px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+      }
+
+      .form-info-text {
+        font-size: 14px;
+        color: #1e40af;
+        line-height: 1.6;
       }
 
       .form-group {
-        margin-bottom: 24px;
+        margin-bottom: 28px;
+        position: relative;
       }
 
       label {
         display: block;
         font-size: 14px;
         font-weight: 600;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
         color: var(--text-color);
+        display: flex;
+        align-items: center;
+        gap: 8px;
       }
 
-      input,
-      select {
+      .required-star {
+        color: var(--error-color);
+        font-size: 16px;
+      }
+
+      input {
         width: 100%;
-        padding: 14px 16px;
+        padding: 16px 18px;
         font-size: 16px;
         border: 2px solid #e5e7eb;
-        border-radius: 8px;
+        border-radius: 10px;
         background: white;
         color: var(--text-color);
         transition: all 0.3s ease;
+        font-family: inherit;
       }
 
-      input:focus,
-      select:focus {
+      input:focus {
         outline: none;
         border-color: var(--primary-color);
-        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+        transform: translateY(-2px);
+      }
+
+      input.error {
+        border-color: var(--error-color);
+        animation: shake 0.3s;
+      }
+
+      @keyframes shake {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-10px);
+        }
+        75% {
+          transform: translateX(10px);
+        }
+      }
+
+      .input-hint {
+        font-size: 12px;
+        color: #6b7280;
+        margin-top: 6px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .input-error {
+        font-size: 12px;
+        color: var(--error-color);
+        margin-top: 6px;
+        display: none;
+        align-items: center;
+        gap: 4px;
+      }
+
+      input.error + .input-hint {
+        display: none;
+      }
+
+      input.error ~ .input-error {
+        display: flex;
+      }
+
+      .char-counter {
+        font-size: 12px;
+        color: #9ca3af;
+        text-align: right;
+        margin-top: 4px;
       }
 
       .submit-btn {
         width: 100%;
-        padding: 16px;
-        font-size: 16px;
+        padding: 18px;
+        font-size: 17px;
         font-weight: 600;
         color: white;
-        background: var(--primary-color);
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
         border: none;
-        border-radius: 8px;
+        border-radius: 12px;
         cursor: pointer;
         transition: all 0.3s ease;
         margin-top: 10px;
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .submit-btn::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+      }
+
+      .submit-btn:hover::before {
+        width: 300px;
+        height: 300px;
       }
 
       .submit-btn:hover {
-        background: var(--secondary-color);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
       }
 
       .submit-btn:active {
-        transform: translateY(0);
+        transform: translateY(-1px);
       }
 
       .submit-btn:disabled {
         background: #9ca3af;
         cursor: not-allowed;
         transform: none;
+        box-shadow: none;
       }
 
-      .message {
-        padding: 16px;
-        border-radius: 8px;
-        margin-bottom: 20px;
-        font-size: 14px;
-        font-weight: 500;
-        text-align: center;
-        display: none;
-      }
-
-      .message.success {
-        background: #d1fae5;
-        color: #065f46;
-        border: 1px solid #10b981;
-      }
-
-      .message.error {
-        background: #fee2e2;
-        color: #991b1b;
-        border: 1px solid #ef4444;
-      }
-
-      .message.show {
-        display: block;
+      .submit-btn span {
+        position: relative;
+        z-index: 1;
       }
 
       /* Success Modal */
@@ -178,8 +278,9 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.7);
         animation: fadeIn 0.3s;
+        backdrop-filter: blur(5px);
       }
 
       .success-modal.show {
@@ -199,50 +300,68 @@
 
       .success-modal-content {
         background: white;
-        border-radius: 20px;
-        padding: 40px;
-        max-width: 450px;
+        border-radius: 24px;
+        padding: 50px 40px;
+        max-width: 500px;
         width: 90%;
         text-align: center;
-        animation: slideUp 0.4s;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        animation: slideUp 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+        position: relative;
+      }
+
+      .success-modal-content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: linear-gradient(
+          90deg,
+          var(--success-color),
+          var(--primary-color)
+        );
+        border-radius: 24px 24px 0 0;
       }
 
       @keyframes slideUp {
         from {
-          transform: translateY(50px);
+          transform: translateY(100px) scale(0.8);
           opacity: 0;
         }
         to {
-          transform: translateY(0);
+          transform: translateY(0) scale(1);
           opacity: 1;
         }
       }
 
       .success-icon {
-        width: 80px;
-        height: 80px;
-        background: var(--success-color);
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, var(--success-color), #059669);
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 auto 20px;
-        font-size: 48px;
-        animation: scaleIn 0.5s;
+        margin: 0 auto 24px;
+        font-size: 56px;
+        animation: successPulse 1s infinite;
+        box-shadow: 0 10px 40px rgba(16, 185, 129, 0.4);
       }
 
-      @keyframes scaleIn {
-        from {
-          transform: scale(0);
-        }
-        to {
+      @keyframes successPulse {
+        0%,
+        100% {
           transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
         }
       }
 
       .success-title {
-        font-size: 24px;
+        font-size: 28px;
         font-weight: 700;
         color: var(--text-color);
         margin-bottom: 12px;
@@ -251,42 +370,77 @@
       .success-message {
         font-size: 15px;
         color: #6b7280;
-        margin-bottom: 24px;
+        margin-bottom: 30px;
+        line-height: 1.6;
       }
 
-      .tracking-number-box {
-        background: #f3f4f6;
-        border: 2px dashed var(--primary-color);
-        border-radius: 12px;
-        padding: 20px;
+      .queue-position-box {
+        background: linear-gradient(135deg, #fef3c7, #fde68a);
+        border: 2px solid #f59e0b;
+        border-radius: 16px;
+        padding: 24px;
         margin-bottom: 20px;
       }
 
-      .tracking-label {
-        font-size: 13px;
+      .queue-label {
+        font-size: 14px;
         font-weight: 600;
-        color: #6b7280;
+        color: #92400e;
         text-transform: uppercase;
         letter-spacing: 0.5px;
         margin-bottom: 8px;
       }
 
+      .queue-number {
+        font-size: 48px;
+        font-weight: 700;
+        color: #b45309;
+      }
+
+      .queue-text {
+        font-size: 16px;
+        color: #92400e;
+        margin-top: 8px;
+        font-weight: 600;
+      }
+
+      .tracking-number-box {
+        background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+        border: 2px dashed var(--primary-color);
+        border-radius: 16px;
+        padding: 24px;
+        margin-bottom: 20px;
+      }
+
+      .tracking-label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #1e40af;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 10px;
+      }
+
       .tracking-number {
-        font-size: 32px;
+        font-size: 36px;
         font-weight: 700;
         color: var(--primary-color);
-        letter-spacing: 2px;
+        letter-spacing: 3px;
         font-family: "Courier New", monospace;
       }
 
       .copy-btn {
         width: 100%;
-        padding: 14px;
-        background: var(--primary-color);
+        padding: 16px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
         color: white;
         border: none;
-        border-radius: 8px;
-        font-size: 15px;
+        border-radius: 12px;
+        font-size: 16px;
         font-weight: 600;
         cursor: pointer;
         transition: all 0.3s ease;
@@ -294,26 +448,27 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 8px;
+        gap: 10px;
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
       }
 
       .copy-btn:hover {
-        background: var(--secondary-color);
-        transform: translateY(-2px);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
       }
 
       .copy-btn.copied {
-        background: var(--success-color);
+        background: linear-gradient(135deg, var(--success-color), #059669);
       }
 
       .close-modal-btn {
         width: 100%;
-        padding: 14px;
+        padding: 16px;
         background: #f3f4f6;
         color: #6b7280;
         border: none;
-        border-radius: 8px;
-        font-size: 15px;
+        border-radius: 12px;
+        font-size: 16px;
         font-weight: 600;
         cursor: pointer;
         transition: all 0.3s ease;
@@ -325,19 +480,23 @@
 
       @media (max-width: 480px) {
         .container {
-          padding: 30px 20px;
+          padding: 40px 25px;
         }
 
         .clinic-name {
-          font-size: 20px;
+          font-size: 24px;
         }
 
         .success-modal-content {
-          padding: 30px 20px;
+          padding: 40px 25px;
         }
 
         .tracking-number {
-          font-size: 24px;
+          font-size: 28px;
+        }
+
+        .queue-number {
+          font-size: 40px;
         }
       }
     </style>
@@ -355,56 +514,91 @@
           <div class="logo-placeholder" id="logoPlaceholder">🏥</div>
         </div>
         <h1 class="clinic-name" id="clinicName">Clinique Médicale</h1>
-        <p class="clinic-subtitle" id="clinicSubtitle">
-          Réservez votre rendez-vous
+        <p class="clinic-subtitle" id="clinicSubtitle">Réservation en ligne</p>
+      </div>
+
+      <div class="form-info">
+        <p class="form-info-text">
+          ✨ Réservez votre place en quelques secondes. Vous recevrez un numéro
+          de suivi unique et votre position dans la file d'attente.
         </p>
       </div>
 
-      <div id="messageBox" class="message"></div>
-
       <form id="reservationForm">
         <div class="form-group">
-          <label for="date">Date du rendez-vous</label>
+          <label for="date">
+            📅 Date du rendez-vous
+            <span class="required-star">*</span>
+          </label>
           <input type="date" id="date" name="date" required />
+          <div class="input-hint">💡 Sélectionnez la date de votre visite</div>
         </div>
 
         <div class="form-group">
-          <label for="name">Nom complet</label>
+          <label for="name">
+            👤 Nom complet
+            <span class="required-star">*</span>
+          </label>
           <input
             type="text"
             id="name"
             name="name"
-            placeholder="Entrez votre nom complet"
+            placeholder="Ex: Ahmed Ben Ali"
+            minlength="3"
+            maxlength="100"
+            pattern="[A-Za-zÀ-ÿ\s]{3,100}"
             required
           />
+          <div class="input-hint">
+            💡 Entrez votre nom complet (minimum 3 caractères)
+          </div>
+          <div class="input-error">
+            ⚠️ Nom invalide - lettres uniquement, 3-100 caractères
+          </div>
         </div>
 
         <div class="form-group">
-          <label for="phone">Numéro de téléphone</label>
+          <label for="phone">
+            📱 Numéro de téléphone
+            <span class="required-star">*</span>
+          </label>
           <input
             type="tel"
             id="phone"
             name="phone"
-            placeholder="Entrez votre numéro de téléphone"
+            placeholder="Ex: 0555123456"
+            pattern="0[5-7][0-9]{8}"
+            minlength="10"
+            maxlength="10"
             required
           />
+          <div class="input-hint">
+            💡 Format: 0555123456 (10 chiffres, commence par 05/06/07)
+          </div>
+          <div class="input-error">⚠️ Numéro invalide - format: 0555123456</div>
+          <div class="char-counter" id="phoneCounter">0/10</div>
         </div>
 
         <div class="form-group">
-          <label for="age">Âge</label>
+          <label for="age">
+            🎂 Âge
+            <span class="required-star">*</span>
+          </label>
           <input
             type="number"
             id="age"
             name="age"
-            placeholder="Entrez votre âge"
+            placeholder="Ex: 35"
             min="1"
-            max="150"
+            max="120"
             required
           />
+          <div class="input-hint">💡 Votre âge (1-120 ans)</div>
+          <div class="input-error">⚠️ Âge invalide - entre 1 et 120 ans</div>
         </div>
 
         <button type="submit" class="submit-btn" id="submitBtn">
-          Confirmer la réservation
+          <span>✓ Confirmer ma réservation</span>
         </button>
       </form>
     </div>
@@ -415,18 +609,23 @@
         <div class="success-icon">✓</div>
         <h2 class="success-title">Réservation confirmée !</h2>
         <p class="success-message">
-          Votre rendez-vous a été enregistré avec succès. Conservez votre numéro
-          de suivi.
+          Félicitations ! Votre rendez-vous a été enregistré avec succès.
         </p>
 
+        <div class="queue-position-box">
+          <div class="queue-label">Votre position</div>
+          <div class="queue-number">#<span id="queuePosition">0</span></div>
+          <div class="queue-text">dans la file d'attente</div>
+        </div>
+
         <div class="tracking-number-box">
-          <div class="tracking-label">Numéro de suivi</div>
+          <div class="tracking-label">📋 Numéro de suivi</div>
           <div class="tracking-number" id="trackingNumber">------</div>
         </div>
 
         <button class="copy-btn" id="copyBtn" onclick="copyTrackingNumber()">
           <span id="copyIcon">📋</span>
-          <span id="copyText">Copier le numéro</span>
+          <span id="copyText">Copier le numéro de suivi</span>
         </button>
 
         <button class="close-modal-btn" onclick="closeSuccessModal()">
@@ -455,10 +654,10 @@
       // ============================================
       const clinicConfig = {
         name: "Clinique Médicale",
-        subtitle: "Réservez votre rendez-vous",
+        subtitle: "Réservation en ligne",
         primaryColor: "#2563eb",
         secondaryColor: "#1e40af",
-        logoUrl: "", // Ajoutez l'URL du logo ici: 'https://example.com/logo.png'
+        logoUrl: "",
       };
 
       let currentTrackingNumber = "";
@@ -486,6 +685,44 @@
         }
       }
 
+      // Validation en temps réel
+      const nameInput = document.getElementById("name");
+      const phoneInput = document.getElementById("phone");
+      const ageInput = document.getElementById("age");
+      const phoneCounter = document.getElementById("phoneCounter");
+
+      nameInput.addEventListener("input", function () {
+        const value = this.value;
+        if (value.length > 0 && !this.validity.valid) {
+          this.classList.add("error");
+        } else {
+          this.classList.remove("error");
+        }
+      });
+
+      phoneInput.addEventListener("input", function () {
+        let value = this.value.replace(/\D/g, ""); // Supprimer tout sauf les chiffres
+        if (value.length > 10) value = value.slice(0, 10);
+        this.value = value;
+
+        phoneCounter.textContent = `${value.length}/10`;
+
+        if (value.length > 0 && !this.validity.valid) {
+          this.classList.add("error");
+        } else {
+          this.classList.remove("error");
+        }
+      });
+
+      ageInput.addEventListener("input", function () {
+        const value = parseInt(this.value);
+        if (value && (value < 1 || value > 120)) {
+          this.classList.add("error");
+        } else {
+          this.classList.remove("error");
+        }
+      });
+
       // Générer un numéro de suivi unique
       function generateTrackingNumber() {
         const prefix = "TRK";
@@ -503,21 +740,27 @@
         document.getElementById("date").value = today;
       }
 
-      // Afficher le message
-      function showMessage(text, type) {
-        const msgBox = document.getElementById("messageBox");
-        msgBox.textContent = text;
-        msgBox.className = `message ${type} show`;
+      // Obtenir la position dans la file
+      async function getQueuePosition(date) {
+        try {
+          const { data, error } = await supabaseClient
+            .from("reservations")
+            .select("id")
+            .eq("date", date);
 
-        setTimeout(() => {
-          msgBox.classList.remove("show");
-        }, 5000);
+          if (error) throw error;
+          return (data?.length || 0) + 1;
+        } catch (error) {
+          console.error("Erreur lors du calcul de la position:", error);
+          return 0;
+        }
       }
 
       // Afficher le modal de succès
-      function showSuccessModal(trackingNumber) {
+      function showSuccessModal(trackingNumber, queuePosition) {
         currentTrackingNumber = trackingNumber;
         document.getElementById("trackingNumber").textContent = trackingNumber;
+        document.getElementById("queuePosition").textContent = queuePosition;
         document.getElementById("successModal").classList.add("show");
       }
 
@@ -526,9 +769,11 @@
         document.getElementById("successModal").classList.remove("show");
         document.getElementById("reservationForm").reset();
         setMinDate();
+        phoneCounter.textContent = "0/10";
         // Réinitialiser le bouton de copie
         document.getElementById("copyBtn").classList.remove("copied");
-        document.getElementById("copyText").textContent = "Copier le numéro";
+        document.getElementById("copyText").textContent =
+          "Copier le numéro de suivi";
         document.getElementById("copyIcon").textContent = "📋";
       }
 
@@ -543,13 +788,13 @@
 
             btn.classList.add("copied");
             icon.textContent = "✓";
-            text.textContent = "Copié !";
+            text.textContent = "Copié avec succès !";
 
             setTimeout(() => {
               btn.classList.remove("copied");
               icon.textContent = "📋";
-              text.textContent = "Copier le numéro";
-            }, 2000);
+              text.textContent = "Copier le numéro de suivi";
+            }, 3000);
           })
           .catch((err) => {
             console.error("Erreur de copie:", err);
@@ -563,21 +808,37 @@
         .addEventListener("submit", async function (e) {
           e.preventDefault();
 
+          // Validation finale
+          if (!this.checkValidity()) {
+            // Marquer les champs invalides
+            const inputs = this.querySelectorAll("input");
+            inputs.forEach((input) => {
+              if (!input.validity.valid) {
+                input.classList.add("error");
+              }
+            });
+            return;
+          }
+
           const submitBtn = document.getElementById("submitBtn");
           submitBtn.disabled = true;
-          submitBtn.textContent = "Envoi en cours...";
+          submitBtn.innerHTML = "<span>⏳ Envoi en cours...</span>";
 
           const trackingNumber = generateTrackingNumber();
+          const selectedDate = document.getElementById("date").value;
 
           const formData = {
-            date: document.getElementById("date").value,
-            name: document.getElementById("name").value,
-            phone: document.getElementById("phone").value,
+            date: selectedDate,
+            name: document.getElementById("name").value.trim(),
+            phone: document.getElementById("phone").value.trim(),
             age: parseInt(document.getElementById("age").value),
             tracking_number: trackingNumber,
           };
 
           try {
+            // Obtenir la position dans la file avant l'insertion
+            const queuePosition = await getQueuePosition(selectedDate);
+
             // Insérer les données dans Supabase
             const { data, error } = await supabaseClient
               .from("reservations")
@@ -586,17 +847,16 @@
 
             if (error) throw error;
 
-            // Afficher le modal de succès avec le numéro de suivi
-            showSuccessModal(trackingNumber);
+            // Afficher le modal de succès avec le numéro de suivi et la position
+            showSuccessModal(trackingNumber, queuePosition);
           } catch (error) {
-            showMessage(
-              "Échec de la soumission de la réservation. Veuillez réessayer.",
-              "error"
+            alert(
+              "Échec de la soumission de la réservation. Veuillez réessayer."
             );
             console.error("Erreur:", error);
           } finally {
             submitBtn.disabled = false;
-            submitBtn.textContent = "Confirmer la réservation";
+            submitBtn.innerHTML = "<span>✓ Confirmer ma réservation</span>";
           }
         });
 
