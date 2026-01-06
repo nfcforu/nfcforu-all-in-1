@@ -141,7 +141,7 @@
 
       input {
         width: 100%;
-        padding: 16px 18px;
+        padding: 16px 50px 16px 18px;
         font-size: 16px;
         border: 2px solid #e5e7eb;
         border-radius: 10px;
@@ -158,8 +158,14 @@
         transform: translateY(-2px);
       }
 
+      input.valid {
+        border-color: var(--success-color);
+        background: #f0fdf4;
+      }
+
       input.error {
         border-color: var(--error-color);
+        background: #fef2f2;
         animation: shake 0.3s;
       }
 
@@ -180,9 +186,7 @@
         font-size: 12px;
         color: #6b7280;
         margin-top: 6px;
-        display: flex;
-        align-items: center;
-        gap: 4px;
+        display: none;
       }
 
       .input-error {
@@ -194,12 +198,31 @@
         gap: 4px;
       }
 
-      input.error + .input-hint {
-        display: none;
-      }
-
       input.error ~ .input-error {
         display: flex;
+      }
+
+      .input-icon {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        opacity: 0;
+        transition: all 0.3s ease;
+        pointer-events: none;
+      }
+
+      .input-icon.show {
+        opacity: 1;
+      }
+
+      .input-icon.valid {
+        color: var(--success-color);
+      }
+
+      .input-icon.error {
+        color: var(--error-color);
       }
 
       .char-counter {
@@ -531,7 +554,6 @@
             <span class="required-star">*</span>
           </label>
           <input type="date" id="date" name="date" required />
-          <div class="input-hint">💡 Sélectionnez la date de votre visite</div>
         </div>
 
         <div class="form-group">
@@ -539,22 +561,19 @@
             👤 Nom complet
             <span class="required-star">*</span>
           </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Ex: Ahmed Ben Ali"
-            minlength="3"
-            maxlength="100"
-            pattern="[A-Za-zÀ-ÿ\s]{3,100}"
-            required
-          />
-          <div class="input-hint">
-            💡 Entrez votre nom complet (minimum 3 caractères)
+          <div style="position: relative">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Ex: Ahmed Ben Ali"
+              minlength="3"
+              maxlength="100"
+              required
+            />
+            <div class="input-icon" id="nameIcon"></div>
           </div>
-          <div class="input-error">
-            ⚠️ Nom invalide - lettres uniquement, 3-100 caractères
-          </div>
+          <div class="input-error">⚠️ Nom invalide (minimum 3 caractères)</div>
         </div>
 
         <div class="form-group">
@@ -562,21 +581,19 @@
             📱 Numéro de téléphone
             <span class="required-star">*</span>
           </label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="Ex: 0555123456"
-            pattern="0[5-7][0-9]{8}"
-            minlength="10"
-            maxlength="10"
-            required
-          />
-          <div class="input-hint">
-            💡 Format: 0555123456 (10 chiffres, commence par 05/06/07)
+          <div style="position: relative">
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="0555123456"
+              minlength="10"
+              maxlength="10"
+              required
+            />
+            <div class="input-icon" id="phoneIcon"></div>
           </div>
-          <div class="input-error">⚠️ Numéro invalide - format: 0555123456</div>
-          <div class="char-counter" id="phoneCounter">0/10</div>
+          <div class="input-error">⚠️ Format invalide (Ex: 0555123456)</div>
         </div>
 
         <div class="form-group">
@@ -584,17 +601,19 @@
             🎂 Âge
             <span class="required-star">*</span>
           </label>
-          <input
-            type="number"
-            id="age"
-            name="age"
-            placeholder="Ex: 35"
-            min="1"
-            max="120"
-            required
-          />
-          <div class="input-hint">💡 Votre âge (1-120 ans)</div>
-          <div class="input-error">⚠️ Âge invalide - entre 1 et 120 ans</div>
+          <div style="position: relative">
+            <input
+              type="number"
+              id="age"
+              name="age"
+              placeholder="Ex: 35"
+              min="1"
+              max="120"
+              required
+            />
+            <div class="input-icon" id="ageIcon"></div>
+          </div>
+          <div class="input-error">⚠️ Âge invalide (1-120 ans)</div>
         </div>
 
         <button type="submit" class="submit-btn" id="submitBtn">
@@ -689,37 +708,76 @@
       const nameInput = document.getElementById("name");
       const phoneInput = document.getElementById("phone");
       const ageInput = document.getElementById("age");
-      const phoneCounter = document.getElementById("phoneCounter");
 
+      const nameIcon = document.getElementById("nameIcon");
+      const phoneIcon = document.getElementById("phoneIcon");
+      const ageIcon = document.getElementById("ageIcon");
+
+      // Validation du nom
       nameInput.addEventListener("input", function () {
-        const value = this.value;
-        if (value.length > 0 && !this.validity.valid) {
-          this.classList.add("error");
-        } else {
+        const value = this.value.trim();
+
+        if (value.length === 0) {
+          this.classList.remove("valid", "error");
+          nameIcon.classList.remove("show");
+        } else if (value.length >= 3) {
+          this.classList.add("valid");
           this.classList.remove("error");
+          nameIcon.textContent = "✓";
+          nameIcon.classList.add("show", "valid");
+          nameIcon.classList.remove("error");
+        } else {
+          this.classList.add("error");
+          this.classList.remove("valid");
+          nameIcon.textContent = "✗";
+          nameIcon.classList.add("show", "error");
+          nameIcon.classList.remove("valid");
         }
       });
 
+      // Validation du téléphone
       phoneInput.addEventListener("input", function () {
-        let value = this.value.replace(/\D/g, ""); // Supprimer tout sauf les chiffres
+        let value = this.value.replace(/\D/g, "");
         if (value.length > 10) value = value.slice(0, 10);
         this.value = value;
 
-        phoneCounter.textContent = `${value.length}/10`;
-
-        if (value.length > 0 && !this.validity.valid) {
-          this.classList.add("error");
-        } else {
+        if (value.length === 0) {
+          this.classList.remove("valid", "error");
+          phoneIcon.classList.remove("show");
+        } else if (value.length === 10 && /^0[5-7][0-9]{8}$/.test(value)) {
+          this.classList.add("valid");
           this.classList.remove("error");
+          phoneIcon.textContent = "✓";
+          phoneIcon.classList.add("show", "valid");
+          phoneIcon.classList.remove("error");
+        } else {
+          this.classList.add("error");
+          this.classList.remove("valid");
+          phoneIcon.textContent = "✗";
+          phoneIcon.classList.add("show", "error");
+          phoneIcon.classList.remove("valid");
         }
       });
 
+      // Validation de l'âge
       ageInput.addEventListener("input", function () {
         const value = parseInt(this.value);
-        if (value && (value < 1 || value > 120)) {
-          this.classList.add("error");
-        } else {
+
+        if (!this.value) {
+          this.classList.remove("valid", "error");
+          ageIcon.classList.remove("show");
+        } else if (value >= 1 && value <= 120) {
+          this.classList.add("valid");
           this.classList.remove("error");
+          ageIcon.textContent = "✓";
+          ageIcon.classList.add("show", "valid");
+          ageIcon.classList.remove("error");
+        } else {
+          this.classList.add("error");
+          this.classList.remove("valid");
+          ageIcon.textContent = "✗";
+          ageIcon.classList.add("show", "error");
+          ageIcon.classList.remove("valid");
         }
       });
 
@@ -769,7 +827,15 @@
         document.getElementById("successModal").classList.remove("show");
         document.getElementById("reservationForm").reset();
         setMinDate();
-        phoneCounter.textContent = "0/10";
+
+        // Réinitialiser les icônes de validation
+        document.querySelectorAll(".input-icon").forEach((icon) => {
+          icon.classList.remove("show", "valid", "error");
+        });
+        document.querySelectorAll("input").forEach((input) => {
+          input.classList.remove("valid", "error");
+        });
+
         // Réinitialiser le bouton de copie
         document.getElementById("copyBtn").classList.remove("copied");
         document.getElementById("copyText").textContent =
