@@ -1031,12 +1031,20 @@
           e.preventDefault();
 
           const id = parseInt(document.getElementById("editId").value);
+          const originalDate = allReservations.find((r) => r.id === id)?.date;
+          const newDate = document.getElementById("editDate").value;
+
           const updatedData = {
             name: document.getElementById("editName").value,
             phone: document.getElementById("editPhone").value,
             age: parseInt(document.getElementById("editAge").value),
-            date: document.getElementById("editDate").value,
+            date: newDate,
           };
+
+          // Si la date a changé, mettre à jour le timestamp pour placer à la fin de la file
+          if (originalDate !== newDate) {
+            updatedData.timestamp = new Date().toISOString();
+          }
 
           console.log(
             "Updating reservation ID:",
@@ -1066,6 +1074,14 @@
                 .select("*")
                 .eq("id", id);
               console.log("Existing record:", existing);
+            }
+
+            // Si la date a changé, réinitialiser le statut à "waiting"
+            if (originalDate !== newDate) {
+              await supabaseClient
+                .from("patient_status")
+                .delete()
+                .eq("reservation_id", id);
             }
 
             closeEditModal();
