@@ -2109,5 +2109,22 @@
       "tiktok": "https://www.tiktok.com/@mokhtari.shoes?_r=1&_t=ZS-92p4w8goVb5&fbclid=IwY2xjawPLfeBleHRuA2FlbQIxMABicmlkETF1M3B2dzVDVWJBaXR0dDY2c3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEeh78TZbpt48-du_dkFTu3YXCkLipKjaiUJEq4oIzPE8zJCjKrOmiRHNZLUss_aem_neP7ugF9G1YfTvIasX9bZg",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213782800948"
     }
+  },
+  "MI-boutique": {
+    "name": "MI boutique",
+    "image": "",
+    "phone": "0558877947",
+    "email": "mohamedizza1998@gmail.com",
+    "gradient": "linear-gradient(56deg,rgba(156, 50, 156, 1) 0%, rgba(255, 255, 255, 1) 100%)",
+    "address": {
+      "text": "PCG7+H5R، Rue Frères Khaled Kebir, Boudouaou",
+      "url": "https://maps.app.goo.gl/uk7es7hnAaz4dyB16"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=100093906246284&mibextid=ZbWKwL",
+      "instagram": "https://www.instagram.com/mi_boutique_lingerie?igsh=MW9tNXo5aTlvYWRrbg%3D%3D&fbclid=IwY2xjawPLf-tleHRuA2FlbQIxMABicmlkETF1M3B2dzVDVWJBaXR0dDY2c3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEewyuyHFW3JojCF6Our13PpuPVa1SL8Rv3nPb9FCpJ3soy3i8DpH96YJeP_fc_aem_-iXTg5O8qx92irikFlua3g",
+      "tiktok": "https://www.tiktok.com/@mi.boutique.lingerie?_r=1&_t=ZS-92p4XJHsHIr&fbclid=IwY2xjawPLf_1leHRuA2FlbQIxMABicmlkETF1M3B2dzVDVWJBaXR0dDY2c3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEePHhXRUDvnCXxlliyFDmQgEgCCGZ8gy6dCgpGaGvpAGkUD-tV_6uD5S59DG8_aem_RG07OAx_kOdCJlYXnI9-sg",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213558877947"
+    }
   }
 }
