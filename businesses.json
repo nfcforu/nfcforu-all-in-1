@@ -1372,7 +1372,8 @@
     },
     "socials": {
       "facebook": "https://www.facebook.com/blakywr.bajmlt.al.lmt?mibextid=wwXIfr&rdid=S8R4cqA0UP39CRcW&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17sKi1C5dz%2F%3Fmibextid%3DwwXIfr#",
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213558382609"
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213558382609",
+      "telegram": "https://t.me/palquoreleulma"
     }
   },
   "LAFARR-EULMA": {
@@ -1388,7 +1389,7 @@
       "facebook": "https://www.facebook.com/blakywr.baljmlt.al.lmt.lafar?mibextid=wwXIfr",
       "tiktok": "https://www.tiktok.com/@achrafkamikaz4?_r=1&_t=ZS-91kpgUeHJZK",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2130671948096",
-      "telegram": "https://t.me/palquoreleulma"
+      "telegram": "https://t.me/plaquieleulma"
     }
   },
   "Dr-M-MERAZI": {
@@ -2063,7 +2064,7 @@
   "Youcef_Moda": {
     "name": "Youcef Moda",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-28%20at%2013.35.31.jpeg",
-    "phone": "0774548263",
+    "phone": "0776169076",
     "gradient": "linear-gradient(203deg,rgba(22, 22, 23, 1) 0%, rgba(235, 182, 7, 1) 100%)",
     "address": {
       "text": "Setif",
@@ -2073,12 +2074,13 @@
       "facebook": "https://www.facebook.com/profile.php?id=100064362385134&rdid=KZ3cgdwXcTMpKHeV&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AEWNzKXgK%2F#",
       "instagram": "https://www.instagram.com/youcef_moda_4?igsh=bDE3NHZndGM0bzQ1",
       "tiktok": "https://www.tiktok.com/@youcef_moda_4?_r=1&_t=ZS-92bDQcde7tf",
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213774548263"
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213776169076",
+      "telegram": "https://t.me/+213776169076"
     }
   },
   "Rahaf-Eline-Decor": {
     "name": "Rahaf Eline Decor",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202025-12-31%20at%2014.40.26.jpeg",
     "phone": "0770789313",
     "gradient": "linear-gradient(203deg,rgba(22, 22, 23, 1) 0%, rgba(235, 182, 7, 1) 100%)",
     "address": {
@@ -2090,6 +2092,39 @@
       "instagram": "https://www.instagram.com/rahaf_eline_decor/",
       "tiktok": "https://www.tiktok.com/@rahaf.eline.dcor",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770789313"
+    }
+  },
+  "Mokhtari-shoes": {
+    "name": "Mokhtari shoes ",
+    "image": "",
+    "phone": "0782800948",
+    "gradient": "linear-gradient(203deg,rgba(22, 22, 23, 1) 0%, rgba(235, 182, 7, 1) 100%)",
+    "address": {
+      "text": "PCG7+G3Q, Boudouaou",
+      "url": "https://maps.app.goo.gl/BmMtMWAfvi5cbJze7"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1AfvS4xDYr/",
+      "instagram": "https://www.instagram.com/mokhtari_shoes?igsh=MWNybnIzZ25iZzNyOQ%3D%3D&fbclid=IwY2xjawPLfbxleHRuA2FlbQIxMABicmlkETF1M3B2dzVDVWJBaXR0dDY2c3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEezQbVjCzjh6T7PqqZGf_esUSAdCUKhGxja_iEs2AK2q9iaUo0DCrXMVfs-DY_aem_AoZKdrW08ZTa0mifg2IG5w",
+      "tiktok": "https://www.tiktok.com/@mokhtari.shoes?_r=1&_t=ZS-92p4w8goVb5&fbclid=IwY2xjawPLfeBleHRuA2FlbQIxMABicmlkETF1M3B2dzVDVWJBaXR0dDY2c3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEeh78TZbpt48-du_dkFTu3YXCkLipKjaiUJEq4oIzPE8zJCjKrOmiRHNZLUss_aem_neP7ugF9G1YfTvIasX9bZg",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213782800948"
+    }
+  },
+  "MI-boutique": {
+    "name": "MI boutique",
+    "image": "",
+    "phone": "0558877947",
+    "email": "mohamedizza1998@gmail.com",
+    "gradient": "linear-gradient(56deg,rgba(156, 50, 156, 1) 0%, rgba(255, 255, 255, 1) 100%)",
+    "address": {
+      "text": "PCG7+H5R، Rue Frères Khaled Kebir, Boudouaou",
+      "url": "https://maps.app.goo.gl/uk7es7hnAaz4dyB16"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=100093906246284&mibextid=ZbWKwL",
+      "instagram": "https://www.instagram.com/mi_boutique_lingerie?igsh=MW9tNXo5aTlvYWRrbg%3D%3D&fbclid=IwY2xjawPLf-tleHRuA2FlbQIxMABicmlkETF1M3B2dzVDVWJBaXR0dDY2c3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEewyuyHFW3JojCF6Our13PpuPVa1SL8Rv3nPb9FCpJ3soy3i8DpH96YJeP_fc_aem_-iXTg5O8qx92irikFlua3g",
+      "tiktok": "https://www.tiktok.com/@mi.boutique.lingerie?_r=1&_t=ZS-92p4XJHsHIr&fbclid=IwY2xjawPLf_1leHRuA2FlbQIxMABicmlkETF1M3B2dzVDVWJBaXR0dDY2c3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEePHhXRUDvnCXxlliyFDmQgEgCCGZ8gy6dCgpGaGvpAGkUD-tV_6uD5S59DG8_aem_RG07OAx_kOdCJlYXnI9-sg",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213558877947"
     }
   }
 }
