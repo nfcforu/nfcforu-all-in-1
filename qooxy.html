@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join Qooxy | Become a Delivery Partner</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #ff4d00; /* Qooxy Vibrant Orange */
+        --secondary-color: #1a1a1a;
+        --text-light: #666;
+        --bg-light: #f8f9fa;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        background-color: var(--bg-light);
+        color: var(--secondary-color);
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Header Section */
+      header {
+        text-align: center;
+        padding: 40px 20px;
+        background: white;
+        border-bottom: 1px solid #eee;
+      }
+
+      .logo {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--primary-color);
+        letter-spacing: -1px;
+      }
+
+      h1 {
+        margin-top: 10px;
+        font-size: 1.5rem;
+        font-weight: 800;
+      }
+
+      p.subtitle {
+        color: var(--text-light);
+        margin-top: 5px;
+      }
+
+      /* Form Styling */
+      .form-card {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        margin-top: -30px;
+        z-index: 10;
+        position: relative;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #eee;
+        border-radius: 10px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+      }
+
+      input:focus,
+      select:focus {
+        outline: none;
+        border-color: var(--primary-color);
+      }
+
+      .radio-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+      }
+
+      .radio-option {
+        border: 2px solid #eee;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        cursor: pointer;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      .radio-option input {
+        display: none;
+      }
+
+      .radio-option.active {
+        border-color: var(--primary-color);
+        background: rgba(255, 77, 0, 0.05);
+        color: var(--primary-color);
+      }
+
+      button {
+        width: 100%;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 16px;
+        border-radius: 12px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: transform 0.2s, background 0.3s;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background: #e64500;
+        transform: translateY(-2px);
+      }
+
+      /* Success Message */
+      #success-msg {
+        display: none;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .footer-info {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 0.8rem;
+        color: var(--text-light);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">QOOXY</div>
+      <h1>Deliver & Earn</h1>
+      <p class="subtitle">Join the fleet and start earning today.</p>
+    </header>
+
+    <div class="container">
+      <div id="form-container" class="form-card">
+        <form id="hiringForm">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input
+              type="text"
+              id="fullName"
+              name="name"
+              placeholder="John Doe"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+1 234 567 890"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="john@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="city">City</label>
+            <select id="city" name="city" required>
+              <option value="">Select your city</option>
+              <option value="city1">Casablanca</option>
+              <option value="city2">Marrakech</option>
+              <option value="city3">Rabat</option>
+              <option value="city4">Tangier</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Vehicle Type</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="vehicle" value="bicycle" required />
+                Bicycle
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="vehicle" value="scooter" /> Scooter
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="vehicle" value="car" /> Car
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" id="submitBtn">Submit Application</button>
+        </form>
+      </div>
+
+      <div id="success-msg" class="form-card">
+        <h2 style="color: var(--primary-color)">Application Received! 🎉</h2>
+        <p>
+          Thank you for applying to Qooxy. Our team will contact you via phone
+          within 48 hours.
+        </p>
+        <button
+          onclick="window.location.reload()"
+          style="margin-top: 20px; background: var(--secondary-color)"
+        >
+          Back to Home
+        </button>
+      </div>
+
+      <div class="footer-info">
+        &copy; 2026 Qooxy Technologies. All rights reserved.
+      </div>
+    </div>
+
+    <script>
+      // Handle Radio Button Styling
+      const radioOptions = document.querySelectorAll(".radio-option");
+      radioOptions.forEach((option) => {
+        option.addEventListener("click", function () {
+          radioOptions.forEach((opt) => opt.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+
+      // Handle Form Submission
+      const form = document.getElementById("hiringForm");
+      const formContainer = document.getElementById("form-container");
+      const successMsg = document.getElementById("success-msg");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Show loading state
+        const btn = document.getElementById("submitBtn");
+        btn.innerText = "Sending...";
+        btn.style.opacity = "0.7";
+        btn.disabled = true;
+
+        // Collect Data
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        console.log("Form Data Collected:", data);
+
+        // MOCK API CALL - Replace this with your actual endpoint
+        setTimeout(() => {
+          formContainer.style.display = "none";
+          successMsg.style.display = "block";
+          window.scrollTo(0, 0);
+        }, 1500);
+      });
+    </script>
+  </body>
+</html>
