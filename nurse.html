@@ -642,6 +642,21 @@
         <form id="editForm">
           <input type="hidden" id="editId" />
           <div class="form-group">
+            <label for="editTrackingNumber">Numéro de suivi</label>
+            <input
+              type="text"
+              id="editTrackingNumber"
+              readonly
+              style="
+                background: #f3f4f6;
+                cursor: not-allowed;
+                font-family: 'Courier New', monospace;
+                color: #2563eb;
+                font-weight: 600;
+              "
+            />
+          </div>
+          <div class="form-group">
             <label for="editName">Nom complet</label>
             <input type="text" id="editName" required />
           </div>
@@ -807,6 +822,14 @@
           // Si recherche par numéro de suivi
           if (searchQuery) {
             query = query.ilike("tracking_number", `%${searchQuery}%`);
+            // Réinitialiser le filtre à "Tous" lors de la recherche
+            if (currentFilter !== "all") {
+              currentFilter = "all";
+              document
+                .querySelectorAll(".filter-btn")
+                .forEach((btn) => btn.classList.remove("active"));
+              document.getElementById("filterAll").classList.add("active");
+            }
           } else {
             // Sinon filtrer par date
             query = query.eq("date", selectedDate);
@@ -998,6 +1021,8 @@
         if (!reservation) return;
 
         document.getElementById("editId").value = reservation.id;
+        document.getElementById("editTrackingNumber").value =
+          reservation.tracking_number || "N/A";
         document.getElementById("editName").value = reservation.name;
         document.getElementById("editPhone").value = reservation.phone;
         document.getElementById("editAge").value = reservation.age;
@@ -1022,7 +1047,59 @@
       function closeAddModal() {
         document.getElementById("addModal").classList.remove("show");
         document.getElementById("addForm").reset();
+        // Cacher les messages d'erreur
+        document
+          .querySelectorAll("#addForm .input-error")
+          .forEach((el) => (el.style.display = "none"));
       }
+
+      // Générer un numéro de suivi unique
+      function generateTrackingNumber() {
+        const prefix = "TRK";
+        const timestamp = Date.now().toString().slice(-6);
+        const random = Math.floor(Math.random() * 1000)
+          .toString()
+          .padStart(3, "0");
+        return `${prefix}${timestamp}${random}`;
+      }
+
+      // Validation en temps réel pour le formulaire d'ajout
+      const addNameInput = document.getElementById("addName");
+      const addPhoneInput = document.getElementById("addPhone");
+      const addAgeInput = document.getElementById("addAge");
+
+      addNameInput.addEventListener("input", function () {
+        const error = document.getElementById("addNameError");
+        if (this.value.trim().length < 3 && this.value.length > 0) {
+          error.style.display = "block";
+        } else {
+          error.style.display = "none";
+        }
+      });
+
+      addPhoneInput.addEventListener("input", function () {
+        let value = this.value.replace(/\D/g, "");
+        if (value.length > 10) value = value.slice(0, 10);
+        this.value = value;
+
+        const error = document.getElementById("addPhoneError");
+        const isValid = /^0[5-7][0-9]{8}$/.test(value);
+        if (value.length > 0 && !isValid) {
+          error.style.display = "block";
+        } else {
+          error.style.display = "none";
+        }
+      });
+
+      addAgeInput.addEventListener("input", function () {
+        const error = document.getElementById("addAgeError");
+        const value = parseInt(this.value);
+        if (this.value && (value < 1 || value > 120)) {
+          error.style.display = "block";
+        } else {
+          error.style.display = "none";
+        }
+      });
 
       // Gérer la soumission du formulaire d'édition
       document
@@ -1142,11 +1219,38 @@
         .addEventListener("submit", async function (e) {
           e.preventDefault();
 
+          // Validation finale
+          const name = document.getElementById("addName").value.trim();
+          const phone = document.getElementById("addPhone").value.trim();
+          const age = parseInt(document.getElementById("addAge").value);
+
+          let hasError = false;
+
+          if (name.length < 3) {
+            document.getElementById("addNameError").style.display = "block";
+            hasError = true;
+          }
+
+          if (!/^0[5-7][0-9]{8}$/.test(phone)) {
+            document.getElementById("addPhoneError").style.display = "block";
+            hasError = true;
+          }
+
+          if (age < 1 || age > 120) {
+            document.getElementById("addAgeError").style.display = "block";
+            hasError = true;
+          }
+
+          if (hasError) return;
+
+          const trackingNumber = generateTrackingNumber();
+
           const newReservation = {
-            name: document.getElementById("addName").value,
-            phone: document.getElementById("addPhone").value,
-            age: parseInt(document.getElementById("addAge").value),
+            name: name,
+            phone: phone,
+            age: age,
             date: document.getElementById("addDate").value,
+            tracking_number: trackingNumber,
           };
 
           console.log("Adding new reservation:", newReservation);
@@ -1166,7 +1270,9 @@
 
             closeAddModal();
             await loadReservations();
-            alert("Réservation ajoutée avec succès !");
+            alert(
+              `Réservation ajoutée avec succès !\n\nNuméro de suivi: ${trackingNumber}`
+            );
           } catch (error) {
             console.error("Erreur complète:", error);
             alert("Échec de l'ajout: " + error.message);
@@ -1175,13 +1281,27 @@
 
       // S'abonner aux changements en temps réel
       function setupRealtimeSubscription() {
+        // Écouter les changements dans la table reservations
         supabaseClient
           .channel("reservations-changes")
           .on(
             "postgres_changes",
             { event: "*", schema: "public", table: "reservations" },
             (payload) => {
-              console.log("Changement détecté:", payload);
+              console.log("Changement réservations détecté:", payload);
+              loadReservations();
+            }
+          )
+          .subscribe();
+
+        // Écouter les changements dans la table patient_status
+        supabaseClient
+          .channel("status-changes")
+          .on(
+            "postgres_changes",
+            { event: "*", schema: "public", table: "patient_status" },
+            (payload) => {
+              console.log("Changement statut détecté:", payload);
               loadReservations();
             }
           )
