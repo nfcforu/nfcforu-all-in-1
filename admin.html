@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Gestion des Cliniques</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+
+      /* Login Page */
+      .login-container {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .login-box {
+        background: white;
+        border-radius: 20px;
+        padding: 50px 40px;
+        max-width: 400px;
+        width: 100%;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      .login-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .login-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 40px;
+      }
+
+      .login-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 8px;
+      }
+
+      .login-subtitle {
+        font-size: 14px;
+        color: #6b7280;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #1f2937;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 14px 16px;
+        font-size: 15px;
+        border: 2px solid #e5e7eb;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .form-group input:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      }
+
+      .login-btn {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .login-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+      }
+
+      .error-message {
+        background: #fee2e2;
+        color: #991b1b;
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        font-size: 14px;
+        display: none;
+      }
+
+      /* Admin Dashboard */
+      .admin-container {
+        display: none;
+        min-height: 100vh;
+        background: #f3f4f6;
+      }
+
+      .admin-header {
+        background: white;
+        padding: 20px 30px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .admin-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1f2937;
+      }
+
+      .logout-btn {
+        padding: 10px 20px;
+        background: #ef4444;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .logout-btn:hover {
+        background: #dc2626;
+      }
+
+      .admin-content {
+        padding: 30px;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .action-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .add-clinic-btn {
+        padding: 12px 24px;
+        background: linear-gradient(135deg, #10b981, #059669);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+      }
+
+      .add-clinic-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+      }
+
+      .clinics-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 25px;
+      }
+
+      .clinic-card {
+        background: white;
+        border-radius: 16px;
+        padding: 25px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .clinic-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .clinic-card.inactive {
+        opacity: 0.6;
+        background: #f9fafb;
+      }
+
+      .clinic-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+
+      .clinic-logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .clinic-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+
+      .clinic-info h3 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 4px;
+      }
+
+      .clinic-info p {
+        font-size: 13px;
+        color: #6b7280;
+      }
+
+      .clinic-id {
+        font-family: "Courier New", monospace;
+        background: #f3f4f6;
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 12px;
+        color: #4b5563;
+        margin-bottom: 15px;
+      }
+
+      .clinic-colors {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .color-box {
+        flex: 1;
+        height: 40px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        color: white;
+        font-weight: 600;
+      }
+
+      .clinic-actions {
+        display: flex;
+        gap: 8px;
+      }
+
+      .action-btn {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .view-btn {
+        background: #3b82f6;
+        color: white;
+      }
+
+      .view-btn:hover {
+        background: #2563eb;
+      }
+
+      .edit-btn {
+        background: #f59e0b;
+        color: white;
+      }
+
+      .edit-btn:hover {
+        background: #d97706;
+      }
+
+      .delete-btn {
+        background: #ef4444;
+        color: white;
+      }
+
+      .delete-btn:hover {
+        background: #dc2626;
+      }
+
+      /* Modal */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(5px);
+      }
+
+      .modal.show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn 0.3s;
+      }
+
+      .modal-content {
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        max-width: 600px;
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+        animation: slideUp 0.3s;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .modal-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1f2937;
+      }
+
+      .close-btn {
+        background: none;
+        border: none;
+        font-size: 28px;
+        color: #6b7280;
+        cursor: pointer;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .close-btn:hover {
+        background: #f3f4f6;
+      }
+
+      .modal-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      .modal-btn {
+        flex: 1;
+        padding: 14px;
+        border: none;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .modal-btn.cancel {
+        background: #f3f4f6;
+        color: #6b7280;
+      }
+
+      .modal-btn.cancel:hover {
+        background: #e5e7eb;
+      }
+
+      .modal-btn.save {
+        background: linear-gradient(135deg, #10b981, #059669);
+        color: white;
+      }
+
+      .modal-btn.save:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+      }
+
+      .empty-state {
+        text-align: center;
+        padding: 80px 20px;
+        color: #6b7280;
+      }
+
+      .empty-icon {
+        font-size: 80px;
+        margin-bottom: 20px;
+      }
+
+      .empty-text {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .clinics-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .admin-content {
+          padding: 20px 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Login Page -->
+    <div class="login-container" id="loginPage">
+      <div class="login-box">
+        <div class="login-header">
+          <div class="login-icon">🔐</div>
+          <h1 class="login-title">Admin Dashboard</h1>
+          <p class="login-subtitle">Gestion des Cliniques</p>
+        </div>
+
+        <div class="error-message" id="loginError">Mot de passe incorrect</div>
+
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Entrez le mot de passe admin"
+              required
+            />
+          </div>
+          <button type="submit" class="login-btn">Se connecter</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div class="admin-container" id="adminPage">
+      <div class="admin-header">
+        <h1 class="admin-title">🏥 Gestion des Cliniques</h1>
+        <button class="logout-btn" onclick="logout()">Déconnexion</button>
+      </div>
+
+      <div class="admin-content">
+        <div class="action-bar">
+          <h2 style="font-size: 20px; color: #1f2937">Mes Cliniques</h2>
+          <button class="add-clinic-btn" onclick="openAddModal()">
+            ➕ Nouvelle Clinique
+          </button>
+        </div>
+
+        <div class="clinics-grid" id="clinicsGrid">
+          <!-- Clinics will be loaded here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Add/Edit Clinic Modal -->
+    <div id="clinicModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="modalTitle">Nouvelle Clinique</h2>
+          <button class="close-btn" onclick="closeModal()">×</button>
+        </div>
+
+        <form id="clinicForm">
+          <input type="hidden" id="clinicId" />
+          <div class="form-group">
+            <label for="clinicName">Nom de la clinique *</label>
+            <input
+              type="text"
+              id="clinicName"
+              placeholder="Ex: Clinique El Shifa"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="clinicSubtitle">Sous-titre</label>
+            <input
+              type="text"
+              id="clinicSubtitle"
+              placeholder="Ex: Soins de qualité depuis 1995"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="clinicLogoUrl">URL du logo</label>
+            <input
+              type="url"
+              id="clinicLogoUrl"
+              placeholder="https://example.com/logo.png"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="primaryColor">Couleur principale *</label>
+            <input type="color" id="primaryColor" value="#2563eb" required />
+          </div>
+
+          <div class="form-group">
+            <label for="secondaryColor">Couleur secondaire *</label>
+            <input type="color" id="secondaryColor" value="#1e40af" required />
+          </div>
+
+          <div class="modal-actions">
+            <button
+              type="button"
+              class="modal-btn cancel"
+              onclick="closeModal()"
+            >
+              Annuler
+            </button>
+            <button type="submit" class="modal-btn save">Enregistrer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+      // Supabase Configuration
+      const SUPABASE_URL = "https://xgahasrfktpyldjkndhh.supabase.co";
+      const SUPABASE_KEY =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhnYWhhc3Jma3RweWxkamtuZGhoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY5MDMyMzgsImV4cCI6MjA4MjQ3OTIzOH0.0Oec4OpBjHS5OL6QMY3bvs3jT2KGfkvECgGKZfNLXb4";
+      const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+      // Simple password (change this!)
+      const ADMIN_PASSWORD = "admin123";
+
+      // Check if logged in
+      function checkAuth() {
+        const isLoggedIn = sessionStorage.getItem("adminLoggedIn");
+        if (isLoggedIn) {
+          showAdminPage();
+        }
+      }
+
+      // Login
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const password = document.getElementById("password").value;
+
+          if (password === ADMIN_PASSWORD) {
+            sessionStorage.setItem("adminLoggedIn", "true");
+            showAdminPage();
+          } else {
+            document.getElementById("loginError").style.display = "block";
+          }
+        });
+
+      function showAdminPage() {
+        document.getElementById("loginPage").style.display = "none";
+        document.getElementById("adminPage").style.display = "block";
+        loadClinics();
+      }
+
+      function logout() {
+        sessionStorage.removeItem("adminLoggedIn");
+        document.getElementById("loginPage").style.display = "flex";
+        document.getElementById("adminPage").style.display = "none";
+        document.getElementById("password").value = "";
+      }
+
+      // Generate clinic ID
+      function generateClinicId(name) {
+        return (
+          name
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .replace(/[^a-z0-9-]/g, "") +
+          "-" +
+          Math.random().toString(36).substr(2, 6)
+        );
+      }
+
+      // Load all clinics
+      async function loadClinics() {
+        try {
+          const { data, error } = await supabase
+            .from("clinics")
+            .select("*")
+            .order("created_at", { ascending: false });
+
+          if (error) throw error;
+
+          displayClinics(data || []);
+        } catch (error) {
+          console.error("Error loading clinics:", error);
+          alert("Erreur lors du chargement des cliniques");
+        }
+      }
+
+      // Display clinics
+      function displayClinics(clinics) {
+        const grid = document.getElementById("clinicsGrid");
+
+        if (clinics.length === 0) {
+          grid.innerHTML = `
+                    <div class="empty-state" style="grid-column: 1/-1;">
+                        <div class="empty-icon">🏥</div>
+                        <div class="empty-text">Aucune clinique</div>
+                        <p>Cliquez sur "Nouvelle Clinique" pour commencer</p>
+                    </div>
+                `;
+          return;
+        }
+
+        grid.innerHTML = clinics
+          .map(
+            (clinic) => `
+                <div class="clinic-card ${!clinic.active ? "inactive" : ""}">
+                    <div class="clinic-header">
+                        <div class="clinic-logo" style="background: ${
+                          clinic.primary_color
+                        };">
+                            ${
+                              clinic.logo_url
+                                ? `<img src="${clinic.logo_url}" alt="${clinic.name}">`
+                                : "🏥"
+                            }
+                        </div>
+                        <div class="clinic-info">
+                            <h3>${clinic.name}</h3>
+                            <p>${clinic.subtitle || "Pas de sous-titre"}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="clinic-id">ID: ${clinic.id}</div>
+                    
+                    <div class="clinic-colors">
+                        <div class="color-box" style="background: ${
+                          clinic.primary_color
+                        };">
+                            Primaire
+                        </div>
+                        <div class="color-box" style="background: ${
+                          clinic.secondary_color
+                        };">
+                            Secondaire
+                        </div>
+                    </div>
+                    
+                    <div class="clinic-actions">
+                        <button class="action-btn view-btn" onclick="viewClinic('${
+                          clinic.id
+                        }')">
+                            👁️ Voir
+                        </button>
+                        <button class="action-btn edit-btn" onclick="editClinic('${
+                          clinic.id
+                        }')">
+                            ✏️ Modifier
+                        </button>
+                        <button class="action-btn delete-btn" onclick="deleteClinic('${
+                          clinic.id
+                        }')">
+                            🗑️ Supprimer
+                        </button>
+                    </div>
+                </div>
+            `
+          )
+          .join("");
+      }
+
+      // Open add modal
+      function openAddModal() {
+        document.getElementById("modalTitle").textContent = "Nouvelle Clinique";
+        document.getElementById("clinicForm").reset();
+        document.getElementById("clinicId").value = "";
+        document.getElementById("primaryColor").value = "#2563eb";
+        document.getElementById("secondaryColor").value = "#1e40af";
+        document.getElementById("clinicModal").classList.add("show");
+      }
+
+      // Edit clinic
+      async function editClinic(id) {
+        try {
+          const { data, error } = await supabase
+            .from("clinics")
+            .select("*")
+            .eq("id", id)
+            .single();
+
+          if (error) throw error;
+
+          document.getElementById("modalTitle").textContent =
+            "Modifier la Clinique";
+          document.getElementById("clinicId").value = data.id;
+          document.getElementById("clinicName").value = data.name;
+          document.getElementById("clinicSubtitle").value = data.subtitle || "";
+          document.getElementById("clinicLogoUrl").value = data.logo_url || "";
+          document.getElementById("primaryColor").value = data.primary_color;
+          document.getElementById("secondaryColor").value =
+            data.secondary_color;
+          document.getElementById("clinicModal").classList.add("show");
+        } catch (error) {
+          console.error("Error loading clinic:", error);
+          alert("Erreur lors du chargement de la clinique");
+        }
+      }
+
+      // Close modal
+      function closeModal() {
+        document.getElementById("clinicModal").classList.remove("show");
+      }
+
+      // Save clinic
+      document
+        .getElementById("clinicForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const id = document.getElementById("clinicId").value;
+          const clinicData = {
+            name: document.getElementById("clinicName").value,
+            subtitle: document.getElementById("clinicSubtitle").value || null,
+            logo_url: document.getElementById("clinicLogoUrl").value || null,
+            primary_color: document.getElementById("primaryColor").value,
+            secondary_color: document.getElementById("secondaryColor").value,
+          };
+
+          try {
+            if (id) {
+              // Update existing
+              const { error } = await supabase
+                .from("clinics")
+                .update(clinicData)
+                .eq("id", id);
+
+              if (error) throw error;
+              alert("Clinique modifiée avec succès !");
+            } else {
+              // Create new
+              clinicData.id = generateClinicId(clinicData.name);
+              const { error } = await supabase
+                .from("clinics")
+                .insert([clinicData]);
+
+              if (error) throw error;
+              alert(
+                "Clinique créée avec succès !\n\nURL: ?clinic=" + clinicData.id
+              );
+            }
+
+            closeModal();
+            loadClinics();
+          } catch (error) {
+            console.error("Error saving clinic:", error);
+            alert("Erreur: " + error.message);
+          }
+        });
+
+      // View clinic
+      function viewClinic(id) {
+        const url =
+          window.location.origin + window.location.pathname + "?clinic=" + id;
+        window.open(url, "_blank");
+      }
+
+      // Delete clinic
+      async function deleteClinic(id) {
+        if (
+          !confirm(
+            "Êtes-vous sûr de vouloir supprimer cette clinique ? Cette action est irréversible !"
+          )
+        ) {
+          return;
+        }
+
+        try {
+          const { error } = await supabase
+            .from("clinics")
+            .delete()
+            .eq("id", id);
+
+          if (error) throw error;
+
+          alert("Clinique supprimée avec succès !");
+          loadClinics();
+        } catch (error) {
+          console.error("Error deleting clinic:", error);
+          alert("Erreur lors de la suppression");
+        }
+      }
+
+      // Initialize
+      checkAuth();
+    </script>
+  </body>
+</html>

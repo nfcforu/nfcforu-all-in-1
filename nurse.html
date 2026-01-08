@@ -739,10 +739,15 @@
         SUPABASE_KEY
       );
 
+      // Get clinic ID from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const clinicId = urlParams.get("clinic");
+
       // ============================================
       // CONFIGURATION DE LA MARQUE
       // ============================================
-      const clinicConfig = {
+      let clinicConfig = {
+        id: null,
         name: "Clinique Médicale",
         subtitle: "Gestion de la file d'attente des patients",
         primaryColor: "#2563eb",
@@ -752,6 +757,50 @@
       // État du filtre
       let currentFilter = "all";
       let allReservations = [];
+
+      // Load clinic configuration
+      async function loadClinicConfig() {
+        if (!clinicId) {
+          console.warn("No clinic ID provided");
+          applyBranding();
+          return;
+        }
+
+        try {
+          const { data, error } = await supabaseClient
+            .from("clinics")
+            .select("*")
+            .eq("id", clinicId)
+            .eq("active", true)
+            .single();
+
+          if (error) throw error;
+
+          if (data) {
+            clinicConfig = {
+              id: data.id,
+              name: data.name,
+              subtitle:
+                data.subtitle || "Gestion de la file d'attente des patients",
+              primaryColor: data.primary_color,
+              secondaryColor: data.secondary_color,
+            };
+          }
+
+          applyBranding();
+        } catch (error) {
+          console.error("Error loading clinic config:", error);
+          document.body.innerHTML = `
+                    <div style="display: flex; justify-content: center; align-items: center; min-height: 100vh; text-align: center; padding: 20px;">
+                        <div>
+                            <h1 style="font-size: 48px; margin-bottom: 20px;">❌</h1>
+                            <h2 style="font-size: 24px; color: #1f2937; margin-bottom: 10px;">Clinique introuvable</h2>
+                            <p style="color: #6b7280;">L'URL de cette clinique est invalide ou la clinique est inactive.</p>
+                        </div>
+                    </div>
+                `;
+        }
+      }
 
       // Appliquer la marque
       function applyBranding() {
@@ -816,8 +865,16 @@
           .value.trim()
           .toUpperCase();
 
+        if (!clinicConfig.id) {
+          console.warn("No clinic ID");
+          return;
+        }
+
         try {
-          let query = supabaseClient.from("reservations").select("*");
+          let query = supabaseClient
+            .from("reservations")
+            .select("*")
+            .eq("clinic_id", clinicConfig.id);
 
           // Si recherche par numéro de suivi
           if (searchQuery) {
@@ -1251,6 +1308,7 @@
             age: age,
             date: document.getElementById("addDate").value,
             tracking_number: trackingNumber,
+            clinic_id: clinicConfig.id,
           };
 
           console.log("Adding new reservation:", newReservation);
@@ -1319,10 +1377,12 @@
         .addEventListener("input", loadReservations);
 
       // Initialiser
-      applyBranding();
-      setDateFilter();
-      loadReservations();
-      setupRealtimeSubscription();
+      loadClinicConfig().then(() => {
+        applyBranding();
+        setDateFilter();
+        loadReservations();
+        setupRealtimeSubscription();
+      });
     </script>
   </body>
 </html>
