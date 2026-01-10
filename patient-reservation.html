@@ -848,12 +848,13 @@
       }
 
       // Obtenir la position dans la file
-      async function getQueuePosition(date) {
+      async function getQueuePosition(date, clinicId) {
         try {
           const { data, error } = await supabaseClient
             .from("reservations")
             .select("id")
-            .eq("date", date);
+            .eq("date", date)
+            .eq("clinic_id", clinicId);
 
           if (error) throw error;
           return (data?.length || 0) + 1;
@@ -953,7 +954,10 @@
 
           try {
             // Obtenir la position dans la file avant l'insertion
-            const queuePosition = await getQueuePosition(selectedDate);
+            const queuePosition = await getQueuePosition(
+              selectedDate,
+              clinicConfig.id
+            );
 
             // Insérer les données dans Supabase
             const { data, error } = await supabaseClient
