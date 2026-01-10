@@ -812,9 +812,7 @@
 
               if (error) throw error;
 
-              const baseUrl =
-                window.location.origin +
-                window.location.pathname.replace("admin.html", "");
+              const baseUrl = window.location.origin + "/";
               const reservationUrl =
                 baseUrl + "patient-reservation.html?clinic=" + clinicData.id;
               const dashboardUrl =
@@ -835,10 +833,8 @@
 
       // View clinic
       function viewClinic(id) {
-        // Get the base URL without any query parameters
-        const baseUrl =
-          window.location.origin +
-          window.location.pathname.replace("admin.html", "");
+        // Get the base URL (remove /admin or /admin.html)
+        let baseUrl = window.location.origin + "/";
 
         // Open patient reservation page
         const reservationUrl =
@@ -848,9 +844,7 @@
 
       // View clinic dashboard
       function viewDashboard(id) {
-        const baseUrl =
-          window.location.origin +
-          window.location.pathname.replace("admin.html", "");
+        let baseUrl = window.location.origin + "/";
         const dashboardUrl = baseUrl + "nurse-dashboard.html?clinic=" + id;
         window.open(dashboardUrl, "_blank");
       }
