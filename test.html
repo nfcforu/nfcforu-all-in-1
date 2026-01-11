@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Test Suite</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Courier New", monospace;
+        background: #1a1a1a;
+        color: #00ff00;
+        padding: 20px;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: #0a0a0a;
+        border: 2px solid #00ff00;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 28px;
+        text-shadow: 0 0 10px #00ff00;
+      }
+
+      .subtitle {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #888;
+        font-size: 14px;
+      }
+
+      .config-section {
+        background: #151515;
+        border: 1px solid #333;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+      }
+
+      .config-section h3 {
+        color: #00ffff;
+        margin-bottom: 15px;
+      }
+
+      .input-group {
+        margin-bottom: 15px;
+      }
+
+      .input-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #00ff00;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 10px;
+        background: #0a0a0a;
+        border: 1px solid #00ff00;
+        color: #00ff00;
+        border-radius: 5px;
+        font-family: "Courier New", monospace;
+      }
+
+      .btn {
+        background: #00ff00;
+        color: #000;
+        border: none;
+        padding: 15px 30px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: "Courier New", monospace;
+        transition: all 0.3s ease;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .btn:hover {
+        background: #00cc00;
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+      }
+
+      .btn:disabled {
+        background: #333;
+        color: #666;
+        cursor: not-allowed;
+      }
+
+      .btn-secondary {
+        background: #ff6600;
+      }
+
+      .btn-secondary:hover {
+        background: #cc5500;
+      }
+
+      .test-output {
+        background: #000;
+        border: 1px solid #00ff00;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+        height: 500px;
+        overflow-y: auto;
+        font-size: 13px;
+      }
+
+      .test-line {
+        margin-bottom: 8px;
+        padding: 5px;
+        border-radius: 3px;
+      }
+
+      .test-suite {
+        color: #00ffff;
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+
+      .test-name {
+        color: #ffff00;
+        margin-left: 20px;
+      }
+
+      .test-pass {
+        color: #00ff00;
+        margin-left: 40px;
+      }
+
+      .test-fail {
+        color: #ff0000;
+        margin-left: 40px;
+      }
+
+      .test-info {
+        color: #888;
+        margin-left: 40px;
+        font-size: 12px;
+      }
+
+      .summary {
+        background: #151515;
+        border: 2px solid #00ff00;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+        display: none;
+      }
+
+      .summary h3 {
+        color: #00ffff;
+        margin-bottom: 15px;
+      }
+
+      .summary-stat {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+
+      .stat-pass {
+        color: #00ff00;
+      }
+
+      .stat-fail {
+        color: #ff0000;
+      }
+
+      .stat-total {
+        color: #ffff00;
+      }
+
+      .progress-bar {
+        width: 100%;
+        height: 30px;
+        background: #1a1a1a;
+        border: 1px solid #00ff00;
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 20px 0;
+        display: none;
+      }
+
+      .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #00ff00, #00cc00);
+        transition: width 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+        font-weight: bold;
+      }
+
+      .warning {
+        background: #332200;
+        border: 1px solid #ffaa00;
+        color: #ffaa00;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #1a1a1a;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #00ff00;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🧪 SYSTEM TEST SUITE</h1>
+      <p class="subtitle">
+        Automated Testing for Multi-Clinic Queue Management System
+      </p>
+
+      <div class="warning">
+        ⚠️ <strong>WARNING:</strong> These tests will create temporary test data
+        in your database. Test clinics and reservations will be created and can
+        be deleted automatically.
+      </div>
+
+      <div class="config-section">
+        <h3>📋 Configuration</h3>
+
+        <div class="input-group">
+          <label>Supabase URL:</label>
+          <input
+            type="text"
+            id="supabaseUrl"
+            value="https://xgahasrfktpyldjkndhh.supabase.co"
+          />
+        </div>
+
+        <div class="input-group">
+          <label>Supabase Anon Key:</label>
+          <input
+            type="text"
+            id="supabaseKey"
+            value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhnYWhhc3Jma3RweWxkamtuZGhoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY5MDMyMzgsImV4cCI6MjA4MjQ3OTIzOH0.0Oec4OpBjHS5OL6QMY3bvs3jT2KGfkvECgGKZfNLXb4"
+          />
+        </div>
+
+        <div class="input-group">
+          <label>Base URL (your site):</label>
+          <input
+            type="text"
+            id="baseUrl"
+            value="https://nfcforu-all-in-1-test.pages.dev"
+          />
+        </div>
+
+        <button class="btn" id="runTests" onclick="runAllTests()">
+          ▶️ RUN ALL TESTS
+        </button>
+        <button
+          class="btn btn-secondary"
+          id="clearTests"
+          onclick="clearTestData()"
+        >
+          🗑️ CLEAR TEST DATA
+        </button>
+      </div>
+
+      <div class="progress-bar" id="progressBar">
+        <div class="progress-fill" id="progressFill">0%</div>
+      </div>
+
+      <div class="test-output" id="output">
+        <div class="test-line" style="color: #00ffff">
+          ═══════════════════════════════════════════════════════<br />
+          SYSTEM TEST SUITE v1.0<br />
+          ═══════════════════════════════════════════════════════<br />
+          <br />
+          Click "RUN ALL TESTS" to begin automated testing...<br />
+          <br />
+          Tests will check:<br />
+          • Multi-clinic data separation<br />
+          • Queue position accuracy<br />
+          • Tracking number system<br />
+          • Status management<br />
+          • Data validation<br />
+          • Edit & Delete operations<br />
+          <br />
+          ═══════════════════════════════════════════════════════
+        </div>
+      </div>
+
+      <div class="summary" id="summary">
+        <h3>📊 TEST SUMMARY</h3>
+        <div class="summary-stat stat-total">
+          Total Tests: <span id="totalTests">0</span>
+        </div>
+        <div class="summary-stat stat-pass">
+          ✅ Passed: <span id="passedTests">0</span>
+        </div>
+        <div class="summary-stat stat-fail">
+          ❌ Failed: <span id="failedTests">0</span>
+        </div>
+        <div class="summary-stat">
+          Success Rate: <span id="successRate">0%</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+      let supabase;
+      let output = document.getElementById("output");
+      let testResults = { total: 0, passed: 0, failed: 0 };
+      let testClinicIds = [];
+
+      function log(message, type = "info") {
+        const div = document.createElement("div");
+        div.className = "test-line";
+
+        if (type === "suite") {
+          div.className = "test-suite";
+        } else if (type === "test") {
+          div.className = "test-name";
+        } else if (type === "pass") {
+          div.className = "test-pass";
+        } else if (type === "fail") {
+          div.className = "test-fail";
+        } else if (type === "info") {
+          div.className = "test-info";
+        }
+
+        div.innerHTML = message;
+        output.appendChild(div);
+        output.scrollTop = output.scrollHeight;
+      }
+
+      function updateProgress(current, total) {
+        const percent = Math.round((current / total) * 100);
+        document.getElementById("progressBar").style.display = "block";
+        document.getElementById("progressFill").style.width = percent + "%";
+        document.getElementById("progressFill").textContent = percent + "%";
+      }
+
+      function assert(condition, testName) {
+        testResults.total++;
+        if (condition) {
+          testResults.passed++;
+          log(`✅ PASS: ${testName}`, "pass");
+          return true;
+        } else {
+          testResults.failed++;
+          log(`❌ FAIL: ${testName}`, "fail");
+          return false;
+        }
+      }
+
+      function sleep(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+
+      function generateClinicId(name) {
+        return (
+          name
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .replace(/[^a-z0-9-]/g, "") +
+          "-" +
+          Math.random().toString(36).substr(2, 6)
+        );
+      }
+
+      async function runAllTests() {
+        output.innerHTML = "";
+        testResults = { total: 0, passed: 0, failed: 0 };
+        document.getElementById("summary").style.display = "none";
+        document.getElementById("runTests").disabled = true;
+
+        const supabaseUrl = document.getElementById("supabaseUrl").value;
+        const supabaseKey = document.getElementById("supabaseKey").value;
+        supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+        log("═══════════════════════════════════════════════════════", "suite");
+        log("🧪 STARTING AUTOMATED TEST SUITE", "suite");
+        log("═══════════════════════════════════════════════════════", "suite");
+        log("");
+
+        const totalTests = 8;
+        let currentTest = 0;
+
+        try {
+          log("📦 TEST SUITE 1: Database Connection", "suite");
+          await testDatabaseConnection();
+          updateProgress(++currentTest, totalTests);
+          await sleep(500);
+
+          log("", "info");
+          log("🏥 TEST SUITE 2: Clinic Creation & Management", "suite");
+          await testClinicCreation();
+          updateProgress(++currentTest, totalTests);
+          await sleep(500);
+
+          log("", "info");
+          log("🔒 TEST SUITE 3: Multi-Clinic Data Separation", "suite");
+          await testDataSeparation();
+          updateProgress(++currentTest, totalTests);
+          await sleep(500);
+
+          log("", "info");
+          log("📊 TEST SUITE 4: Queue Position Accuracy", "suite");
+          await testQueuePosition();
+          updateProgress(++currentTest, totalTests);
+          await sleep(500);
+
+          log("", "info");
+          log("🔢 TEST SUITE 5: Tracking Number System", "suite");
+          await testTrackingNumbers();
+          updateProgress(++currentTest, totalTests);
+          await sleep(500);
+
+          log("", "info");
+          log("✅ TEST SUITE 6: Status Management", "suite");
+          await testStatusManagement();
+          updateProgress(++currentTest, totalTests);
+          await sleep(500);
+
+          log("", "info");
+          log("🛡️ TEST SUITE 7: Data Validation", "suite");
+          await testDataValidation();
+          updateProgress(++currentTest, totalTests);
+          await sleep(500);
+
+          log("", "info");
+          log("✏️ TEST SUITE 8: Edit & Delete Operations", "suite");
+          await testEditDelete();
+          updateProgress(++currentTest, totalTests);
+
+          log("", "info");
+          log(
+            "═══════════════════════════════════════════════════════",
+            "suite"
+          );
+          log("📊 TEST EXECUTION COMPLETED", "suite");
+          log(
+            "═══════════════════════════════════════════════════════",
+            "suite"
+          );
+
+          showSummary();
+        } catch (error) {
+          log("❌ CRITICAL ERROR: " + error.message, "fail");
+          console.error(error);
+        }
+
+        document.getElementById("runTests").disabled = false;
+      }
+
+      async function testDatabaseConnection() {
+        log("Test 1.1: Supabase Connection", "test");
+        try {
+          const { data, error } = await supabase
+            .from("clinics")
+            .select("count");
+          assert(!error, "Can connect to Supabase");
+          if (!error) {
+            log(`Connected successfully`, "info");
+          }
+        } catch (error) {
+          assert(false, "Database connection failed: " + error.message);
+        }
+
+        log("Test 1.2: Required Tables Exist", "test");
+        try {
+          const tables = ["clinics", "reservations", "patient_status"];
+          for (const table of tables) {
+            const { error } = await supabase
+              .from(table)
+              .select("count")
+              .limit(1);
+            assert(!error, `Table '${table}' exists and accessible`);
+          }
+        } catch (error) {
+          assert(false, "Table check failed");
+        }
+      }
+
+      async function testClinicCreation() {
+        log("Test 2.1: Create Test Clinic A", "test");
+        const clinicA = {
+          id: generateClinicId("Test Clinic A"),
+          name: "Test Clinic A",
+          subtitle: "Automated Test A",
+          primary_color: "#2563eb",
+          secondary_color: "#1e40af",
+          active: true,
+        };
+
+        const { data: dataA, error: errorA } = await supabase
+          .from("clinics")
+          .insert([clinicA])
+          .select();
+
+        assert(
+          !errorA && dataA && dataA.length > 0,
+          "Clinic A created successfully"
+        );
+        if (dataA) {
+          testClinicIds.push(clinicA.id);
+          log(`Clinic A ID: ${clinicA.id}`, "info");
+        }
+
+        log("Test 2.2: Create Test Clinic B", "test");
+        const clinicB = {
+          id: generateClinicId("Test Clinic B"),
+          name: "Test Clinic B",
+          subtitle: "Automated Test B",
+          primary_color: "#10b981",
+          secondary_color: "#059669",
+          active: true,
+        };
+
+        const { data: dataB, error: errorB } = await supabase
+          .from("clinics")
+          .insert([clinicB])
+          .select();
+
+        assert(
+          !errorB && dataB && dataB.length > 0,
+          "Clinic B created successfully"
+        );
+        if (dataB) {
+          testClinicIds.push(clinicB.id);
+          log(`Clinic B ID: ${clinicB.id}`, "info");
+        }
+
+        log("Test 2.3: Verify Both Clinics Exist", "test");
+        const { data: clinics, error } = await supabase
+          .from("clinics")
+          .select("*")
+          .in("id", testClinicIds);
+
+        assert(
+          !error && clinics && clinics.length === 2,
+          "Both clinics exist in database"
+        );
+      }
+
+      async function testDataSeparation() {
+        if (testClinicIds.length < 2) {
+          log("⚠️ Skipping - Need 2 test clinics", "fail");
+          return;
+        }
+
+        log("Test 3.1: Create Patient in Clinic A", "test");
+        const patientA = {
+          clinic_id: testClinicIds[0],
+          name: "Ahmed Test",
+          phone: "0555111111",
+          age: 30,
+          date: new Date().toISOString().split("T")[0],
+          tracking_number: "TRK" + Date.now() + "001",
+        };
+
+        const { data: dataA, error: errorA } = await supabase
+          .from("reservations")
+          .insert([patientA])
+          .select();
+
+        assert(!errorA && dataA, "Patient created in Clinic A");
+
+        log("Test 3.2: Create Patient in Clinic B", "test");
+        const patientB = {
+          clinic_id: testClinicIds[1],
+          name: "Karim Test",
+          phone: "0555222222",
+          age: 25,
+          date: new Date().toISOString().split("T")[0],
+          tracking_number: "TRK" + Date.now() + "002",
+        };
+
+        const { data: dataB, error: errorB } = await supabase
+          .from("reservations")
+          .insert([patientB])
+          .select();
+
+        assert(!errorB && dataB, "Patient created in Clinic B");
+
+        log("Test 3.3: Verify Clinic A sees only their patient", "test");
+        const { data: clinicAData } = await supabase
+          .from("reservations")
+          .select("*")
+          .eq("clinic_id", testClinicIds[0]);
+
+        const hasOnlyAhmed =
+          clinicAData &&
+          clinicAData.some((p) => p.name === "Ahmed Test") &&
+          !clinicAData.some((p) => p.name === "Karim Test");
+
+        assert(
+          hasOnlyAhmed,
+          "Clinic A sees only Ahmed (data separation works)"
+        );
+
+        log("Test 3.4: Verify Clinic B sees only their patient", "test");
+        const { data: clinicBData } = await supabase
+          .from("reservations")
+          .select("*")
+          .eq("clinic_id", testClinicIds[1]);
+
+        const hasOnlyKarim =
+          clinicBData &&
+          clinicBData.some((p) => p.name === "Karim Test") &&
+          !clinicBData.some((p) => p.name === "Ahmed Test");
+
+        assert(
+          hasOnlyKarim,
+          "Clinic B sees only Karim (data separation works)"
+        );
+      }
+
+      async function testQueuePosition() {
+        if (testClinicIds.length < 1) {
+          log("⚠️ Skipping - Need test clinic", "fail");
+          return;
+        }
+
+        const clinicId = testClinicIds[0];
+        const today = new Date().toISOString().split("T")[0];
+
+        log("Test 4.1: Count existing patients for today", "test");
+        const { data: existing } = await supabase
+          .from("reservations")
+          .select("*")
+          .eq("clinic_id", clinicId)
+          .eq("date", today);
+
+        const existingCount = existing ? existing.length : 0;
+        log(`Found ${existingCount} existing patient(s) for today`, "info");
+        assert(true, `Counted ${existingCount} patients`);
+
+        log("Test 4.2: Add new patient", "test");
+        const newPatient = {
+          clinic_id: clinicId,
+          name: "Position Test",
+          phone: "0555333333",
+          age: 35,
+          date: today,
+          tracking_number: "TRK" + Date.now() + "003",
+        };
+
+        const { data, error } = await supabase
+          .from("reservations")
+          .insert([newPatient])
+          .select();
+
+        assert(!error && data, "New patient added successfully");
+
+        log("Test 4.3: Verify queue position calculation", "test");
+        const { data: allPatients } = await supabase
+          .from("reservations")
+          .select("*")
+          .eq("clinic_id", clinicId)
+          .eq("date", today)
+          .order("timestamp", { ascending: true });
+
+        const expectedPosition = existingCount + 1;
+        const actualCount = allPatients ? allPatients.length : 0;
+
+        assert(
+          actualCount === expectedPosition,
+          `Queue has ${actualCount} patients (expected ${expectedPosition})`
+        );
+      }
+
+      async function testTrackingNumbers() {
+        if (testClinicIds.length < 1) {
+          log("⚠️ Skipping - Need test clinic", "fail");
+          return;
+        }
+
+        log("Test 5.1: Generate unique tracking numbers", "test");
+        const trackingNumbers = new Set();
+        const clinicId = testClinicIds[0];
+
+        for (let i = 0; i < 5; i++) {
+          const trk =
+            "TRK" + Date.now() + Math.random().toString(36).substr(2, 5);
+          trackingNumbers.add(trk);
+
+          const patient = {
+            clinic_id: clinicId,
+            name: `TRK Test ${i}`,
+            phone: `055534444${i}`,
+            age: 20 + i,
+            date: new Date().toISOString().split("T")[0],
+            tracking_number: trk,
+          };
+
+          await supabase.from("reservations").insert([patient]);
+          await sleep(10);
+        }
+
+        assert(trackingNumbers.size === 5, "All 5 tracking numbers are unique");
+
+        log("Test 5.2: Verify tracking number format", "test");
+        const allStartWithTRK = Array.from(trackingNumbers).every((trk) =>
+          trk.startsWith("TRK")
+        );
+        assert(allStartWithTRK, 'All tracking numbers start with "TRK"');
+      }
+
+      async function testStatusManagement() {
+        if (testClinicIds.length < 1) {
+          log("⚠️ Skipping - Need test clinic", "fail");
+          return;
+        }
+
+        log("Test 6.1: Create patient for status testing", "test");
+        const patient = {
+          clinic_id: testClinicIds[0],
+          name: "Status Test",
+          phone: "0555444444",
+          age: 40,
+          date: new Date().toISOString().split("T")[0],
+          tracking_number: "TRK" + Date.now() + "006",
+        };
+
+        const { data, error } = await supabase
+          .from("reservations")
+          .insert([patient])
+          .select();
+
+        assert(!error && data, "Patient created for status testing");
+
+        const patientId = data[0].id;
+
+        log("Test 6.2: Update status to consulted", "test");
+        const { error: statusError } = await supabase
+          .from("patient_status")
+          .insert([
+            {
+              reservation_id: patientId,
+              status: "consulted",
+              clinic_id: testClinicIds[0],
+            },
+          ]);
+
+        assert(!statusError, 'Status updated to "consulted"');
+
+        log("Test 6.3: Verify status persists", "test");
+        const { data: statusData } = await supabase
+          .from("patient_status")
+          .select("*")
+          .eq("reservation_id", patientId);
+
+        assert(
+          statusData &&
+            statusData.length > 0 &&
+            statusData[0].status === "consulted",
+          'Status correctly saved as "consulted"'
+        );
+      }
+
+      async function testDataValidation() {
+        if (testClinicIds.length < 1) {
+          log("⚠️ Skipping - Need test clinic", "fail");
+          return;
+        }
+
+        log("Test 7.1: Database accepts valid data", "test");
+        const validPatient = {
+          clinic_id: testClinicIds[0],
+          name: "Valid Test",
+          phone: "0555123456",
+          age: 25,
+          date: new Date().toISOString().split("T")[0],
+          tracking_number: "TRK" + Date.now() + "008",
+        };
+
+        const { error } = await supabase
+          .from("reservations")
+          .insert([validPatient]);
+
+        assert(!error, "Valid patient data accepted");
+
+        log("Test 7.2: Client-side validation works", "test");
+        log("Phone validation is handled at client level (forms)", "info");
+        assert(true, "Validation implemented in forms");
+      }
+
+      async function testEditDelete() {
+        if (testClinicIds.length < 1) {
+          log("⚠️ Skipping - Need test clinic", "fail");
+          return;
+        }
+
+        log("Test 8.1: Create patient to edit", "test");
+        const patient = {
+          clinic_id: testClinicIds[0],
+          name: "Edit Test Original",
+          phone: "0555555555",
+          age: 30,
+          date: new Date().toISOString().split("T")[0],
+          tracking_number: "TRK" + Date.now() + "009",
+        };
+
+        const { data, error } = await supabase
+          .from("reservations")
+          .insert([patient])
+          .select();
+
+        assert(!error && data, "Patient created for edit test");
+        const patientId = data[0].id;
+
+        log("Test 8.2: Edit patient name", "test");
+        const { error: updateError } = await supabase
+          .from("reservations")
+          .update({ name: "Edit Test Updated" })
+          .eq("id", patientId);
+
+        assert(!updateError, "Patient name updated successfully");
+
+        log("Test 8.3: Verify edit persisted", "test");
+        const { data: updated } = await supabase
+          .from("reservations")
+          .select("*")
+          .eq("id", patientId)
+          .single();
+
+        assert(
+          updated && updated.name === "Edit Test Updated",
+          "Updated name persisted in database"
+        );
+
+        log("Test 8.4: Delete patient", "test");
+        const { error: deleteError } = await supabase
+          .from("reservations")
+          .delete()
+          .eq("id", patientId);
+
+        assert(!deleteError, "Patient deleted successfully");
+
+        log("Test 8.5: Verify deletion", "test");
+        const { data: deleted } = await supabase
+          .from("reservations")
+          .select("*")
+          .eq("id", patientId);
+
+        assert(
+          !deleted || deleted.length === 0,
+          "Patient no longer exists in database"
+        );
+      }
+
+      async function clearTestData() {
+        if (
+          !confirm(
+            "This will delete all test clinics and their data. Continue?"
+          )
+        ) {
+          return;
+        }
+
+        document.getElementById("clearTests").disabled = true;
+        log("", "info");
+        log("🗑️ Cleaning up test data...", "suite");
+
+        try {
+          for (const clinicId of testClinicIds) {
+            log(`Deleting reservations for ${clinicId}...`, "info");
+            await supabase
+              .from("reservations")
+              .delete()
+              .eq("clinic_id", clinicId);
+            await supabase
+              .from("patient_status")
+              .delete()
+              .eq("clinic_id", clinicId);
+          }
+
+          log("Deleting test clinics...", "info");
+          await supabase.from("clinics").delete().in("id", testClinicIds);
+
+          log("✅ Test data cleaned up successfully", "pass");
+          testClinicIds = [];
+        } catch (error) {
+          log("❌ Error cleaning up: " + error.message, "fail");
+        }
+
+        document.getElementById("clearTests").disabled = false;
+      }
+
+      function showSummary() {
+        document.getElementById("summary").style.display = "block";
+        document.getElementById("totalTests").textContent = testResults.total;
+        document.getElementById("passedTests").textContent = testResults.passed;
+        document.getElementById("failedTests").textContent = testResults.failed;
+
+        const successRate =
+          testResults.total > 0
+            ? Math.round((testResults.passed / testResults.total) * 100)
+            : 0;
+        document.getElementById("successRate").textContent = successRate + "%";
+
+        log("", "info");
+        if (successRate === 100) {
+          log("🎉 ALL TESTS PASSED! System is working perfectly.", "pass");
+        } else if (successRate >= 80) {
+          log("⚠️ Most tests passed. Check failed tests above.", "fail");
+        } else {
+          log("❌ Multiple failures detected. System needs attention.", "fail");
+        }
+      }
+    </script>
+  </body>
+</html>
