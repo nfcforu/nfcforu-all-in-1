@@ -2133,5 +2133,26 @@
       "tiktok": "https://www.tiktok.com/@mi.boutique.lingerie?_r=1&_t=ZS-92p4XJHsHIr&fbclid=IwY2xjawPLf_1leHRuA2FlbQIxMABicmlkETF1M3B2dzVDVWJBaXR0dDY2c3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEePHhXRUDvnCXxlliyFDmQgEgCCGZ8gy6dCgpGaGvpAGkUD-tV_6uD5S59DG8_aem_RG07OAx_kOdCJlYXnI9-sg",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213558877947"
     }
+  },
+  "SAND-OUS": {
+    "name": "SANDOUSE PHONES",
+    "image": "",
+    "phone": "0554109015",
+    "email": "nfcforu@gmail.com",
+    "gradient": "#1916c5",
+    "address": {
+      "text": "rue 24 fevrier 1956 , setif",
+      "url": "https://maps.app.goo.gl/YtwAYubeUjLdt89J7"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=100064068131999",
+      "instagram": "https://www.instagram.com/la_.sicilia_19",
+      "tiktok": "https://www.tiktok.com/@optic.belaid.rita?_r=1&_t=ZS-928X3B7s0IP&fbclid=IwY2xjawOny1tleHRuA2FlbQIxMABicmlkETE5ZVNKeWl6eDJKTFJGc1JSc3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEeUA6rmLtmzgSnN97n40_XKYOMqyNSb1WV8F-TklX1GAahG5KO_AbzQ9sE_bE_aem_ZwPh_oZFjB10YsZd8gby3A",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213659686007",
+      "snapchat": "https://www.snapchat.com/@prvvt20?share_id=xRQ52I2LRQCTqPBLKNkzjQ&locale=fr_DZ&fbclid=IwY2xjawOzP01leHRuA2FlbQIxMABicmlkETFBNXN2ejFOMlg3cXVGSWJ5c3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEejo0_TIRBvrF5hMawjNlig6eT3RKMKC4DOZiBzc5Wmlq-DVpYrYpjWsmmBtQ_aem_ANvL0223br4b6Bg-RNxbIg",
+      "telegram": "https://t.me/+213556 03 77 74",
+      "viber": "viber://chat?number=%2B‪+213771786456",
+      "youtube": "https://youtube.com/@-bu3rs3lv9e?si=LDSYEWCJxIX_ErnM"
+    }
   }
 }
