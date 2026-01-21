@@ -2214,7 +2214,43 @@
       "url": ""
     },
     "socials": {
-      "facebook": "https://www.facebook.com/share/1G8VFuPg8Z/"
+      "facebook": "https://www.facebook.com/share/1G8VFuPg8Z/",
+      "instagram": "https://www.instagram.com/saveurs_beladi?igsh=MWRzbmpwb3BicHN4MA==",
+      "tiktok": "https://www.tiktok.com/@saveursbeladi1?_r=1&_t=ZN-93Fvm9onAOc",
+      "whatsapp": "Wa.me+213562131834",
+      "viber": "+213562131834"
+    }
+  },
+  "crepeabuanes": {
+    "name": "Crêpes abu anes ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-01-21%20at%2011.20.09.jpeg",
+    "phone": "0540435422",
+    "gradient": "#ffd977",
+    "address": {
+      "text": "",
+      "url": "https://maps.app.goo.gl/h7ZbpewqaCR9gUp3A?g_st=ic"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/zerganehanine",
+      "instagram": "https://www.instagram.com/crepe_abu_anes?igsh=ZThxZ24ybTRjZGJo",
+      "tiktok": "https://www.tiktok.com/@crepe465?_r=1&_t=ZS-93FsPNJQkN7",
+      "snapchat": "https://snapchat.com/t/FucoX0VD"
+    }
+  },
+  "Rosabijoux": {
+    "name": "Rosa bijoux ",
+    "image": "",
+    "phone": "0775584018",
+    "email": "ilyesbnz16@gmail.com",
+    "gradient": "#efcaff",
+    "address": {
+      "text": "",
+      "url": "https://maps.app.goo.gl/Pn5TRbnM4eBXrLwe8"
+    },
+    "socials": {
+      "instagram": "https://www.instagram.com/rosa._.bijoux?igsh=ZHZvend2NzNxb3V6",
+      "tiktok": "https://www.tiktok.com/@rosa._.bijoux?_r=1&_t=ZS-93FyabS5x8p",
+      "whatsapp": "https://wa.me/message/S46HFGEGOVASE1"
     }
   }
 }
