@@ -2304,5 +2304,21 @@
       "tiktok": "https://www.tiktok.com/@pizzace_?_r=1&_t=ZS-93G4GhERsu5",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2137936120 71"
     }
+  },
+  "Keratinebyyoulin": {
+    "name": "Kératine by youlin",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-01-21%20at%2014.24.42.jpeg",
+    "phone": "+213 542 53 09 83",
+    "gradient": "#ffffff",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1AFrunMk1h/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/keratine_by_youlin_?igsh=MXQ3cGpiNnl2YWdhNg%3D%3D&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@youlin278?_r=1&_t=ZS-93GAvKXUKmn",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213542530983"
+    }
   }
 }
