@@ -2190,5 +2190,21 @@
       "whatsapp": "Wa.me+213674871302",
       "viber": "viber://chat?number=%2B+213771786456"
     }
+  },
+  "Mafalschool": {
+    "name": "Mafal school ",
+    "image": "",
+    "phone": "0771379412",
+    "gradient": "#0056d6",
+    "address": {
+      "text": "",
+      "url": "https://maps.google.com/?q=36.741447,3.344805"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1C8rB5GSpa/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/mafal_school?igsh=N2Z1dThpdnUwM2Fo&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@mafal_school?_r=1&_t=ZS-93FjT9xBxs9",
+      "whatsapp": "Wa.me+213771379412"
+    }
   }
 }
