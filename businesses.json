@@ -2320,5 +2320,23 @@
       "tiktok": "https://www.tiktok.com/@youlin278?_r=1&_t=ZS-93GAvKXUKmn",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213542530983"
     }
+  },
+  "Laitus": {
+    "name": "Laitus",
+    "image": "",
+    "phone": "0770052720",
+    "email": "Contact@laitus-dz.com",
+    "gradient": "#263e0f",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/14KToZmV7wf/",
+      "instagram": "https://instagram.com/laitusdz",
+      "tiktok": "https://tiktok.com/@laitus.dz",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770052720",
+      "website": "https://q.me-qr.com/jpR1RLB0"
+    }
   }
 }
