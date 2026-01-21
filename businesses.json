@@ -2272,5 +2272,21 @@
       "website": "https://chicmisscosmetics.com/",
       "snapchat": "https://snapchat.com/t/qbBdrTgF"
     }
+  },
+  "Mafrouchatetadjalmalaki": {
+    "name": "مفروشات التاج الملكي ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-01-21%20at%2013.43.52.jpeg",
+    "phone": "0675560980",
+    "email": "tamertolba1997@gmail.com",
+    "gradient": "#707070",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/17sDnvpsgN/",
+      "instagram": "https://www.instagram.com/_ihab_official_?igsh=MTRydTVjbXJvamUxdQ==",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213675560980"
+    }
   }
 }
