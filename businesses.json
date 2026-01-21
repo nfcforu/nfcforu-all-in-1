@@ -2239,7 +2239,7 @@
   },
   "Rosabijoux": {
     "name": "Rosa bijoux ",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-01-21%20at%2012.46.12.jpeg",
     "phone": "0775584018",
     "email": "ilyesbnz16@gmail.com",
     "gradient": "#efcaff",
@@ -2248,9 +2248,29 @@
       "url": "https://maps.app.goo.gl/Pn5TRbnM4eBXrLwe8"
     },
     "socials": {
+      "facebook": "https://www.facebook.com/share/16xUVx1ERG/?mibextid=wwXIfr",
       "instagram": "https://www.instagram.com/rosa._.bijoux?igsh=ZHZvend2NzNxb3V6",
       "tiktok": "https://www.tiktok.com/@rosa._.bijoux?_r=1&_t=ZS-93FyabS5x8p",
       "whatsapp": "https://wa.me/message/S46HFGEGOVASE1"
+    }
+  },
+  "Chicmisscosmetics": {
+    "name": "Chic miss cosmetics ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-01-21%20at%2012.52.50.jpeg",
+    "phone": "‪+213 550 58 71 65‬",
+    "email": "chicmisscosmetics@gmail.com",
+    "gradient": "#000000",
+    "address": {
+      "text": "",
+      "url": "https://maps.app.goo.gl/2NPhKz4Ntu47xK7g6?g_st=ipc"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/16nuLAh9Z2/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/dzchicmiss?igsh=MWhxa2ViN3E3aHN3ZQ%3D%3D&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@dzchicmiss?_r=1&_t=ZS-93Fz1hlho5V",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213550587165",
+      "website": "https://chicmisscosmetics.com/",
+      "snapchat": "https://snapchat.com/t/qbBdrTgF"
     }
   }
 }
