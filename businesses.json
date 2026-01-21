@@ -2338,5 +2338,22 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770052720",
       "website": "https://q.me-qr.com/jpR1RLB0"
     }
+  },
+  "Farasha": {
+    "name": "Farasha ",
+    "image": "",
+    "phone": "0549549913",
+    "gradient": "",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1Gq2UgL6dN/",
+      "instagram": "https://www.instagram.com/farashaoran?igsh=MWR6cjMyc2V6bjJwcg==",
+      "tiktok": "https://www.tiktok.com/@farasha.oran?_r=1&_t=ZS-93GOU2XE78e",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213449549913",
+      "website": "https://farasha-shop.com/recherche?q=Collection"
+    }
   }
 }
