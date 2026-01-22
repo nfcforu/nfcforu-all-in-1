@@ -2288,5 +2288,72 @@
       "instagram": "https://www.instagram.com/_ihab_official_?igsh=MTRydTVjbXJvamUxdQ==",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213675560980"
     }
+  },
+  "pizza-ce": {
+    "name": "pizzace. بيتزاتشي ",
+    "image": "",
+    "phone": " 07 93 61 20 71",
+    "gradient": "linear-gradient(291deg,rgba(40, 33, 41, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%)",
+    "address": {
+      "text": "99C4+8RM Mezerana",
+      "url": "https://maps.app.goo.gl/1fpvH2Wnc1Yqv6k76"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61580129797639&rdid=x4VB5pqLrEL2QGg1&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19c7rZap9f%2F#",
+      "instagram": "https://www.instagram.com/pizz_ace?utm_source=qr&igsh=MXd2OTF0MmN6cTh0dg%3D%3D",
+      "tiktok": "https://www.tiktok.com/@pizzace_?_r=1&_t=ZS-93G4GhERsu5",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B2137936120 71"
+    }
+  },
+  "Keratinebyyoulin": {
+    "name": "Kératine by youlin",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-01-21%20at%2014.24.42.jpeg",
+    "phone": "+213 542 53 09 83",
+    "gradient": "#707070",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1AFrunMk1h/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/keratine_by_youlin_?igsh=MXQ3cGpiNnl2YWdhNg%3D%3D&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@youlin278?_r=1&_t=ZS-93GAvKXUKmn",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213542530983"
+    }
+  },
+  "Laitus": {
+    "name": "Laitus",
+    "image": "",
+    "phone": "0770052720",
+    "email": "Contact@laitus-dz.com",
+    "gradient": "#263e0f",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/14KToZmV7wf/",
+      "instagram": "https://instagram.com/laitusdz",
+      "tiktok": "https://tiktok.com/@laitus.dz",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770052720",
+      "website": "https://q.me-qr.com/jpR1RLB0"
+    }
+  },
+  "Farasha": {
+    "name": "Farasha ",
+    "image": "",
+    "phone": "0549549913",
+    "gradient": "",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1Gq2UgL6dN/",
+      "instagram": "https://www.instagram.com/farashaoran?igsh=MWR6cjMyc2V6bjJwcg==",
+      "tiktok": "https://www.tiktok.com/@farasha.oran?_r=1&_t=ZS-93GOU2XE78e",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213449549913",
+      "website": "https://farasha-shop.com/recherche?q=Collection"
+    }
   }
 }
