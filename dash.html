@@ -823,6 +823,11 @@
           const businesses = JSON.parse(jsonContent);
           let count = 0;
           let errors = 0;
+          const accessCodes = []; // Store all access codes
+
+          // Show progress
+          const totalCount = Object.keys(businesses).length;
+          showToast(`Migrating ${totalCount} businesses...`, true);
 
           for (const [businessId, data] of Object.entries(businesses)) {
             try {
@@ -855,7 +860,16 @@
 
               if (response.ok) {
                 count++;
-                await generateAccessCode(businessId);
+                // Generate and store access code
+                const accessCode = await generateAccessCodeSilent(businessId);
+                if (accessCode) {
+                  accessCodes.push({
+                    businessId: businessId,
+                    businessName: data.name,
+                    accessCode: accessCode,
+                  });
+                }
+                showToast(`Migrated ${count}/${totalCount}...`, true);
               } else {
                 errors++;
                 console.error(`Failed to migrate ${businessId}`);
@@ -868,12 +882,185 @@
 
           closeMigrationModal();
           await loadData();
-          alert(
-            `Migration complete!\n\nMigrated: ${count}\nErrors: ${errors}\n\n⚠️ Access codes have been generated. Check console for details.`,
-          );
+
+          // Show all access codes in a modal
+          showAccessCodesModal(accessCodes, count, errors);
         } catch (error) {
           alert("Invalid JSON format: " + error.message);
         }
+      }
+
+      async function generateAccessCodeSilent(businessId) {
+        try {
+          const chars =
+            "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789";
+          let accessCode = "";
+          for (let i = 0; i < 16; i++) {
+            accessCode += chars.charAt(
+              Math.floor(Math.random() * chars.length),
+            );
+          }
+
+          const encoder = new TextEncoder();
+          const data = encoder.encode(accessCode);
+          const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+          const hashArray = Array.from(new Uint8Array(hashBuffer));
+          const accessCodeHash = hashArray
+            .map((b) => b.toString(16).padStart(2, "0"))
+            .join("");
+
+          const response = await fetch(
+            `${credentials.url}/rest/v1/business_access`,
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                apikey: credentials.key,
+                Authorization: `Bearer ${credentials.key}`,
+              },
+              body: JSON.stringify({
+                business_id: businessId,
+                access_code_hash: accessCodeHash,
+              }),
+            },
+          );
+
+          if (response.ok) {
+            return accessCode;
+          }
+          return null;
+        } catch (error) {
+          console.error("Error generating access code for", businessId, error);
+          return null;
+        }
+      }
+
+      function showAccessCodesModal(accessCodes, successCount, errorCount) {
+        // Create CSV content
+        let csvContent = "Business ID,Business Name,Access Code,Portal URL\n";
+        accessCodes.forEach((item) => {
+          csvContent += `"${item.businessId}","${item.businessName}","${item.accessCode}","${window.location.origin}/portal"\n`;
+        });
+
+        // Create text content
+        let textContent = `MIGRATION COMPLETE\n`;
+        textContent += `===================\n\n`;
+        textContent += `✅ Successfully migrated: ${successCount}\n`;
+        textContent += `❌ Errors: ${errorCount}\n\n`;
+        textContent += `⚠️ IMPORTANT: Save these access codes! They won't be shown again.\n\n`;
+        textContent += `ACCESS CODES:\n`;
+        textContent += `===================\n\n`;
+
+        accessCodes.forEach((item) => {
+          textContent += `Business: ${item.businessName}\n`;
+          textContent += `ID: ${item.businessId}\n`;
+          textContent += `Access Code: ${item.accessCode}\n`;
+          textContent += `Portal: ${window.location.origin}/portal\n`;
+          textContent += `-------------------\n\n`;
+        });
+
+        // Create modal
+        const modal = document.createElement("div");
+        modal.className =
+          "fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4";
+        modal.innerHTML = `
+          <div class="bg-white rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] flex flex-col">
+            <div class="p-6 border-b">
+              <h2 class="text-2xl font-bold text-green-600">
+                <i class="fas fa-check-circle"></i> Migration Complete!
+              </h2>
+              <p class="text-gray-600 mt-2">
+                Migrated ${successCount} businesses successfully. ${errorCount > 0 ? `${errorCount} errors occurred.` : ""}
+              </p>
+            </div>
+            
+            <div class="p-6 overflow-y-auto flex-1">
+              <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
+                <div class="flex">
+                  <i class="fas fa-exclamation-triangle text-yellow-400 mt-1"></i>
+                  <div class="ml-3">
+                    <p class="text-sm text-yellow-700 font-bold">⚠️ SAVE THESE ACCESS CODES NOW!</p>
+                    <p class="text-sm text-yellow-700 mt-1">These codes will NOT be shown again. Download or copy them before closing.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-3">
+                ${accessCodes
+                  .map(
+                    (item) => `
+                  <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                      <div>
+                        <strong class="text-gray-700">Business:</strong>
+                        <span class="ml-2">${item.businessName}</span>
+                      </div>
+                      <div>
+                        <strong class="text-gray-700">ID:</strong>
+                        <span class="ml-2 font-mono text-blue-600">${item.businessId}</span>
+                      </div>
+                      <div class="md:col-span-2">
+                        <strong class="text-gray-700">Access Code:</strong>
+                        <code class="ml-2 bg-yellow-100 px-3 py-1 rounded font-mono text-lg font-bold">${item.accessCode}</code>
+                      </div>
+                    </div>
+                  </div>
+                `,
+                  )
+                  .join("")}
+              </div>
+            </div>
+
+            <div class="p-6 border-t bg-gray-50 flex gap-3">
+              <button onclick="downloadAccessCodes('${btoa(csvContent)}', 'csv')" 
+                      class="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 font-semibold">
+                <i class="fas fa-download"></i> Download CSV
+              </button>
+              <button onclick="downloadAccessCodes('${btoa(textContent)}', 'txt')" 
+                      class="flex-1 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 font-semibold">
+                <i class="fas fa-file-alt"></i> Download TXT
+              </button>
+              <button onclick="copyAccessCodes('${btoa(textContent)}')" 
+                      class="flex-1 bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 font-semibold">
+                <i class="fas fa-copy"></i> Copy All
+              </button>
+              <button onclick="this.closest('.fixed').remove()" 
+                      class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 font-semibold">
+                Close
+              </button>
+            </div>
+          </div>
+        `;
+
+        document.body.appendChild(modal);
+      }
+
+      function downloadAccessCodes(base64Content, format) {
+        const content = atob(base64Content);
+        const blob = new Blob([content], {
+          type: format === "csv" ? "text/csv" : "text/plain",
+        });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = `access-codes-${new Date().toISOString().split("T")[0]}.${format}`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast(`✅ Downloaded access codes as ${format.toUpperCase()}`);
+      }
+
+      function copyAccessCodes(base64Content) {
+        const content = atob(base64Content);
+        navigator.clipboard
+          .writeText(content)
+          .then(() => {
+            showToast("✅ Access codes copied to clipboard!");
+          })
+          .catch((err) => {
+            alert("Failed to copy. Please download instead.");
+          });
       }
 
       function filterGrid() {
