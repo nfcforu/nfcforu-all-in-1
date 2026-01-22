@@ -2373,5 +2373,19 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213550464131",
       "snapchat": "https://snapchat.com/t/okhHQqYt"
     }
+  },
+  "avocat-azil": {
+    "name": "محامي عزيل عبد الحق",
+    "image": "",
+    "phone": "0660445524",
+    "gradient": "linear-gradient(337deg,rgba(40, 33, 41, 1) 12%, rgba(158, 101, 9, 1) 100%)",
+    "address": {
+      "text": "99P9+F98, Cité halitim khaled, Barika 05700",
+      "url": "https://maps.app.goo.gl/LyP61KZxufe1XNFS6"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/azou.azil.1?rdid=cWSPfMWdgJu00zip&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17yHmE2HG8%2F#",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213660445524"
+    }
   }
 }
