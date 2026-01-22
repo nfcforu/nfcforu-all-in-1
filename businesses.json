@@ -2355,5 +2355,23 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213449549913",
       "website": "https://farasha-shop.com/recherche?q=Collection"
     }
+  },
+  "Axisforce": {
+    "name": "AXIS FORCE ",
+    "image": "",
+    "phone": "0550 46 41 31",
+    "email": "axisforce18@gmail.com",
+    "gradient": "",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1B6bAdRBoE/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/axisforceofficial18?igsh=Yzh6MHJvaTNva3Zz&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@axis.force.official18?_r=1&_t=ZN-93HTJFuL7Nm",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213550464131",
+      "snapchat": "https://snapchat.com/t/okhHQqYt"
+    }
   }
 }
