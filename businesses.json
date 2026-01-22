@@ -2402,5 +2402,21 @@
       "instagram": "https://www.instagram.com/salsabilbeaute/",
       "tiktok": "https://www.tiktok.com/@salsabilbeaute?_r=1&_t=ZN-93Hr7ExOPcE"
     }
+  },
+  "Afineanutricenter": {
+    "name": "Afinea Nutricenter",
+    "image": "",
+    "phone": "05 61236670",
+    "gradient": "#00a1d8",
+    "address": {
+      "text": "Dar El Beïda",
+      "url": "https://maps.app.goo.gl/889w5fc6xTefFHcv5?g_st=ic"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/afineanutricenter/",
+      "instagram": "https://www.instagram.com/afinea_nutricenter_/?hl=fr",
+      "tiktok": "https://www.tiktok.com/@afinea_nutricenter",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213561236670"
+    }
   }
 }
