@@ -2387,5 +2387,19 @@
       "facebook": "https://www.facebook.com/azou.azil.1?rdid=cWSPfMWdgJu00zip&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17yHmE2HG8%2F#",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213660445524"
     }
+  },
+  "salsabil": {
+    "name": "Salsabil Beuty",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-01-22%20at%2014.57.23.jpeg",
+    "phone": "0776434348",
+    "gradient": "#d75b5b",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/17x3i6FXCF/",
+      "instagram": "https://www.instagram.com/salsabilbeaute/"
+    }
   }
 }
