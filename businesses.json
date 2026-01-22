@@ -2291,7 +2291,7 @@
   },
   "pizza-ce": {
     "name": "pizzace. بيتزاتشي ",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-01-21%20at%2015.13.31.jpeg",
     "phone": " 07 93 61 20 71",
     "gradient": "linear-gradient(291deg,rgba(40, 33, 41, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%)",
     "address": {
@@ -2323,13 +2323,13 @@
   },
   "Laitus": {
     "name": "Laitus",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-01-21%20at%2017.49.36.jpeg",
     "phone": "0770052720",
     "email": "Contact@laitus-dz.com",
     "gradient": "#263e0f",
     "address": {
-      "text": "",
-      "url": ""
+      "text": "lot n°B163, Cité du lycée, Rouïba 16012",
+      "url": "https://maps.app.goo.gl/QpNb41Z4rgPCdie28"
     },
     "socials": {
       "facebook": "https://www.facebook.com/share/14KToZmV7wf/",
@@ -2341,7 +2341,7 @@
   },
   "Farasha": {
     "name": "Farasha ",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-01-21%20at%2018.33.11.jpeg",
     "phone": "0549549913",
     "gradient": "",
     "address": {
@@ -2354,6 +2354,24 @@
       "tiktok": "https://www.tiktok.com/@farasha.oran?_r=1&_t=ZS-93GOU2XE78e",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213449549913",
       "website": "https://farasha-shop.com/recherche?q=Collection"
+    }
+  },
+  "Axisforce": {
+    "name": "AXIS FORCE ",
+    "image": "",
+    "phone": "0550 46 41 31",
+    "email": "axisforce18@gmail.com",
+    "gradient": "",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1B6bAdRBoE/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/axisforceofficial18?igsh=Yzh6MHJvaTNva3Zz&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@axis.force.official18?_r=1&_t=ZN-93HTJFuL7Nm",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213550464131",
+      "snapchat": "https://snapchat.com/t/okhHQqYt"
     }
   }
 }
