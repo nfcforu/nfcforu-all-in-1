@@ -2336,7 +2336,7 @@
       "instagram": "https://instagram.com/laitusdz",
       "tiktok": "https://tiktok.com/@laitus.dz",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770052720",
-      "website": "https://q.me-qr.com/jpR1RLB0"
+      "website": "https://www.laitus-dz.com/"
     }
   },
   "Farasha": {
@@ -2345,15 +2345,15 @@
     "phone": "0549549913",
     "gradient": "",
     "address": {
-      "text": "",
-      "url": ""
+      "text": "Centre commercial es sinia Santer Oran",
+      "url": "https://maps.google.com/?q=35.638191,-0.589793"
     },
     "socials": {
       "facebook": "https://www.facebook.com/share/1Gq2UgL6dN/",
       "instagram": "https://www.instagram.com/farashaoran?igsh=MWR6cjMyc2V6bjJwcg==",
       "tiktok": "https://www.tiktok.com/@farasha.oran?_r=1&_t=ZS-93GOU2XE78e",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213449549913",
-      "website": "https://farasha-shop.com/recherche?q=Collection"
+      "website": "https://farasha-shop.com/boutique"
     }
   },
   "Axisforce": {
@@ -2376,7 +2376,7 @@
   },
   "avocat-azil": {
     "name": "محامي عزيل عبد الحق",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-01-22%20at%2011.24.45.jpeg",
     "phone": "0660445524",
     "gradient": "linear-gradient(337deg,rgba(40, 33, 41, 1) 27%, rgba(235, 197, 9, 1) 100%)",
     "address": {
