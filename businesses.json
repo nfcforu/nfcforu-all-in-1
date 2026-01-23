@@ -2497,7 +2497,8 @@
     "socials": {
       "facebook": "https://www.facebook.com/profile.php?id=100092439895901",
       "tiktok": "https://www.tiktok.com/@sidhomelkentaoui?_r=1&_d=ed9817di1m98ii&sec_uid=MS4wLjABAAAAgIkRBqqM08m3LZlGLHSrAeLKm_oVDnWdaE4mj-ZMIsVS8aaOPUaNKsztrzh14Xot&share_author_id=6643861103380578310&sharer_language=ar&source=h5_m&u_code=d43l0j7i9egg79&timestamp=1769187664&user_id=6643861103380578310&sec_user_id=MS4wLjABAAAAgIkRBqqM08m3LZlGLHSrAeLKm_oVDnWdaE4mj-ZMIsVS8aaOPUaNKsztrzh14Xot&item_author_type=1&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7561177122145437448&share_link_id=306f1006-e4ed-4583-ab14-a78361976b2c&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1",
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213674935893"
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213674935893",
+      "telegram": "https://t.me/sidhom_phone"
     }
   }
 }
