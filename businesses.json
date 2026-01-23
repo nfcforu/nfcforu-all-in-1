@@ -2450,5 +2450,21 @@
     "socials": {
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213663522735"
     }
+  },
+  "Boutiqueninas": {
+    "name": "Boutique Ninas ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-01-23%20at%2014.21.13.jpeg",
+    "phone": "0672914104",
+    "gradient": "",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1DGERJrBTZ/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/boutique_ninas_08?igsh=MWNkZHNtYnZ3bHJncA==",
+      "tiktok": "https://www.tiktok.com/@hanane_nina7?_r=1&_d=f095a4e4ak0ml8&sec_uid=MS4wLjABAAAAv8eBPDY3B9r64TiiPlHBMB5hAVlVk0b7Voj5ZcLMW8KL1EHN8_tY2Q7ne0Zm-Txa&share_author_id=6917718127481209862&sharer_language=fr&source=h5_m&u_code=dgf7g6365f334k&item_author_type=1&utm_source=copy&tt_from=copy&enable_checksum=1&utm_medium=ios&share_link_id=793BB529-33F6-451C-B9A9-113258621491&user_id=6917718127481209862&sec_user_id=MS4wLjABAAAAv8eBPDY3B9r64TiiPlHBMB5hAVlVk0b7Voj5ZcLMW8KL1EHN8_tY2Q7ne0Zm-Txa&social_share_type=5&ug_btm=b8727,b0&utm_campaign=client_share&share_app_id=1233",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213672914104"
+    }
   }
 }
