@@ -2419,5 +2419,23 @@
       "tiktok": "https://www.tiktok.com/@afinea_nutricenter",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213561236670"
     }
+  },
+  "Ram23": {
+    "name": "RAM 23",
+    "image": "",
+    "phone": "0696469101",
+    "email": "gheraibiabillel2@gmail.com",
+    "gradient": "#b51a00",
+    "address": {
+      "text": "RPG7+VXV, Sidi Amar",
+      "url": "https://maps.app.goo.gl/4fzz3r1RbYwh7WNC6?g_st=aw"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61565596264593&mibextid=ZbWKwL",
+      "instagram": "https://www.instagram.com/gheraibia_billel?igsh=MTljNHV1cGQwc3ZiZw==",
+      "tiktok": "https://vm.tiktok.com/ZSHocMMX2NgKW-0SD1X/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213696469101",
+      "website": "http://autotch.com/"
+    }
   }
 }
