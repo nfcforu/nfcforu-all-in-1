@@ -2437,5 +2437,18 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213696469101",
       "website": "http://autotch.com/"
     }
+  },
+  "Dralloucheferhat": {
+    "name": "DR Allouche Ferhat",
+    "image": "",
+    "phone": "0773002987",
+    "gradient": "#a7c6ff",
+    "address": {
+      "text": "adresse cité 17 octobre numéro 19 bba",
+      "url": ""
+    },
+    "socials": {
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213663522735"
+    }
   }
 }
