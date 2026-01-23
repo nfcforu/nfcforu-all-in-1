@@ -2156,7 +2156,7 @@
     }
   },
   "Khairo-accessories": {
-    "name": "Accessories et décor ",
+    "name": "Accessories et décors",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-01-20%20at%2012.21.21.jpeg",
     "phone": "0674871302",
     "email": "khairo7daghnouch70@icould.com",
@@ -2386,6 +2386,69 @@
     "socials": {
       "facebook": "https://www.facebook.com/azou.azil.1?rdid=cWSPfMWdgJu00zip&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17yHmE2HG8%2F#",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213660445524"
+    }
+  },
+  "salsabil": {
+    "name": "Salsabil Beauty",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-01-22%20at%2014.57.23.jpeg",
+    "phone": "0676434348",
+    "gradient": "#d75b5b",
+    "address": {
+      "text": "Elkarimia, Chlef",
+      "url": "https://maps.app.goo.gl/apFJnKNUL24siVBUA"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/17x3i6FXCF/",
+      "instagram": "https://www.instagram.com/salsabilbeaute/",
+      "tiktok": "https://www.tiktok.com/@salsabilbeaute?_r=1&_t=ZN-93Hr7ExOPcE"
+    }
+  },
+  "Afineanutricenter": {
+    "name": "Afinea Nutricenter",
+    "image": "",
+    "phone": "05 61236670",
+    "email": "affinea.centre@gmail.com",
+    "gradient": "#00a1d8",
+    "address": {
+      "text": "Dar El Beïda",
+      "url": "https://maps.app.goo.gl/889w5fc6xTefFHcv5?g_st=ic"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/afineanutricenter/",
+      "instagram": "https://www.instagram.com/afinea_nutricenter_/?hl=fr",
+      "tiktok": "https://www.tiktok.com/@afinea_nutricenter",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213561236670"
+    }
+  },
+  "Ram23": {
+    "name": "RAM 23",
+    "image": "",
+    "phone": "0696469101",
+    "email": "gheraibiabillel2@gmail.com",
+    "gradient": "#b51a00",
+    "address": {
+      "text": "RPG7+VXV, Sidi Amar",
+      "url": "https://maps.app.goo.gl/4fzz3r1RbYwh7WNC6?g_st=aw"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61565596264593&mibextid=ZbWKwL",
+      "instagram": "https://www.instagram.com/gheraibia_billel?igsh=MTljNHV1cGQwc3ZiZw==",
+      "tiktok": "https://vm.tiktok.com/ZSHocMMX2NgKW-0SD1X/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213696469101",
+      "website": "http://autotch.com/"
+    }
+  },
+  "Dralloucheferhat": {
+    "name": "DR Allouche Ferhat",
+    "image": "",
+    "phone": "0773002987",
+    "gradient": "#a7c6ff",
+    "address": {
+      "text": "adresse cité 17 octobre numéro 19 bba",
+      "url": ""
+    },
+    "socials": {
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213663522735"
     }
   }
 }
