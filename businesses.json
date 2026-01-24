@@ -2508,7 +2508,7 @@
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-01-24%20at%2013.45.53.jpeg",
     "phone": "0541 30 13 21",
     "email": "lorascents7@gmail.com",
-    "gradient": "linear-gradient(38deg,rgba(236, 237, 232, 1) 0%, rgba(43, 38, 38, 1) 100%)",
+    "gradient": "radial-gradient(circle,rgba(247, 247, 247, 1) 0%, rgba(255, 0, 132, 1) 100%)",
     "address": {
       "text": "Alger",
       "url": "https://maps.app.goo.gl/Aqj5iE4jGDzxhrE16"
