@@ -2520,5 +2520,23 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213541 30 13 2",
       "website": "lorascents7.com"
     }
+  },
+  "israa-com": {
+    "name": "إسراء كوم لتصليح الهواتف",
+    "image": "",
+    "phone": "0665118050",
+    "gradient": "radial-gradient(circle,rgba(230, 225, 226, 1) 0%, rgba(148, 187, 233, 1) 100%)",
+    "address": {
+      "text": "Tebessa",
+      "url": "https://maps.app.goo.gl/hF8CMsyLvogud8CW8"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/asra.kwm.ltslyh.alhwatf?mibextid=wwXIfr&rdid=ri8bt7ShvN61cCe4&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AS2gkiKhJ%2F%3Fmibextid%3DwwXIfr#",
+      "instagram": "https://www.instagram.com/bwhdhyfns?igsh=MXFsZWJleTNtbW5hdA%3D%3D",
+      "tiktok": "https://www.tiktok.com/@user68752395473550",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213660 42 24 25",
+      "telegram": "https://t.me/+213665118050",
+      "viber": "viber://chat?number=%2B‪+213665118050"
+    }
   }
 }
