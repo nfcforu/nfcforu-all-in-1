@@ -2443,15 +2443,16 @@
   },
   "Dralloucheferhat": {
     "name": "DR Allouche Ferhat",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-01-24%20at%2009.38.43.jpeg",
     "phone": "0773002987",
     "gradient": "#a7c6ff",
     "address": {
       "text": "adresse cité 17 octobre numéro 19 bba",
-      "url": ""
+      "url": "https://goo.gl/maps/5KR4PaBYQdpAm2NE8"
     },
     "socials": {
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213663522735"
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213663522735",
+      "viber": "0663522735"
     }
   },
   "Boutiqueninas": {
