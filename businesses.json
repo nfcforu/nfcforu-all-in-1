@@ -2443,15 +2443,17 @@
   },
   "Dralloucheferhat": {
     "name": "DR Allouche Ferhat",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-01-24%20at%2009.38.43.jpeg",
     "phone": "0773002987",
     "gradient": "#a7c6ff",
     "address": {
       "text": "adresse cité 17 octobre numéro 19 bba",
-      "url": ""
+      "url": "https://goo.gl/maps/5KR4PaBYQdpAm2NE8"
     },
     "socials": {
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213663522735"
+      "facebook": "https://www.facebook.com/share/186MHGuFrM/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213663522735",
+      "viber": "viber://chat?number=%2B213773002987"
     }
   },
   "Boutiqueninas": {
@@ -2499,6 +2501,24 @@
       "tiktok": "https://www.tiktok.com/@sidhomelkentaoui?_r=1&_d=ed9817di1m98ii&sec_uid=MS4wLjABAAAAgIkRBqqM08m3LZlGLHSrAeLKm_oVDnWdaE4mj-ZMIsVS8aaOPUaNKsztrzh14Xot&share_author_id=6643861103380578310&sharer_language=ar&source=h5_m&u_code=d43l0j7i9egg79&timestamp=1769187664&user_id=6643861103380578310&sec_user_id=MS4wLjABAAAAgIkRBqqM08m3LZlGLHSrAeLKm_oVDnWdaE4mj-ZMIsVS8aaOPUaNKsztrzh14Xot&item_author_type=1&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7561177122145437448&share_link_id=306f1006-e4ed-4583-ab14-a78361976b2c&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213674935893",
       "telegram": "https://t.me/sidhom_phone"
+    }
+  },
+  "Lora-Scents": {
+    "name": "Lora Scents",
+    "image": "",
+    "phone": "0541 30 13 21",
+    "email": "lorascents7@gmail.com",
+    "gradient": "linear-gradient(38deg,rgba(236, 237, 232, 1) 0%, rgba(43, 38, 38, 1) 100%)",
+    "address": {
+      "text": "Alger",
+      "url": "https://maps.app.goo.gl/Aqj5iE4jGDzxhrE16"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1G7fmwC1Fr/",
+      "instagram": "https://www.instagram.com/lora.scents?igsh=MXI2MnBwc2Z1cGNsZQ%3D%3D",
+      "tiktok": "https://www.tiktok.com/@lora.scents1?_r=1&_t=ZS-93KtzrZ1Dq0",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213541 30 13 2",
+      "website": "lorascents7.com"
     }
   }
 }
