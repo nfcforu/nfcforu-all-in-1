@@ -2502,5 +2502,22 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213674935893",
       "telegram": "https://t.me/sidhom_phone"
     }
+  },
+  "Lora-Scents": {
+    "name": "Lora Scents",
+    "image": "",
+    "phone": "0541 30 13 21",
+    "email": "lorascents7@gmail.com",
+    "gradient": "linear-gradient(38deg,rgba(236, 237, 232, 1) 0%, rgba(43, 38, 38, 1) 100%)",
+    "address": {
+      "text": "Alger",
+      "url": "https://maps.app.goo.gl/Aqj5iE4jGDzxhrE16"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1G7fmwC1Fr/",
+      "instagram": "https://www.instagram.com/lora.scents?igsh=MXI2MnBwc2Z1cGNsZQ%3D%3D",
+      "tiktok": "https://www.tiktok.com/@lora.scents1?_r=1&_t=ZS-93KtzrZ1Dq0",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213541 30 13 2"
+    }
   }
 }
