@@ -3,297 +3,385 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NFC Business Manager | Admin</title>
+    <title>NFC Manager | Admin Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <style>
-      .loader {
-        border: 4px solid #f3f3f3;
-        border-top: 4px solid #3498db;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        animation: spin 1s linear infinite;
+      .glass-modal {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
       }
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
+      .social-input {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid #e2e8f0;
+        padding: 8px;
+        border-radius: 12px;
+        transition: all 0.2s;
       }
-      .success-glow {
-        animation: glow 2s infinite;
+      .social-input:focus-within {
+        border-color: #4f46e5;
+        ring: 2px;
+        ring-color: #4f46e5;
       }
-      @keyframes glow {
-        0%,
-        100% {
-          box-shadow: 0 0 5px rgba(34, 197, 94, 0.2);
-        }
-        50% {
-          box-shadow: 0 0 20px rgba(34, 197, 94, 0.6);
-        }
+      .social-input i {
+        width: 24px;
+        text-align: center;
+        font-size: 1.1rem;
       }
     </style>
   </head>
-  <body class="bg-gray-100 min-h-screen">
+  <body class="bg-slate-50 min-h-screen">
     <div
       id="loginModal"
-      class="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-center z-50"
+      class="fixed inset-0 bg-slate-900 flex items-center justify-center z-50"
     >
-      <div class="bg-white p-8 rounded-2xl shadow-2xl w-96">
-        <h2 class="text-2xl font-bold mb-4 text-gray-800 text-center">
+      <div class="bg-white p-8 rounded-3xl shadow-2xl w-full max-w-sm">
+        <h2
+          class="text-3xl font-black mb-6 text-slate-800 text-center tracking-tight"
+        >
           Admin Login
         </h2>
-        <div
-          id="loginError"
-          class="hidden mb-4 p-3 bg-red-100 text-red-700 rounded-lg text-sm"
-        ></div>
-        <div class="mb-4">
-          <label class="block text-xs font-bold uppercase text-gray-500 mb-1"
-            >Supabase URL</label
+        <div class="space-y-4">
+          <div>
+            <label class="block text-xs font-bold uppercase text-slate-400 mb-1"
+              >Supabase URL</label
+            >
+            <input
+              type="text"
+              id="supabaseUrl"
+              class="w-full p-3 border rounded-xl"
+              placeholder="https://xxx.supabase.co"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-slate-400 mb-1"
+              >Service Role Key</label
+            >
+            <input
+              type="password"
+              id="supabaseKey"
+              class="w-full p-3 border rounded-xl"
+              placeholder="secret-key"
+            />
+          </div>
+          <button
+            onclick="authenticate()"
+            id="btnAuth"
+            class="w-full bg-indigo-600 text-white py-4 rounded-2xl font-bold hover:bg-indigo-700 transition shadow-lg shadow-indigo-200"
           >
-          <input
-            type="text"
-            id="supabaseUrl"
-            class="w-full p-3 border rounded-xl"
-            placeholder="https://xxx.supabase.co"
-          />
+            Connect Dashboard
+          </button>
         </div>
-        <div class="mb-6">
-          <label class="block text-xs font-bold uppercase text-gray-500 mb-1"
-            >Service Role Key</label
-          >
-          <input
-            type="password"
-            id="supabaseKey"
-            class="w-full p-3 border rounded-xl"
-            placeholder="Secret Key"
-          />
-        </div>
-        <button
-          onclick="authenticate()"
-          id="btnAuth"
-          class="w-full bg-indigo-600 text-white py-3 rounded-xl font-bold hover:bg-indigo-700 transition"
-        >
-          Connect
-        </button>
       </div>
     </div>
 
-    <div id="app" class="hidden container mx-auto px-4 py-8">
+    <div id="app" class="hidden container mx-auto px-4 py-10">
       <div
-        class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4"
+        class="flex flex-col md:flex-row justify-between items-center mb-10 gap-6"
       >
-        <h1 class="text-3xl font-black text-gray-800">Business Manager</h1>
-        <div class="flex gap-2 w-full md:w-auto">
+        <div>
+          <h1 class="text-4xl font-black text-slate-900 tracking-tighter">
+            Business Console
+          </h1>
+          <p class="text-slate-500 font-medium">
+            Manage your NFC business cards and clients.
+          </p>
+        </div>
+        <div class="flex gap-3">
           <button
             onclick="loadData()"
-            class="flex-1 md:flex-none bg-white border px-4 py-2 rounded-lg font-bold text-gray-600 hover:bg-gray-50"
+            class="bg-white border border-slate-200 px-6 py-3 rounded-2xl font-bold text-slate-600 hover:bg-slate-50 transition"
           >
-            <i class="fas fa-sync"></i> Refresh
+            <i class="fas fa-sync mr-2"></i> Refresh
           </button>
           <button
             onclick="openModal('new')"
-            class="flex-1 md:flex-none bg-indigo-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-indigo-700"
+            class="bg-indigo-600 text-white px-8 py-3 rounded-2xl font-bold hover:bg-indigo-700 transition shadow-lg shadow-indigo-100"
           >
-            Add Business
+            <i class="fas fa-plus mr-2"></i> Add Business
           </button>
           <button
             onclick="logout()"
-            class="bg-red-50 text-red-600 px-4 py-2 rounded-lg font-bold"
+            class="text-red-400 hover:text-red-600 px-2 transition"
           >
-            <i class="fas fa-sign-out-alt"></i>
+            <i class="fas fa-power-off text-xl"></i>
           </button>
         </div>
       </div>
 
-      <div class="mb-6">
+      <div class="mb-10">
         <input
           type="text"
           id="search"
           onkeyup="filterGrid()"
-          placeholder="Search by business name..."
-          class="w-full p-4 border rounded-2xl shadow-sm focus:ring-2 focus:ring-indigo-500 outline-none"
+          placeholder="Search businesses..."
+          class="w-full p-5 border-none rounded-3xl shadow-sm focus:ring-4 focus:ring-indigo-100 outline-none text-lg"
         />
       </div>
 
       <div
         id="businessGrid"
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
       ></div>
     </div>
 
     <div
       id="editModal"
-      class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40 overflow-y-auto py-10"
+      class="hidden fixed inset-0 bg-slate-900/60 flex items-center justify-center z-40 overflow-y-auto py-10"
     >
       <div
-        class="bg-white rounded-2xl shadow-xl w-full max-w-3xl m-4 p-8 relative"
+        class="bg-white rounded-[2.5rem] shadow-2xl w-full max-w-4xl m-4 p-10 relative"
       >
-        <div class="flex justify-between items-center mb-6">
-          <h2 id="modalTitle" class="text-2xl font-bold">Business Details</h2>
+        <div class="flex justify-between items-center mb-8">
+          <h2
+            id="modalTitle"
+            class="text-3xl font-black text-slate-800 tracking-tight"
+          >
+            Business Setup
+          </h2>
           <button
             onclick="closeEditModal()"
-            class="text-gray-400 hover:text-gray-600 text-2xl"
+            class="text-slate-300 hover:text-slate-600 text-4xl"
           >
             &times;
           </button>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="space-y-6">
             <div>
-              <label class="block text-xs font-bold uppercase text-gray-400"
-                >ID (URL Slug)</label
+              <label
+                class="block text-xs font-bold uppercase text-slate-400 mb-2"
+                >Business Logo</label
+              >
+              <div
+                class="relative group cursor-pointer border-2 border-dashed border-slate-200 rounded-3xl p-4 text-center hover:border-indigo-400 transition"
+                onclick="document.getElementById('fileInput').click()"
+              >
+                <img
+                  id="imagePreview"
+                  src="https://via.placeholder.com/150"
+                  class="w-32 h-32 rounded-full mx-auto object-cover mb-3 shadow-md"
+                />
+                <p class="text-[10px] font-bold text-indigo-500 uppercase">
+                  Click to Upload
+                </p>
+                <input
+                  type="file"
+                  id="fileInput"
+                  class="hidden"
+                  accept="image/*"
+                  onchange="previewImage(this)"
+                />
+                <input type="hidden" id="editImage" />
+              </div>
+            </div>
+
+            <div>
+              <label
+                class="block text-xs font-bold uppercase text-slate-400 mb-1"
+                >Background Gradient</label
+              >
+              <div class="flex gap-2">
+                <input
+                  type="text"
+                  id="editGradient"
+                  class="flex-1 p-3 border rounded-xl text-sm font-mono"
+                  placeholder="linear-gradient(...)"
+                />
+                <input
+                  type="color"
+                  onchange="
+                    document.getElementById('editGradient').value =
+                      `linear-gradient(135deg, ${this.value} 0%, #1a1a1a 100%)`
+                  "
+                  class="w-12 h-12 rounded-xl border-none cursor-pointer"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="col-span-2">
+              <label
+                class="block text-xs font-bold uppercase text-slate-400 mb-1"
+                >Unique ID (URL Slug)</label
               >
               <input
                 type="text"
                 id="editId"
-                class="w-full p-2 border rounded-lg bg-gray-50"
-                placeholder="e.g. burger-shop"
+                class="w-full p-3 border rounded-xl font-bold text-indigo-600"
+                placeholder="e.g. burger-king"
               />
             </div>
             <div>
-              <label class="block text-xs font-bold uppercase text-gray-400"
+              <label
+                class="block text-xs font-bold uppercase text-slate-400 mb-1"
                 >Business Name</label
               >
               <input
                 type="text"
                 id="editName"
-                class="w-full p-2 border rounded-lg"
+                class="w-full p-3 border rounded-xl"
               />
             </div>
             <div>
-              <label class="block text-xs font-bold uppercase text-gray-400"
-                >Photo Upload</label
+              <label
+                class="block text-xs font-bold uppercase text-slate-400 mb-1"
+                >Phone Number</label
               >
-              <div class="flex items-center gap-3 mt-1">
-                <input type="file" id="fileInput" class="text-xs w-full" />
-                <input type="hidden" id="editImage" />
-              </div>
+              <input
+                type="text"
+                id="editPhone"
+                class="w-full p-3 border rounded-xl"
+              />
             </div>
-          </div>
-
-          <div
-            class="bg-indigo-50 p-4 rounded-xl border border-indigo-100 space-y-3"
-          >
-            <h3 class="text-indigo-800 font-bold text-sm uppercase">
-              <i class="fas fa-shield-alt mr-2"></i> Access & Preview
-            </h3>
             <div>
-              <label class="block text-[10px] font-bold text-indigo-400"
-                >Client Access Code</label
+              <label
+                class="block text-xs font-bold uppercase text-slate-400 mb-1"
+                >Contact Email</label
+              >
+              <input
+                type="email"
+                id="editEmail"
+                class="w-full p-3 border rounded-xl"
+              />
+            </div>
+            <div>
+              <label
+                class="block text-xs font-bold uppercase text-slate-400 mb-1"
+                >Access Code</label
               >
               <input
                 type="text"
                 id="displayCode"
                 readonly
-                class="w-full bg-transparent border-none font-mono text-lg text-indigo-700 p-0 focus:ring-0"
-                value="Generated on save"
+                class="w-full p-3 border rounded-xl bg-slate-50 font-mono text-indigo-500"
+                value="AUTO-GEN"
               />
-            </div>
-            <div id="previewLinkContainer" class="hidden">
-              <label class="block text-[10px] font-bold text-indigo-400"
-                >Public Link</label
-              >
-              <a
-                id="previewBtn"
-                target="_blank"
-                class="text-indigo-600 underline font-bold text-sm block truncate"
-                >Click to View Page</a
-              >
             </div>
           </div>
 
-          <div class="col-span-2 border-t pt-4">
-            <h3 class="font-bold mb-3 text-sm">Social Networks</h3>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-              <input
-                type="text"
-                id="socialFb"
-                placeholder="Facebook URL"
-                class="p-2 border rounded-lg text-sm"
-              />
-              <input
-                type="text"
-                id="socialInsta"
-                placeholder="Instagram URL"
-                class="p-2 border rounded-lg text-sm"
-              />
-              <input
-                type="text"
-                id="socialTiktok"
-                placeholder="TikTok URL"
-                class="p-2 border rounded-lg text-sm"
-              />
-              <input
-                type="text"
-                id="socialLinkedin"
-                placeholder="LinkedIn URL"
-                class="p-2 border rounded-lg text-sm"
-              />
-              <input
-                type="text"
-                id="socialX"
-                placeholder="X / Twitter URL"
-                class="p-2 border rounded-lg text-sm"
-              />
-              <input
-                type="text"
-                id="socialPinterest"
-                placeholder="Pinterest URL"
-                class="p-2 border rounded-lg text-sm"
-              />
-              <input
-                type="text"
-                id="socialWhatsapp"
-                placeholder="WhatsApp Number"
-                class="p-2 border rounded-lg text-sm"
-              />
-              <input
-                type="text"
-                id="socialWeb"
-                placeholder="Website URL"
-                class="p-2 border rounded-lg text-sm"
-              />
+          <div class="md:col-span-3 border-t pt-8 mt-4">
+            <h3 class="font-black text-slate-800 text-lg mb-6 tracking-tight">
+              Social Media & Links
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="social-input">
+                <i class="fab fa-facebook text-blue-600"></i
+                ><input
+                  type="text"
+                  id="socialFb"
+                  placeholder="Facebook URL"
+                  class="w-full outline-none text-sm"
+                />
+              </div>
+              <div class="social-input">
+                <i class="fab fa-instagram text-pink-600"></i
+                ><input
+                  type="text"
+                  id="socialInsta"
+                  placeholder="Instagram URL"
+                  class="w-full outline-none text-sm"
+                />
+              </div>
+              <div class="social-input">
+                <i class="fab fa-tiktok text-black"></i
+                ><input
+                  type="text"
+                  id="socialTiktok"
+                  placeholder="TikTok URL"
+                  class="w-full outline-none text-sm"
+                />
+              </div>
+              <div class="social-input">
+                <i class="fab fa-youtube text-red-600"></i
+                ><input
+                  type="text"
+                  id="socialYoutube"
+                  placeholder="YouTube URL"
+                  class="w-full outline-none text-sm"
+                />
+              </div>
+              <div class="social-input">
+                <i class="fa-brands fa-threads text-black"></i
+                ><input
+                  type="text"
+                  id="socialThreads"
+                  placeholder="Threads URL"
+                  class="w-full outline-none text-sm"
+                />
+              </div>
+              <div class="social-input">
+                <i class="fab fa-snapchat text-yellow-400"></i
+                ><input
+                  type="text"
+                  id="socialSnapchat"
+                  placeholder="Snapchat URL"
+                  class="w-full outline-none text-sm"
+                />
+              </div>
+              <div class="social-input">
+                <i class="fab fa-telegram text-blue-400"></i
+                ><input
+                  type="text"
+                  id="socialTelegram"
+                  placeholder="Telegram URL"
+                  class="w-full outline-none text-sm"
+                />
+              </div>
+              <div class="social-input">
+                <i class="fab fa-viber text-purple-600"></i
+                ><input
+                  type="text"
+                  id="socialViber"
+                  placeholder="Viber URL"
+                  class="w-full outline-none text-sm"
+                />
+              </div>
+              <div class="social-input">
+                <i class="fas fa-globe text-slate-400"></i
+                ><input
+                  type="text"
+                  id="socialWeb"
+                  placeholder="Website"
+                  class="w-full outline-none text-sm"
+                />
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="flex justify-end gap-3 mt-8 pt-4 border-t">
+        <div
+          class="flex justify-end gap-4 mt-10 pt-8 border-t border-slate-100"
+        >
           <button
             onclick="closeEditModal()"
-            class="text-gray-500 font-bold px-4"
+            class="text-slate-400 font-bold px-6"
           >
             Cancel
           </button>
           <button
             onclick="saveBusiness()"
             id="saveBtn"
-            class="bg-indigo-600 text-white px-8 py-3 rounded-xl font-bold shadow-lg hover:bg-indigo-700 transition"
+            class="bg-indigo-600 text-white px-10 py-4 rounded-2xl font-bold shadow-xl shadow-indigo-100 hover:bg-indigo-700 transition"
           >
-            Save Business
+            Save Business Card
           </button>
         </div>
       </div>
     </div>
-
-    <div
-      id="toast"
-      class="fixed bottom-5 right-5 bg-gray-900 text-white px-6 py-3 rounded-xl shadow-2xl z-50 hidden"
-    ></div>
 
     <script>
       let globalData = {};
       let credentials = { url: "", key: "" };
       let currentEditId = null;
 
-      // AUTH & LOADING
       async function authenticate() {
         const btn = document.getElementById("btnAuth");
         credentials.url = document
@@ -301,7 +389,8 @@
           .value.trim()
           .replace(/\/$/, "");
         credentials.key = document.getElementById("supabaseKey").value.trim();
-        if (!credentials.url || !credentials.key) return;
+        if (!credentials.url || !credentials.key)
+          return alert("Fill credentials");
         btn.disabled = true;
         try {
           const res = await fetch(
@@ -319,106 +408,105 @@
           document.getElementById("app").classList.remove("hidden");
           loadData();
         } catch (e) {
-          alert("Invalid credentials");
+          alert("Connection failed");
           btn.disabled = false;
         }
       }
 
       async function loadData() {
-        try {
-          const res = await fetch(
-            `${credentials.url}/rest/v1/businesses?select=*,business_access(*)`,
-            {
-              headers: {
-                apikey: credentials.key,
-                Authorization: `Bearer ${credentials.key}`,
-              },
+        const res = await fetch(
+          `${credentials.url}/rest/v1/businesses?select=*,business_access(*)`,
+          {
+            headers: {
+              apikey: credentials.key,
+              Authorization: `Bearer ${credentials.key}`,
             },
-          );
-          const data = await res.json();
-          globalData = {};
-          data.forEach((b) => (globalData[b.business_id] = b));
-          renderGrid();
-        } catch (e) {
-          console.error(e);
-        }
+          },
+        );
+        const data = await res.json();
+        globalData = {};
+        data.forEach((b) => (globalData[b.business_id] = b));
+        renderGrid();
       }
 
-      // RENDER GRID WITH VIEW BUTTON
       function renderGrid() {
         const grid = document.getElementById("businessGrid");
         grid.innerHTML = "";
         Object.entries(globalData).forEach(([id, biz]) => {
-          const code = biz.business_access?.[0]?.access_code_raw || "Hashed";
           const div = document.createElement("div");
           div.className =
-            "bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition";
+            "bg-white p-6 rounded-[2rem] shadow-sm hover:shadow-xl transition duration-300 group border border-slate-100";
           div.dataset.name = biz.name.toLowerCase();
           div.innerHTML = `
-                    <div class="flex items-center gap-4 mb-4">
-                        <img src="${biz.image || "https://via.placeholder.com/150"}" class="w-14 h-14 rounded-full object-cover bg-gray-100">
-                        <div class="overflow-hidden">
-                            <h3 class="font-bold text-gray-800 truncate">${biz.name}</h3>
-                            <p class="text-[10px] text-indigo-500 font-bold uppercase tracking-wider">Code: ${code}</p>
+                    <div class="flex items-center gap-5 mb-6">
+                        <img src="${biz.image || "https://via.placeholder.com/150"}" class="w-20 h-20 rounded-3xl object-cover shadow-inner bg-slate-50">
+                        <div>
+                            <h3 class="font-black text-slate-800 text-xl leading-tight">${biz.name}</h3>
+                            <p class="text-xs font-mono text-indigo-500 uppercase tracking-widest mt-1">${id}</p>
                         </div>
                     </div>
                     <div class="flex gap-2">
-                        <button onclick="editBusiness('${id}')" class="flex-1 py-2 text-sm font-bold text-indigo-600 bg-indigo-50 rounded-lg">Edit</button>
-                        <a href="ind.html?id=${id}" target="_blank" class="flex-1 py-2 text-center text-sm font-bold text-green-600 bg-green-50 rounded-lg"><i class="fas fa-external-link-alt mr-1"></i> View</a>
-                        <button onclick="deleteBusiness('${id}')" class="px-3 py-2 text-red-300 hover:text-red-500"><i class="fas fa-trash"></i></button>
+                        <button onclick="editBusiness('${id}')" class="flex-1 bg-slate-50 text-slate-700 py-3 rounded-2xl font-bold text-sm hover:bg-indigo-50 hover:text-indigo-600 transition">Edit Details</button>
+                        <a href="ind.html?id=${id}" target="_blank" class="px-5 py-3 bg-indigo-600 text-white rounded-2xl flex items-center justify-center"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 `;
           grid.appendChild(div);
         });
       }
 
-      // SAVE LOGIC WITH INSTANT CODE REVEAL
-      async function saveBusiness() {
-        const id = document.getElementById("editId").value.trim().toLowerCase();
-        const isNew = !currentEditId;
-        const file = document.getElementById("fileInput").files[0];
+      async function uploadImage(file, bizId) {
+        const ext = file.name.split(".").pop();
+        const path = `${bizId}-${Date.now()}.${ext}`;
+        const res = await fetch(
+          `${credentials.url}/storage/v1/object/business-images/${path}`,
+          {
+            method: "POST",
+            headers: {
+              apikey: credentials.key,
+              Authorization: `Bearer ${credentials.key}`,
+              "Content-Type": file.type,
+            },
+            body: file,
+          },
+        );
+        if (!res.ok) throw new Error("Upload failed");
+        return `${credentials.url}/storage/v1/object/public/business-images/${path}`;
+      }
 
+      async function saveBusiness() {
+        const btn = document.getElementById("saveBtn");
+        const id = document.getElementById("editId").value.trim().toLowerCase();
+        const file = document.getElementById("fileInput").files[0];
         if (!id) return alert("ID is required");
 
-        const btn = document.getElementById("saveBtn");
         btn.disabled = true;
+        btn.textContent = "Processing...";
 
         try {
           let imageUrl = document.getElementById("editImage").value;
-          if (file) {
-            const fileName = `${id}-${Date.now()}`;
-            const res = await fetch(
-              `${credentials.url}/storage/v1/object/business-images/${fileName}`,
-              {
-                method: "POST",
-                headers: {
-                  apikey: credentials.key,
-                  Authorization: `Bearer ${credentials.key}`,
-                  "Content-Type": file.type,
-                },
-                body: file,
-              },
-            );
-            if (res.ok)
-              imageUrl = `${credentials.url}/storage/v1/object/public/business-images/${fileName}`;
-          }
+          if (file) imageUrl = await uploadImage(file, id);
 
-          const bizData = {
+          const payload = {
             business_id: id,
             name: document.getElementById("editName").value,
+            phone: document.getElementById("editPhone").value,
+            email: document.getElementById("editEmail").value,
+            gradient: document.getElementById("editGradient").value,
             image: imageUrl,
             socials: {
               facebook: document.getElementById("socialFb").value,
               instagram: document.getElementById("socialInsta").value,
               tiktok: document.getElementById("socialTiktok").value,
-              linkedin: document.getElementById("socialLinkedin").value,
-              twitter: document.getElementById("socialX").value,
-              pinterest: document.getElementById("socialPinterest").value,
-              whatsapp: document.getElementById("socialWhatsapp").value,
+              youtube: document.getElementById("socialYoutube").value,
+              threads: document.getElementById("socialThreads").value,
+              snapchat: document.getElementById("socialSnapchat").value,
+              telegram: document.getElementById("socialTelegram").value,
+              viber: document.getElementById("socialViber").value,
               website: document.getElementById("socialWeb").value,
             },
           };
 
+          const isNew = !currentEditId;
           await fetch(
             `${credentials.url}/rest/v1/businesses${isNew ? "" : "?business_id=eq." + id}`,
             {
@@ -428,7 +516,7 @@
                 apikey: credentials.key,
                 Authorization: `Bearer ${credentials.key}`,
               },
-              body: JSON.stringify(bizData),
+              body: JSON.stringify(payload),
             },
           );
 
@@ -448,30 +536,21 @@
                 access_code_raw: rawCode,
               }),
             });
-
-            // Reveal code immediately in the modal
-            document.getElementById("displayCode").value = rawCode;
-            document
-              .getElementById("previewLinkContainer")
-              .classList.remove("hidden");
-            document.getElementById("previewBtn").href = `ind.html?id=${id}`;
-            alert(
-              `Business Created Successfully!\n\nAccess Code: ${rawCode}\n\nKeep the modal open if you want to copy the code.`,
-            );
+            alert("Card Created! Access Code: " + rawCode);
           }
 
+          closeEditModal();
           loadData();
-          if (!isNew) closeEditModal();
         } catch (e) {
-          alert("Save failed");
+          alert(e.message);
         }
         btn.disabled = false;
       }
 
       async function hashString(str) {
-        const msgUint8 = new TextEncoder().encode(str);
-        const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8);
-        return Array.from(new Uint8Array(hashBuffer))
+        const msg = new TextEncoder().encode(str);
+        const hash = await crypto.subtle.digest("SHA-256", msg);
+        return Array.from(new Uint8Array(hash))
           .map((b) => b.toString(16).padStart(2, "0"))
           .join("");
       }
@@ -479,42 +558,49 @@
       function openModal(mode, id = null) {
         currentEditId = id;
         document.getElementById("editModal").classList.remove("hidden");
-        document.getElementById("previewLinkContainer").classList.add("hidden");
+        document.getElementById("fileInput").value = "";
+        document.getElementById("imagePreview").src =
+          "https://via.placeholder.com/150";
 
         if (id) {
           const b = globalData[id];
           document.getElementById("editId").value = b.business_id;
           document.getElementById("editId").disabled = true;
           document.getElementById("editName").value = b.name || "";
+          document.getElementById("editPhone").value = b.phone || "";
+          document.getElementById("editEmail").value = b.email || "";
+          document.getElementById("editGradient").value = b.gradient || "";
           document.getElementById("editImage").value = b.image || "";
+          document.getElementById("imagePreview").src =
+            b.image || "https://via.placeholder.com/150";
           document.getElementById("displayCode").value =
-            b.business_access?.[0]?.access_code_raw || "Hashed";
+            b.business_access?.[0]?.access_code_raw || "LOCKED";
 
-          document
-            .getElementById("previewLinkContainer")
-            .classList.remove("hidden");
-          document.getElementById("previewBtn").href = `ind.html?id=${id}`;
-
-          document.getElementById("socialFb").value = b.socials?.facebook || "";
-          document.getElementById("socialInsta").value =
-            b.socials?.instagram || "";
-          document.getElementById("socialTiktok").value =
-            b.socials?.tiktok || "";
-          document.getElementById("socialLinkedin").value =
-            b.socials?.linkedin || "";
-          document.getElementById("socialX").value = b.socials?.twitter || "";
-          document.getElementById("socialPinterest").value =
-            b.socials?.pinterest || "";
-          document.getElementById("socialWhatsapp").value =
-            b.socials?.whatsapp || "";
-          document.getElementById("socialWeb").value = b.socials?.website || "";
+          const s = b.socials || {};
+          document.getElementById("socialFb").value = s.facebook || "";
+          document.getElementById("socialInsta").value = s.instagram || "";
+          document.getElementById("socialTiktok").value = s.tiktok || "";
+          document.getElementById("socialYoutube").value = s.youtube || "";
+          document.getElementById("socialThreads").value = s.threads || "";
+          document.getElementById("socialSnapchat").value = s.snapchat || "";
+          document.getElementById("socialTelegram").value = s.telegram || "";
+          document.getElementById("socialViber").value = s.viber || "";
+          document.getElementById("socialWeb").value = s.website || "";
         } else {
-          document.getElementById("editId").value = "";
           document.getElementById("editId").disabled = false;
-          document.getElementById("displayCode").value = "Generated on save";
           document
             .querySelectorAll("#editModal input")
             .forEach((i) => (i.type !== "file" ? (i.value = "") : null));
+          document.getElementById("displayCode").value = "AUTO-GEN";
+        }
+      }
+
+      function previewImage(input) {
+        if (input.files && input.files[0]) {
+          const reader = new FileReader();
+          reader.onload = (e) =>
+            (document.getElementById("imagePreview").src = e.target.result);
+          reader.readAsDataURL(input.files[0]);
         }
       }
 
@@ -522,15 +608,15 @@
         document.getElementById("editModal").classList.add("hidden");
       }
       window.editBusiness = (id) => openModal("edit", id);
-      function logout() {
-        localStorage.removeItem("supabase_creds");
-        location.reload();
-      }
       function filterGrid() {
         const term = document.getElementById("search").value.toLowerCase();
         document.querySelectorAll("#businessGrid > div").forEach((c) => {
           c.style.display = c.dataset.name.includes(term) ? "block" : "none";
         });
+      }
+      function logout() {
+        localStorage.removeItem("supabase_creds");
+        location.reload();
       }
     </script>
   </body>
