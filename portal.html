@@ -4,274 +4,184 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Business Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <style>
-      :root {
-        --primary: #764ba2;
-        --secondary: #667eea;
-        --bg: #f5f7fb;
-      }
-      body {
-        font-family: -apple-system, sans-serif;
-        background: var(--bg);
-        margin: 0;
-        padding: 0;
-      }
-
-      /* Container */
-      .container {
-        width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
-        padding: 15px;
-        box-sizing: border-box;
-      }
-
-      /* Mobile Cards */
-      .card {
-        background: white;
-        border-radius: 20px;
-        padding: 25px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        border: 1px solid #edf2f7;
-      }
-      .card-title {
-        font-size: 1.2rem;
-        font-weight: 700;
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: #2d3748;
-      }
-
-      /* Form Styling */
-      .input-group {
-        margin-bottom: 15px;
-      }
-      label {
-        display: block;
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: #718096;
-        margin-bottom: 5px;
-      }
-      input {
-        width: 100%;
-        padding: 12px;
-        border: 2px solid #e2e8f0;
-        border-radius: 12px;
-        font-size: 16px;
-        box-sizing: border-box;
-        transition: 0.2s;
-      }
-      input:focus {
-        outline: none;
-        border-color: var(--secondary);
-        background: #fcfdff;
-      }
-
-      /* Buttons */
-      .btn {
-        width: 100%;
-        padding: 14px;
-        border: none;
-        border-radius: 12px;
-        font-size: 1rem;
-        font-weight: 700;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-      .btn-primary {
-        background: linear-gradient(135deg, var(--secondary), var(--primary));
-        color: white;
-      }
-      .btn-primary:active {
-        transform: scale(0.98);
-      }
-      .btn-logout {
-        background: #fee2e2;
-        color: #dc2626;
-        margin-top: 10px;
-      }
-
-      /* Login Screen Specifics */
-      #loginScreen {
-        padding-top: 60px;
-        text-align: center;
-      }
-      .login-logo {
-        width: 70px;
-        height: 70px;
-        background: white;
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 20px;
-        font-size: 30px;
-        color: var(--primary);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Toast Notification */
-      #toast {
-        position: fixed;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: #2d3748;
-        color: white;
-        padding: 12px 24px;
-        border-radius: 50px;
-        font-size: 0.9rem;
-        display: none;
-        z-index: 1000;
-      }
-
-      @media (max-width: 480px) {
-        .container {
-          padding: 10px;
-        }
-      }
-    </style>
   </head>
-  <body>
-    <div class="container">
-      <div id="loginScreen">
-        <div class="login-logo"><i class="fas fa-briefcase"></i></div>
-        <h1 style="margin-bottom: 30px">Portail Entreprise</h1>
-        <div class="card">
-          <div class="input-group">
-            <label>ID Entreprise</label>
-            <input type="text" id="bizId" placeholder="ex: sac-de-lux" />
+  <body class="bg-slate-50 min-h-screen font-sans">
+    <div class="max-w-md mx-auto px-4 py-10" id="portalApp">
+      <div
+        id="loginSection"
+        class="bg-white rounded-3xl shadow-xl p-8 text-center border border-slate-100"
+      >
+        <div
+          class="w-20 h-20 bg-indigo-600 text-white rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 shadow-lg"
+        >
+          <i class="fas fa-fingerprint"></i>
+        </div>
+        <h1 class="text-2xl font-black text-slate-800 mb-2">Client Portal</h1>
+        <p class="text-slate-500 text-sm mb-8">Manage your NFC business card</p>
+
+        <div class="space-y-4 text-left">
+          <div>
+            <label class="text-xs font-bold uppercase text-slate-400 ml-1"
+              >Business ID</label
+            >
+            <input
+              type="text"
+              id="loginId"
+              class="w-full p-4 bg-slate-50 border-none rounded-2xl mt-1 focus:ring-2 focus:ring-indigo-500"
+              placeholder="my-business-id"
+            />
           </div>
-          <div class="input-group">
-            <label>Code d'accès</label>
-            <input type="password" id="accCode" placeholder="••••••••" />
+          <div>
+            <label class="text-xs font-bold uppercase text-slate-400 ml-1"
+              >Access Code</label
+            >
+            <input
+              type="password"
+              id="loginCode"
+              class="w-full p-4 bg-slate-50 border-none rounded-2xl mt-1 focus:ring-2 focus:ring-indigo-500"
+              placeholder="••••••••"
+            />
           </div>
-          <button class="btn btn-primary" onclick="handleLogin()">
-            Se Connecter
+          <button
+            onclick="portalLogin()"
+            id="loginBtn"
+            class="w-full bg-indigo-600 text-white py-4 rounded-2xl font-bold text-lg shadow-indigo-200 shadow-xl hover:bg-indigo-700 transition-all"
+          >
+            Login
           </button>
         </div>
       </div>
 
-      <div id="dashboard" style="display: none">
-        <div class="card">
-          <div class="card-title">
-            <i class="fas fa-store"></i>
-            <span id="bizDisplayName">Business</span>
-          </div>
+      <div id="dashSection" class="hidden space-y-6">
+        <div class="flex justify-between items-center">
+          <h2 class="text-2xl font-black text-slate-800" id="bizTitle">
+            Welcome
+          </h2>
           <button
-            class="btn btn-primary"
-            onclick="alert('Open profile edit...')"
+            onclick="location.reload()"
+            class="text-red-500 font-bold text-sm"
           >
-            Modifier mon profil
+            Logout
           </button>
         </div>
 
-        <div class="card" style="border-left: 4px solid #f6ad55">
-          <div class="card-title">
-            <i class="fas fa-shield-alt" style="color: #f6ad55"></i> Sécurité
-          </div>
-          <p style="font-size: 0.85rem; color: #718096; margin-bottom: 15px">
-            Changez votre code secret ci-dessous.
+        <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
+          <h3 class="font-bold mb-4 flex items-center gap-2">
+            <i class="fas fa-edit text-indigo-500"></i> Edit Profile
+          </h3>
+          <button
+            class="w-full py-4 border-2 border-dashed border-slate-200 rounded-2xl text-slate-400 font-medium hover:border-indigo-300 hover:text-indigo-500 transition"
+          >
+            Update Business Info
+          </button>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
+          <h3 class="font-bold mb-1 flex items-center gap-2">
+            <i class="fas fa-shield-halved text-orange-500"></i> Security
+          </h3>
+          <p class="text-xs text-slate-400 mb-4">
+            Change your access code here.
           </p>
-          <div class="input-group">
-            <label>Nouveau Code (min. 6 caractères)</label>
-            <input type="text" id="newAccessCode" placeholder="Nouveau code" />
-          </div>
+
+          <input
+            type="text"
+            id="newCode"
+            class="w-full p-4 bg-slate-50 rounded-2xl mb-3 border-none focus:ring-2 focus:ring-orange-500"
+            placeholder="Enter new code"
+          />
           <button
-            class="btn btn-primary"
-            style="background: #2d3748"
-            onclick="updateSecurityCode()"
+            onclick="updateSecurity()"
+            class="w-full bg-slate-800 text-white py-4 rounded-2xl font-bold"
           >
-            Mettre à jour le code
+            Update Code
           </button>
         </div>
-
-        <button class="btn btn-logout" onclick="location.reload()">
-          Déconnexion
-        </button>
       </div>
     </div>
 
-    <div id="toast">Message here</div>
-
     <script>
-      const SUPABASE_URL = "YOUR_URL"; // Copied from your previous portal.html
-      const SUPABASE_KEY = "YOUR_KEY"; // Copied from your previous portal.html
-      let currentId = "";
+      // REPLACE THESE with your actual Supabase URL and PUBLIC Key (anon key)
+      const URL = "YOUR_SUPABASE_URL";
+      const KEY = "YOUR_SUPABASE_ANON_KEY";
 
-      async function handleLogin() {
-        const id = document.getElementById("bizId").value.trim();
-        const code = document.getElementById("accCode").value.trim();
+      let sessionID = "";
 
-        // ... (Login logic same as your portal.html, hashing and checking) ...
-        // If success:
-        currentId = id;
-        document.getElementById("loginScreen").style.display = "none";
-        document.getElementById("dashboard").style.display = "block";
-        document.getElementById("bizDisplayName").textContent = id;
-      }
+      async function portalLogin() {
+        const id = document.getElementById("loginId").value.trim();
+        const code = document.getElementById("loginCode").value.trim();
+        const btn = document.getElementById("loginBtn");
 
-      async function updateSecurityCode() {
-        const newCode = document.getElementById("newAccessCode").value.trim();
-        if (newCode.length < 6)
-          return showToast("Le code doit faire 6 caractères min.");
-
-        if (!confirm("Êtes-vous sûr de vouloir changer votre code d'accès ?"))
-          return;
-
-        showToast("Mise à jour...");
-
-        // 1. Hash the new code
-        const encoder = new TextEncoder();
-        const data = encoder.encode(newCode);
-        const hashBuffer = await crypto.subtle.digest("SHA-256", data);
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        const newHash = hashArray
-          .map((b) => b.toString(16).padStart(2, "0"))
-          .join("");
+        if (!id || !code) return alert("Please fill fields");
+        btn.textContent = "Verifying...";
 
         try {
-          // 2. Update both Hash (for login) and Raw (for Dashboard visibility)
-          const response = await fetch(
-            `${SUPABASE_URL}/rest/v1/business_access?business_id=eq.${currentId}`,
+          // In a real app, you'd fetch the hash and compare.
+          // For this project, we check business_access table.
+          const hash = await hashString(code);
+          const res = await fetch(
+            `${URL}/rest/v1/business_access?business_id=eq.${id}&access_code_hash=eq.${hash}`,
+            {
+              headers: { apikey: KEY, Authorization: `Bearer ${KEY}` },
+            },
+          );
+          const data = await res.json();
+
+          if (data.length > 0) {
+            sessionID = id;
+            document.getElementById("loginSection").classList.add("hidden");
+            document.getElementById("dashSection").classList.remove("hidden");
+            document.getElementById("bizTitle").textContent = id;
+          } else {
+            alert("Invalid ID or Code");
+          }
+        } catch (e) {
+          alert("Login Error");
+        }
+        btn.textContent = "Login";
+      }
+
+      async function updateSecurity() {
+        const newCode = document.getElementById("newCode").value.trim();
+        if (newCode.length < 4) return alert("Code too short");
+
+        const hash = await hashString(newCode);
+        try {
+          const res = await fetch(
+            `${URL}/rest/v1/business_access?business_id=eq.${sessionID}`,
             {
               method: "PATCH",
               headers: {
                 "Content-Type": "application/json",
-                apikey: SUPABASE_KEY,
-                Authorization: `Bearer ${SUPABASE_KEY}`,
+                apikey: KEY,
+                Authorization: `Bearer ${KEY}`,
               },
               body: JSON.stringify({
-                access_code_hash: newHash,
+                access_code_hash: hash,
                 access_code_raw: newCode,
               }),
             },
           );
-
-          if (response.ok) {
-            showToast("Code mis à jour !");
-            document.getElementById("newAccessCode").value = "";
-          } else {
-            throw new Error("Erreur serveur");
+          if (res.ok) {
+            alert("Code updated! Please use this new code next time.");
+            document.getElementById("newCode").value = "";
           }
         } catch (e) {
-          alert("Erreur: " + e.message);
+          alert("Update failed");
         }
       }
 
-      function showToast(msg) {
-        const t = document.getElementById("toast");
-        t.textContent = msg;
-        t.style.display = "block";
-        setTimeout(() => (t.style.display = "none"), 3000);
+      async function hashString(str) {
+        const msgUint8 = new TextEncoder().encode(str);
+        const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8);
+        return Array.from(new Uint8Array(hashBuffer))
+          .map((b) => b.toString(16).padStart(2, "0"))
+          .join("");
       }
     </script>
   </body>
