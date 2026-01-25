@@ -1,497 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="page-title">Business Card</title>
+    <title>Chargement...</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <style>
-      * {
-        box-sizing: border-box;
-      }
       body {
-        margin: 0;
-        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-          Roboto, sans-serif;
-        min-height: 100vh;
-        background: #1e1e1e;
-        color: #fff;
-        line-height: 1.4;
-        overflow-x: hidden;
+        background: #1a1a1a;
+        color: white;
+        font-family: "Inter", sans-serif;
       }
-      .main-container {
-        max-width: 680px;
-        margin: 0 auto;
-        padding: 40px 20px 60px;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .profile-header {
-        text-align: center;
-        margin-bottom: 40px;
-        animation: fadeInUp 0.6s ease-out;
-      }
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      .profile-avatar {
-        width: 140px;
-        height: 140px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid #fff;
-        margin-bottom: 20px;
-        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
-        transition: transform 0.3s ease;
-        cursor: pointer;
-      }
-      .profile-avatar:hover {
-        transform: scale(1.05);
-      }
-      .profile-name {
-        font-size: 1.8rem;
-        font-weight: 700;
-        margin-bottom: 8px;
-        letter-spacing: -0.02em;
-      }
-      .profile-bio {
-        font-size: 1rem;
-        color: rgba(255, 255, 255, 0.8);
-        margin-bottom: 0;
-        max-width: 300px;
-      }
-      .links-container {
-        width: 100%;
-        max-width: 480px;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-      .link-item {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 20px;
-        padding: 20px;
-        text-decoration: none;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      .glass {
+        background: rgba(255, 255, 255, 0.05);
         backdrop-filter: blur(10px);
-        position: relative;
-        overflow: hidden;
-        animation: fadeInUp 0.6s ease-out backwards;
-      }
-      .link-item:hover {
-        transform: translateY(-4px) scale(1.02);
-        background: rgba(255, 255, 255, 0.15);
-        border-color: rgba(255, 255, 255, 0.3);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-      }
-      .link-icon {
-        width: 44px;
-        height: 44px;
-        border-radius: 12px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 16px;
-        font-size: 1.2rem;
-        flex-shrink: 0;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      }
-      .link-content {
-        flex: 1;
-        min-width: 0;
-      }
-      .link-title {
-        font-size: 1.1rem;
-        font-weight: 600;
-        margin-bottom: 2px;
-        line-height: 1.3;
-      }
-      .link-subtitle {
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.7);
-        line-height: 1.2;
-      }
-      .link-arrow {
-        font-size: 1.2rem;
-        color: rgba(255, 255, 255, 0.6);
-        transition: transform 0.3s ease;
-      }
-      .link-item:hover .link-arrow {
-        transform: translateX(4px);
-        color: rgba(255, 255, 255, 0.9);
-      }
-      .link-item.phone .link-icon {
-        background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-      }
-      .link-item.email .link-icon {
-        background: linear-gradient(135deg, #5b6e7e 0%, #8ca1b1 100%);
-      }
-      .link-item.address .link-icon {
-        background: linear-gradient(135deg, #fd746c 0%, #ff9068 100%);
-      }
-      .link-item.menu .link-icon {
-        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-      }
-      .link-item.instagram .link-icon {
-        background: linear-gradient(
-          135deg,
-          #f09433 0%,
-          #e6683c 25%,
-          #dc2743 50%,
-          #cc2366 75%,
-          #bc1888 100%
-        );
-      }
-      .link-item.facebook .link-icon {
-        background: linear-gradient(135deg, #1877f2 0%, #42a5f5 100%);
-      }
-      .link-item.whatsapp .link-icon {
-        background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
-      }
-      .link-item.telegram .link-icon {
-        background: linear-gradient(135deg, #2aabee 0%, #229ed9 100%);
-      }
-      .link-item.snapchat .link-icon {
-        background: linear-gradient(135deg, #fffc00 0%, #f5f200 100%);
-        color: #000;
-      }
-      .link-item.viber .link-icon {
-        background: linear-gradient(135deg, #7360f2 0%, #665cac 100%);
-      }
-      .link-item.youtube .link-icon {
-        background: linear-gradient(135deg, #ff0000 0%, #c4302b 100%);
-      }
-      .link-item.threads .link-icon {
-        background: linear-gradient(135deg, #000000 0%, #333333 100%);
-      }
-      .loading-state,
-      .error-state {
-        text-align: center;
-        padding: 60px 20px;
-      }
-      .loading-spinner {
-        width: 40px;
-        height: 40px;
-        border: 3px solid rgba(255, 255, 255, 0.3);
-        border-top: 3px solid #fff;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-        margin: 0 auto 20px;
-      }
-      @keyframes spin {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-      @media (max-width: 640px) {
-        .main-container {
-          padding: 30px 16px 50px;
-        }
-        .profile-avatar {
-          width: 120px;
-          height: 120px;
-        }
-        .profile-name {
-          font-size: 1.6rem;
-        }
-        .links-container {
-          gap: 14px;
-        }
-        .link-item {
-          padding: 18px;
-          border-radius: 16px;
-        }
-        .link-icon {
-          width: 40px;
-          height: 40px;
-          margin-right: 14px;
-        }
-        .link-title {
-          font-size: 1rem;
-        }
+        border: 1px solid rgba(255, 255, 255, 0.1);
       }
     </style>
   </head>
-  <body>
-    <div class="main-container" id="mainContainer"></div>
+  <body class="min-h-screen flex items-center justify-center p-4">
+    <div id="main-content" class="w-full max-w-md text-center">
+      <div class="loader-container" id="loader">
+        <div
+          class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto"
+        ></div>
+        <p class="mt-4 text-gray-400">Recherche de l'entreprise...</p>
+      </div>
+    </div>
 
     <script>
-      // ⚠️ CONFIGURE YOUR SUPABASE HERE
-      const SUPABASE_URL = "https://uuzgfzhfbxfxzpjumpgd.supabase.co";
-      const SUPABASE_ANON_KEY =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV1emdmemhmYnhmeHpwanVtcGdkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg5MDI0MjcsImV4cCI6MjA4NDQ3ODQyN30.tgYk1EFQKEujjqYlNpr2ZdgYEciFtlHV7uGj4PRqbkc";
-
-      function showLoading() {
-        document.getElementById("mainContainer").innerHTML = `
-          <div class="loading-state">
-            <div class="loading-spinner"></div>
-            <h2>Chargement de votre carte de visite...</h2>
-          </div>
-        `;
-      }
-
-      function showError(message) {
-        document.getElementById("mainContainer").innerHTML = `
-          <div class="error-state">
-            <h2>Oups ! Quelque chose s'est mal passé</h2>
-            <p>${message}</p>
-          </div>
-        `;
-      }
-
-      function getIconForType(type, platform) {
-        const icons = {
-          phone: "fas fa-phone",
-          email: "fas fa-envelope",
-          address: "fas fa-map-marker-alt",
-          menu: "fas fa-utensils",
-          gallery: "fas fa-images",
-          instagram: "fab fa-instagram",
-          facebook: "fab fa-facebook",
-          whatsapp: "fab fa-whatsapp",
-          twitter: "fab fa-twitter",
-          linkedin: "fab fa-linkedin",
-          tiktok: "fab fa-tiktok",
-          youtube: "fab fa-youtube",
-          snapchat: "fab fa-snapchat-ghost",
-          telegram: "fab fa-telegram",
-          viber: "fab fa-viber",
-          threads: "fa-brands fa-threads",
-        };
-        return icons[type] || icons[platform] || "fas fa-link";
-      }
-
-      function getSubtitleForType(type, platform) {
-        const subtitles = {
-          phone: "Appelez-nous",
-          email: "Envoyez-nous un email",
-          address: "Obtenir les directions",
-          menu: "Voir notre menu",
-          instagram: "Suivez-nous",
-          facebook: "Aimez notre page",
-          whatsapp: "Discutez avec nous",
-          twitter: "Suivez-nous",
-          tiktok: "Voir nos vidéos",
-          snapchat: "Ajoutez-nous sur Snap",
-          telegram: "Rejoignez-nous",
-          viber: "Contactez-nous sur Viber",
-          youtube: "Regardez notre chaîne",
-          threads: "Suivez-nous sur Threads",
-        };
-        return subtitles[type] || subtitles[platform] || "Visiter le lien";
-      }
-
-      function improveColorContrast(gradient) {
-        if (!gradient)
-          return "linear-gradient(135deg, #667eea 0%, #764ba2 100%)";
-        if (gradient.includes("gradient")) return gradient;
-
-        const color = gradient.startsWith("#") ? gradient : "#667eea";
-        const hex = color.replace("#", "");
-        const r = parseInt(hex.substr(0, 2), 16);
-        const g = parseInt(hex.substr(2, 2), 16);
-        const b = parseInt(hex.substr(4, 2), 16);
-
-        const brightness = (r * 299 + g * 587 + b * 114) / 1000;
-        if (brightness > 180) {
-          const darkerR = Math.max(0, Math.round(r * 0.3));
-          const darkerG = Math.max(0, Math.round(g * 0.3));
-          const darkerB = Math.max(0, Math.round(b * 0.3));
-          const darkerHex = `#${darkerR.toString(16).padStart(2, "0")}${darkerG
-            .toString(16)
-            .padStart(2, "0")}${darkerB.toString(16).padStart(2, "0")}`;
-          return `linear-gradient(135deg, ${color} 0%, ${darkerHex} 100%)`;
-        }
-        return gradient;
-      }
+      // --- CONFIGURATION SUPABASE ---
+      const SB_URL = "VOTRE_URL_SUPABASE";
+      const SB_KEY = "VOTRE_CLE_ANON_PUBLIQUE";
 
       async function loadBusiness() {
-        showLoading();
-        const path = window.location.pathname.replace(/^\/+|\/+$/g, "");
-        const businessId = path || "sac-de-lux";
+        const content = document.getElementById("main-content");
+
+        // 1. RÉCUPÉRER L'ID DEPUIS L'URL (?id=nom-entreprise)
+        const urlParams = new URLSearchParams(window.location.search);
+        let bizId = urlParams.get("id");
+
+        // Si pas d'ID dans l'URL, on essaie de voir si le fichier a été renommé
+        if (!bizId) {
+          const path = window.location.pathname.split("/").pop();
+          if (path !== "ind.html" && path !== "") {
+            bizId = path.replace(".html", "");
+          }
+        }
+
+        if (!bizId || bizId === "ind") {
+          content.innerHTML = `<div class="p-8 glass rounded-3xl"><i class="fas fa-search text-4xl mb-4 text-red-400"></i><h1 class="text-xl font-bold">Lien invalide</h1><p class="text-gray-400 mt-2">Aucun identifiant d'entreprise détecté.</p></div>`;
+          return;
+        }
 
         try {
-          // Fetch from Supabase
           const res = await fetch(
-            `${SUPABASE_URL}/rest/v1/businesses?business_id=eq.${businessId}&select=*`,
+            `${SB_URL}/rest/v1/businesses?business_id=eq.${bizId}&select=*`,
             {
-              headers: {
-                apikey: SUPABASE_ANON_KEY,
-                Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
-              },
-            }
+              headers: { apikey: SB_KEY, Authorization: `Bearer ${SB_KEY}` },
+            },
           );
+          const data = await res.json();
 
-          if (!res.ok) throw new Error(`Failed to load data`);
-
-          const businesses = await res.json();
-          const business = businesses[0];
-
-          if (!business) {
-            showError(`Entreprise "${businessId}" introuvable.`);
+          if (!data.length) {
+            content.innerHTML = `<div class="p-8 glass rounded-3xl"><h1 class="text-xl font-bold">Entreprise introuvable</h1><p class="text-gray-400 mt-2">L'entreprise "${bizId}" n'existe pas.</p></div>`;
             return;
           }
 
-          const name = business.name || "Nom de l'entreprise";
-          const image =
-            business.image ||
-            `https://via.placeholder.com/140x140?text=${encodeURIComponent(
-              name.charAt(0)
-            )}`;
-          const gradient =
-            business.gradient ||
-            "linear-gradient(135deg, #667eea 0%, #764ba2 100%)";
-          const phone = business.phone || "";
-          const email = business.email || "";
-          const menu = business.menu || "";
-          const socials = business.socials || {};
-          const address = business.address || {};
-
-          document.body.style.background = improveColorContrast(gradient);
-          document.title = name;
-
-          const links = [];
-
-          // Gallery
-          if (
-            business.gallery &&
-            Array.isArray(business.gallery.images) &&
-            business.gallery.images.length > 0
-          ) {
-            links.push({
-              type: "gallery",
-              title: business.gallery.name || "Gallery",
-              subtitle: "Voir les photos",
-              url: "#",
-              external: false,
-              galleryImages: business.gallery.images,
-            });
-          }
-
-          // Address
-          if (address.text) {
-            links.push({
-              type: "address",
-              title: address.text,
-              subtitle: "Obtenir les directions",
-              url:
-                address.url ||
-                `http://maps.google.com/?q=${encodeURIComponent(address.text)}`,
-              external: true,
-            });
-          }
-
-          // Phone
-          if (phone) {
-            links.push({
-              type: "phone",
-              title: phone,
-              subtitle: "Appelez-nous",
-              url: `tel:${phone}`,
-              external: true,
-            });
-          }
-
-          // Email
-          if (email) {
-            links.push({
-              type: "email",
-              title: email,
-              subtitle: "Envoyez-nous un email",
-              url: `mailto:${email}`,
-              external: true,
-            });
-          }
-
-          // Menu
-          if (menu) {
-            const googleViewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(
-              menu
-            )}&embedded=true`;
-            links.push({
-              type: "menu",
-              title: "Voir le Menu",
-              subtitle: "Découvrez nos offres",
-              url: menu,
-              external: true,
-            });
-          }
-
-          // Socials
-          Object.entries(socials).forEach(([platform, url]) => {
-            if (url) {
-              links.push({
-                type: platform,
-                title: platform.charAt(0).toUpperCase() + platform.slice(1),
-                subtitle: getSubtitleForType("", platform),
-                url: url,
-                external: true,
-              });
-            }
-          });
-
-          const linksHtml = links
-            .map((link, index) => {
-              return `<a href="${link.url}" 
-                     class="link-item ${link.type}" 
-                     ${link.external ? 'target="_blank" rel="noopener"' : ""}
-                     style="animation-delay: ${0.1 + index * 0.1}s">
-                      <div class="link-icon">
-                        <i class="${getIconForType(link.type, link.type)}"></i>
-                      </div>
-                      <div class="link-content">
-                        <div class="link-title">${link.title}</div>
-                        <div class="link-subtitle">${link.subtitle}</div>
-                      </div>
-                      <div class="link-arrow">
-                        <i class="fas fa-chevron-right"></i>
-                      </div>
-                    </a>`;
-            })
-            .join("");
-
-          document.getElementById("mainContainer").innerHTML = `
-            <div class="profile-header">
-              <img src="${image}" 
-                   alt="${name}" 
-                   class="profile-avatar"
-                   onerror="this.src='https://via.placeholder.com/140x140?text=${encodeURIComponent(
-                     name.charAt(0)
-                   )}&bg=667eea&color=fff'">
-              <h1 class="profile-name">${name}</h1>
-              <p class="profile-bio">Connectez-vous avec nous via ces liens</p>
-            </div>
-            <div class="links-container">
-              ${linksHtml}
-            </div>
-          `;
-        } catch (error) {
-          console.error("Error loading business:", error);
-          showError("Impossible de charger les informations de l'entreprise.");
+          renderProfile(data[0]);
+        } catch (e) {
+          content.innerHTML = `<p class="text-red-400">Erreur de connexion</p>`;
         }
       }
 
-      document.addEventListener("DOMContentLoaded", loadBusiness);
+      function renderProfile(biz) {
+        document.title = biz.name;
+        const socials = biz.socials || {};
+        const container = document.getElementById("main-content");
+
+        let linksHtml = "";
+        const icons = {
+          facebook: "fab fa-facebook",
+          instagram: "fab fa-instagram",
+          tiktok: "fab fa-tiktok",
+          whatsapp: "fab fa-whatsapp",
+          linkedin: "fab fa-linkedin",
+          twitter: "fab fa-x-twitter",
+          website: "fas fa-globe",
+          youtube: "fab fa-youtube",
+          pinterest: "fab fa-pinterest",
+        };
+
+        Object.entries(socials).forEach(([platform, url]) => {
+          if (url) {
+            linksHtml += `
+                        <a href="${url}" target="_blank" class="glass flex items-center p-4 rounded-2xl mb-3 hover:scale-[1.02] transition-transform">
+                            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 mr-4">
+                                <i class="${icons[platform] || "fas fa-link"} text-xl"></i>
+                            </div>
+                            <span class="font-bold capitalize">${platform}</span>
+                            <i class="fas fa-chevron-right ml-auto text-gray-500"></i>
+                        </a>`;
+          }
+        });
+
+        container.innerHTML = `
+                <div class="mb-8">
+                    <img src="${biz.image || "https://via.placeholder.com/150"}" class="w-24 h-24 rounded-full mx-auto border-4 border-blue-500/20 shadow-xl mb-4 object-cover">
+                    <h1 class="text-2xl font-black">${biz.name}</h1>
+                    <p class="text-gray-400 text-sm mt-1">Contactez-nous ci-dessous</p>
+                </div>
+                <div class="text-left">${linksHtml}</div>
+            `;
+      }
+
+      loadBusiness();
     </script>
   </body>
 </html>
