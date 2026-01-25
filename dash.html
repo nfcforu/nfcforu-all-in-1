@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NFC Business Manager</title>
+    <title>NFC Business Manager | Admin</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -26,6 +26,18 @@
           transform: rotate(360deg);
         }
       }
+      .success-glow {
+        animation: glow 2s infinite;
+      }
+      @keyframes glow {
+        0%,
+        100% {
+          box-shadow: 0 0 5px rgba(34, 197, 94, 0.2);
+        }
+        50% {
+          box-shadow: 0 0 20px rgba(34, 197, 94, 0.6);
+        }
+      }
     </style>
   </head>
   <body class="bg-gray-100 min-h-screen">
@@ -33,36 +45,40 @@
       id="loginModal"
       class="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-center z-50"
     >
-      <div class="bg-white p-8 rounded-lg shadow-xl w-96">
+      <div class="bg-white p-8 rounded-2xl shadow-2xl w-96">
         <h2 class="text-2xl font-bold mb-4 text-gray-800 text-center">
-          Dashboard Login
+          Admin Login
         </h2>
         <div
           id="loginError"
           class="hidden mb-4 p-3 bg-red-100 text-red-700 rounded-lg text-sm"
         ></div>
         <div class="mb-4">
-          <label class="block text-sm font-bold mb-2">Supabase URL</label>
+          <label class="block text-xs font-bold uppercase text-gray-500 mb-1"
+            >Supabase URL</label
+          >
           <input
             type="text"
             id="supabaseUrl"
-            class="w-full p-2 border rounded"
-            placeholder="https://xxxxx.supabase.co"
+            class="w-full p-3 border rounded-xl"
+            placeholder="https://xxx.supabase.co"
           />
         </div>
         <div class="mb-6">
-          <label class="block text-sm font-bold mb-2">Service Role Key</label>
+          <label class="block text-xs font-bold uppercase text-gray-500 mb-1"
+            >Service Role Key</label
+          >
           <input
             type="password"
             id="supabaseKey"
-            class="w-full p-2 border rounded"
+            class="w-full p-3 border rounded-xl"
             placeholder="Secret Key"
           />
         </div>
         <button
           onclick="authenticate()"
           id="btnAuth"
-          class="w-full bg-blue-600 text-white py-2 rounded font-bold hover:bg-blue-700"
+          class="w-full bg-indigo-600 text-white py-3 rounded-xl font-bold hover:bg-indigo-700 transition"
         >
           Connect
         </button>
@@ -70,24 +86,26 @@
     </div>
 
     <div id="app" class="hidden container mx-auto px-4 py-8">
-      <div class="flex justify-between items-center mb-8">
+      <div
+        class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4"
+      >
         <h1 class="text-3xl font-black text-gray-800">Business Manager</h1>
-        <div class="flex gap-2">
+        <div class="flex gap-2 w-full md:w-auto">
           <button
             onclick="loadData()"
-            class="bg-white border px-4 py-2 rounded hover:bg-gray-50"
+            class="flex-1 md:flex-none bg-white border px-4 py-2 rounded-lg font-bold text-gray-600 hover:bg-gray-50"
           >
-            <i class="fas fa-sync"></i>
+            <i class="fas fa-sync"></i> Refresh
           </button>
           <button
             onclick="openModal('new')"
-            class="bg-green-600 text-white px-4 py-2 rounded font-bold hover:bg-green-700"
+            class="flex-1 md:flex-none bg-indigo-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-indigo-700"
           >
             Add Business
           </button>
           <button
             onclick="logout()"
-            class="bg-red-50 text-red-600 px-4 py-2 rounded font-bold"
+            class="bg-red-50 text-red-600 px-4 py-2 rounded-lg font-bold"
           >
             <i class="fas fa-sign-out-alt"></i>
           </button>
@@ -99,8 +117,8 @@
           type="text"
           id="search"
           onkeyup="filterGrid()"
-          placeholder="Search businesses..."
-          class="w-full p-4 border rounded-xl shadow-sm focus:ring-2 focus:ring-blue-500 outline-none"
+          placeholder="Search by business name..."
+          class="w-full p-4 border rounded-2xl shadow-sm focus:ring-2 focus:ring-indigo-500 outline-none"
         />
       </div>
 
@@ -115,195 +133,139 @@
       class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40 overflow-y-auto py-10"
     >
       <div
-        class="bg-white rounded-xl shadow-xl w-full max-w-2xl m-4 p-8 relative"
+        class="bg-white rounded-2xl shadow-xl w-full max-w-3xl m-4 p-8 relative"
       >
-        <h2 id="modalTitle" class="text-2xl font-bold mb-6">
-          Business Details
-        </h2>
+        <div class="flex justify-between items-center mb-6">
+          <h2 id="modalTitle" class="text-2xl font-bold">Business Details</h2>
+          <button
+            onclick="closeEditModal()"
+            class="text-gray-400 hover:text-gray-600 text-2xl"
+          >
+            &times;
+          </button>
+        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="col-span-2">
-            <label class="block text-xs font-bold uppercase text-gray-400"
-              >ID (URL Slug)</label
-            >
-            <input
-              type="text"
-              id="editId"
-              class="w-full p-2 border rounded bg-gray-50"
-              placeholder="los-tacos"
-            />
-          </div>
-
-          <div>
-            <label class="block text-xs font-bold uppercase text-gray-400"
-              >Business Name</label
-            >
-            <input
-              type="text"
-              id="editName"
-              class="w-full p-2 border rounded"
-            />
-          </div>
-
-          <div>
-            <label class="block text-xs font-bold uppercase text-gray-400"
-              >Phone</label
-            >
-            <input
-              type="text"
-              id="editPhone"
-              class="w-full p-2 border rounded"
-            />
-          </div>
-
-          <div class="col-span-2 border p-4 rounded-xl bg-gray-50">
-            <label class="block text-xs font-bold uppercase text-gray-400 mb-2"
-              >Business Logo</label
-            >
-            <div class="flex items-center gap-4">
-              <img
-                id="imagePreview"
-                src="https://via.placeholder.com/150"
-                class="w-16 h-16 rounded-full object-cover border-2 border-white shadow"
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs font-bold uppercase text-gray-400"
+                >ID (URL Slug)</label
+              >
+              <input
+                type="text"
+                id="editId"
+                class="w-full p-2 border rounded-lg bg-gray-50"
+                placeholder="e.g. burger-shop"
               />
-              <div class="flex-1">
-                <input
-                  type="file"
-                  id="fileInput"
-                  accept="image/*"
-                  class="text-xs text-gray-500 mb-2 block w-full"
-                />
-                <input
-                  type="text"
-                  id="editImage"
-                  placeholder="Or paste Image URL"
-                  class="w-full p-2 border rounded text-xs"
-                />
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase text-gray-400"
+                >Business Name</label
+              >
+              <input
+                type="text"
+                id="editName"
+                class="w-full p-2 border rounded-lg"
+              />
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase text-gray-400"
+                >Photo Upload</label
+              >
+              <div class="flex items-center gap-3 mt-1">
+                <input type="file" id="fileInput" class="text-xs w-full" />
+                <input type="hidden" id="editImage" />
               </div>
             </div>
           </div>
 
-          <div>
-            <label class="block text-xs font-bold uppercase text-gray-400"
-              >Email</label
-            >
-            <input
-              type="email"
-              id="editEmail"
-              class="w-full p-2 border rounded"
-            />
+          <div
+            class="bg-indigo-50 p-4 rounded-xl border border-indigo-100 space-y-3"
+          >
+            <h3 class="text-indigo-800 font-bold text-sm uppercase">
+              <i class="fas fa-shield-alt mr-2"></i> Access & Preview
+            </h3>
+            <div>
+              <label class="block text-[10px] font-bold text-indigo-400"
+                >Client Access Code</label
+              >
+              <input
+                type="text"
+                id="displayCode"
+                readonly
+                class="w-full bg-transparent border-none font-mono text-lg text-indigo-700 p-0 focus:ring-0"
+                value="Generated on save"
+              />
+            </div>
+            <div id="previewLinkContainer" class="hidden">
+              <label class="block text-[10px] font-bold text-indigo-400"
+                >Public Link</label
+              >
+              <a
+                id="previewBtn"
+                target="_blank"
+                class="text-indigo-600 underline font-bold text-sm block truncate"
+                >Click to View Page</a
+              >
+            </div>
           </div>
 
-          <div>
-            <label class="block text-xs font-bold uppercase text-gray-400"
-              >Gradient/Color</label
-            >
-            <input
-              type="text"
-              id="editGradient"
-              class="w-full p-2 border rounded"
-              placeholder="linear-gradient(...)"
-            />
-          </div>
-
-          <div class="col-span-2 border-t pt-4 mt-2">
-            <h3 class="font-bold mb-3 text-sm">Social Networks & Links</h3>
-            <div class="grid grid-cols-2 gap-3">
-              <div class="flex items-center gap-2">
-                <i class="fab fa-facebook text-blue-600 w-4"></i>
-                <input
-                  type="text"
-                  id="socialFb"
-                  placeholder="Facebook"
-                  class="flex-1 p-2 border rounded text-sm"
-                />
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="fab fa-instagram text-pink-600 w-4"></i>
-                <input
-                  type="text"
-                  id="socialInsta"
-                  placeholder="Instagram"
-                  class="flex-1 p-2 border rounded text-sm"
-                />
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="fab fa-tiktok text-black w-4"></i>
-                <input
-                  type="text"
-                  id="socialTiktok"
-                  placeholder="TikTok"
-                  class="flex-1 p-2 border rounded text-sm"
-                />
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="fab fa-whatsapp text-green-500 w-4"></i>
-                <input
-                  type="text"
-                  id="socialWhatsapp"
-                  placeholder="WhatsApp"
-                  class="flex-1 p-2 border rounded text-sm"
-                />
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="fab fa-linkedin text-blue-700 w-4"></i>
-                <input
-                  type="text"
-                  id="socialLinkedin"
-                  placeholder="LinkedIn"
-                  class="flex-1 p-2 border rounded text-sm"
-                />
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="fab fa-x-twitter text-black w-4"></i>
-                <input
-                  type="text"
-                  id="socialX"
-                  placeholder="X / Twitter"
-                  class="flex-1 p-2 border rounded text-sm"
-                />
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="fab fa-youtube text-red-600 w-4"></i>
-                <input
-                  type="text"
-                  id="socialYoutube"
-                  placeholder="YouTube"
-                  class="flex-1 p-2 border rounded text-sm"
-                />
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="fab fa-pinterest text-red-500 w-4"></i>
-                <input
-                  type="text"
-                  id="socialPinterest"
-                  placeholder="Pinterest"
-                  class="flex-1 p-2 border rounded text-sm"
-                />
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="fab fa-snapchat text-yellow-500 w-4"></i>
-                <input
-                  type="text"
-                  id="socialSnapchat"
-                  placeholder="Snapchat"
-                  class="flex-1 p-2 border rounded text-sm"
-                />
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="fas fa-globe text-gray-400 w-4"></i>
-                <input
-                  type="text"
-                  id="socialWeb"
-                  placeholder="Website"
-                  class="flex-1 p-2 border rounded text-sm"
-                />
-              </div>
+          <div class="col-span-2 border-t pt-4">
+            <h3 class="font-bold mb-3 text-sm">Social Networks</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+              <input
+                type="text"
+                id="socialFb"
+                placeholder="Facebook URL"
+                class="p-2 border rounded-lg text-sm"
+              />
+              <input
+                type="text"
+                id="socialInsta"
+                placeholder="Instagram URL"
+                class="p-2 border rounded-lg text-sm"
+              />
+              <input
+                type="text"
+                id="socialTiktok"
+                placeholder="TikTok URL"
+                class="p-2 border rounded-lg text-sm"
+              />
+              <input
+                type="text"
+                id="socialLinkedin"
+                placeholder="LinkedIn URL"
+                class="p-2 border rounded-lg text-sm"
+              />
+              <input
+                type="text"
+                id="socialX"
+                placeholder="X / Twitter URL"
+                class="p-2 border rounded-lg text-sm"
+              />
+              <input
+                type="text"
+                id="socialPinterest"
+                placeholder="Pinterest URL"
+                class="p-2 border rounded-lg text-sm"
+              />
+              <input
+                type="text"
+                id="socialWhatsapp"
+                placeholder="WhatsApp Number"
+                class="p-2 border rounded-lg text-sm"
+              />
+              <input
+                type="text"
+                id="socialWeb"
+                placeholder="Website URL"
+                class="p-2 border rounded-lg text-sm"
+              />
             </div>
           </div>
         </div>
 
-        <div class="flex justify-end gap-3 mt-8">
+        <div class="flex justify-end gap-3 mt-8 pt-4 border-t">
           <button
             onclick="closeEditModal()"
             class="text-gray-500 font-bold px-4"
@@ -313,7 +275,7 @@
           <button
             onclick="saveBusiness()"
             id="saveBtn"
-            class="bg-blue-600 text-white px-8 py-3 rounded-xl font-bold"
+            class="bg-indigo-600 text-white px-8 py-3 rounded-xl font-bold shadow-lg hover:bg-indigo-700 transition"
           >
             Save Business
           </button>
@@ -323,7 +285,7 @@
 
     <div
       id="toast"
-      class="hidden fixed bottom-5 right-5 bg-gray-800 text-white px-6 py-3 rounded shadow-lg z-50"
+      class="fixed bottom-5 right-5 bg-gray-900 text-white px-6 py-3 rounded-xl shadow-2xl z-50 hidden"
     ></div>
 
     <script>
@@ -331,31 +293,16 @@
       let credentials = { url: "", key: "" };
       let currentEditId = null;
 
-      window.onload = () => {
-        const stored = localStorage.getItem("supabase_creds");
-        if (stored) {
-          credentials = JSON.parse(stored);
-          document.getElementById("supabaseUrl").value = credentials.url;
-          document.getElementById("supabaseKey").value = credentials.key;
-        }
-      };
-
+      // AUTH & LOADING
       async function authenticate() {
         const btn = document.getElementById("btnAuth");
-        const errDiv = document.getElementById("loginError");
-        errDiv.classList.add("hidden");
         credentials.url = document
           .getElementById("supabaseUrl")
           .value.trim()
           .replace(/\/$/, "");
         credentials.key = document.getElementById("supabaseKey").value.trim();
-
-        if (!credentials.url || !credentials.key)
-          return showLoginError("Please fill all fields");
-
+        if (!credentials.url || !credentials.key) return;
         btn.disabled = true;
-        btn.textContent = "Connecting...";
-
         try {
           const res = await fetch(
             `${credentials.url}/rest/v1/businesses?limit=1`,
@@ -366,81 +313,113 @@
               },
             },
           );
-          if (!res.ok) throw new Error("Connection failed. Check your keys.");
-
+          if (!res.ok) throw new Error();
           localStorage.setItem("supabase_creds", JSON.stringify(credentials));
           document.getElementById("loginModal").classList.add("hidden");
           document.getElementById("app").classList.remove("hidden");
           loadData();
         } catch (e) {
-          errDiv.textContent = e.message;
-          errDiv.classList.remove("hidden");
+          alert("Invalid credentials");
           btn.disabled = false;
-          btn.textContent = "Connect";
         }
       }
 
-      async function uploadImage(file, businessId) {
-        const fileExt = file.name.split(".").pop();
-        const fileName = `${businessId}-${Date.now()}.${fileExt}`;
-        const filePath = `${fileName}`;
-
-        const res = await fetch(
-          `${credentials.url}/storage/v1/object/business-images/${filePath}`,
-          {
-            method: "POST",
-            headers: {
-              apikey: credentials.key,
-              Authorization: `Bearer ${credentials.key}`,
-              "Content-Type": file.type,
+      async function loadData() {
+        try {
+          const res = await fetch(
+            `${credentials.url}/rest/v1/businesses?select=*,business_access(*)`,
+            {
+              headers: {
+                apikey: credentials.key,
+                Authorization: `Bearer ${credentials.key}`,
+              },
             },
-            body: file,
-          },
-        );
-
-        if (!res.ok) throw new Error("Image upload failed");
-        return `${credentials.url}/storage/v1/object/public/business-images/${filePath}`;
+          );
+          const data = await res.json();
+          globalData = {};
+          data.forEach((b) => (globalData[b.business_id] = b));
+          renderGrid();
+        } catch (e) {
+          console.error(e);
+        }
       }
 
+      // RENDER GRID WITH VIEW BUTTON
+      function renderGrid() {
+        const grid = document.getElementById("businessGrid");
+        grid.innerHTML = "";
+        Object.entries(globalData).forEach(([id, biz]) => {
+          const code = biz.business_access?.[0]?.access_code_raw || "Hashed";
+          const div = document.createElement("div");
+          div.className =
+            "bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition";
+          div.dataset.name = biz.name.toLowerCase();
+          div.innerHTML = `
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="${biz.image || "https://via.placeholder.com/150"}" class="w-14 h-14 rounded-full object-cover bg-gray-100">
+                        <div class="overflow-hidden">
+                            <h3 class="font-bold text-gray-800 truncate">${biz.name}</h3>
+                            <p class="text-[10px] text-indigo-500 font-bold uppercase tracking-wider">Code: ${code}</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="editBusiness('${id}')" class="flex-1 py-2 text-sm font-bold text-indigo-600 bg-indigo-50 rounded-lg">Edit</button>
+                        <a href="ind.html?id=${id}" target="_blank" class="flex-1 py-2 text-center text-sm font-bold text-green-600 bg-green-50 rounded-lg"><i class="fas fa-external-link-alt mr-1"></i> View</a>
+                        <button onclick="deleteBusiness('${id}')" class="px-3 py-2 text-red-300 hover:text-red-500"><i class="fas fa-trash"></i></button>
+                    </div>
+                `;
+          grid.appendChild(div);
+        });
+      }
+
+      // SAVE LOGIC WITH INSTANT CODE REVEAL
       async function saveBusiness() {
-        const btn = document.getElementById("saveBtn");
         const id = document.getElementById("editId").value.trim().toLowerCase();
+        const isNew = !currentEditId;
         const file = document.getElementById("fileInput").files[0];
 
         if (!id) return alert("ID is required");
 
+        const btn = document.getElementById("saveBtn");
         btn.disabled = true;
-        btn.textContent = "Processing...";
 
         try {
           let imageUrl = document.getElementById("editImage").value;
           if (file) {
-            imageUrl = await uploadImage(file, id);
+            const fileName = `${id}-${Date.now()}`;
+            const res = await fetch(
+              `${credentials.url}/storage/v1/object/business-images/${fileName}`,
+              {
+                method: "POST",
+                headers: {
+                  apikey: credentials.key,
+                  Authorization: `Bearer ${credentials.key}`,
+                  "Content-Type": file.type,
+                },
+                body: file,
+              },
+            );
+            if (res.ok)
+              imageUrl = `${credentials.url}/storage/v1/object/public/business-images/${fileName}`;
           }
 
           const bizData = {
             business_id: id,
             name: document.getElementById("editName").value,
-            phone: document.getElementById("editPhone").value,
-            email: document.getElementById("editEmail").value,
             image: imageUrl,
-            gradient: document.getElementById("editGradient").value,
             socials: {
               facebook: document.getElementById("socialFb").value,
               instagram: document.getElementById("socialInsta").value,
               tiktok: document.getElementById("socialTiktok").value,
-              whatsapp: document.getElementById("socialWhatsapp").value,
               linkedin: document.getElementById("socialLinkedin").value,
               twitter: document.getElementById("socialX").value,
-              youtube: document.getElementById("socialYoutube").value,
               pinterest: document.getElementById("socialPinterest").value,
-              snapchat: document.getElementById("socialSnapchat").value,
+              whatsapp: document.getElementById("socialWhatsapp").value,
               website: document.getElementById("socialWeb").value,
             },
           };
 
-          const isNew = !currentEditId;
-          const res = await fetch(
+          await fetch(
             `${credentials.url}/rest/v1/businesses${isNew ? "" : "?business_id=eq." + id}`,
             {
               method: isNew ? "POST" : "PATCH",
@@ -469,107 +448,24 @@
                 access_code_raw: rawCode,
               }),
             });
-            alert("New Business Created! Access Code: " + rawCode);
+
+            // Reveal code immediately in the modal
+            document.getElementById("displayCode").value = rawCode;
+            document
+              .getElementById("previewLinkContainer")
+              .classList.remove("hidden");
+            document.getElementById("previewBtn").href = `ind.html?id=${id}`;
+            alert(
+              `Business Created Successfully!\n\nAccess Code: ${rawCode}\n\nKeep the modal open if you want to copy the code.`,
+            );
           }
 
-          closeEditModal();
           loadData();
+          if (!isNew) closeEditModal();
         } catch (e) {
-          alert(e.message);
+          alert("Save failed");
         }
         btn.disabled = false;
-        btn.textContent = "Save Business";
-      }
-
-      async function loadData() {
-        showToast("Loading data...");
-        try {
-          const res = await fetch(
-            `${credentials.url}/rest/v1/businesses?select=*,business_access(*)`,
-            {
-              headers: {
-                apikey: credentials.key,
-                Authorization: `Bearer ${credentials.key}`,
-              },
-            },
-          );
-          const data = await res.json();
-          globalData = {};
-          data.forEach((b) => (globalData[b.business_id] = b));
-          renderGrid();
-        } catch (e) {
-          showToast("Error loading data");
-        }
-      }
-
-      function renderGrid() {
-        const grid = document.getElementById("businessGrid");
-        grid.innerHTML = "";
-        Object.entries(globalData).forEach(([id, biz]) => {
-          const code = biz.business_access?.[0]?.access_code_raw || "Locked";
-          const div = document.createElement("div");
-          div.className =
-            "bg-white p-5 rounded-2xl shadow-sm border border-gray-100";
-          div.dataset.name = biz.name.toLowerCase();
-          div.innerHTML = `
-            <div class="flex items-center gap-4 mb-4">
-              <img src="${biz.image || "https://via.placeholder.com/150"}" class="w-14 h-14 rounded-full object-cover bg-gray-50">
-              <div>
-                <h3 class="font-bold text-gray-800">${biz.name}</h3>
-                <p class="text-[10px] text-gray-400 font-mono">${id} | Code: ${code}</p>
-              </div>
-            </div>
-            <div class="flex gap-2">
-              <button onclick="editBusiness('${id}')" class="flex-1 bg-blue-50 text-blue-600 py-2 rounded-lg font-bold text-sm">Edit</button>
-              <button onclick="deleteBusiness('${id}')" class="px-3 py-2 text-red-400 hover:text-red-600"><i class="fas fa-trash"></i></button>
-            </div>
-          `;
-          grid.appendChild(div);
-        });
-      }
-
-      function openModal(mode, id = null) {
-        currentEditId = id;
-        document.getElementById("editModal").classList.remove("hidden");
-        document.getElementById("fileInput").value = "";
-        document.getElementById("imagePreview").src =
-          "https://via.placeholder.com/150";
-
-        if (id) {
-          const b = globalData[id];
-          document.getElementById("editId").value = b.business_id;
-          document.getElementById("editId").disabled = true;
-          document.getElementById("editName").value = b.name || "";
-          document.getElementById("editPhone").value = b.phone || "";
-          document.getElementById("editEmail").value = b.email || "";
-          document.getElementById("editImage").value = b.image || "";
-          document.getElementById("imagePreview").src =
-            b.image || "https://via.placeholder.com/150";
-          document.getElementById("editGradient").value = b.gradient || "";
-          document.getElementById("socialFb").value = b.socials?.facebook || "";
-          document.getElementById("socialInsta").value =
-            b.socials?.instagram || "";
-          document.getElementById("socialTiktok").value =
-            b.socials?.tiktok || "";
-          document.getElementById("socialWhatsapp").value =
-            b.socials?.whatsapp || "";
-          document.getElementById("socialLinkedin").value =
-            b.socials?.linkedin || "";
-          document.getElementById("socialX").value = b.socials?.twitter || "";
-          document.getElementById("socialYoutube").value =
-            b.socials?.youtube || "";
-          document.getElementById("socialPinterest").value =
-            b.socials?.pinterest || "";
-          document.getElementById("socialSnapchat").value =
-            b.socials?.snapchat || "";
-          document.getElementById("socialWeb").value = b.socials?.website || "";
-        } else {
-          document.getElementById("editId").value = "";
-          document.getElementById("editId").disabled = false;
-          document
-            .querySelectorAll("#editModal input")
-            .forEach((i) => (i.value = ""));
-        }
       }
 
       async function hashString(str) {
@@ -580,16 +476,52 @@
           .join("");
       }
 
+      function openModal(mode, id = null) {
+        currentEditId = id;
+        document.getElementById("editModal").classList.remove("hidden");
+        document.getElementById("previewLinkContainer").classList.add("hidden");
+
+        if (id) {
+          const b = globalData[id];
+          document.getElementById("editId").value = b.business_id;
+          document.getElementById("editId").disabled = true;
+          document.getElementById("editName").value = b.name || "";
+          document.getElementById("editImage").value = b.image || "";
+          document.getElementById("displayCode").value =
+            b.business_access?.[0]?.access_code_raw || "Hashed";
+
+          document
+            .getElementById("previewLinkContainer")
+            .classList.remove("hidden");
+          document.getElementById("previewBtn").href = `ind.html?id=${id}`;
+
+          document.getElementById("socialFb").value = b.socials?.facebook || "";
+          document.getElementById("socialInsta").value =
+            b.socials?.instagram || "";
+          document.getElementById("socialTiktok").value =
+            b.socials?.tiktok || "";
+          document.getElementById("socialLinkedin").value =
+            b.socials?.linkedin || "";
+          document.getElementById("socialX").value = b.socials?.twitter || "";
+          document.getElementById("socialPinterest").value =
+            b.socials?.pinterest || "";
+          document.getElementById("socialWhatsapp").value =
+            b.socials?.whatsapp || "";
+          document.getElementById("socialWeb").value = b.socials?.website || "";
+        } else {
+          document.getElementById("editId").value = "";
+          document.getElementById("editId").disabled = false;
+          document.getElementById("displayCode").value = "Generated on save";
+          document
+            .querySelectorAll("#editModal input")
+            .forEach((i) => (i.type !== "file" ? (i.value = "") : null));
+        }
+      }
+
       function closeEditModal() {
         document.getElementById("editModal").classList.add("hidden");
       }
       window.editBusiness = (id) => openModal("edit", id);
-      function showToast(m) {
-        const t = document.getElementById("toast");
-        t.textContent = m;
-        t.classList.remove("hidden");
-        setTimeout(() => t.classList.add("hidden"), 3000);
-      }
       function logout() {
         localStorage.removeItem("supabase_creds");
         location.reload();
