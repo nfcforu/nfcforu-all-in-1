@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NFC Business Manager</title>
+    <title>NFC Business Manager | Admin</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -26,6 +26,13 @@
           transform: rotate(360deg);
         }
       }
+      #toast {
+        transition: all 0.3s ease;
+        transform: translateY(100px);
+      }
+      #toast.show {
+        transform: translateY(0);
+      }
     </style>
   </head>
   <body class="bg-gray-100 min-h-screen">
@@ -33,34 +40,40 @@
       id="loginModal"
       class="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-center z-50"
     >
-      <div class="bg-white p-8 rounded-lg shadow-xl w-96">
-        <h2 class="text-2xl font-bold mb-4 text-gray-800">Dashboard Login</h2>
+      <div class="bg-white p-8 rounded-2xl shadow-2xl w-96">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800 text-center">
+          Admin Login
+        </h2>
         <div
           id="loginError"
           class="hidden mb-4 p-3 bg-red-100 text-red-700 rounded-lg text-sm"
         ></div>
         <div class="mb-4">
-          <label class="block text-sm font-bold mb-2">Supabase URL</label>
+          <label class="block text-xs font-bold uppercase text-gray-500 mb-1"
+            >Supabase URL</label
+          >
           <input
             type="text"
             id="supabaseUrl"
-            class="w-full p-2 border rounded"
-            placeholder="https://xxxxx.supabase.co"
+            class="w-full p-3 border rounded-xl"
+            placeholder="https://xxx.supabase.co"
           />
         </div>
         <div class="mb-6">
-          <label class="block text-sm font-bold mb-2">Service Role Key</label>
+          <label class="block text-xs font-bold uppercase text-gray-500 mb-1"
+            >Service Role Key</label
+          >
           <input
             type="password"
             id="supabaseKey"
-            class="w-full p-2 border rounded"
-            placeholder="eyJhbGc..."
+            class="w-full p-3 border rounded-xl"
+            placeholder="Secret Key"
           />
         </div>
         <button
           onclick="authenticate()"
           id="btnAuth"
-          class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+          class="w-full bg-indigo-600 text-white py-3 rounded-xl font-bold hover:bg-indigo-700 transition"
         >
           Connect
         </button>
@@ -68,38 +81,42 @@
     </div>
 
     <div id="app" class="hidden container mx-auto px-4 py-8">
-      <div class="flex justify-between items-center mb-8">
-        <h1 class="text-3xl font-bold text-gray-800">Business Manager</h1>
-        <div class="flex gap-2">
+      <div
+        class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4"
+      >
+        <h1 class="text-3xl font-black text-gray-800">Business Manager</h1>
+        <div class="flex gap-2 w-full md:w-auto">
           <button
             onclick="loadData()"
-            class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300"
+            class="flex-1 md:flex-none bg-white border px-4 py-2 rounded-lg font-bold text-gray-600 hover:bg-gray-50"
           >
-            <i class="fas fa-sync"></i> Refresh
+            <i class="fas fa-sync"></i>
           </button>
           <button
             onclick="openModal('new')"
-            class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+            class="flex-1 md:flex-none bg-indigo-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-indigo-700"
           >
-            <i class="fas fa-plus"></i> Add New
+            Add Business
           </button>
           <button
             onclick="logout()"
-            class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
+            class="bg-red-50 text-red-600 px-4 py-2 rounded-lg font-bold"
           >
-            Logout
+            <i class="fas fa-sign-out-alt"></i>
           </button>
         </div>
       </div>
+
       <div class="mb-6">
         <input
           type="text"
           id="search"
           onkeyup="filterGrid()"
           placeholder="Search businesses..."
-          class="w-full p-3 border rounded-lg shadow-sm"
+          class="w-full p-4 border rounded-2xl shadow-sm focus:ring-2 focus:ring-indigo-500 outline-none"
         />
       </div>
+
       <div
         id="businessGrid"
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -109,17 +126,120 @@
     <div
       id="editModal"
       class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40 overflow-y-auto py-10"
+    >
+      <div class="bg-white rounded-2xl shadow-xl w-full max-w-xl m-4 p-8">
+        <h2 id="modalTitle" class="text-2xl font-bold mb-6">
+          Business Details
+        </h2>
+        <div class="grid gap-4">
+          <input
+            type="text"
+            id="editId"
+            placeholder="Business ID (slug)"
+            class="p-3 border rounded-xl"
+          />
+          <input
+            type="text"
+            id="editName"
+            placeholder="Business Name"
+            class="p-3 border rounded-xl"
+          />
+          <input
+            type="text"
+            id="editImage"
+            placeholder="Image URL"
+            class="p-3 border rounded-xl"
+          />
+          <div class="flex justify-end gap-3 mt-4">
+            <button
+              onclick="closeEditModal()"
+              class="text-gray-500 font-bold px-4"
+            >
+              Cancel
+            </button>
+            <button
+              onclick="saveBusiness()"
+              id="saveBtn"
+              class="bg-indigo-600 text-white px-8 py-3 rounded-xl font-bold"
+            >
+              Save Business
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="toast"
+      class="fixed bottom-5 right-5 bg-gray-900 text-white px-6 py-3 rounded-xl shadow-2xl z-50 hidden"
     ></div>
 
     <script>
       let globalData = {};
       let credentials = { url: "", key: "" };
+      let currentEditId = null;
+      const PLACEHOLDER =
+        'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="%23ddd"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="12" fill="%23888">No Image</text></svg>';
+
+      window.onload = () => {
+        const stored = localStorage.getItem("supabase_creds");
+        if (stored) {
+          credentials = JSON.parse(stored);
+          document.getElementById("supabaseUrl").value = credentials.url;
+          document.getElementById("supabaseKey").value = credentials.key;
+        }
+      };
+
+      async function authenticate() {
+        const btn = document.getElementById("btnAuth");
+        const errDiv = document.getElementById("loginError");
+        errDiv.classList.add("hidden");
+
+        credentials.url = document
+          .getElementById("supabaseUrl")
+          .value.trim()
+          .replace(/\/$/, "");
+        credentials.key = document.getElementById("supabaseKey").value.trim();
+
+        if (!credentials.url || !credentials.key) {
+          errDiv.textContent = "Please fill in all fields.";
+          errDiv.classList.remove("hidden");
+          return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = "Connecting...";
+
+        try {
+          const res = await fetch(
+            `${credentials.url}/rest/v1/businesses?limit=1`,
+            {
+              headers: {
+                apikey: credentials.key,
+                Authorization: `Bearer ${credentials.key}`,
+              },
+            },
+          );
+
+          if (!res.ok)
+            throw new Error("Connection failed. Check your Key and URL.");
+
+          localStorage.setItem("supabase_creds", JSON.stringify(credentials));
+          document.getElementById("loginModal").classList.add("hidden");
+          document.getElementById("app").classList.remove("hidden");
+          loadData();
+        } catch (e) {
+          errDiv.textContent = e.message;
+          errDiv.classList.remove("hidden");
+          btn.disabled = false;
+          btn.textContent = "Connect";
+        }
+      }
 
       async function loadData() {
-        showToast("Loading data...", true);
+        showToast("Syncing database...");
         try {
-          // IMPORTANT: Join with business_access to get codes
-          const response = await fetch(
+          const res = await fetch(
             `${credentials.url}/rest/v1/businesses?select=*,business_access(*)`,
             {
               headers: {
@@ -128,75 +248,57 @@
               },
             },
           );
-          const businesses = await response.json();
+          const data = await res.json();
           globalData = {};
-          businesses.forEach((biz) => {
-            globalData[biz.business_id] = biz;
-          });
+          data.forEach((b) => (globalData[b.business_id] = b));
           renderGrid();
-          showToast("Data loaded successfully");
         } catch (e) {
-          alert("Load error: " + e.message);
+          showToast("Error loading data");
         }
       }
 
       function renderGrid() {
         const grid = document.getElementById("businessGrid");
         grid.innerHTML = "";
-        Object.entries(globalData).forEach(([key, biz]) => {
-          // Get the raw access code from the joined table data
-          const accessCode =
-            biz.business_access?.[0]?.access_code_raw || "Hashed";
-
-          const card = document.createElement("div");
-          card.className =
-            "bg-white p-4 rounded-lg shadow border-t-4 border-blue-500 relative";
-          card.innerHTML = `
-            <div class="flex items-center gap-4 mb-4">
-              <img src="${biz.image || "https://via.placeholder.com/150"}" class="w-16 h-16 rounded-full object-cover">
-              <div>
-                <h3 class="font-bold text-lg">${biz.name || "Unnamed"}</h3>
-                <div class="flex gap-2 items-center">
-                    <span class="text-xs font-mono bg-gray-100 px-2 py-1 rounded">${key}</span>
-                    <span class="text-xs font-bold bg-green-100 text-green-700 px-2 py-1 rounded" title="Access Code">
-                        <i class="fas fa-key"></i> ${accessCode}
-                    </span>
-                </div>
-              </div>
-            </div>
-            <div class="mt-4 flex gap-2 border-t pt-3">
-              <button onclick="editBusiness('${key}')" class="flex-1 bg-blue-50 text-blue-600 py-1 rounded">Edit</button>
-              <button onclick="deleteBusiness('${key}')" class="flex-1 bg-red-50 text-red-600 py-1 rounded">Delete</button>
-            </div>
-          `;
-          grid.appendChild(card);
+        Object.entries(globalData).forEach(([id, biz]) => {
+          const code = biz.business_access?.[0]?.access_code_raw || "Hashed";
+          const div = document.createElement("div");
+          div.className =
+            "bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition";
+          div.dataset.name = biz.name.toLowerCase();
+          div.innerHTML = `
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="${biz.image || PLACEHOLDER}" class="w-14 h-14 rounded-full object-cover bg-gray-100">
+                        <div>
+                            <h3 class="font-bold text-gray-800">${biz.name}</h3>
+                            <div class="flex gap-2 mt-1">
+                                <span class="text-[10px] bg-gray-100 px-2 py-0.5 rounded font-mono">${id}</span>
+                                <span class="text-[10px] bg-green-100 text-green-700 px-2 py-0.5 rounded font-bold">Code: ${code}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="editBusiness('${id}')" class="flex-1 py-2 text-sm font-bold text-indigo-600 bg-indigo-50 rounded-lg">Edit</button>
+                        <button onclick="deleteBusiness('${id}')" class="px-3 py-2 text-red-400 hover:text-red-600"><i class="fas fa-trash"></i></button>
+                    </div>
+                `;
+          grid.appendChild(div);
         });
       }
 
-      async function generateAccessCode() {
-        const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-        let code = "";
-        for (let i = 0; i < 8; i++)
-          code += chars.charAt(Math.floor(Math.random() * chars.length));
-
-        const encoder = new TextEncoder();
-        const data = encoder.encode(code);
-        const hashBuffer = await crypto.subtle.digest("SHA-256", data);
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        const hashHex = hashArray
-          .map((b) => b.toString(16).padStart(2, "0"))
-          .join("");
-
-        return { raw: code, hash: hashHex };
-      }
-
       async function saveBusiness() {
-        // ... (Gather form data same as before) ...
-        const id = document.getElementById("editId").value.trim().toLowerCase();
+        const id = document.getElementById("editId").value.trim();
+        const name = document.getElementById("editName").value.trim();
+        const image = document.getElementById("editImage").value.trim();
+
+        if (!id || !name) return alert("ID and Name are required");
+
         const isNew = !currentEditId;
+        const btn = document.getElementById("saveBtn");
+        btn.disabled = true;
 
         try {
-          // Save business info
+          // Save/Update business
           await fetch(
             `${credentials.url}/rest/v1/businesses${isNew ? "" : "?business_id=eq." + id}`,
             {
@@ -206,12 +308,13 @@
                 apikey: credentials.key,
                 Authorization: `Bearer ${credentials.key}`,
               },
-              body: JSON.stringify(businessData),
+              body: JSON.stringify({ business_id: id, name, image }),
             },
           );
 
           if (isNew) {
-            const codes = await generateAccessCode();
+            const rawCode = Math.random().toString(36).slice(-8); // Random 8 char code
+            const hash = await hashString(rawCode);
             await fetch(`${credentials.url}/rest/v1/business_access`, {
               method: "POST",
               headers: {
@@ -221,19 +324,67 @@
               },
               body: JSON.stringify({
                 business_id: id,
-                access_code_hash: codes.hash,
-                access_code_raw: codes.raw, // Save raw code for admin view
+                access_code_hash: hash,
+                access_code_raw: rawCode,
               }),
             });
-            alert(`Business Created!\nAccess Code: ${codes.raw}`);
+            alert("Business Created! Access Code: " + rawCode);
           }
           loadData();
           closeEditModal();
         } catch (e) {
-          alert("Save failed: " + e.message);
+          alert("Error saving");
+        }
+        btn.disabled = false;
+      }
+
+      async function hashString(str) {
+        const msgUint8 = new TextEncoder().encode(str);
+        const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8);
+        return Array.from(new Uint8Array(hashBuffer))
+          .map((b) => b.toString(16).padStart(2, "0"))
+          .join("");
+      }
+
+      function openModal(mode, id = null) {
+        currentEditId = id;
+        document.getElementById("editModal").classList.remove("hidden");
+        if (id) {
+          const b = globalData[id];
+          document.getElementById("editId").value = b.business_id;
+          document.getElementById("editId").disabled = true;
+          document.getElementById("editName").value = b.name;
+          document.getElementById("editImage").value = b.image || "";
+        } else {
+          document.getElementById("editId").value = "";
+          document.getElementById("editId").disabled = false;
+          document.getElementById("editName").value = "";
+          document.getElementById("editImage").value = "";
         }
       }
-      // ... (Rest of your helper functions: authenticate, logout, showToast, etc) ...
+
+      function closeEditModal() {
+        document.getElementById("editModal").classList.add("hidden");
+      }
+      window.editBusiness = (id) => openModal("edit", id);
+
+      function showToast(m) {
+        const t = document.getElementById("toast");
+        t.textContent = m;
+        t.classList.remove("hidden");
+        setTimeout(() => t.classList.add("hidden"), 3000);
+      }
+
+      function logout() {
+        localStorage.removeItem("supabase_creds");
+        location.reload();
+      }
+      function filterGrid() {
+        const term = document.getElementById("search").value.toLowerCase();
+        document.querySelectorAll("#businessGrid > div").forEach((c) => {
+          c.style.display = c.dataset.name.includes(term) ? "block" : "none";
+        });
+      }
     </script>
   </body>
 </html>
