@@ -2299,7 +2299,7 @@
     "gradient": "linear-gradient(90deg,rgba(66, 87, 0, 1) 50%, rgba(48, 38, 38, 1) 100%)",
     "address": {
       "text": "99C4+8RM Mezerana",
-      "url": "https://maps.app.goo.gl/1fpvH2Wnc1Yqv6k76"
+      "url": "https://maps.app.goo.gl/CgsJUMPb92TyA8eQ8"
     },
     "socials": {
       "facebook": "https://www.facebook.com/profile.php?id=61580129797639&rdid=x4VB5pqLrEL2QGg1&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19c7rZap9f%2F#",
@@ -2353,7 +2353,7 @@
     },
     "socials": {
       "facebook": "https://www.facebook.com/share/1Gq2UgL6dN/",
-      "instagram": "https://www.instagram.com/farashaoran?igsh=MWR6cjMyc2V6bjJwcg==",
+      "instagram": "https://www.instagram.com/farasha_oran?igsh=Y3B1c3dmbDBlbXl6",
       "tiktok": "https://www.tiktok.com/@farasha.oran?_r=1&_t=ZS-93GOU2XE78e",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213449549913",
       "website": "https://farasha-shop.com/boutique"
@@ -2505,10 +2505,10 @@
   },
   "Lora-Scents": {
     "name": "Lora Scents",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-01-24%20at%2013.45.53.jpeg",
     "phone": "0541 30 13 21",
     "email": "lorascents7@gmail.com",
-    "gradient": "linear-gradient(38deg,rgba(236, 237, 232, 1) 0%, rgba(43, 38, 38, 1) 100%)",
+    "gradient": " radial-gradient(circle,rgba(247, 247, 247, 1) 0%, rgba(38, 37, 37, 1) 100%)",
     "address": {
       "text": "Alger",
       "url": "https://maps.app.goo.gl/Aqj5iE4jGDzxhrE16"
@@ -2519,6 +2519,24 @@
       "tiktok": "https://www.tiktok.com/@lora.scents1?_r=1&_t=ZS-93KtzrZ1Dq0",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213541 30 13 2",
       "website": "lorascents7.com"
+    }
+  },
+  "israa-com": {
+    "name": "إسراء كوم لتصليح الهواتف",
+    "image": "",
+    "phone": "0665118050",
+    "gradient": "radial-gradient(circle,rgba(230, 225, 226, 1) 0%, rgba(148, 187, 233, 1) 100%)",
+    "address": {
+      "text": "Tebessa",
+      "url": "https://maps.app.goo.gl/hF8CMsyLvogud8CW8"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/asra.kwm.ltslyh.alhwatf?mibextid=wwXIfr&rdid=ri8bt7ShvN61cCe4&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AS2gkiKhJ%2F%3Fmibextid%3DwwXIfr#",
+      "instagram": "https://www.instagram.com/bwhdhyfns?igsh=MXFsZWJleTNtbW5hdA%3D%3D",
+      "tiktok": "https://www.tiktok.com/@user68752395473550",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213660 42 24 25",
+      "telegram": "https://t.me/+213665118050",
+      "viber": "viber://chat?number=%2B‪+213665118050"
     }
   }
 }
