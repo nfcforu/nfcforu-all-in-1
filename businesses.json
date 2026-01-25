@@ -2538,5 +2538,21 @@
       "telegram": "https://t.me/+213665118050",
       "viber": "viber://chat?number=%2B‪+213665118050"
     }
+  },
+  "Elly": {
+    "name": "Élly ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-01-25%20at%2010.26.56%20(1).jpeg",
+    "phone": "0790133739",
+    "gradient": "#858585",
+    "address": {
+      "text": "Yes mall ",
+      "url": "https://maps.apple/p/e6NsGh8F_Zch5s"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1KRkhSXNym/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/_boutique.elly.25_?igsh=MWoxMWZhY2tnMG9zaQ%3D%3D&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@_elly_25_5?_r=1&_t=ZS-93McHby8yjV",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213790133739"
+    }
   }
 }
