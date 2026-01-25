@@ -1,125 +1,325 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chargement...</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title id="page-title">Business Card</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <style>
-      body {
-        background: #1a1a1a;
-        color: white;
-        font-family: "Inter", sans-serif;
+      * {
+        box-sizing: border-box;
       }
-      .glass {
-        background: rgba(255, 255, 255, 0.05);
+      body {
+        margin: 0;
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+        min-height: 100vh;
+        background: #1e1e1e; /* Fallback color */
+        color: #fff;
+        line-height: 1.4;
+        overflow-x: hidden;
+        transition: background 0.5s ease;
+      }
+      .main-container {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .profile-header {
+        text-align: center;
+        margin-bottom: 40px;
+        animation: fadeInUp 0.6s ease-out;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .profile-avatar {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #fff;
+        margin-bottom: 20px;
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+        transition: transform 0.3s ease;
+      }
+      .profile-name {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+        letter-spacing: -0.02em;
+      }
+      .profile-bio {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 300px;
+      }
+      .links-container {
+        width: 100%;
+        max-width: 480px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .link-item {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        padding: 20px;
+        text-decoration: none;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        animation: fadeInUp 0.6s ease-out backwards;
+      }
+      .link-item:hover {
+        transform: translateY(-4px) scale(1.02);
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      }
+      .link-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 16px;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+      }
+      .link-content {
+        flex: 1;
+        min-width: 0;
+      }
+      .link-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 2px;
+      }
+      .link-subtitle {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .link-arrow {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      /* Specific Social Colors */
+      .link-item.facebook .link-icon {
+        background: #1877f2;
+      }
+      .link-item.instagram .link-icon {
+        background: linear-gradient(
+          45deg,
+          #f09433,
+          #e6683c,
+          #dc2743,
+          #cc2366,
+          #bc1888
+        );
+      }
+      .link-item.whatsapp .link-icon {
+        background: #25d366;
+      }
+      .link-item.tiktok .link-icon {
+        background: #000;
+      }
+      .link-item.youtube .link-icon {
+        background: #ff0000;
+      }
+      .link-item.snapchat .link-icon {
+        background: #fffc00;
+        color: #000;
+      }
+      .link-item.telegram .link-icon {
+        background: #0088cc;
+      }
+      .link-item.viber .link-icon {
+        background: #7360f2;
+      }
+      .link-item.threads .link-icon {
+        background: #000;
+      }
+
+      .loading-state,
+      .error-state {
+        text-align: center;
+        padding: 60px 20px;
+      }
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-top: 3px solid #fff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 20px;
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
       }
     </style>
   </head>
-  <body class="min-h-screen flex items-center justify-center p-4">
-    <div id="main-content" class="w-full max-w-md text-center">
-      <div class="loader-container" id="loader">
-        <div
-          class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto"
-        ></div>
-        <p class="mt-4 text-gray-400">Recherche de l'entreprise...</p>
-      </div>
-    </div>
+  <body>
+    <div class="main-container" id="mainContainer"></div>
 
     <script>
-      // --- CONFIGURATION SUPABASE ---
-      const SB_URL = "https://uuzgfzhfbxfxzpjumpgd.supabase.co";
-      const SB_KEY =
+      const SUPABASE_URL = "https://uuzgfzhfbxfxzpjumpgd.supabase.co";
+      const SUPABASE_ANON_KEY =
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV1emdmemhmYnhmeHpwanVtcGdkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg5MDI0MjcsImV4cCI6MjA4NDQ3ODQyN30.tgYk1EFQKEujjqYlNpr2ZdgYEciFtlHV7uGj4PRqbkc";
 
+      function showLoading() {
+        document.getElementById("mainContainer").innerHTML =
+          `<div class="loading-state"><div class="loading-spinner"></div><h2>Chargement...</h2></div>`;
+      }
+
+      function showError(message) {
+        document.getElementById("mainContainer").innerHTML =
+          `<div class="error-state"><h2>Erreur</h2><p>${message}</p></div>`;
+      }
+
+      function getIconForType(type) {
+        const icons = {
+          phone: "fas fa-phone",
+          email: "fas fa-envelope",
+          address: "fas fa-map-marker-alt",
+          facebook: "fab fa-facebook",
+          instagram: "fab fa-instagram",
+          whatsapp: "fab fa-whatsapp",
+          tiktok: "fab fa-tiktok",
+          youtube: "fab fa-youtube",
+          snapchat: "fab fa-snapchat-ghost",
+          telegram: "fab fa-telegram",
+          viber: "fab fa-viber",
+          threads: "fa-brands fa-threads",
+          website: "fas fa-globe",
+        };
+        return icons[type] || "fas fa-link";
+      }
+
+      function improveColorContrast(gradient) {
+        if (!gradient)
+          return "linear-gradient(135deg, #1e1e1e 0%, #111111 100%)";
+        if (gradient.includes("gradient")) return gradient;
+        return `linear-gradient(135deg, ${gradient} 0%, #111111 100%)`;
+      }
+
       async function loadBusiness() {
-        const content = document.getElementById("main-content");
-
-        // 1. RÉCUPÉRER L'ID DEPUIS L'URL (?id=nom-entreprise)
+        showLoading();
         const urlParams = new URLSearchParams(window.location.search);
-        let bizId = urlParams.get("id");
-
-        // Si pas d'ID dans l'URL, on essaie de voir si le fichier a été renommé
-        if (!bizId) {
-          const path = window.location.pathname.split("/").pop();
-          if (path !== "ind.html" && path !== "") {
-            bizId = path.replace(".html", "");
-          }
-        }
-
-        if (!bizId || bizId === "ind") {
-          content.innerHTML = `<div class="p-8 glass rounded-3xl"><i class="fas fa-search text-4xl mb-4 text-red-400"></i><h1 class="text-xl font-bold">Lien invalide</h1><p class="text-gray-400 mt-2">Aucun identifiant d'entreprise détecté.</p></div>`;
-          return;
-        }
+        let businessId =
+          urlParams.get("id") ||
+          window.location.pathname.replace(/^\/+|\/+$/g, "");
+        if (!businessId || businessId === "ind") businessId = "sac-de-lux";
 
         try {
           const res = await fetch(
-            `${SB_URL}/rest/v1/businesses?business_id=eq.${bizId}&select=*`,
+            `${SUPABASE_URL}/rest/v1/businesses?business_id=eq.${businessId}&select=*`,
             {
-              headers: { apikey: SB_KEY, Authorization: `Bearer ${SB_KEY}` },
+              headers: {
+                apikey: SUPABASE_ANON_KEY,
+                Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+              },
             },
           );
-          const data = await res.json();
 
-          if (!data.length) {
-            content.innerHTML = `<div class="p-8 glass rounded-3xl"><h1 class="text-xl font-bold">Entreprise introuvable</h1><p class="text-gray-400 mt-2">L'entreprise "${bizId}" n'existe pas.</p></div>`;
+          const businesses = await res.json();
+          const biz = businesses[0];
+
+          if (!biz) {
+            showError(`Entreprise "${businessId}" introuvable.`);
             return;
           }
 
-          renderProfile(data[0]);
+          // Apply Background
+          document.body.style.background = improveColorContrast(biz.gradient);
+          document.body.style.backgroundAttachment = "fixed";
+
+          const links = [];
+          if (biz.phone)
+            links.push({
+              type: "phone",
+              title: "Téléphone",
+              subtitle: biz.phone,
+              url: `tel:${biz.phone}`,
+            });
+          if (biz.email)
+            links.push({
+              type: "email",
+              title: "Email",
+              subtitle: biz.email,
+              url: `mailto:${biz.email}`,
+            });
+
+          if (biz.socials) {
+            Object.entries(biz.socials).forEach(([platform, url]) => {
+              if (url)
+                links.push({
+                  type: platform,
+                  title: platform.charAt(0).toUpperCase() + platform.slice(1),
+                  subtitle: `Suivez-nous sur ${platform}`,
+                  url: url,
+                });
+            });
+          }
+
+          const linksHtml = links
+            .map(
+              (link, index) => `
+            <a href="${link.url}" class="link-item ${link.type}" target="_blank" style="animation-delay: ${0.1 + index * 0.1}s">
+              <div class="link-icon"><i class="${getIconForType(link.type)}"></i></div>
+              <div class="link-content">
+                <div class="link-title">${link.title}</div>
+                <div class="link-subtitle">${link.subtitle}</div>
+              </div>
+              <div class="link-arrow"><i class="fas fa-chevron-right"></i></div>
+            </a>`,
+            )
+            .join("");
+
+          document.getElementById("mainContainer").innerHTML = `
+            <div class="profile-header">
+              <img src="${biz.image || "https://via.placeholder.com/150"}" class="profile-avatar">
+              <h1 class="profile-name">${biz.name}</h1>
+              <p class="profile-bio">Connectez-vous avec nous</p>
+            </div>
+            <div class="links-container">${linksHtml}</div>
+          `;
         } catch (e) {
-          content.innerHTML = `<p class="text-red-400">Erreur de connexion</p>`;
+          showError("Erreur de connexion.");
         }
       }
 
-      function renderProfile(biz) {
-        document.title = biz.name;
-        const socials = biz.socials || {};
-        const container = document.getElementById("main-content");
-
-        let linksHtml = "";
-        const icons = {
-          facebook: "fab fa-facebook",
-          instagram: "fab fa-instagram",
-          tiktok: "fab fa-tiktok",
-          whatsapp: "fab fa-whatsapp",
-          linkedin: "fab fa-linkedin",
-          twitter: "fab fa-x-twitter",
-          website: "fas fa-globe",
-          youtube: "fab fa-youtube",
-          pinterest: "fab fa-pinterest",
-        };
-
-        Object.entries(socials).forEach(([platform, url]) => {
-          if (url) {
-            linksHtml += `
-                        <a href="${url}" target="_blank" class="glass flex items-center p-4 rounded-2xl mb-3 hover:scale-[1.02] transition-transform">
-                            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 mr-4">
-                                <i class="${icons[platform] || "fas fa-link"} text-xl"></i>
-                            </div>
-                            <span class="font-bold capitalize">${platform}</span>
-                            <i class="fas fa-chevron-right ml-auto text-gray-500"></i>
-                        </a>`;
-          }
-        });
-
-        container.innerHTML = `
-                <div class="mb-8">
-                    <img src="${biz.image || "https://via.placeholder.com/150"}" class="w-24 h-24 rounded-full mx-auto border-4 border-blue-500/20 shadow-xl mb-4 object-cover">
-                    <h1 class="text-2xl font-black">${biz.name}</h1>
-                    <p class="text-gray-400 text-sm mt-1">Contactez-nous ci-dessous</p>
-                </div>
-                <div class="text-left">${linksHtml}</div>
-            `;
-      }
-
-      loadBusiness();
+      document.addEventListener("DOMContentLoaded", loadBusiness);
     </script>
   </body>
 </html>
