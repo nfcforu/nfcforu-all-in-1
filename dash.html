@@ -90,7 +90,7 @@
             onclick="loadData()"
             class="flex-1 md:flex-none bg-white border px-4 py-2 rounded-lg font-bold text-gray-600 hover:bg-gray-50"
           >
-            <i class="fas fa-sync"></i>
+            <i class="fas fa-sync"></i> Refresh
           </button>
           <button
             onclick="openModal('new')"
@@ -127,44 +127,150 @@
       id="editModal"
       class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40 overflow-y-auto py-10"
     >
-      <div class="bg-white rounded-2xl shadow-xl w-full max-w-xl m-4 p-8">
+      <div
+        class="bg-white rounded-2xl shadow-xl w-full max-w-2xl m-4 p-8 relative"
+      >
         <h2 id="modalTitle" class="text-2xl font-bold mb-6">
           Business Details
         </h2>
-        <div class="grid gap-4">
-          <input
-            type="text"
-            id="editId"
-            placeholder="Business ID (slug)"
-            class="p-3 border rounded-xl"
-          />
-          <input
-            type="text"
-            id="editName"
-            placeholder="Business Name"
-            class="p-3 border rounded-xl"
-          />
-          <input
-            type="text"
-            id="editImage"
-            placeholder="Image URL"
-            class="p-3 border rounded-xl"
-          />
-          <div class="flex justify-end gap-3 mt-4">
-            <button
-              onclick="closeEditModal()"
-              class="text-gray-500 font-bold px-4"
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="col-span-2">
+            <label class="block text-xs font-bold uppercase text-gray-400"
+              >ID (URL Slug)</label
             >
-              Cancel
-            </button>
-            <button
-              onclick="saveBusiness()"
-              id="saveBtn"
-              class="bg-indigo-600 text-white px-8 py-3 rounded-xl font-bold"
-            >
-              Save Business
-            </button>
+            <input
+              type="text"
+              id="editId"
+              class="w-full p-2 border rounded-lg"
+            />
           </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-gray-400"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="editName"
+              class="w-full p-2 border rounded-lg"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-gray-400"
+              >Phone</label
+            >
+            <input
+              type="text"
+              id="editPhone"
+              class="w-full p-2 border rounded-lg"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-gray-400"
+              >Email</label
+            >
+            <input
+              type="text"
+              id="editEmail"
+              class="w-full p-2 border rounded-lg"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-gray-400"
+              >Image URL</label
+            >
+            <input
+              type="text"
+              id="editImage"
+              class="w-full p-2 border rounded-lg"
+            />
+          </div>
+          <div class="col-span-2">
+            <label class="block text-xs font-bold uppercase text-gray-400"
+              >Gradient/Color</label
+            >
+            <input
+              type="text"
+              id="editGradient"
+              class="w-full p-2 border rounded-lg"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-gray-400"
+              >Address Text</label
+            >
+            <input
+              type="text"
+              id="editAddrText"
+              class="w-full p-2 border rounded-lg"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-gray-400"
+              >Maps URL</label
+            >
+            <input
+              type="text"
+              id="editAddrUrl"
+              class="w-full p-2 border rounded-lg"
+            />
+          </div>
+
+          <div class="col-span-2 border-t pt-4 mt-2">
+            <h3 class="font-bold mb-3 text-sm">Social Networks</h3>
+            <div class="grid grid-cols-2 gap-2">
+              <input
+                type="text"
+                id="socialFb"
+                placeholder="Facebook"
+                class="p-2 border rounded-lg text-sm"
+              />
+              <input
+                type="text"
+                id="socialInsta"
+                placeholder="Instagram"
+                class="p-2 border rounded-lg text-sm"
+              />
+              <input
+                type="text"
+                id="socialTiktok"
+                placeholder="TikTok"
+                class="p-2 border rounded-lg text-sm"
+              />
+              <input
+                type="text"
+                id="socialWhatsapp"
+                placeholder="WhatsApp"
+                class="p-2 border rounded-lg text-sm"
+              />
+              <input
+                type="text"
+                id="socialYoutube"
+                placeholder="YouTube"
+                class="p-2 border rounded-lg text-sm"
+              />
+              <input
+                type="text"
+                id="socialWeb"
+                placeholder="Website"
+                class="p-2 border rounded-lg text-sm"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-end gap-3 mt-8">
+          <button
+            onclick="closeEditModal()"
+            class="text-gray-500 font-bold px-4"
+          >
+            Cancel
+          </button>
+          <button
+            onclick="saveBusiness()"
+            id="saveBtn"
+            class="bg-indigo-600 text-white px-8 py-3 rounded-xl font-bold"
+          >
+            Save Business
+          </button>
         </div>
       </div>
     </div>
@@ -178,8 +284,6 @@
       let globalData = {};
       let credentials = { url: "", key: "" };
       let currentEditId = null;
-      const PLACEHOLDER =
-        'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="%23ddd"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="12" fill="%23888">No Image</text></svg>';
 
       window.onload = () => {
         const stored = localStorage.getItem("supabase_creds");
@@ -194,22 +298,18 @@
         const btn = document.getElementById("btnAuth");
         const errDiv = document.getElementById("loginError");
         errDiv.classList.add("hidden");
-
         credentials.url = document
           .getElementById("supabaseUrl")
           .value.trim()
           .replace(/\/$/, "");
         credentials.key = document.getElementById("supabaseKey").value.trim();
-
         if (!credentials.url || !credentials.key) {
           errDiv.textContent = "Please fill in all fields.";
           errDiv.classList.remove("hidden");
           return;
         }
-
         btn.disabled = true;
         btn.textContent = "Connecting...";
-
         try {
           const res = await fetch(
             `${credentials.url}/rest/v1/businesses?limit=1`,
@@ -220,10 +320,7 @@
               },
             },
           );
-
-          if (!res.ok)
-            throw new Error("Connection failed. Check your Key and URL.");
-
+          if (!res.ok) throw new Error("Check your Key and URL.");
           localStorage.setItem("supabase_creds", JSON.stringify(credentials));
           document.getElementById("loginModal").classList.add("hidden");
           document.getElementById("app").classList.remove("hidden");
@@ -268,7 +365,7 @@
           div.dataset.name = biz.name.toLowerCase();
           div.innerHTML = `
                     <div class="flex items-center gap-4 mb-4">
-                        <img src="${biz.image || PLACEHOLDER}" class="w-14 h-14 rounded-full object-cover bg-gray-100">
+                        <img src="${biz.image || "https://via.placeholder.com/150"}" class="w-14 h-14 rounded-full object-cover bg-gray-100">
                         <div>
                             <h3 class="font-bold text-gray-800">${biz.name}</h3>
                             <div class="flex gap-2 mt-1">
@@ -287,18 +384,33 @@
       }
 
       async function saveBusiness() {
-        const id = document.getElementById("editId").value.trim();
-        const name = document.getElementById("editName").value.trim();
-        const image = document.getElementById("editImage").value.trim();
-
-        if (!id || !name) return alert("ID and Name are required");
-
-        const isNew = !currentEditId;
+        const id = document.getElementById("editId").value.trim().toLowerCase();
         const btn = document.getElementById("saveBtn");
-        btn.disabled = true;
+        const isNew = !currentEditId;
 
+        const bizData = {
+          business_id: id,
+          name: document.getElementById("editName").value,
+          phone: document.getElementById("editPhone").value,
+          email: document.getElementById("editEmail").value,
+          image: document.getElementById("editImage").value,
+          gradient: document.getElementById("editGradient").value,
+          address: {
+            text: document.getElementById("editAddrText").value,
+            url: document.getElementById("editAddrUrl").value,
+          },
+          socials: {
+            facebook: document.getElementById("socialFb").value,
+            instagram: document.getElementById("socialInsta").value,
+            tiktok: document.getElementById("socialTiktok").value,
+            whatsapp: document.getElementById("socialWhatsapp").value,
+            youtube: document.getElementById("socialYoutube").value,
+            website: document.getElementById("socialWeb").value,
+          },
+        };
+
+        btn.disabled = true;
         try {
-          // Save/Update business
           await fetch(
             `${credentials.url}/rest/v1/businesses${isNew ? "" : "?business_id=eq." + id}`,
             {
@@ -308,12 +420,12 @@
                 apikey: credentials.key,
                 Authorization: `Bearer ${credentials.key}`,
               },
-              body: JSON.stringify({ business_id: id, name, image }),
+              body: JSON.stringify(bizData),
             },
           );
 
           if (isNew) {
-            const rawCode = Math.random().toString(36).slice(-8); // Random 8 char code
+            const rawCode = Math.random().toString(36).slice(-8).toUpperCase();
             const hash = await hashString(rawCode);
             await fetch(`${credentials.url}/rest/v1/business_access`, {
               method: "POST",
@@ -328,7 +440,7 @@
                 access_code_raw: rawCode,
               }),
             });
-            alert("Business Created! Access Code: " + rawCode);
+            alert("Business Created!\nCode: " + rawCode);
           }
           loadData();
           closeEditModal();
@@ -349,17 +461,34 @@
       function openModal(mode, id = null) {
         currentEditId = id;
         document.getElementById("editModal").classList.remove("hidden");
+        const idInput = document.getElementById("editId");
         if (id) {
           const b = globalData[id];
-          document.getElementById("editId").value = b.business_id;
-          document.getElementById("editId").disabled = true;
-          document.getElementById("editName").value = b.name;
+          idInput.value = b.business_id;
+          idInput.disabled = true;
+          document.getElementById("editName").value = b.name || "";
+          document.getElementById("editPhone").value = b.phone || "";
+          document.getElementById("editEmail").value = b.email || "";
           document.getElementById("editImage").value = b.image || "";
+          document.getElementById("editGradient").value = b.gradient || "";
+          document.getElementById("editAddrText").value = b.address?.text || "";
+          document.getElementById("editAddrUrl").value = b.address?.url || "";
+          document.getElementById("socialFb").value = b.socials?.facebook || "";
+          document.getElementById("socialInsta").value =
+            b.socials?.instagram || "";
+          document.getElementById("socialTiktok").value =
+            b.socials?.tiktok || "";
+          document.getElementById("socialWhatsapp").value =
+            b.socials?.whatsapp || "";
+          document.getElementById("socialYoutube").value =
+            b.socials?.youtube || "";
+          document.getElementById("socialWeb").value = b.socials?.website || "";
         } else {
-          document.getElementById("editId").value = "";
-          document.getElementById("editId").disabled = false;
-          document.getElementById("editName").value = "";
-          document.getElementById("editImage").value = "";
+          idInput.value = "";
+          idInput.disabled = false;
+          document
+            .querySelectorAll("#editModal input")
+            .forEach((i) => (i.value = ""));
         }
       }
 
@@ -367,14 +496,12 @@
         document.getElementById("editModal").classList.add("hidden");
       }
       window.editBusiness = (id) => openModal("edit", id);
-
       function showToast(m) {
         const t = document.getElementById("toast");
         t.textContent = m;
         t.classList.remove("hidden");
         setTimeout(() => t.classList.add("hidden"), 3000);
       }
-
       function logout() {
         localStorage.removeItem("supabase_creds");
         location.reload();
