@@ -2555,5 +2555,19 @@
       "tiktok": "https://www.tiktok.com/@_elly_25_5?_r=1&_t=ZS-93McHby8yjV",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213790133739"
     }
+  },
+  "Notairerouibamouhamedbentalha": {
+    "name": "الأستاذ محمد بن طلحةموثق رويبة",
+    "image": "0542467588",
+    "phone": "0542467588",
+    "gradient": "",
+    "address": {
+      "text": "Rouiba Alger ",
+      "url": "https://maps.app.goo.gl/ZHBQtriAk1LZnZv17"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1C7TiF3YzG/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213542467588"
+    }
   }
 }
