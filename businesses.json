@@ -2586,5 +2586,20 @@
       "instagram": "https://www.instagram.com/gasmi_promotoin?igsh=dXJjMm5sam16YWFq",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213660376446"
     }
+  },
+  "Infinityboutique": {
+    "name": "Infinity boutique ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-01-28%20at%2009.43.26.jpeg",
+    "phone": "0540562560",
+    "gradient": "",
+    "address": {
+      "text": "Bab El oued ",
+      "url": "https://maps.app.goo.gl/ZFK1Usexyy9VQ8wu9?g_st=ipc"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1BrjaPfh55/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/infinity_boutique_beo?igsh=b3g1YnN2eW90aGo2&utm_source=qr",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213552010990"
+    }
   }
 }
