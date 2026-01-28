@@ -2570,5 +2570,21 @@
       "facebook": "https://www.facebook.com/share/1C7TiF3YzG/",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213542467588"
     }
+  },
+  "Gasmi-promotion-immobiliere": {
+    "name": "Gasmi promotion immobiliere",
+    "image": "",
+    "phone": "0770727177",
+    "email": "Gasmi.promotion19@gmail.com",
+    "gradient": "radial-gradient(circle,rgba(250, 245, 247, 1) 0%, rgba(47, 47, 51, 1) 100%)",
+    "address": {
+      "text": "Guidjel",
+      "url": "https://maps.app.goo.gl/Mkun1sVoFhu73YxA9"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61578308979216&rdid=wHCcdHDBshct9Ezo&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AScpArces%2F#",
+      "instagram": "https://www.instagram.com/gasmi_promotoin?igsh=dXJjMm5sam16YWFq",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213660376446"
+    }
   }
 }
