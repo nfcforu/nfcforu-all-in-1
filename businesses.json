@@ -2654,5 +2654,21 @@
       "website": "https://share.google/7UeSHjEcc0IZKM2nc",
       "snapchat": "https://www.snapchat.com/add/ai.academy?share_id=TGJOvPbLwWY&locale=fr-DZ"
     }
+  },
+  "Restauranthalahalab": {
+    "name": "Restaurant Hala halab",
+    "image": "",
+    "phone": "0795315149",
+    "gradient": "#ffffff",
+    "address": {
+      "text": "برج بوعريريج حي 500 مسكن بجنب مركز الضرائب",
+      "url": "https://maps.app.goo.gl/9oB2Fvs4ep3pDxPE9?"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1N54yecyVN/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/rest_hala_halab?igsh=MXAwejY3aHI1ZHQ3ZA==",
+      "tiktok": "https://www.tiktok.com/@moutazbellahdakkak?_r=1&_t=ZS-93uc90xALPG",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213795315149"
+    }
   }
 }
