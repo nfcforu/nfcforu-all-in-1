@@ -2670,5 +2670,21 @@
       "tiktok": "https://www.tiktok.com/@moutazbellahdakkak?_r=1&_t=ZS-93uc90xALPG",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213795315149"
     }
+  },
+  "Brmobile": {
+    "name": "BR Mobile ",
+    "image": "",
+    "phone": "‪+213 668 11 66 64‬",
+    "gradient": "#d38301",
+    "address": {
+      "text": "Adrar centre ville ",
+      "url": "https://maps.app.goo.gl/X1h6ozodC3jn9Uvv5?g_st=ic"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1AgEZf47g8/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/br_._mobile?igsh=aXdsZTFmNHdiM2Vu",
+      "tiktok": "https://www.tiktok.com/@br_._mobile?_r=1&_t=ZS-93wIyAjxZFX",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213668116664"
+    }
   }
 }
