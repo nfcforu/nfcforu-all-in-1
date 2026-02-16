@@ -2686,5 +2686,21 @@
       "tiktok": "https://www.tiktok.com/@br_._mobile?_r=1&_t=ZS-93wIyAjxZFX",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213668116664"
     }
+  },
+  "Bejouterielepetitprince": {
+    "name": "مجوهرات الأمير الصغير ",
+    "image": "",
+    "phone": "0563527412",
+    "gradient": "#adadad",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1BcR9YXR5F/",
+      "instagram": "https://www.instagram.com/petit.prince_bijoux?igsh=MW5kaDFuZDN2MGx4YQ==",
+      "tiktok": "https://www.tiktok.com/@petit_prince.bijoux?_r=1&_t=ZS-93xEamHLOke",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213563527412"
+    }
   }
 }
