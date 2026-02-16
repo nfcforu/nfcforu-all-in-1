@@ -2702,5 +2702,21 @@
       "tiktok": "https://www.tiktok.com/@petit_prince.bijoux?_r=1&_t=ZS-93xEamHLOke",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213563527412"
     }
+  },
+  "Celinamod": {
+    "name": "Celina mod",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-02-16%20at%2010.07.42.jpeg",
+    "phone": "+213 5 50169799",
+    "gradient": "",
+    "address": {
+      "text": "Boudouaou Alger ",
+      "url": "https://maps.google.com/?q=36.725792,3.412574"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1G95CUPWhK/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/celina.mod35?igsh=MXg4YjJ1Ym0zZ25yZg==",
+      "tiktok": "https://www.tiktok.com/@celina.mod.boudouaou?_r=1&_t=ZS-93xzELv5B4a",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213550169799"
+    }
   }
 }
