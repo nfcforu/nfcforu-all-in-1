@@ -2732,5 +2732,20 @@
       "facebook": "https://www.facebook.com/share/1a2S8FrK6h/",
       "instagram": "https://www.instagram.com/cosmetiquesdadiel?igsh=MWxiMmkzeXI0cGptYg=="
     }
+  },
+  "Lamssabywissam": {
+    "name": "Lamssa by Wissam ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-02-16%20at%2010.57.44.jpeg",
+    "phone": "0666057212",
+    "gradient": "",
+    "address": {
+      "text": "Batna باركا فوراج ",
+      "url": ""
+    },
+    "socials": {
+      "instagram": "https://www.instagram.com/lamssa.by_wissam?igsh=MXhhbzhqd3BndjA2cw==",
+      "tiktok": "https://www.tiktok.com/@lamssa_by_wissam?_r=1&_t=ZS-93xtC6wCeYu",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213666057212"
+    }
   }
 }
