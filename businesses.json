@@ -2747,5 +2747,22 @@
       "tiktok": "https://www.tiktok.com/@lamssa_by_wissam?_r=1&_t=ZS-93xtC6wCeYu",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213666057212"
     }
+  },
+  "Telecommunicationbureutiqueservices": {
+    "name": "Télécommunications bureautique services ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-02-16%20at%2022.07.39.jpeg",
+    "phone": "0555784334",
+    "gradient": "",
+    "address": {
+      "text": "CEM 11 Décembre, Fouka",
+      "url": "https://maps.app.goo.gl/7ZMVnAhNsJeVx5Cf7?g_st=ic"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/19yHnxp9gk/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/tbsshopfouka?igsh=MXVhNjg4dGp4YnQyMA==",
+      "tiktok": "https://www.tiktok.com/@tbsshop.1?_r=1&_t=ZS-93ypNXCPrD3",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213555784334",
+      "website": "https://www.ouedkniss.com/my/u/announcements/new"
+    }
   }
 }
