@@ -2795,5 +2795,21 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213794027426",
       "telegram": "https://t.me/+213794027426"
     }
+  },
+  "Babylisspro": {
+    "name": "BaByliss pro ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-02-17%20at%2012.24.26.jpeg",
+    "phone": "0541776657",
+    "gradient": "",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1aXo59b11H/?mibextid=wwXIfr",
+      "instagram": "Insta : https://www.instagram.com/babylizz_pro19?igsh=MTF6ZmpnN2s0dmhy&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@babyliss.store.setif?_r=1&_t=ZS-93zqj4K5pQW",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213541776657"
+    }
   }
 }
