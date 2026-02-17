@@ -2811,5 +2811,20 @@
       "tiktok": "https://www.tiktok.com/@babyliss.store.setif?_r=1&_t=ZS-93zqj4K5pQW",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213541776657"
     }
+  },
+  "Salonmadambenhamza": {
+    "name": "Salon madame ben hamza ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-02-17%20at%2016.07.15.jpeg",
+    "phone": "0673623057",
+    "gradient": "#5c5c5c",
+    "address": {
+      "text": "لمغير",
+      "url": "https://maps.app.goo.gl/k4rCrCrb4T1bTMLg9?g_st=iw"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/17FbD5wb7b/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/salon_ben_hmza?igsh=cGUyY2dicjNwNmUw",
+      "tiktok": "https://www.tiktok.com/@salon_madam_ben_hamza?_r=1&_t=ZS-940HHUlwVlI"
+    }
   }
 }
