@@ -2764,5 +2764,21 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213555784334",
       "website": "https://www.ouedkniss.com/my/u/announcements/new"
     }
+  },
+  "Kehilissilver": {
+    "name": "KEHILI’S SILVER ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-02-17%20at%2010.03.07.jpeg",
+    "phone": "+213 562 13 69 93",
+    "gradient": "",
+    "address": {
+      "text": "18000, Jijel 18001",
+      "url": "https://maps.app.goo.gl/kt9QehuyHVK7Tc1aA?g_st=iw"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/18E7jEf7NW/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/kehilis_bijoux_silver?igsh=bWF1Z3g5dG00a3Vj",
+      "tiktok": "https://www.tiktok.com/@kehilis.bijoux.silver?_r=1&_t=ZS-93zeryUCLAK",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213562136993"
+    }
   }
 }
