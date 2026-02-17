@@ -2779,5 +2779,21 @@
       "tiktok": "https://www.tiktok.com/@kehilis.bijoux.silver?_r=1&_t=ZS-93zeryUCLAK",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213562136993"
     }
+  },
+  "Boutiquegherib": {
+    "name": "Boutique gherib ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/ChatGPT%20Image%20Feb%2017,%202026,%2012_06_15%20PM.png",
+    "phone": "0794027426",
+    "gradient": "#5c5c5c",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/r/1Av6ezAPEb/",
+      "instagram": "https://www.instagram.com/stories/boutiquegherib/3834424963470235500?utm_source=ig_story_item_share&igsh=djF4eHB2dDlzcTJ1",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213794027426",
+      "telegram": "https://t.me/+213794027426"
+    }
   }
 }
