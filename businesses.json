@@ -2826,5 +2826,21 @@
       "instagram": "https://www.instagram.com/salon_ben_hmza?igsh=cGUyY2dicjNwNmUw",
       "tiktok": "https://www.tiktok.com/@salon_madam_ben_hamza?_r=1&_t=ZS-940HHUlwVlI"
     }
+  },
+  "Telecommunicationbureautiqueservices": {
+    "name": "Télécommunications bureautique services ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-02-17%20at%2018.47.40.jpeg",
+    "phone": "0555784334",
+    "gradient": "#ffab01",
+    "address": {
+      "text": "CEM 11 Décembre, Fouka",
+      "url": "https://maps.app.goo.gl/7ZMVnAhNsJeVx5Cf7?g_st=ic"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1EDrPgVJgh/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/tbs_tech.store?igsh=Mm81MWlwdHBybmFl",
+      "tiktok": "https://www.tiktok.com/@tbs_tech.store?_r=1&_t=ZS-940GoaU57gH",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213555784334"
+    }
   }
 }
