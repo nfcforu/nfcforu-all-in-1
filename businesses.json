@@ -2843,5 +2843,20 @@
       "tiktok": "https://www.tiktok.com/@tbs_tech.store?_r=1&_t=ZS-940GoaU57gH",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213555784334"
     }
+  },
+  "Walassphone": {
+    "name": "WALASS PHONE ",
+    "image": "",
+    "phone": "07 84119770",
+    "gradient": "",
+    "address": {
+      "text": "Biskra",
+      "url": "https://maps.app.goo.gl/QJKPsXAA4ZoBnwfs9?g_st=ic"
+    },
+    "socials": {
+      "instagram": "https://www.instagram.com/walass_phone?igsh=MXJiODdpNmZ3cXh6OA%3D%3D&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@walass_phone.07?_r=1&_t=ZS-940KDzX69lF",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213784119770"
+    }
   }
 }
