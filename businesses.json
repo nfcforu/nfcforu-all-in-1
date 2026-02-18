@@ -2846,9 +2846,9 @@
   },
   "Walassphone": {
     "name": "WALASS PHONE ",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-02-17%20at%2019.20.03.jpeg",
     "phone": "07 84119770",
-    "gradient": "",
+    "gradient": "#f5ec00",
     "address": {
       "text": "Biskra",
       "url": "https://maps.app.goo.gl/QJKPsXAA4ZoBnwfs9?g_st=ic"
