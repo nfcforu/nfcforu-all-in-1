@@ -2906,5 +2906,21 @@
       "tiktok": "https://www.tiktok.com/@hamadaaccessoire23?_r=1&_t=ZS-941QOW3odWK",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213774232533"
     }
+  },
+  "Zinelle": {
+    "name": "Zinelle",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-02-18%20at%2013.00.17.jpeg",
+    "phone": "06 70282301",
+    "gradient": "",
+    "address": {
+      "text": "16084, Chéraga 16084",
+      "url": "https://maps.app.goo.gl/JwZHNn6qR8FCAjtq6?g_st=ic"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1ZbshGNKCh/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/maison.zinelle?igsh=MTFjbThqank4dndvZg==",
+      "tiktok": "https://www.tiktok.com/@maison.zinelle?_r=1&_t=ZS-941Svmmf400",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213670282301"
+    }
   }
 }
