@@ -2922,5 +2922,21 @@
       "tiktok": "https://www.tiktok.com/@maison.zinelle?_r=1&_t=ZS-941Svmmf400",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213670282301"
     }
+  },
+  "Lamarquise": {
+    "name": "La marquise 19",
+    "image": "",
+    "phone": "0563255224",
+    "gradient": "#791a3d",
+    "address": {
+      "text": "Centre commercial RAIS ",
+      "url": "https://maps.google.com/?q=36.204926,5.429581"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/16wFBCbXU4/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/lamarquise_19?igsh=MTgwbmc4YmR0dXVxYw==",
+      "tiktok": "https://www.tiktok.com/@la_marquise19?_r=1&_t=ZS-941eADIwwvk",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213563255224"
+    }
   }
 }
