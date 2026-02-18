@@ -2890,5 +2890,21 @@
       "tiktok": "https://www.tiktok.com/@toufikrebatchialu?_r=1&_t=ZS-941Q0IRn9X6",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213552520920"
     }
+  },
+  "Hamadaphoneaccessoires": {
+    "name": "Hamada phone accessoires ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-02-18%20at%2010.11.00.jpeg",
+    "phone": "0774232533",
+    "gradient": "#fecb3e",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/189ivgxY31/",
+      "instagram": "https://www.instagram.com/hamadaaccessoires23?igsh=MTQzejBrbGttOHBxZw==",
+      "tiktok": "https://www.tiktok.com/@hamadaaccessoire23?_r=1&_t=ZS-941QOW3odWK",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213774232533"
+    }
   }
 }
