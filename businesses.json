@@ -2858,5 +2858,21 @@
       "tiktok": "https://www.tiktok.com/@walass_phone.07?_r=1&_t=ZS-940KDzX69lF",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213784119770"
     }
+  },
+  "nkkunafa": {
+    "name": "NK Khnafa",
+    "image": "",
+    "phone": "0563000655",
+    "gradient": "",
+    "address": {
+      "text": "3 Aissat Idir, Chéraga",
+      "url": "https://maps.app.goo.gl/bVSXJRTmMmtfUHCj8?g_st=iw"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1C2f1goKB8/",
+      "instagram": "https://www.instagram.com/nkkunafa?igsh=MTE3dDRraXF4NnBsaQ==",
+      "tiktok": "https://www.tiktok.com/@nkkunafanuts?_r=1&_t=ZS-941Ij0TnJY5",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213563000655"
+    }
   }
 }
