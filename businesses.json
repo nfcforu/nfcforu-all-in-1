@@ -2938,5 +2938,21 @@
       "tiktok": "https://www.tiktok.com/@la_marquise19?_r=1&_t=ZS-941eADIwwvk",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213563255224"
     }
+  },
+  "Averocenepharm": {
+    "name": "Averocene pharm ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-03-01%20at%2014.44.39.jpeg",
+    "phone": "0554570129",
+    "gradient": "",
+    "address": {
+      "text": "Guelma",
+      "url": "https://maps.google.com/?q=36.464214,7.415890"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1C9XFiVhJG/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/averocene_pharm?igsh=MWN2emp6NnRqOWg4cQ%3D%3D&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@averocene_pharm?_r=1&_t=ZS-94KOLHsHQZw",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213554570129"
+    }
   }
 }
