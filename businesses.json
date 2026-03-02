@@ -2954,5 +2954,21 @@
       "tiktok": "https://www.tiktok.com/@averocene_pharm?_r=1&_t=ZS-94KOLHsHQZw",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213554570129"
     }
+  },
+  "Boutiquejumo": {
+    "name": "Boutique jumo ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/ChatGPT%20Image%202%20mars%202026,%2009_12_46.png",
+    "phone": "0776682276",
+    "gradient": "",
+    "address": {
+      "text": "Sétif roud Silag ",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1AkLiD6km2/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/boutique.jumo?igsh=M2dxdGp0YTRraHMy",
+      "tiktok": "https://www.tiktok.com/@boutiquejumo?_r=1&_t=ZS-94KwdFRbSse",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213776682276"
+    }
   }
 }
