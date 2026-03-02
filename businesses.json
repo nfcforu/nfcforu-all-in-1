@@ -772,16 +772,16 @@
   "BOUTIQUE-RICCHEZZA": {
     "name": "BOUTIQUE RICCHEZZA",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/566965733_17845293588591544_6999019790555691166_n.jpg",
-    "address": {
-      "url": "https://maps.app.goo.gl/TXECKkpJgs7TzibX6",
-      "text": "en face la grande poste, Setif"
-    },
     "phone": "0777706017",
     "gradient": "linear-gradient(187deg,rgba(251, 126, 168, 1) 0%, rgba(102, 100, 100, 1) 100%)",
+    "address": {
+      "text": "en face la grande poste, Setif",
+      "url": "https://maps.app.goo.gl/TXECKkpJgs7TzibX6"
+    },
     "socials": {
+      "facebook": "https://www.facebook.com/people/Boutique-Ricchezza/61581885119661/?rdid=pifNNXFcnB9CFvAY&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16cBo3gY8W%2F",
       "instagram": "https://www.instagram.com/boutique_ricchezza?",
-      "tiktok": "https://www.tiktok.com/@boutique.ricchezz?",
-      "facebook": "https://www.facebook.com/people/Boutique-Ricchezza/61581885119661/?rdid=pifNNXFcnB9CFvAY&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16cBo3gY8W%2F"
+      "tiktok": "https://www.tiktok.com/@redha2288?_r=1&_t=ZN-94LzcvLDcqU"
     }
   },
   "Pharmacie-Bouzana": {
