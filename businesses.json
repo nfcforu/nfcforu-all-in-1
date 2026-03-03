@@ -2987,5 +2987,21 @@
       "tiktok": "https://www.tiktok.com/@boutique.ghazali?_r=1&_t=ZS-94MpD8on4JF",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213542014504"
     }
+  },
+  "Cosacosmetique": {
+    "name": "Cosa cosmétique ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-03-03%20at%2010.59.11.jpeg",
+    "phone": "0557888961",
+    "gradient": "#f9d3e0",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1AxN4pGgPU/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/cosa_cosmetique?igsh=MWFqa3ljcHBuZHF6YQ==",
+      "tiktok": "https://www.tiktok.com/@cosa.1998?_r=1&_t=ZN-94NVz7ILdbi",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213557888961"
+    }
   }
 }
