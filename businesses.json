@@ -2970,5 +2970,21 @@
       "tiktok": "https://www.tiktok.com/@boutiquejumo?_r=1&_t=ZS-94KwdFRbSse",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213776682276"
     }
+  },
+  "Ghazaliboutique": {
+    "name": "Ghazali boutique ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-03-03%20at%2000.54.32.jpeg",
+    "phone": "0542014504",
+    "gradient": "#d9ec37",
+    "address": {
+      "text": "PW8V+F9G, Ouled Fayet",
+      "url": "https://maps.app.goo.gl/FDPjD8M3poDm2dWF9"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1AykmNyv2G/",
+      "instagram": "https://www.instagram.com/boutiqueghazali?igsh=aTdhemM0ejkxZW90",
+      "tiktok": "https://www.tiktok.com/@boutique.ghazali?_r=1&_t=ZS-94MpD8on4JF",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213542014504"
+    }
   }
 }
