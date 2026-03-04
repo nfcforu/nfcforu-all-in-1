@@ -3050,5 +3050,21 @@
       "tiktok": "https://www.tiktok.com/@lyoucef3?_r=1&_t=ZS-94PGiXJOtvR",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770774349"
     }
+  },
+  "Izzabeaute": {
+    "name": "Izza beauté ",
+    "image": "",
+    "phone": "0560510689",
+    "gradient": "#000000",
+    "address": {
+      "text": "Alger bordj el kiffan",
+      "url": "https://maps.app.goo.gl/BapDe7sENg5JsrU96?g_st=ic"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1C9h6vME6a/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/izza.beaute?igsh=N2xvZGl4djY1Mnd0",
+      "tiktok": "https://www.tiktok.com/@izza.rahali?_r=1&_t=ZS-94PIuR8cAOi",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213560510689"
+    }
   }
 }
