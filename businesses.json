@@ -3081,5 +3081,21 @@
       "facebook": "https://www.facebook.com/share/18cXR369UW/?mibextid=wwXIfr",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213553441577"
     }
+  },
+  "Intenselyparfum": {
+    "name": "Intensely parfum Paris ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/ChatGPT%20Image%204%20mars%202026,%2012_58_55%20(1).png",
+    "phone": "0554089119",
+    "gradient": "#a7c6ff",
+    "address": {
+      "text": "Alger Bordj el Bahri ",
+      "url": "https://maps.app.goo.gl/fYyZWwgfArtgrXwp8?g_st=iw"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1CGQi1oBiD/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/intensely_parfum_paris?igsh=MTUxbXYybHMzdm80Yg%3D%3D&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@abderazekattalah?_r=1&_t=ZS-94PNDVf6xam",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213554089119"
+    }
   }
 }
