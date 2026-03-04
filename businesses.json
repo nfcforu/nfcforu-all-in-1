@@ -3034,5 +3034,21 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213795382629",
       "viber": "0795382629"
     }
+  },
+  "Elegance": {
+    "name": "Elegance’s",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-03-04%20at%2011.27.33.jpeg",
+    "phone": "0770774349",
+    "gradient": "#000000",
+    "address": {
+      "text": "Gydel Oran ",
+      "url": "https://goo.gl/maps/CP1WXXpxmfNyfwKL6?g_st=aw"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1CLzhoiUae/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/youcefsmail333?utm_source=qr&igsh=MWx1djVqNWxnejNseQ==",
+      "tiktok": "https://www.tiktok.com/@lyoucef3?_r=1&_t=ZS-94PGiXJOtvR",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770774349"
+    }
   }
 }
