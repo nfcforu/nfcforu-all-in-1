@@ -3017,5 +3017,22 @@
       "tiktok": "www.tiktok.com/@luxury_corner4",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213555383235"
     }
+  },
+  "Tenuesdestars": {
+    "name": "أزياء المشاهير ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/ChatGPT%20Image%20Mar%204,%202026,%2011_27_25%20AM.png",
+    "phone": "0795382629",
+    "gradient": "",
+    "address": {
+      "text": "Alger douira",
+      "url": "https://maps.google.com/?q=36.668896,2.954736"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61583804227439",
+      "instagram": "https://www.instagram.com/abdo_moha_mosta?igsh=MWdncGZjd2h2bXZ2cA==",
+      "tiktok": "tiktok.com/@tenues.de.stars",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213795382629",
+      "viber": "0795382629"
+    }
   }
 }
