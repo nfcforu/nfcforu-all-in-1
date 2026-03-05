@@ -3113,21 +3113,5 @@
       "tiktok": "https://www.tiktok.com/@yasminegateaux?_r=1&_t=ZS-94PP6hKM0r2",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213655610697"
     }
-  },
-  "Centrepieddiabitique": {
-    "name": "Centre pied diabétique ",
-    "image": "",
-    "phone": "0770391336",
-    "gradient": "#74a7ff",
-    "address": {
-      "text": "Alger bouzereaa",
-      "url": "https://maps.apple.com/place?coordinate=36.785750,3.012740&name=05%20route%20neuve,%20ex%20carnot,%20Bouzar%C3%A9ah%20Algiers,%20Algeria&map=explore"
-    },
-    "socials": {
-      "facebook": "https://www.facebook.com/share/1CSZDsmFBi/?mibextid=wwXIfr",
-      "instagram": "https://www.instagram.com/centre_pied_diabetique?igsh=MTZtNzV6NDNyM254dA==",
-      "tiktok": "https://www.tiktok.com/@centre_pied_diabetique_?_r=1&_t=ZS-94PVwR0vkV2",
-      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770391336"
-    }
   }
 }
