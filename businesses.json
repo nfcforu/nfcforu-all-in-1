@@ -3164,5 +3164,23 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213550552199",
       "telegram": "https://t.me/OFMbeaute"
     }
+  },
+  "Bachotalibrary": {
+    "name": "البشير للخدمات العامة ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/file_00000000f01871fd8ac33b97a0b0dd7d.png",
+    "phone": "07 95162925",
+    "email": "bachir715@gmail.com",
+    "gradient": "#982abc",
+    "address": {
+      "text": "El oued ",
+      "url": "https://maps.google.com/?ftid=0x0:0x331230f7b969ecfc&entry=gps&shh=CAE&lucs=,94297699,94231188,94280568,47071704,94218641,94282134,94286869&g_st=ic"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1B2XKFmC1r/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/bachir_bouguettaya?igsh=Y2Q3dXp6bm1sNHRn&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@banb243?_r=1&_t=ZS-94RgwwTkK0N",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213795162925",
+      "telegram": "https://t.me/BBachir39"
+    }
   }
 }
