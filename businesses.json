@@ -3147,5 +3147,22 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213540446977",
       "viber": "0540446977"
     }
+  },
+  "Ofmbeaute": {
+    "name": "OFM Beauté ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260305-WA0028.jpg",
+    "phone": "0550552199",
+    "gradient": "#000000",
+    "address": {
+      "text": "Alger Bab Ezzouar",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/17sQrQRFpx/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/ofmbeaute?igsh=Y3U2ZjJxMTBhbW55&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@ofmbeaute?_r=1&_t=ZS-94RYeAVGfY5",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213550552199",
+      "telegram": "https://t.me/OFMbeaute"
+    }
   }
 }
