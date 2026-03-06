@@ -3245,5 +3245,21 @@
       "tiktok": "https://www.tiktok.com/@newlook.medea?_r=1&_t=ZS-94Spl9cfbka",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213541728825"
     }
+  },
+  "Aliphonemascara": {
+    "name": "Ali phone mascara",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260306-WA0010.jpg",
+    "phone": "0660461012",
+    "gradient": "#ff4015",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1B6KWfw7Tt/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/ali_phone.mascara?igsh=MTk2YmZhamh0MTd3Mw==",
+      "tiktok": "https://www.tiktok.com/@ali.phone.mascara29?_r=1&_t=ZS-94SqVPr2qkz",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213660461012"
+    }
   }
 }
