@@ -3182,5 +3182,21 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213795162925",
       "telegram": "https://t.me/BBachir39"
     }
+  },
+  "Perfectosmile": {
+    "name": "Perfecto smile ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260306-WA0000.jpg",
+    "phone": "0550252326",
+    "gradient": "#e292fe",
+    "address": {
+      "text": "Cheraga Alger ",
+      "url": "https://maps.app.goo.gl/MgieVwLs2a8DK4LJ9"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/18DZ6fQniF",
+      "instagram": "https://www.instagram.com/perfectsmileclinic16?igsh=ZW16YmhpMXd1cG5m",
+      "tiktok": "https://www.tiktok.com/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213550252326"
+    }
   }
 }
