@@ -3276,5 +3276,21 @@
       "tiktok": "https://www.tiktok.com/@ali.phone.mascara2?_r=1&_t=ZS-94SxOfxxB2r",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213660461012"
     }
+  },
+  "ghshoes": {
+    "name": "G.H shoes ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260306-WA0019.jpg",
+    "phone": "0799 67 10 05",
+    "gradient": "#be38f3",
+    "address": {
+      "text": "Alger Birtouta",
+      "url": "https://maps.app.goo.gl/ociE7Tm9TbEJyERW8?g_st=aw"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/14WKEKd4co5/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/g.hshoes?igsh=MWhscDZrdHZzbXg2Mw==",
+      "tiktok": "https://www.tiktok.com/@gh_shoes?_r=1&_t=ZS-94TNd6FSkBV",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213799671005"
+    }
   }
 }
