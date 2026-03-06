@@ -3263,13 +3263,13 @@
     }
   },
   "Aliphoneplus": {
-    "name": "ALI PHONE PLUS ",
-    "image": "",
+    "name": "ALI PHONE 2",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260306-WA0014.jpg",
     "phone": "0660461012",
     "gradient": "#3a87fe",
     "address": {
       "text": "Mascara",
-      "url": ""
+      "url": "https://maps.app.goo.gl/iWXwNTaDTFF4eq6n9?g_st=aw"
     },
     "socials": {
       "facebook": "https://www.facebook.com/share/17bJpQsK5f/?mibextid=wwXIfr",
