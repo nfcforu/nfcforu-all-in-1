@@ -3261,5 +3261,20 @@
       "tiktok": "https://www.tiktok.com/@ali.phone.mascara29?_r=1&_t=ZS-94SqVPr2qkz",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213660461012"
     }
+  },
+  "Aliphoneplus": {
+    "name": "ALI PHONE PLUS ",
+    "image": "",
+    "phone": "0660461012",
+    "gradient": "#3a87fe",
+    "address": {
+      "text": "Mascara",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/17bJpQsK5f/?mibextid=wwXIfr",
+      "tiktok": "https://www.tiktok.com/@ali.phone.29?_r=1&_t=ZS-94SsgPXvRzt",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213660461012"
+    }
   }
 }
