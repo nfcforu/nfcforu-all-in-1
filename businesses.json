@@ -3229,5 +3229,21 @@
       "instagram": "https://www.instagram.com/dr_tamali_soundous?igsh=MTZ0djMyd3I0cnB6NQ==",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213699871921"
     }
+  },
+  "Newlook": {
+    "name": "New look ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260306-WA0011.jpg",
+    "phone": "+213 541 72 88 25",
+    "gradient": "#707070",
+    "address": {
+      "text": "Médéa",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/newlookmedea/",
+      "instagram": "https://www.instagram.com/newlook_real",
+      "tiktok": "https://www.tiktok.com/@newlook.medea?_r=1&_t=ZS-94Spl9cfbka",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213541728825"
+    }
   }
 }
