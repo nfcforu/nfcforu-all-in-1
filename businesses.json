@@ -3214,5 +3214,20 @@
       "tiktok": "https://www.tiktok.com/@hichemcherifi19?_r=1&_t=ZS-94SliLsIvAL",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213796670728"
     }
+  },
+  "Crystalsmile": {
+    "name": "عيادة طب الأسنان الدكتورة طمالي سندس",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260306-WA0007.jpg",
+    "phone": "0541926036",
+    "gradient": "#858585",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1K9gm1TEfR/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/dr_tamali_soundous?igsh=MTZ0djMyd3I0cnB6NQ==",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213699871921"
+    }
   }
 }
