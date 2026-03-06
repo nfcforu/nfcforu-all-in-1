@@ -3198,5 +3198,21 @@
       "tiktok": "https://www.tiktok.com/",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213550252326"
     }
+  },
+  "Surfacehomme": {
+    "name": "Surface homme ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260306-WA0006.jpg",
+    "phone": "07 96670728",
+    "gradient": "#707070",
+    "address": {
+      "text": "Café chergui Alger, Bordj El Kiffan",
+      "url": "https://maps.app.goo.gl/5Dy8xnoSNfbyGkne9?g_st=iw"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1By8hYiziV/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/surface_homme?igsh=c3Rmdmg0eTR6MG5k&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@hichemcherifi19?_r=1&_t=ZS-94SliLsIvAL",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213796670728"
+    }
   }
 }
