@@ -3338,5 +3338,20 @@
       "instagram": "https://www.instagram.com/metasec.dz/",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213773839131"
     }
+  },
+  "Relineluxury": {
+    "name": "رلين للأناقة الخليجية",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260308-WA0025.jpg",
+    "phone": "‪+213 555 89 43 33‬",
+    "gradient": "",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "instagram": "https://www.instagram.com/reline_luxury?igsh=cG02bHBmdmJ4bjV6&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@reline_luxury_dxb?_r=1&_t=ZS-94WQUTOqSag",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213555894333"
+    }
   }
 }
