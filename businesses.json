@@ -3310,10 +3310,9 @@
   },
   "Whstore": {
     "name": "WH STORE ",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260308-WA0000.jpg",
     "phone": "0673839131",
     "gradient": "",
-    "menu": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260308-WA0000.jpg",
     "address": {
       "text": "Batna ",
       "url": ""
