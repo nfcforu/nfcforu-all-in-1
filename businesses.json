@@ -3343,7 +3343,7 @@
     "name": "رلين للأناقة الخليجية",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260308-WA0025.jpg",
     "phone": "‪+213 555 89 43 33‬",
-    "gradient": "",
+    "gradient": "#000000",
     "address": {
       "text": "Bou ismail tipaza",
       "url": ""
