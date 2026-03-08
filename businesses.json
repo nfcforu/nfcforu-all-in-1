@@ -3323,5 +3323,20 @@
       "tiktok": "https://www.tiktok.com/@wh.store05?_r=1&_d=f14j1m11i6889m&sec_uid=MS4wLjABAAAAjTuqyRKv3z1d9aTeYLpVcZuJEyE_OTJS1X8Md1dDFCxB695NFAKv5PICTF8dl_02&share_author_id=7352152556175475717&sharer_language=en&source=h5_m&u_code=edb6d65l9ahh6f&timestamp=1772928173&user_id=7352152556175475717&sec_user_id=MS4wLjABAAAAjTuqyRKv3z1d9aTeYLpVcZuJEyE_OTJS1X8Md1dDFCxB695NFAKv5PICTF8dl_02&item_author_type=1&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7606240198738249490&share_link_id=abbfe5fd-7ac8-4748-ad1e-2d4a0d726bea&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213673839131"
     }
+  },
+  "Metasecuritydz": {
+    "name": "Meta security DZ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260308-WA0001.jpg",
+    "phone": "0655870662",
+    "gradient": "",
+    "address": {
+      "text": "G5X3+J4F, Batna",
+      "url": "https://maps.app.goo.gl/6pvbHnGMUBvDPG946?g_st=ic"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61555651462566",
+      "instagram": "https://www.instagram.com/metasec.dz/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213773839131"
+    }
   }
 }
