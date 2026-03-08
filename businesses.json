@@ -3328,7 +3328,7 @@
     "name": "Meta security DZ",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260308-WA0001.jpg",
     "phone": "0655870662",
-    "gradient": "",
+    "gradient": "#000000",
     "address": {
       "text": "G5X3+J4F, Batna",
       "url": "https://maps.app.goo.gl/6pvbHnGMUBvDPG946?g_st=ic"
@@ -3336,6 +3336,7 @@
     "socials": {
       "facebook": "https://www.facebook.com/profile.php?id=61555651462566",
       "instagram": "https://www.instagram.com/metasec.dz/",
+      "tiktok": "https://www.tiktok.com/@metasecurity.dz?_r=1&_t=ZS-94WcaO6ZkP7",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213773839131"
     }
   },
