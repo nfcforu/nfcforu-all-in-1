@@ -3307,5 +3307,22 @@
       "tiktok": "https://www.tiktok.com/@ali.phone.29?_r=1&_d=f17j20k7e6m7hh&sec_uid=MS4wLjABAAAAbBOs37xgJf1LMQ5yN_xXVBKmm4srKeIg2JJ-MCf_E9qw9UtGg4pnjgdbb0Zsvgix&share_author_id=7441490826432545847&sharer_language=fr&source=h5_m&u_code=e9i2b4b8jmm9fd&timestamp=1772840018&user_id=7270994280352908293&sec_user_id=MS4wLjABAAAAqh2qvPSsvYwfXDlPu0RURJaW2Z6fv6kyu9kpMf7BAlVZEx-gr6XTHkmImJj8c43Y&item_author_type=2&utm_source=whatsapp&utm_campaign=client_share&utm_medium=android&share_iid=7613291231074944788&share_link_id=1dc71608-f817-4007-8457-4d047391c392&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b6880%2Cb5836&social_share_type=5&enable_checksum=1",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213660461012"
     }
+  },
+  "Whstore": {
+    "name": "WH STORE ",
+    "image": "",
+    "phone": "0673839131",
+    "gradient": "",
+    "menu": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260308-WA0000.jpg",
+    "address": {
+      "text": "Batna ",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=61585655986265&mibextid=ZbWKwL",
+      "instagram": "https://www.instagram.com/whstore05?igsh=MTVjMmQzeG1tem93Zw==",
+      "tiktok": "https://www.tiktok.com/@wh.store05?_r=1&_d=f14j1m11i6889m&sec_uid=MS4wLjABAAAAjTuqyRKv3z1d9aTeYLpVcZuJEyE_OTJS1X8Md1dDFCxB695NFAKv5PICTF8dl_02&share_author_id=7352152556175475717&sharer_language=en&source=h5_m&u_code=edb6d65l9ahh6f&timestamp=1772928173&user_id=7352152556175475717&sec_user_id=MS4wLjABAAAAjTuqyRKv3z1d9aTeYLpVcZuJEyE_OTJS1X8Md1dDFCxB695NFAKv5PICTF8dl_02&item_author_type=1&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7606240198738249490&share_link_id=abbfe5fd-7ac8-4748-ad1e-2d4a0d726bea&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213673839131"
+    }
   }
 }
