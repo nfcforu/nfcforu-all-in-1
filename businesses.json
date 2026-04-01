@@ -3384,5 +3384,22 @@
       "facebook": "https://www.facebook.com/share/1Bp8ah2kbo/?mibextid=wwXIfr",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213660437895"
     }
+  },
+  "Plaquiaffaire": {
+    "name": "بلاكيور لافار العلمة ",
+    "image": "",
+    "phone": "0659309530",
+    "gradient": "",
+    "address": {
+      "text": "العلمة ",
+      "url": "https://maps.app.goo.gl/AwmnowyEGVED51dd6?g_st=ipc"
+    },
+    "socials": {
+      "facebook": "راب الفيس  https://www.facebook.com/share/1Q84KDEWLW/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/hichemarab555?igsh=ajA5ajYzdmVsbGty&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@hichembijouxeleul?_r=1&_t=ZS-91he41CF0K8",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213659309530",
+      "telegram": "https://t.me/blaqui_laffaire"
+    }
   }
 }
