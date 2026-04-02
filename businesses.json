@@ -3401,5 +3401,20 @@
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213659309530",
       "telegram": "https://t.me/blaqui_laffaire"
     }
+  },
+  "King": {
+    "name": "The King 19",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/file_00000000723871f6a5ab704e48f24c0c.png",
+    "phone": "0783076009",
+    "gradient": "",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1FUsS3Wuoy/",
+      "instagram": "https://www.instagram.com/the_king______19?igsh=Z2dmOHY3czJld3o0",
+      "tiktok": "https://www.tiktok.com/@boutiquetheking19?_r=1&_t=ZS-95D0EGfY1bR"
+    }
   }
 }
