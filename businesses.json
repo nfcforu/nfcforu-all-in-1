@@ -3417,5 +3417,19 @@
       "tiktok": "https://www.tiktok.com/@boutiquetheking19?_r=1&_t=ZS-95D0EGfY1bR",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213556766757"
     }
+  },
+  "Cherguifacilite": {
+    "name": "Chergui facilité",
+    "image": "",
+    "phone": "0661158408",
+    "gradient": "",
+    "address": {
+      "text": "تمنراست - سرسوف, بجانب جيزي، مقابل المستشفى",
+      "url": "https://maps.app.goo.gl/nBZxYSLyCz6A9PJL8"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1B3ALYj4Tk/?mibextid=wwXIfr",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213661158408"
+    }
   }
 }
