@@ -3422,7 +3422,7 @@
     "name": "Chergui facilité",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260410-WA0010.jpg",
     "phone": "0661158408",
-    "gradient": "",
+    "gradient": "#000000",
     "address": {
       "text": "تمنراست - سرسوف, بجانب جيزي، مقابل المستشفى",
       "url": "https://maps.app.goo.gl/nBZxYSLyCz6A9PJL8"
