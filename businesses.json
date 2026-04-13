@@ -3431,5 +3431,20 @@
       "facebook": "https://www.facebook.com/share/1B3ALYj4Tk/?mibextid=wwXIfr",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213661158408"
     }
+  },
+  "Moustaphaphone": {
+    "name": "مصطفى فون ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260413-WA0011.jpg",
+    "phone": "0771958281",
+    "gradient": "",
+    "address": {
+      "text": "7VV5+RJ2, Rue Maghni Sandid Fatna, Aïn Témouchent",
+      "url": "https://maps.app.goo.gl/R7ESWVHSyC5AU5w28?g_st=aw"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1G1BA98TmW/",
+      "instagram": "https://www.instagram.com/mostapha_phone?utm_source=qr&igsh=MXg1djZ1bnc3NHE3Yw==",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213771958281"
+    }
   }
 }
