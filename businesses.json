@@ -3446,5 +3446,21 @@
       "instagram": "https://www.instagram.com/mostapha_phone?utm_source=qr&igsh=MXg1djZ1bnc3NHE3Yw==",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213771958281"
     }
+  },
+  "Bijouterieelwancharis": {
+    "name": "Bijouterie El wancharis",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260414-WA0003.jpg",
+    "phone": "0663691290",
+    "gradient": "#333333",
+    "address": {
+      "text": "عين تيموشنت",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1DJ2GnVVfd/",
+      "instagram": "https://www.instagram.com/bijouterie_elwancharis_46?utm_source=qr&igsh=aGFibHRrd3JqNmpp",
+      "tiktok": "tiktok.com/@bijouterie46elwancharis",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213663691290"
+    }
   }
 }
