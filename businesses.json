@@ -3463,5 +3463,20 @@
       "tiktok": "tiktok.com/@bijouterie46elwancharis",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213663691290"
     }
+  },
+  "Amiranasri": {
+    "name": "Amira Nasri",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260413-WA0012.jpg",
+    "phone": "0656660942",
+    "gradient": "",
+    "address": {
+      "text": "ام البواقي",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1CrWcmgKCG/",
+      "instagram": "https://www.instagram.com/amira.nasri.5095110?igsh=MTkwcDVlOGdkYzd3bw==",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213656660942"
+    }
   }
 }
