@@ -3478,5 +3478,19 @@
       "instagram": "https://www.instagram.com/amira.nasri.5095110?igsh=MTkwcDVlOGdkYzd3bw==",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213656660942"
     }
+  },
+  "Modedimanat": {
+    "name": "Mode diamant ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/file_000000008418720c8089842e2d0d9962.png",
+    "phone": "0551083968",
+    "gradient": "",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/17GQDGdGHk/",
+      "instagram": "https://www.instagram.com/mode_diamant_?utm_source=qr&igsh=cnlqbHVlbG55NDE2"
+    }
   }
 }
