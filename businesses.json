@@ -3509,5 +3509,21 @@
       "tiktok": "https://www.tiktok.com/@mustabag4?_r=1&_t=ZS-95au2jnm7pR",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213552301638"
     }
+  },
+  "Akmoda": {
+    "name": "AK moda",
+    "image": "",
+    "phone": "0555345318",
+    "gradient": "",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1ELD681YB5/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/ak_moda9?igsh=MTZrdGFqeGxkZ2p6ZQ==",
+      "tiktok": "https://www.tiktok.com/@ak_moda9?_r=1&_t=ZS-95ax4g4FRdg",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213555345318"
+    }
   }
 }
