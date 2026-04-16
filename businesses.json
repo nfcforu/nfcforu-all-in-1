@@ -3493,5 +3493,20 @@
       "facebook": "https://www.facebook.com/share/17GQDGdGHk/",
       "instagram": "https://www.instagram.com/mode_diamant_?utm_source=qr&igsh=cnlqbHVlbG55NDE2"
     }
+  },
+  "Qodsphone": {
+    "name": "Qods phone",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260416-WA0004.jpg",
+    "phone": "0552301638",
+    "gradient": "",
+    "address": {
+      "text": "3396+9CR, Frenda",
+      "url": "https://www.google.com/maps/place/El+Qods+phone/@35.0684097,1.0583243,17z/data=!3m1!4b1!4m6!3m5!1s0x1280d1b4373134bf:0xb4f34133348f2ea9!8m2!3d35.0684053!4d1.0608992!16s%2Fg%2F11vclr1m1j?authuser=0&entry=ttu&g_ep=EgoyMDI2MDQxMy4wIKXMDSoASAFQAw%3D%3D"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/mustapha.pdv?locale=fr_FR",
+      "instagram": "https://www.instagram.com/mustapha_pdv/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213552301638"
+    }
   }
 }
