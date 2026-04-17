@@ -3525,5 +3525,19 @@
       "tiktok": "https://www.tiktok.com/@ak_moda9?_r=1&_t=ZS-95ax4g4FRdg",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213555345318"
     }
+  },
+  "Apartmentlocation": {
+    "name": "Apartments location F2 ",
+    "image": "",
+    "phone": "0557933073",
+    "gradient": "#74a7ff",
+    "address": {
+      "text": "Bejaïa",
+      "url": "https://maps.app.goo.gl/r9B2zSvRS7b8KBZB9?g_st=iw"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1E9C3aWDo2/?mibextid=wwXIfr",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213557933073"
+    }
   }
 }
