@@ -3543,9 +3543,9 @@
   "Falcontravel": {
     "name": "Falcon travel ",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260420-WA0028.jpg",
-    "phone": "",
+    "phone": "0669554196",
     "email": "falcontravelagency98@gmail.com",
-    "gradient": "",
+    "gradient": "#011d57",
     "address": {
       "text": "",
       "url": "https://maps.google.com/?q=Falcon%20travel%20agency%20%D9%81%D8%A7%D9%84%D9%83%D9%88%D9%86%20%D8%AA%D8%B1%D8%A7%D9%81%D9%84%20%D9%84%D9%84%D8%B3%D9%8A%D8%A7%D8%AD%D8%A9%20%D9%88%D8%A7%D9%84%D8%A3%D8%B3%D9%81%D8%A7%D8%B1&ftid=0x64f16bcbd759c1d7:0x642b156bc3ae047f&entry=gps&shh=CAE&lucs=,94297699,94284496,94231188,94280568,47071704,94218641,94282134,94286869&g_st=ic"
@@ -3553,7 +3553,8 @@
     "socials": {
       "facebook": "https://www.facebook.com/share/1CRXknt6Rn/?mibextid=wwXIfr",
       "instagram": "https://www.instagram.com/falcon_travel_agency_98?igsh=ZHgwejhhajFmOWVr&utm_source=qr",
-      "tiktok": "https://www.tiktok.com/@nacereddine.toudj?_r=1&_t=ZS-95fp6BpvR2a"
+      "tiktok": "https://www.tiktok.com/@nacereddine.toudj?_r=1&_t=ZS-95fp6BpvR2a",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213669554196"
     }
   }
 }
