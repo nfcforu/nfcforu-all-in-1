@@ -3556,5 +3556,21 @@
       "tiktok": "https://www.tiktok.com/@nacereddine.toudj?_r=1&_t=ZS-95fp6BpvR2a",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213669554196"
     }
+  },
+  "Laminedor": {
+    "name": "La mine d’or ",
+    "image": "",
+    "phone": "0540 95 80 93",
+    "gradient": "",
+    "address": {
+      "text": "Ben khadda ",
+      "url": "https://maps.app.goo.gl/5atpxfXCTqb36uSs6?g_st=aw"
+    },
+    "socials": {
+      "facebook": "Lien Facebook :  https://www.facebook.com/share/1CYb6HLhx3/",
+      "instagram": "https://www.instagram.com/bijouterielaminedordbk?igsh=eTBkYTBhdWdqejQ=",
+      "tiktok": "https://www.tiktok.com/@la.mine.dor.dbk.2?_r=1&_t=ZS-95m4sVRggMM",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213540958093"
+    }
   }
 }
