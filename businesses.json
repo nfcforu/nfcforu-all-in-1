@@ -3559,9 +3559,9 @@
   },
   "Laminedor": {
     "name": "La mine d’or ",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260423-WA0003(1).jpg",
     "phone": "0540 95 80 93",
-    "gradient": "",
+    "gradient": "#000000",
     "address": {
       "text": "Ben khadda ",
       "url": "https://maps.app.goo.gl/5atpxfXCTqb36uSs6?g_st=aw"
