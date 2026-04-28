@@ -3606,5 +3606,20 @@
       "tiktok": "https://www.tiktok.com/@abdelkaderbounab6?_r=1&_t=ZS-95ueiltXgrE",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213540727126"
     }
+  },
+  "Laboratoireelnoor": {
+    "name": "Laboratoire d’analyses médicales EL NOOR",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260428-WA0007.jpg",
+    "phone": "0774137444",
+    "email": "drsebaat.lab@gmail.com",
+    "gradient": "",
+    "address": {
+      "text": "Mostaganem",
+      "url": "https://maps.app.goo.gl/YJS9VKq2Sw446dcc8?g_st=ai"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=100076929212670",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213774137444"
+    }
   }
 }
