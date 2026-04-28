@@ -3590,5 +3590,21 @@
       "tiktok": "https://www.tiktok.com/@ligna.cuisines.setif?_r=1&_t=ZS-95rEUYf4YWS",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213561641231"
     }
+  },
+  "Drbiunababdelkader": {
+    "name": "DR BOUNAB Abdelkader",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260428-WA0004.jpg",
+    "phone": "0540727126",
+    "gradient": "",
+    "address": {
+      "text": "Oran ",
+      "url": "https://maps.app.goo.gl/2kbsJ7E7uMZaamF16?g_st=ic"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1KoRqM2jCo/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/dr.bounab_abdelkader?igsh=MWRtZ3NnYjJkMHVhdQ%3D%3D&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@abdelkaderbounab6?_r=1&_t=ZS-95ueiltXgrE",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213540727126"
+    }
   }
 }
