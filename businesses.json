@@ -3635,5 +3635,20 @@
       "facebook": "https://www.facebook.com/share/p/1Bp2ytAc3n/",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213699507514"
     }
+  },
+  "Meftahfroid": {
+    "name": "Meftah froid ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/Screenshot_20260430_114253_ChatGPT.jpg",
+    "phone": "0779854720",
+    "gradient": "",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1BFxeGn3tM/?mibextid=wwXIfr",
+      "tiktok": "https://www.tiktok.com/@meftah.froid?_r=1&_t=ZS-95y6f3SeEpY",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213779854720"
+    }
   }
 }
