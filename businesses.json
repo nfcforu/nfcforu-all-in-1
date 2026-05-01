@@ -3683,5 +3683,18 @@
       "tiktok": "https://www.tiktok.com/@sabrrsmaili?_r=1&_t=ZS-960aZUiZCwm",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213670954494"
     }
+  },
+  "Boumvalpaintpro": {
+    "name": "Bou M valpaint pro ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/Screenshot_20260501_225845_ChatGPT.jpg",
+    "phone": "0656535138",
+    "gradient": "",
+    "address": {
+      "text": "تبسة الونزة",
+      "url": "https://maps.app.goo.gl/2AoYQQ1JnbRVmVXW9?g_st=aw"
+    },
+    "socials": {
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213656535138"
+    }
   }
 }
