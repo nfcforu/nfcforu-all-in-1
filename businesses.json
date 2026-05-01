@@ -3650,5 +3650,21 @@
       "tiktok": "https://www.tiktok.com/@meftah.froid?_r=1&_t=ZS-95y6f3SeEpY",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213779854720"
     }
+  },
+  "Tikoliva": {
+    "name": "Tikoliva",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260501-WA0000.jpg",
+    "phone": "0773909730",
+    "gradient": "#263e0f",
+    "address": {
+      "text": "",
+      "url": "https://maps.app.goo.gl/Vf2kEY8orWBGuJpR7?g_st=aw"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1imngzMaMS/",
+      "instagram": "https://www.instagram.com/huilerieamari?utm_source=qr&igsh=MXhuOWc3aXplY2NobQ==",
+      "tiktok": "https://www.tiktok.com/@huilerie.amari.mr?_r=1&_t=ZS-95zjes22zgY",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213773909730"
+    }
   }
 }
