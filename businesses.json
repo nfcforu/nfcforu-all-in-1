@@ -3667,5 +3667,21 @@
       "tiktok": "https://www.tiktok.com/@huilerie.amari.mr?_r=1&_t=ZS-95zjes22zgY",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213773909730"
     }
+  },
+  "Saberdecoration": {
+    "name": "Saber décoration ",
+    "image": "",
+    "phone": "0670954494",
+    "gradient": "",
+    "address": {
+      "text": "تيسة الونزة ",
+      "url": "https://maps.app.goo.gl/2AoYQQ1JnbRVmVXW9?g_st=aw"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1CkUkrdENz/",
+      "instagram": "https://www.instagram.com/sabrr.smaili?igsh=ZG51dWQ3YjFpOWxh",
+      "tiktok": "https://www.tiktok.com/@sabrrsmaili?_r=1&_t=ZS-960aZUiZCwm",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213670954494"
+    }
   }
 }
