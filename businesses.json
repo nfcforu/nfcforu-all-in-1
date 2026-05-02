@@ -3725,5 +3725,20 @@
     "socials": {
       "facebook": "https://www.facebook.com/share/1Faym276QN/?mibextid=wwXIfr"
     }
+  },
+  "Phoneplus": {
+    "name": "Phone plus ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/Screenshot_20260502_104022_ChatGPT.jpg",
+    "phone": "0770101018",
+    "gradient": "#5c5c5c",
+    "address": {
+      "text": "Douera",
+      "url": "https://maps.google.com/?q=36.674191,2.945869"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1C3MAaBmaw/?mibextid=wwXIfr",
+      "tiktok": "https://www.tiktok.com/@phoneplus01?_r=1&_t=ZS-961Rapcxthd",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770101018"
+    }
   }
 }
