@@ -3696,5 +3696,19 @@
     "socials": {
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213656535138"
     }
+  },
+  "Talamaliamira": {
+    "name": "Talamali Amira ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260502-WA0000.jpg",
+    "phone": "",
+    "gradient": "",
+    "address": {
+      "text": "Boumerdes",
+      "url": "https://maps.app.goo.gl/46a1jQcmem8j32yc6?g_st=ic"
+    },
+    "socials": {
+      "instagram": "https://www.instagram.com/amiratalamali?igsh=MWI4aXh0cWV1MnNlcg==",
+      "tiktok": "https://www.tiktok.com/@talamaliamira2?_r=1&_t=ZS-961Gj2BYrAr"
+    }
   }
 }
