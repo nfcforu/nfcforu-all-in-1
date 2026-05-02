@@ -3740,5 +3740,20 @@
       "tiktok": "https://www.tiktok.com/@phoneplus01?_r=1&_t=ZS-961Rapcxthd",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770101018"
     }
+  },
+  "Houssemplombier": {
+    "name": "Houssem plombier ",
+    "image": "",
+    "phone": "0563906037",
+    "gradient": "",
+    "address": {
+      "text": "Filfila skikda",
+      "url": "https://maps.google.com/?q=36.894951,7.044864"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/mrazqt.hsam",
+      "instagram": "https://www.instagram.com/merazkhoussam?igsh=eG16YXlwaWI5MWJt",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213563903037"
+    }
   }
 }
