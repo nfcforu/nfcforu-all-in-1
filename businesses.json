@@ -3700,7 +3700,7 @@
   "Talamaliamira": {
     "name": "Talamali Amira ",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260502-WA0000.jpg",
-    "phone": "",
+    "phone": "+213 552115283",
     "gradient": "#000000",
     "address": {
       "text": "Boumerdes",
@@ -3708,7 +3708,8 @@
     },
     "socials": {
       "instagram": "https://www.instagram.com/amiratalamali?igsh=MWI4aXh0cWV1MnNlcg==",
-      "tiktok": "https://www.tiktok.com/@talamaliamira2?_r=1&_t=ZS-961Gj2BYrAr"
+      "tiktok": "https://www.tiktok.com/@talamaliamira2?_r=1&_t=ZS-961Gj2BYrAr",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213552115283"
     }
   },
   "Drrihaniepsedifallah": {
