@@ -3701,7 +3701,7 @@
     "name": "Talamali Amira ",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260502-WA0000.jpg",
     "phone": "",
-    "gradient": "",
+    "gradient": "#000000",
     "address": {
       "text": "Boumerdes",
       "url": "https://maps.app.goo.gl/46a1jQcmem8j32yc6?g_st=ic"
