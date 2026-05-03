@@ -3756,5 +3756,19 @@
       "instagram": "https://www.instagram.com/merazkhoussam?igsh=eG16YXlwaWI5MWJt",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213563903037"
     }
+  },
+  "swift": {
+    "name": "Swift Express",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260503-WA0013.jpg",
+    "phone": "0797979292",
+    "email": "swiftexpress19@gmail.com",
+    "gradient": "linear-gradient(174deg,rgba(213, 0, 0, 1) 0%, rgba(254, 191, 186, 1) 100%)",
+    "address": {
+      "text": "حي العيد الضحوى امام سوق السيارات",
+      "url": "https://maps.app.goo.gl/wGurpxu3otSjAezy6"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1HzpZbRLCZ/"
+    }
   }
 }
