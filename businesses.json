@@ -3768,7 +3768,8 @@
       "url": "https://maps.app.goo.gl/wGurpxu3otSjAezy6"
     },
     "socials": {
-      "facebook": "https://www.facebook.com/share/1HzpZbRLCZ/"
+      "facebook": "https://www.facebook.com/share/1HzpZbRLCZ/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770333412"
     }
   }
 }
