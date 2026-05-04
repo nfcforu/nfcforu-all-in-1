@@ -3771,5 +3771,19 @@
       "facebook": "https://www.facebook.com/share/1HzpZbRLCZ/",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213770333412"
     }
+  },
+  "Opticnarcisse": {
+    "name": "Optic narcisse",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/Screenshot_20260504_102119_ChatGPT.jpg",
+    "phone": "0675018538",
+    "gradient": "#74a7ff",
+    "address": {
+      "text": "Oran ",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1BYpR791kG/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/optic_narcisse?igsh=MWRzeWMyOXJhbWZieg=="
+    }
   }
 }
