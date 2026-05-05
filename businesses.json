@@ -3785,5 +3785,21 @@
       "facebook": "https://www.facebook.com/share/1BYpR791kG/?mibextid=wwXIfr",
       "instagram": "https://www.instagram.com/optic_narcisse?igsh=MWRzeWMyOXJhbWZieg=="
     }
+  },
+  "Bijouterielamonedor": {
+    "name": "Bijouterie la Mine d’or ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/Screenshot_20260505_191419_ChatGPT.jpg",
+    "phone": "0556468567",
+    "gradient": "",
+    "address": {
+      "text": "Draa ben khedda",
+      "url": "https://maps.app.goo.gl/oxykXXixLPqfbhj38?g_st=aw"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/17QZ1sLzxX/",
+      "instagram": "https://www.instagram.com/la_mine_dor_dbk?igsh=MXZxMG80cnJzdjA5Nw==",
+      "tiktok": "https://www.tiktok.com/@bijoutrielaminedordbk?_r=1&_t=ZS-966oK0p3080",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213556468567"
+    }
   }
 }
