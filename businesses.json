@@ -3836,9 +3836,9 @@
   },
   "salamo": {
     "name": "Salamou",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/Screenshot_20260512_095740_Instagram.jpg",
     "phone": "0781349101",
-    "gradient": "",
+    "gradient": "#dcea1a",
     "address": {
       "text": "حي بيلير امام مسجد عثمان بن عفان ",
       "url": "https://maps.app.goo.gl/tn5g3VeX3XfmKSYc9"
