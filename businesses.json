@@ -3833,5 +3833,20 @@
       "tiktok": "https://www.tiktok.com/@la.mine.dor.dbk.2?_r=1&_t=ZS-95m4sVRggMM",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213540 95 80 93"
     }
+  },
+  "salamo": {
+    "name": "Salamou",
+    "image": "",
+    "phone": "0781349101",
+    "gradient": "",
+    "address": {
+      "text": "حي بيلير امام مسجد عثمان بن عفان ",
+      "url": "https://maps.app.goo.gl/tn5g3VeX3XfmKSYc9"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1BRCzsP9XX/",
+      "instagram": "https://www.instagram.com/_salamou_01?igsh=MWZrOHRvMHFlc2p1",
+      "tiktok": "https://www.tiktok.com/@_salamou_01?_r=1&_t=ZS-96INh66NfDY"
+    }
   }
 }
