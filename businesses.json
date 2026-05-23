@@ -3859,5 +3859,18 @@
       "url": ""
     },
     "socials": {}
+  },
+  "Naimeflorale27": {
+    "name": "Naime Florale 27 ",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/Logo%20fleuriste%20.png",
+    "phone": "0554319112",
+    "gradient": "linear-gradient(182deg,rgba(217, 139, 121, 1) 0%, rgba(254, 250, 246, 1) 100%)",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/17na7MvBGA/?mibextid=wwXIfr"
+    }
   }
 }
