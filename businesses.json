@@ -3861,5 +3861,20 @@
     "socials": {
       "facebook": "https://www.facebook.com/share/17na7MvBGA/?mibextid=wwXIfr"
     }
+  },
+  "El-Imtiyaz-shcool": {
+    "name": "EL Imtiyaz School",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-05-24%20at%2012.53.31.jpeg",
+    "phone": "0561300080",
+    "gradient": "",
+    "address": {
+      "text": " Tout près de l'institut INPED Cité de Boumerdes",
+      "url": "https://maps.app.goo.gl/j3gzJGbWwHmJefuy8"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/elimtiyaz35",
+      "instagram": "https://www.instagram.com/elimtiyaz35",
+      "tiktok": "https://www.tiktok.com/@elimtiyaz_school"
+    }
   }
 }
