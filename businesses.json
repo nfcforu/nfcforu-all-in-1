@@ -3866,7 +3866,7 @@
     "name": "EL Imtiyaz School",
     "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-05-24%20at%2012.53.31.jpeg",
     "phone": "0561300080",
-    "gradient": "",
+    "gradient": "linear-gradient(182deg,rgba(26, 163, 217, 1) 0%, rgba(242, 73, 12, 1) 100%)",
     "address": {
       "text": " Tout près de l'institut INPED Cité de Boumerdes",
       "url": "https://maps.app.goo.gl/j3gzJGbWwHmJefuy8"
