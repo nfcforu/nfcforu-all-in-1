@@ -3893,5 +3893,18 @@
       "tiktok": "https://www.tiktok.com/@elimtiyaz_school",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213550506768"
     }
+  },
+  "The-alpha": {
+    "name": "The Alpha ",
+    "image": "",
+    "phone": "0553181742",
+    "gradient": "",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "instagram": "https://www.instagram.com/alpha_snack19?igsh=MW1oeXgyN21zMWh4OQ=="
+    }
   }
 }
