@@ -3907,5 +3907,18 @@
     "socials": {
       "instagram": "https://www.instagram.com/alpha_snack19?igsh=MW1oeXgyN21zMWh4OQ=="
     }
+  },
+  "Alphasnack": {
+    "name": "Alpha Snack ",
+    "image": "",
+    "phone": "0553181742",
+    "gradient": "#ffe229",
+    "address": {
+      "text": "Rue Harrag Mohamed Senoussi, Sétif 19000",
+      "url": "https://maps.app.goo.gl/Yd7U6xuN6ED4W9Yb6"
+    },
+    "socials": {
+      "instagram": "https://www.instagram.com/alpha_snack19"
+    }
   }
 }
