@@ -3934,5 +3934,21 @@
       "facebook": "https://www.facebook.com/share/1DYa1nhM7b/?mibextid=wwXIfr",
       "instagram": "https://www.instagram.com/location_by_riham?igsh=a3ozOHIzM3AwMDZz&utm_source=qr"
     }
+  },
+  "Castel-Perfume": {
+    "name": "Castel Perfume",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260803-WA0010.jpg",
+    "phone": "0772041862",
+    "gradient": "",
+    "address": {
+      "text": "",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/19DSbVbGvg/",
+      "instagram": "https://www.instagram.com/castle__perfumery?igsh=MTd0YzN0NHo5b3Vmag==",
+      "tiktok": "https://www.tiktok.com/@castle.perfumery?_r=1&_t=ZS-98ZYlou40sW",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213795510115"
+    }
   }
 }
