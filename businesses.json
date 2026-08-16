@@ -3950,5 +3950,21 @@
       "tiktok": "https://www.tiktok.com/@castle.perfumery?_r=1&_t=ZS-98ZYlou40sW",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213795510115"
     }
+  },
+  "Olfabone": {
+    "name": "Olfabone",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/Screenshot_20260816_173246_Drive.jpg",
+    "phone": "0794397624",
+    "gradient": "#ffffff",
+    "address": {
+      "text": "Cour el bouni en face de la mairie",
+      "url": "https://maps.app.goo.gl/neAT2pKgoFcx61kR6?g_st=ac"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1JjbZpkr19/",
+      "instagram": "https://www.instagram.com/olfabone",
+      "tiktok": "https://www.tiktok.com/@olfabone",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213794397624"
+    }
   }
 }
