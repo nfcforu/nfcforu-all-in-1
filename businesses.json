@@ -3966,5 +3966,20 @@
       "tiktok": "https://www.tiktok.com/@olfabone",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213794397624"
     }
+  },
+  "logzz": {
+    "name": "لغز العطور",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/WhatsApp%20Image%202026-08-17%20at%2010.51.57.jpeg",
+    "phone": "0797730013",
+    "gradient": "#FFFBFA",
+    "address": {
+      "text": "حي لاسيتي قرب مسجد معاذ بن جبل ",
+      "url": "https://maps.app.goo.gl/Nc24BvcUBqHgVKFs6"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1EZxY6bhxX/",
+      "instagram": "https://www.instagram.com/loghz5",
+      "tiktok": "https://www.tiktok.com/@loghzaloutour"
+    }
   }
 }
