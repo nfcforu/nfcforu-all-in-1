@@ -3998,5 +3998,21 @@
       "whatsapp": "T.me/0774008460",
       "snapchat": "https://snapchat.com/t/9Z2hMSt4"
     }
+  },
+  "Gharnata": {
+    "name": "غرناطة للعطور ",
+    "image": "",
+    "phone": "0555362919",
+    "gradient": "#5a1c00",
+    "address": {
+      "text": "دالي إبراهيم ",
+      "url": "https://maps.app.goo.gl/Z7gtV4KUm7MCkuzC6?g_st=iw"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1JYYPbJPbL/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/granada__parfum?igsh=MTRxeTRyMWV4OXdoYQ==",
+      "tiktok": "https://www.tiktok.com/@parfumeriegranada?_r=1&_t=ZS-990zBLyiaMn",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213555362919"
+    }
   }
 }
