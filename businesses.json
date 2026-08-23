@@ -4017,10 +4017,10 @@
   },
   "Maisonosmiroma": {
     "name": "Maison osmiroma",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/nfcforu/nfcforu-all-in-1/main/images/IMG-20260823-WA0007.jpg",
     "phone": "+213770930117",
     "email": "osmiromacontact@gmail.com",
-    "gradient": "",
+    "gradient": "#a7c6ff",
     "address": {
       "text": "Tizi ouzou",
       "url": "https://maps.google.com/?q=36.704784,4.037455"
