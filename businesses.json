@@ -4014,5 +4014,21 @@
       "tiktok": "https://www.tiktok.com/@parfumeriegranada?_r=1&_t=ZS-990zBLyiaMn",
       "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213794 39 49 04"
     }
+  },
+  "Maisonosmiroma": {
+    "name": "Maison osmiroma",
+    "image": "",
+    "phone": "+213770930117",
+    "email": "osmiromacontact@gmail.com",
+    "gradient": "",
+    "address": {
+      "text": "Tizi ouzou",
+      "url": "https://maps.google.com/?q=36.704784,4.037455"
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/1ETWXAcN6A/",
+      "instagram": "https://www.instagram.com/p/DZ4vaYhjXL5/?igsi=MXQydDBxd295M21h",
+      "tiktok": "https://vm.tiktok.com/ZGdxgyHKx/"
+    }
   }
 }
