@@ -4030,5 +4030,21 @@
       "instagram": "https://www.instagram.com/p/DZ4vaYhjXL5/?igsi=MXQydDBxd295M21h",
       "tiktok": "https://vm.tiktok.com/ZGdxgyHKx/"
     }
+  },
+  "Boutiquerayadhdfashion": {
+    "name": "Boutique Ryadh Fashion ",
+    "image": "",
+    "phone": "0553652591",
+    "gradient": "#ee719e",
+    "address": {
+      "text": "setif ville 1006 الساعة",
+      "url": ""
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/share/19Cb4V2wfa/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/boutique_riadh19?vrfl=dnRmOGZsendmdmQx&utm_source=qr",
+      "tiktok": "https://www.tiktok.com/@boutique.riadh.19?_r=1&_t=ZS-9B3CjskHcZe",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B213553652591"
+    }
   }
 }
